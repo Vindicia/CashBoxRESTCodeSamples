@@ -1,0 +1,37 @@
+SOAP call : Account.updatePaymentMethod
+
+REST Method:  POST
+
+Endpoint : https://api.prodtest.vindicia.com/accounts/Account-April3?update_behavior=CatchUp&replace_on_all_subscriptions=0&ignore_avs=0&ignore_cvn=0
+
+JSON request:
+
+{
+  "id": "Account-April3",
+  "payment_methods": {
+    "object": "List",
+    "data": [
+      {
+        "object": "PaymentMethod",
+        "type": "CreditCard",
+        "credit_card": {
+          "object": "CreditCard",
+          "account": "4408041234567893",
+          "expiration_date": "202003"
+        },
+        "account_holder": "Cold Stone",
+        "billing_address": {
+          "object": "Address",
+          "name": "Foghorn LegHorn",
+          "line1": "1500 Marilla St",
+          "city": "San Jose",
+          "district": "CA",
+          "postal_code": "95148",
+          "country": "US"
+        },
+        "customer_specified_type": "Visa",
+        "customer_description": "Good Visa"
+      }
+    ]
+  }
+}

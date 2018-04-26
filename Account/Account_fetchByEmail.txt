@@ -1,0 +1,34 @@
+SOAP call : Account.fetchByEmail
+
+REST Method:  GET
+
+Endpoint : https://api.prodtest.vindicia.com/accounts?email=hari2@gmail.com
+
+JSON response:
+
+{  
+   "object":"List",
+   "data":[  
+      {  
+         "object":"Account",
+         "id":"HariAccount2",
+         "vid":"901304a1b2ff26ae5219d29770123e1eab7d02bb",
+         "created":"2017-07-19T12:11:43-07:00",
+         "email":"hari2@gmail.com",
+         "email_type":"html",
+         "name":"Hari account2 via java API",
+         "shipping_address":{  
+            "object":"Address",
+            "vid":"545bc802f6383eec41279328f0045328d88d05ec",
+            "name":"HariAccount2Address",
+            "line1":"2244 Mathilda Ave",
+            "city":"Santa Clara",
+            "postal_code":"95050"
+         }
+      }
+   ],
+   "total_count":1,
+   "url":"/accounts?email=hari2%40gmail.com",
+   "next":"/accounts?email=hari2%40gmail.com&starting_after=HariAccount2",
+   "previous":"/accounts?email=hari2%40gmail.com&ending_before=HariAccount2"
+}

@@ -1,0 +1,81 @@
+SOAP call : Account.fetchByMerchantAccountId
+
+REST Method:  GET
+
+Endpoint : https://api.prodtest.vindicia.com/accounts/ARCAccountApril5
+
+JSON response:
+
+{  
+   "object":"Account",
+   "id":"ARCAccountApril5",
+   "vid":"e386bdbd545c6af47d326b3c02ed5f761b9d9c96",
+   "created":"2018-04-05T15:47:34-07:00",
+   "default_currency":"USD",
+   "email_type":"html",
+   "language":"EN",
+   "notify_before_billing":true,
+   "company":"Peanuts",
+   "name":"ARCAccountApril5",
+   "shipping_address":{  
+      "object":"Address",
+      "vid":"113c971a5edf4805492d3c7262bdc67b7386915d",
+      "name":"ARC AccountApril5",
+      "line1":"123 Main Street",
+      "city":"San Francisco",
+      "district":"CA",
+      "postal_code":"94105",
+      "country":"US",
+      "phone":"415-555-3212"
+   },
+   "payment_methods":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"PaymentMethod",
+            "id":"ppIDApril5ID4",
+            "vid":"c00bf71b8a715fbbc47af672516906674f7d12c6",
+            "created":"2018-04-05T21:28:45-07:00",
+            "type":"PayPal",
+            "paypal":{  
+               "object":"PayPal",
+               "return_url":"http://localhost/~hariprko",
+               "cancel_url":"http://localhost/~hariprko",
+               "request_reference_id":true,
+               "reference_id":null
+            },
+            "account_holder":"Road Runner",
+            "billing_address":{  
+               "object":"Address",
+               "vid":"3827598bd8b7d3b697c159423334acd4f7b8e16e",
+               "name":"ARC AccountApril5",
+               "line1":"123 Main Street",
+               "city":"San Jose",
+               "district":"CA",
+               "postal_code":"95148",
+               "country":"US",
+               "phone":"415-555-9999"
+            },
+            "primary":true,
+            "active":true
+         }
+      ],
+      "total_count":1
+   },
+   "entitlements":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"Entitlement",
+            "id":"access_gold",
+            "description":"Access To gold Subsription"
+         },
+         {  
+            "object":"Entitlement",
+            "id":"access_gold44",
+            "description":"Access To gold44 Subsription"
+         }
+      ],
+      "total_count":2
+   }
+}

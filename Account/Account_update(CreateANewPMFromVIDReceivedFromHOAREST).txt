@@ -1,0 +1,21 @@
+SOAP call : Account.update
+
+REST Method:  POST
+
+Endpoint : https://api.prodtest.vindicia.com/accounts/Test-ViaPostman-AccountApr2
+
+JSON request:
+
+{
+  "id": "Test-ViaPostman-AccountApr2",
+  "payment_methods": {
+    "object": "List",
+    "data": [
+      {
+        "object": "PaymentMethod",
+        "vid":"c6fb1465cbd463fc192c0c8897af03ab113997e7"
+      
+        }
+    ]
+  }
+}

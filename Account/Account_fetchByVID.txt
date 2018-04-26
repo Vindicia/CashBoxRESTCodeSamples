@@ -1,0 +1,62 @@
+SOAP call : Account.fetchByVID
+
+REST Method:  GET
+
+Endpoint : https://api.prodtest.vindicia.com/accounts/9d0780d558e5b1836e487ac92dc28b4755d70c2d
+
+JSON response:
+
+{  
+   "object":"Account",
+   "id":"Account-Jan9",
+   "vid":"9d0780d558e5b1836e487ac92dc28b4755d70c2d",
+   "created":"2018-01-09T12:09:25-08:00",
+   "email":"Jan9@gmail.com",
+   "email_type":"plaintext",
+   "notify_before_billing":false,
+   "name":"Acct Jan9 via java API ",
+   "shipping_address":{  
+      "object":"Address",
+      "vid":"58f1dd7d1f5c40e6dbc03b4161e45418cbec7e97",
+      "name":"Account Jan9",
+      "line1":"2226 Mary Ave",
+      "city":"Santa Clara",
+      "postal_code":"95050",
+      "phone":"408408408"
+   },
+   "payment_methods":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"PaymentMethod",
+            "id":"PMID-111",
+            "vid":"e41ace438196034f4ac52b95caf4643f8150cd12",
+            "created":"2018-01-16T21:31:16-08:00",
+            "type":"CreditCard",
+            "credit_card":{  
+               "object":"CreditCard",
+               "vid":"dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+               "account":"411111XXXXXX1111",
+               "bin":"411111",
+               "last_digits":"1111",
+               "account_length":16,
+               "expiration_date":"201908"
+            },
+            "account_holder":"CC Payer",
+            "billing_address":{  
+               "object":"Address",
+               "vid":"660d9011d771127b956113a68fc0cfa878268edd",
+               "line1":"2226 Mary Ave",
+               "city":"Santa Clara",
+               "postal_code":"95050",
+               "phone":"408408408"
+            },
+            "primary":true,
+            "active":true
+         }
+      ],
+      "total_count":1
+   }
+}
+
+#2

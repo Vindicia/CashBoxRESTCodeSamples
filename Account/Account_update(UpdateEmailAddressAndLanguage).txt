@@ -1,0 +1,16 @@
+SOAP call : Account.update
+
+REST Method:  POST
+
+Endpoint : https://api.prodtest.vindicia.com/accounts/vin-rest-acct-KHP-April92018
+
+JSON request:
+
+{
+  "id": "vin-rest-acct-KHP-April92018",
+  "email": "myemailCHANGED@myemail.com",
+  "email_type": "html",
+  "default_currency": "USD",
+  "name": "vin-rest-acct-KHP-April92018",
+  
+}

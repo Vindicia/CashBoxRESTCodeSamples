@@ -1,0 +1,26 @@
+SOAP call : Account.update
+
+REST Method:  POST
+
+Endpoint : https://api.prodtest.vindicia.com/accounts
+
+JSON request:
+
+{
+  "id": "vin-rest-acct-KHP-April92018",
+  "email": "myemail@myemail.com",
+  "email_type": "html",
+  "default_currency": "USD",
+  "name": "Yar",
+  "notify_before_billing": "0",
+  "language": "EN",
+  "shipping_address": {
+    "phone": "(650) 555-1212x42",
+    "name": "Yar",
+    "postal_code": "94403",
+    "district": "CA",
+    "line1": "11235 Fibonacci St.",
+    "city": "San Mateo",
+    "country": "US"
+  }
+}

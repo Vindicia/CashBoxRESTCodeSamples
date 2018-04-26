@@ -1,0 +1,28 @@
+SOAP call : Account.update
+
+REST Method:  POST
+
+Endpoint : https://api.prodtest.vindicia.com/accounts/child44Account
+
+JSON request:
+
+{
+    "object": "Account",
+    "id": "child44Account",
+ 
+    
+    "default_currency": "USD",
+    "email": "testRESTOct13@example.com",
+    
+
+    "shipping_address": {
+        "object": "Address",
+        "name": "My address",
+        "line1": "123 Main Street",
+        "city": "San Carlos",
+        "district": "CA",
+        "postal_code": "94105",
+        "country": "US",
+        "phone": "415-555-3212"
+    }
+}

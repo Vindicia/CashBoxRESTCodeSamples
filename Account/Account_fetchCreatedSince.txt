@@ -1,0 +1,114 @@
+SOAP call : Account.fetchCreatedSince
+
+REST Method:  GET
+
+Endpoint : https://api.prodtest.vindicia.com/accounts?created_after=20180401
+Endpoint : https://api.prodtest.vindicia.com/accounts?created_before=20170731
+
+JSON response:
+
+{
+"object": "List",
+"data": [
+  {
+"object": "Account",
+"id": "Hari2",
+"vid": "5b333e25ce9ac8b745b11400af331143122f0fba",
+"created": "2017-07-13T10:45:59-07:00",
+"default_currency": "USD",
+"email_type": "html",
+"language": "EN",
+"notify_before_billing": true,
+"name": "HH",
+"shipping_address": {
+"object": "Address",
+"vid": "c8d3a65897c56b8146fc482c0d35f96ce5523da0"
+},
+"payment_methods": {
+"object": "List",
+"data": [
+  {
+"object": "PaymentMethod",
+"vid": "163bf65ae110839793582506effc25cb41b61e67",
+"created": "2017-07-13T10:45:59-07:00",
+"type": "CreditCard",
+"credit_card": {
+"object": "CreditCard",
+"vid": "469191fbf680b9e62758c7dff7780e747257e907",
+"account": "448598XXXXXX2217",
+"bin": "448598",
+"last_digits": "2217",
+"account_length": 16,
+"expiration_date": "203707"
+},
+"billing_address": {
+"object": "Address",
+"vid": "e2959ec4b244d6517c69c021fcfe17bbc80a1828"
+},
+"primary": true,
+"active": true
+}
+],
+"total_count": 1
+}
+},
+  {
+"object": "Account",
+"id": "HariK1",
+"vid": "e0abbdf7cec98ca2dac3433589af45ad59a122fd",
+"created": "2017-07-11T15:24:06-07:00",
+"default_currency": "USD",
+"email": "hkoppuravuri@vindicia.com",
+"email_type": "html",
+"language": "EN",
+"notify_before_billing": true,
+"company": "Vindicia",
+"name": "HariK",
+"shipping_address": {
+"object": "Address",
+"vid": "ce12105bbe133cb5611437934ed9e6177df04b19"
+},
+"payment_methods": {
+"object": "List",
+"data": [
+  {
+"object": "PaymentMethod",
+"id": "1122",
+"vid": "10a299623c2e0b72319102af5ea06b8569fb98d9",
+"created": "2017-07-11T15:24:06-07:00",
+"type": "CreditCard",
+"credit_card": {
+"object": "CreditCard",
+"vid": "469191fbf680b9e62758c7dff7780e747257e907",
+"account": "448598XXXXXX2217",
+"bin": "448598",
+"last_digits": "2217",
+"account_length": 16,
+"expiration_date": "201807"
+},
+"account_holder": "ABCD",
+"billing_address": {
+"object": "Address",
+"vid": "0660748635ad1d4735852c6e7f9564cce3525425",
+"line1": "220 N Mathilda Ave",
+"city": "Sunnyvale",
+"district": "CA",
+"postal_code": "94086",
+"country": "US"
+},
+"primary": true,
+"active": true
+}
+],
+"total_count": 1
+},
+"credit": {
+"object": "Credit"
+}
+}
+],
+"total_count": 2,
+"url": "/accounts?created_before=20170715",
+"next": "/accounts?created_before=20170715&starting_after=HariK1",
+"previous": "/accounts?created_before=20170715&ending_before=Hari2"
+}

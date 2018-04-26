@@ -1,0 +1,514 @@
+SOAP call : Account.list
+
+REST Method:  GET
+
+Endpoint : https://api.prodtest.vindicia.com/accounts
+
+JSON response:
+
+{  
+   "object":"List",
+   "data":[  
+      {  
+         "object":"Account",
+         "id":"HariK1",
+         "vid":"e0abbdf7cec98ca2dac3433589af45ad59a122fd",
+         "created":"2017-07-11T15:24:06-07:00",
+         "default_currency":"USD",
+         "email":"hkoppuravuri@vindicia.com",
+         "email_type":"html",
+         "language":"EN",
+         "notify_before_billing":true,
+         "company":"Vindicia",
+         "name":"HariK",
+         "shipping_address":{  
+            "object":"Address",
+            "vid":"ce12105bbe133cb5611437934ed9e6177df04b19"
+         },
+         "payment_methods":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"PaymentMethod",
+                  "id":"1122",
+                  "vid":"10a299623c2e0b72319102af5ea06b8569fb98d9",
+                  "created":"2017-07-11T15:24:06-07:00",
+                  "type":"CreditCard",
+                  "credit_card":{  
+                     "object":"CreditCard",
+                     "vid":"469191fbf680b9e62758c7dff7780e747257e907",
+                     "account":"448598XXXXXX2217",
+                     "bin":"448598",
+                     "last_digits":"2217",
+                     "account_length":16,
+                     "expiration_date":"201807"
+                  },
+                  "account_holder":"ABCD",
+                  "billing_address":{  
+                     "object":"Address",
+                     "vid":"0660748635ad1d4735852c6e7f9564cce3525425",
+                     "line1":"220 N Mathilda Ave",
+                     "city":"Sunnyvale",
+                     "district":"CA",
+                     "postal_code":"94086",
+                     "country":"US"
+                  },
+                  "primary":true,
+                  "active":true
+               }
+            ],
+            "total_count":1
+         },
+         "credit":{  
+            "object":"Credit"
+         }
+      },
+      {  
+         "object":"Account",
+         "id":"Hari2",
+         "vid":"5b333e25ce9ac8b745b11400af331143122f0fba",
+         "created":"2017-07-13T10:45:59-07:00",
+         "default_currency":"USD",
+         "email_type":"html",
+         "language":"EN",
+         "notify_before_billing":true,
+         "name":"HH",
+         "shipping_address":{  
+            "object":"Address",
+            "vid":"c8d3a65897c56b8146fc482c0d35f96ce5523da0"
+         },
+         "payment_methods":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"PaymentMethod",
+                  "vid":"163bf65ae110839793582506effc25cb41b61e67",
+                  "created":"2017-07-13T10:45:59-07:00",
+                  "type":"CreditCard",
+                  "credit_card":{  
+                     "object":"CreditCard",
+                     "vid":"469191fbf680b9e62758c7dff7780e747257e907",
+                     "account":"448598XXXXXX2217",
+                     "bin":"448598",
+                     "last_digits":"2217",
+                     "account_length":16,
+                     "expiration_date":"203707"
+                  },
+                  "billing_address":{  
+                     "object":"Address",
+                     "vid":"e2959ec4b244d6517c69c021fcfe17bbc80a1828"
+                  },
+                  "primary":true,
+                  "active":true
+               }
+            ],
+            "total_count":1
+         }
+      },
+      {  
+         "object":"Account",
+         "id":"hari_account1",
+         "vid":"2e42fe7c5c98ab47c00ad6e35cd3bf2bbdbda7c8",
+         "created":"2017-07-18T10:18:15-07:00",
+         "email":"hari1@vindicia.com",
+         "email_type":"html",
+         "name":"Hari Account1",
+         "shipping_address":{  
+            "object":"Address",
+            "vid":"9505e7b8aa0af81c7a46b1e4ecdf8d4efea0184d",
+            "name":"Hari1",
+            "line1":"123 main St",
+            "city":"Santa Clara",
+            "postal_code":"394597",
+            "country":"US"
+         }
+      },
+      {  
+         "object":"Account",
+         "id":"HariAccount2",
+         "vid":"901304a1b2ff26ae5219d29770123e1eab7d02bb",
+         "created":"2017-07-19T12:11:43-07:00",
+         "email":"hari2@gmail.com",
+         "email_type":"html",
+         "name":"Hari account2 via java API",
+         "shipping_address":{  
+            "object":"Address",
+            "vid":"545bc802f6383eec41279328f0045328d88d05ec",
+            "name":"HariAccount2Address",
+            "line1":"2244 Mathilda Ave",
+            "city":"Santa Clara",
+            "postal_code":"95050"
+         }
+      },
+      {  
+         "object":"Account",
+         "id":"HariAccount3",
+         "vid":"3c9cbc22f2e1d15d9033f5de08838ab024de9845",
+         "created":"2017-07-19T15:07:33-07:00",
+         "email":"hari3@gmail.com",
+         "email_type":"html",
+         "name":"Hari account3 via java API",
+         "shipping_address":{  
+            "object":"Address",
+            "vid":"f8a032943bb50c2c88cc173c846d826f288763eb",
+            "name":"HariAccount3Address",
+            "line1":"22448899 Mathilda Ave",
+            "city":"Santa Clara",
+            "postal_code":"95050"
+         }
+      },
+      {  
+         "object":"Account",
+         "id":"HariAccount4",
+         "vid":"77c6231f4ddd9f49dd17a21fdd72052339168d2c",
+         "created":"2017-07-19T19:45:43-07:00",
+         "email":"hari4@gmail.com",
+         "email_type":"html",
+         "name":"Hari account4 via java API",
+         "shipping_address":{  
+            "object":"Address",
+            "vid":"ceaa16a4a1dc10bc2a898c736560d01b56c3b6df",
+            "name":"HariAccount4Address",
+            "line1":"22448899 Mathilda Ave",
+            "city":"Santa Clara",
+            "postal_code":"95050"
+         }
+      },
+      {  
+         "object":"Account",
+         "id":"child1Account",
+         "vid":"389c2d84fd2123526a0b08967d64c903ddcb9f91",
+         "created":"2017-07-20T14:29:10-07:00",
+         "parent":{  
+            "object":"Account",
+            "id":"HariK1",
+            "vid":"e0abbdf7cec98ca2dac3433589af45ad59a122fd"
+         },
+         "email":"child1updatedEmailID@vindicia.com",
+         "email_type":"html",
+         "language":"EN",
+         "notify_before_billing":false,
+         "name":"Child Account1 via SOAP call update"
+      },
+      {  
+         "object":"Account",
+         "id":"Child2Account",
+         "vid":"ff341f3a8cfb62c794289e3aa630ea023dcdf79b",
+         "created":"2017-07-20T14:35:05-07:00",
+         "parent":{  
+            "object":"Account",
+            "id":"HariK1",
+            "vid":"e0abbdf7cec98ca2dac3433589af45ad59a122fd"
+         },
+         "email":"child2UpdatedEmail@gmail.com",
+         "email_type":"plaintext",
+         "notify_before_billing":false,
+         "name":"Child 2 Account via java API -change email pref type"
+      },
+      {  
+         "object":"Account",
+         "id":"child3Account",
+         "vid":"44ebf6ccbd8fc32f80d9b88a62de3332655c3442",
+         "created":"2017-07-21T13:48:44-07:00",
+         "parent":{  
+            "object":"Account",
+            "id":"Hari2",
+            "vid":"5b333e25ce9ac8b745b11400af331143122f0fba"
+         },
+         "email":"child3@vindicia.com",
+         "email_type":"html",
+         "language":"EN",
+         "notify_before_billing":false,
+         "name":"Child Account3 via SOAP "
+      },
+      {  
+         "object":"Account",
+         "id":"child4Account",
+         "vid":"cc496099cd8f907aecbffbf7ed235e28602a8366",
+         "created":"2017-07-21T15:51:39-07:00",
+         "email":"child4@vindicia.com",
+         "email_type":"html",
+         "language":"EN",
+         "notify_before_billing":false,
+         "name":"Child Account4 via SOAP "
+      },
+      {  
+         "object":"Account",
+         "id":"child5Account",
+         "vid":"7bf1298f6063b153d2232c7f913040f330ded476",
+         "created":"2017-07-24T10:24:52-07:00",
+         "parent":{  
+            "object":"Account",
+            "id":"Hari2",
+            "vid":"5b333e25ce9ac8b745b11400af331143122f0fba"
+         },
+         "email":"child5@vindicia.com",
+         "email_type":"html",
+         "language":"EN",
+         "notify_before_billing":false,
+         "name":"Child Account5 via SOAP "
+      },
+      {  
+         "object":"Account",
+         "id":"AcctVer5",
+         "vid":"8233ca5a8a43eb5ff09807c60be8f18b8af940c0",
+         "created":"2017-07-31T10:23:59-07:00",
+         "email":"AcctVer5566@gmail.com",
+         "email_type":"plaintext",
+         "notify_before_billing":false,
+         "name":"AcctVersion5 via java API",
+         "shipping_address":{  
+            "object":"Address",
+            "vid":"884008b97dc58686519f9e9e7b5ee1b1bfd72d22",
+            "name":"AcctVer5",
+            "line1":"2244 Lawrence ExpressWay",
+            "city":"Santa Clara",
+            "postal_code":"95148"
+         }
+      },
+      {  
+         "object":"Account",
+         "id":"vin_test_acct_1501626745291",
+         "vid":"d2a0c04e63fef92b65b7cb7868eeb63be6e7fb36",
+         "created":"2017-08-01T15:33:19-07:00",
+         "email":"hoaVer5@nomail.net",
+         "email_type":"html",
+         "name":"HOAVer5",
+         "payment_methods":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"PaymentMethod",
+                  "id":"vin_test_acct_cc_1501626745291",
+                  "vid":"8bb061e10944497c827b494e35f196c920a51efe",
+                  "created":"2017-08-01T15:33:20-07:00",
+                  "type":"CreditCard",
+                  "credit_card":{  
+                     "object":"CreditCard",
+                     "vid":"dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                     "account":"411111XXXXXX1111",
+                     "bin":"411111",
+                     "last_digits":"1111",
+                     "account_length":16,
+                     "expiration_date":"201911"
+                  },
+                  "account_holder":"HOA Card Payer",
+                  "billing_address":{  
+                     "object":"Address",
+                     "vid":"278a7a728dbf7347756347d107d62c64e3b17ef8",
+                     "line1":"845 Campus Dr",
+                     "city":"Mountain View",
+                     "district":"CA",
+                     "postal_code":"94040",
+                     "country":"US"
+                  },
+                  "primary":true,
+                  "active":true
+               }
+            ],
+            "total_count":1
+         }
+      },
+      {  
+         "object":"Account",
+         "id":"vin_test_acct_1501629909730",
+         "vid":"4830f26bcf3cf2d9ba703ad72edf6cae5fa08738",
+         "created":"2017-08-01T16:26:04-07:00",
+         "email":"hoaVer21.0@nomail.net",
+         "email_type":"html",
+         "name":"HOAVer21.0",
+         "payment_methods":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"PaymentMethod",
+                  "id":"vin_test_acct_cc_1501629909730",
+                  "vid":"7fca1fe55d171a78a232111c8c82c8fe8373285a",
+                  "created":"2017-08-01T16:26:05-07:00",
+                  "type":"CreditCard",
+                  "credit_card":{  
+                     "object":"CreditCard",
+                     "vid":"dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                     "account":"411111XXXXXX1111",
+                     "bin":"411111",
+                     "last_digits":"1111",
+                     "account_length":16,
+                     "expiration_date":"201911"
+                  },
+                  "account_holder":"HOA Card Payer 21.0",
+                  "billing_address":{  
+                     "object":"Address",
+                     "vid":"88016f2a00497b3850bf20026058ad03e62c4572",
+                     "line1":"845 Cuesta Dr",
+                     "city":"Mountain View",
+                     "district":"CA",
+                     "postal_code":"94040",
+                     "country":"US"
+                  },
+                  "primary":true,
+                  "active":true
+               }
+            ],
+            "total_count":1
+         }
+      },
+      {  
+         "object":"Account",
+         "id":"vin_test_acct_1501695754436",
+         "vid":"166c901f3040c9c4f4d79e952781572befa31f46",
+         "created":"2017-08-02T10:43:29-07:00",
+         "email":"hoaVer21.0@nomail.net",
+         "email_type":"html",
+         "name":"HOAVer21.0-Aug 2",
+         "payment_methods":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"PaymentMethod",
+                  "id":"vin_test_acct_cc_1501695754436",
+                  "vid":"d1d77fc25fc172d0af60df8a5eba44dc8725c30f",
+                  "created":"2017-08-02T10:43:30-07:00",
+                  "type":"CreditCard",
+                  "credit_card":{  
+                     "object":"CreditCard",
+                     "vid":"dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                     "account":"411111XXXXXX1111",
+                     "bin":"411111",
+                     "last_digits":"1111",
+                     "account_length":16,
+                     "expiration_date":"201909"
+                  },
+                  "account_holder":"HOA Card Payer 21.0 Aug 2",
+                  "billing_address":{  
+                     "object":"Address",
+                     "vid":"44805890077f9e415efbceaab0f7cc146f7c38f8",
+                     "line1":"2988 Campus Drive",
+                     "city":"San Mateo",
+                     "district":"CA",
+                     "postal_code":"94040",
+                     "country":"US"
+                  },
+                  "primary":true,
+                  "active":true
+               }
+            ],
+            "total_count":1
+         }
+      },
+      {  
+         "object":"Account",
+         "id":"vin_test_acct_1501709594266",
+         "vid":"83ab1d205e3ed782e98220e0222a51883cba302b",
+         "created":"2017-08-02T14:34:08-07:00",
+         "email":"hoaVer21.0@nomail.net",
+         "email_type":"html",
+         "name":"HOAVer21.0-Aug 2",
+         "payment_methods":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"PaymentMethod",
+                  "id":"vin_test_acct_cc_1501709594266",
+                  "vid":"896b141c52d4d305a03fd127310b924b2afcdb18",
+                  "created":"2017-08-02T14:34:09-07:00",
+                  "type":"CreditCard",
+                  "credit_card":{  
+                     "object":"CreditCard",
+                     "vid":"dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                     "account":"411111XXXXXX1111",
+                     "bin":"411111",
+                     "last_digits":"1111",
+                     "account_length":16,
+                     "expiration_date":"201909"
+                  },
+                  "account_holder":"HOA Card Payer 21.0 Aug 2",
+                  "billing_address":{  
+                     "object":"Address",
+                     "vid":"2afc080562b95bfa938cd3e287c704e7c9d008a0",
+                     "line1":"2988 Campus Drive",
+                     "city":"San Mateo",
+                     "district":"CA",
+                     "postal_code":"94040",
+                     "country":"US"
+                  },
+                  "primary":true,
+                  "active":true
+               }
+            ],
+            "total_count":1
+         }
+      },
+      {  
+         "object":"Account",
+         "id":"Account-Aug9",
+         "vid":"27129b6e1de675515a5310e8cdfa03b6687ce780",
+         "created":"2017-08-09T11:39:03-07:00",
+         "email":"AcctAug9@gmail.com",
+         "email_type":"plaintext",
+         "notify_before_billing":false,
+         "name":"Acct Aug9 via java API ",
+         "shipping_address":{  
+            "object":"Address",
+            "vid":"7d316bfe8919b7d1b1c88255c619bbfaab70f847",
+            "name":"Account August9",
+            "line1":"22 Mary Ave",
+            "city":"Santa Clara",
+            "postal_code":"95050",
+            "phone":"408408408"
+         }
+      },
+      {  
+         "object":"Account",
+         "id":"child555Account",
+         "vid":"87de082a17530166b0d94a1fa570cd787539cfea",
+         "created":"2017-09-07T12:06:28-07:00",
+         "email":"child555@vindicia.com",
+         "email_type":"html",
+         "language":"EN",
+         "notify_before_billing":false,
+         "name":"Child Account555 via SOAP "
+      },
+      {  
+         "object":"Account",
+         "id":"Account-Sep26",
+         "vid":"26d173353b8a3c5e4e82356fe1eb83717b71243f",
+         "created":"2017-09-26T12:30:53-07:00",
+         "email":"Sep26@gmail.com",
+         "email_type":"plaintext",
+         "notify_before_billing":false,
+         "name":"Acct Sep26 via java API ",
+         "shipping_address":{  
+            "object":"Address",
+            "vid":"2fe869619a0ec14fcf235eef64b008546255015a",
+            "name":"Account Sep26",
+            "line1":"2226 Mary Ave",
+            "city":"Santa Clara",
+            "postal_code":"95050",
+            "phone":"408408408"
+         }
+      },
+      {  
+         "object":"Account",
+         "id":"Account-Oct5",
+         "vid":"09d6bdd0b0bc8f36cf5afe888b66fef40d932d63",
+         "created":"2017-10-05T11:12:00-07:00",
+         "email":"Oct5@gmail.com",
+         "email_type":"plaintext",
+         "notify_before_billing":false,
+         "name":"Acct Oct5 via java API ",
+         "shipping_address":{  
+            "object":"Address",
+            "vid":"a46d079eefef7c31534ff977e7357c24d88453f5",
+            "name":"Account Oct5",
+            "line1":"2226 Mary Ave",
+            "city":"Santa Clara",
+            "postal_code":"95050",
+            "phone":"408408408"
+         }
+      }
+   ],
+   "total_count":102,
+   "url":"/accounts",
+   "next":"/accounts?starting_after=Account-Oct5",
+   "previous":"/accounts?ending_before=HariK1"
+}

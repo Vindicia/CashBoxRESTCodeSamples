@@ -1,0 +1,37 @@
+SOAP call : Account.fetchCreditHistory
+
+REST Method:  GET
+
+Endpoint : https://api.prodtest.vindicia.com/accounts/HariK1/credits
+
+JSON request:
+
+{
+  "id": "Account-April3",
+  "payment_methods": {
+    "object": "List",
+    "data": [
+      {
+        "object": "PaymentMethod",
+        "type": "CreditCard",
+        "credit_card": {
+          "object": "CreditCard",
+          "account": "4408041234567893",
+          "expiration_date": "202003"
+        },
+        "account_holder": "Cold Stone",
+        "billing_address": {
+          "object": "Address",
+          "name": "Foghorn LegHorn",
+          "line1": "1500 Marilla St",
+          "city": "San Jose",
+          "district": "CA",
+          "postal_code": "95148",
+          "country": "US"
+        },
+        "customer_specified_type": "Visa",
+        "customer_description": "Good Visa"
+      }
+    ]
+  }
+}
