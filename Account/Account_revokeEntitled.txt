@@ -1,0 +1,8 @@
+SOAP call : Account.revokeEntitled
+
+REST Method:  DELETE
+
+Endpoint :  https://api.prodtest.vindicia.com/accounts/ARCAccountApril5/entitlements/access_gold44
+
+JSON Response:
+

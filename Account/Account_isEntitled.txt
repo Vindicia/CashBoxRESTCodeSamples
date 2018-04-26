@@ -1,0 +1,12 @@
+SOAP call : Account.isEntitled  
+
+REST Method:  GET
+
+Endpoint :  https://api.prodtest.vindicia.com/accounts/HariAccount2/entitlements/basic_access 
+
+JSON Response:
+
+{
+"object": "Boolean",
+"state": false
+}

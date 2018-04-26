@@ -1,0 +1,13 @@
+SOAP call : Account.grantEntitled
+
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/accounts/ARCAccountApril5/entitlements
+
+JSON Request:
+
+{
+  "object": "Entitlement",
+  "id": "access_gold11",
+  "description": "Access To gold11 Subsription"
+}

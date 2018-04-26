@@ -1,0 +1,97 @@
+SOAP call : Account.listChildren   
+
+REST Method:  GET
+
+Endpoint :  https://api.prodtest.vindicia.com/accounts/Hari2/children 
+
+JSON Response:
+
+{  
+   "object":"List",
+   "data":[  
+      {  
+         "object":"Account",
+         "id":"child5Account",
+         "vid":"7bf1298f6063b153d2232c7f913040f330ded476",
+         "created":"2017-07-24T10:24:52-07:00",
+         "parent":{  
+            "object":"Account",
+            "id":"Hari2",
+            "vid":"5b333e25ce9ac8b745b11400af331143122f0fba"
+         },
+         "email":"child5@vindicia.com",
+         "email_type":"html",
+         "language":"EN",
+         "notify_before_billing":false,
+         "name":"Child Account5 via SOAP "
+      },
+      {  
+         "object":"Account",
+         "id":"child3Account",
+         "vid":"44ebf6ccbd8fc32f80d9b88a62de3332655c3442",
+         "created":"2017-07-21T13:48:44-07:00",
+         "parent":{  
+            "object":"Account",
+            "id":"Hari2",
+            "vid":"5b333e25ce9ac8b745b11400af331143122f0fba"
+         },
+         "email":"child3@vindicia.com",
+         "email_type":"html",
+         "language":"EN",
+         "notify_before_billing":false,
+         "name":"Child Account3 via SOAP "
+      },
+      {  
+         "object":"Account",
+         "id":"child44AccountARC",
+         "vid":"2778ee5312dbaa81998a0e4b9cf1270756a368f4",
+         "created":"2018-04-26T15:35:27-07:00",
+         "parent":{  
+            "object":"Account",
+            "id":"Hari2",
+            "vid":"5b333e25ce9ac8b745b11400af331143122f0fba"
+         },
+         "email":"child44@vindicia.com",
+         "email_type":"html",
+         "language":"EN",
+         "notify_before_billing":false,
+         "name":"Child Account44 via ARC "
+      },
+      {  
+         "object":"Account",
+         "id":"child44Account",
+         "vid":"8896f6b23243cfa9e1c85b457e68c3d0e160d33a",
+         "created":"2018-04-16T11:22:35-07:00",
+         "parent":{  
+            "object":"Account",
+            "id":"Hari2",
+            "vid":"5b333e25ce9ac8b745b11400af331143122f0fba"
+         },
+         "default_currency":"USD",
+         "email":"testRESTOct13@example.com",
+         "email_type":"html",
+         "language":"EN",
+         "notify_before_billing":false,
+         "name":"Child Account44 via REST ",
+         "shipping_address":{  
+            "object":"Address",
+            "vid":"bfea478eb208b41877d9134a477ad31eda3a5fc2",
+            "name":"My address",
+            "line1":"123 Main Street",
+            "city":"San Carlos",
+            "district":"CA",
+            "postal_code":"94105",
+            "country":"US",
+            "phone":"415-555-3212"
+         }
+      }
+   ],
+   "total_count":4,
+   "url":"/accounts/Hari2/children",
+   "next":"/accounts/Hari2/children?starting_after=child44Account",
+   "previous":"/accounts/Hari2/children?ending_before=child5Account"
+}
+
+
+
+

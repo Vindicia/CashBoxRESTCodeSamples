@@ -1,0 +1,7 @@
+SOAP call : Account.removeChildren 
+
+REST Method:  DELETE
+
+Endpoint :     https://api.prodtest.vindicia.com/accounts/Hari2/children/child4Account
+
+

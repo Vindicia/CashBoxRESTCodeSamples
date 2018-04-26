@@ -1,0 +1,25 @@
+SOAP call : Account.fetchChild   
+
+REST Method:  GET
+
+Endpoint :     https://api.prodtest.vindicia.com/accounts/Hari2/children/child44AccountARC
+
+JSON Response:
+
+{
+"object": "Account",
+"id": "child44AccountARC",
+"vid": "2778ee5312dbaa81998a0e4b9cf1270756a368f4",
+"created": "2018-04-26T15:35:27-07:00",
+"parent": {
+"object": "Account",
+"id": "Hari2",
+"vid": "5b333e25ce9ac8b745b11400af331143122f0fba"
+},
+"email": "child44@vindicia.com",
+"email_type": "html",
+"language": "EN",
+"notify_before_billing": false,
+"name": "Child Account44 via ARC "
+}
+

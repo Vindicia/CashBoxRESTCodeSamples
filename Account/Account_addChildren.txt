@@ -1,0 +1,25 @@
+SOAP call : Account.addChildren 
+
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/accounts/Hari2/children
+
+
+JSON request:
+
+{  
+   "object":"Account",
+   "id":"child44Account",
+   "name":"Child Account44 via ARC ",
+  
+   "parent":{  
+      "object":"Account",
+      "id":"Hari2"
+     
+   },
+   "email":"child44@vindicia.com",
+   "email_type":"html",
+   "language":"EN",
+   "notify_before_billing":false
+   
+}

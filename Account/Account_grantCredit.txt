@@ -1,0 +1,26 @@
+SOAP call : Account.grantCredit
+
+REST Method:  POST
+
+Endpoint : https://api.prodtest.vindicia.com/accounts/HariK1/credits
+
+
+JSON request:
+
+{
+    "object": "Credit",
+    "currency_amounts": {
+        "object": "List",
+        "data": [
+            {
+                "object": "CurrencyAmount",
+                "currency": "USD",
+                "amount": 5,
+                "description": "Test KHP April12 Credit",
+                "reason": "Test KHP April12 Credit"
+                
+            }
+        ],
+        "total_count": 1
+    }
+}
