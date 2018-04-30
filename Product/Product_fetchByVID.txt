@@ -1,0 +1,62 @@
+SOAP call : Product.fetchByVID
+
+REST Method:  GET
+
+Endpoint :  https://api.prodtest.vindicia.com/products/4279c4acde0f6d3f31cc493e7b09d1d796f62f5f
+
+
+JSON Response:
+	
+
+{  
+   "object":"Product",
+   "id":"khp_netflix_basic_sub",
+   "vid":"4279c4acde0f6d3f31cc493e7b09d1d796f62f5f",
+   "created":"2017-07-11T15:07:58-07:00",
+   "descriptions":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"ProductDescription",
+            "language":"EN",
+            "description":"Changed Description"
+         }
+      ],
+      "total_count":1
+   },
+   "status":"Active",
+   "tax_classification":"Tax9999",
+   "metadata":{  
+      "vind:Division":"movie"
+   },
+   "entitlements":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"Entitlement",
+            "id":"basic_access",
+            "description":"basic Access description"
+         }
+      ],
+      "total_count":1
+   },
+   "credit_granted":{  
+      "object":"Credit"
+   },
+   "prices":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"ProductPrice",
+            "amount":2,
+            "currency":"USD"
+         },
+         {  
+            "object":"ProductPrice",
+            "amount":700,
+            "currency":"INR"
+         }
+      ],
+      "total_count":2
+   }
+}

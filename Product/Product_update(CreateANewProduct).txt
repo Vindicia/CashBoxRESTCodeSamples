@@ -1,0 +1,54 @@
+SOAP call : Product.update
+
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/products
+
+
+JSON Request:
+
+{  
+   "object":"Product",
+   "id":"khp_ARC_product2018",
+   "descriptions":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"ProductDescription",
+            "language":"EN",
+            "description":"Description For New ProductARC"
+         }
+      ]
+   },
+   "status":"Active",
+   "tax_classification":"Tax9999",
+   "metadata":{  
+      "vind:Division":"ARC Movie"
+   },
+   "entitlements":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"Entitlement",
+            "id":"basic_access",
+            "description":"basic Access description"
+         }
+      ]
+   },
+   "prices":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"ProductPrice",
+            "amount":20,
+            "currency":"USD"
+         },
+         {  
+            "object":"ProductPrice",
+            "amount":700,
+            "currency":"INR"
+         }
+      ]
+   }
+}
+ 

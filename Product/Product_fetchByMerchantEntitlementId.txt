@@ -1,0 +1,160 @@
+SOAP call : Product.fetchByMerchantEntitlementId
+
+REST Method:  GET
+
+Endpoint :  https://api.prodtest.vindicia.com/products?entitlement=basic_access
+
+
+JSON Response:
+	
+
+{  
+   "object":"List",
+   "data":[  
+      {  
+         "object":"Product",
+         "id":"khp_netflix_basic_sub",
+         "vid":"4279c4acde0f6d3f31cc493e7b09d1d796f62f5f",
+         "created":"2017-07-11T15:07:58-07:00",
+         "descriptions":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"ProductDescription",
+                  "language":"EN",
+                  "description":"Changed Description"
+               }
+            ],
+            "total_count":1
+         },
+         "status":"Active",
+         "tax_classification":"Tax9999",
+         "metadata":{  
+            "vind:Division":"movie"
+         },
+         "entitlements":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"Entitlement",
+                  "id":"basic_access",
+                  "description":"basic Access description"
+               }
+            ],
+            "total_count":1
+         },
+         "credit_granted":{  
+            "object":"Credit"
+         },
+         "prices":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"ProductPrice",
+                  "amount":2,
+                  "currency":"USD"
+               },
+               {  
+                  "object":"ProductPrice",
+                  "amount":700,
+                  "currency":"INR"
+               }
+            ],
+            "total_count":2
+         }
+      },
+      {  
+         "object":"Product",
+         "id":"khp_ARC_product2018",
+         "vid":"1c358a7d2f12ee1d1ace26375753b6bc3eb20bd2",
+         "created":"2018-04-16T14:27:12-07:00",
+         "descriptions":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"ProductDescription",
+                  "language":"EN",
+                  "description":"Description For New ProductARC"
+               }
+            ],
+            "total_count":1
+         },
+         "status":"Active",
+         "tax_classification":"TaxExempt",
+         "metadata":{  
+            "vind:Division":"ARC Movie"
+         },
+         "entitlements":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"Entitlement",
+                  "id":"basic_access",
+                  "description":"basic Access description"
+               }
+            ],
+            "total_count":1
+         },
+         "prices":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"ProductPrice",
+                  "amount":112,
+                  "currency":"USD"
+               }
+            ],
+            "total_count":1
+         }
+      },
+      {  
+         "object":"Product",
+         "id":"khp_netflix_basic_sub99",
+         "vid":"ef7bc43c07cab638f8b79d3877bb806bfc84904f",
+         "created":"2017-08-09T14:20:25-07:00",
+         "descriptions":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"ProductDescription",
+                  "language":"FREN",
+                  "description":"Test SOAP UI"
+               }
+            ],
+            "total_count":1
+         },
+         "status":"Suspended",
+         "entitlements":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"Entitlement",
+                  "id":"basic_access",
+                  "description":"basic Access description"
+               }
+            ],
+            "total_count":1
+         },
+         "prices":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"ProductPrice",
+                  "amount":2,
+                  "currency":"USD"
+               },
+               {  
+                  "object":"ProductPrice",
+                  "amount":700,
+                  "currency":"INR"
+               }
+            ],
+            "total_count":2
+         }
+      }
+   ],
+   "total_count":3,
+   "url":"/products?entitlement=basic_access",
+   "next":"/products?entitlement=basic_access&starting_after=khp_netflix_basic_sub99",
+   "previous":"/products?entitlement=basic_access&ending_before=khp_netflix_basic_sub"
+}

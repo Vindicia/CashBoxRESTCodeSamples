@@ -1,0 +1,22 @@
+SOAP call : Product.update (update existing product)
+
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/products/khp_ARC_product2018
+
+
+JSON Request:
+
+{
+  "object": "Product",
+  "id": "khp_ARC_product2018",
+  
+  "tax_classification": "TaxExempt",
+  "prices": [
+    {
+      "object": "ProductPrice",
+      "amount": 112,
+      "currency": "USD"
+    }
+  ]
+}

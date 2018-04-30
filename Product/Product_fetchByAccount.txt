@@ -1,0 +1,110 @@
+SOAP call : Product.fetchByAccount
+
+REST Method:  GET
+
+Endpoint :  https://api.prodtest.vindicia.com/products?account=HariK1
+
+(https://api.prodtest.vindicia.com/products?account=Hari2&include_children=true)
+
+
+JSON Response:
+	
+
+{
+"object": "List",
+"data": [
+  {
+"object": "Product",
+"id": "khp_netflix_basic_sub",
+"vid": "4279c4acde0f6d3f31cc493e7b09d1d796f62f5f",
+"created": "2017-07-11T15:07:58-07:00",
+"descriptions": {
+"object": "List",
+"data": [
+  {
+"object": "ProductDescription",
+"language": "EN",
+"description": "Changed Description"
+}
+],
+"total_count": 1
+},
+"status": "Active",
+"tax_classification": "Tax9999",
+"metadata": {
+"vind:Division": "movie"
+},
+"entitlements": {
+"object": "List",
+"data": [
+  {
+"object": "Entitlement",
+"id": "basic_access",
+"description": "basic Access description"
+}
+],
+"total_count": 1
+},
+"credit_granted": {
+"object": "Credit"
+},
+"prices": {
+"object": "List",
+"data": [
+  {
+"object": "ProductPrice",
+"amount": 2,
+"currency": "USD"
+},
+  {
+"object": "ProductPrice",
+"amount": 700,
+"currency": "INR"
+}
+],
+"total_count": 2
+}
+},
+  {
+"object": "Product",
+"id": "khp_netflix_6month-sub",
+"vid": "b696010daf05fa1404492d3f1a23c0734651f660",
+"created": "2017-07-13T11:16:18-07:00",
+"descriptions": {
+"object": "List",
+"data": [
+  {
+"object": "ProductDescription",
+"language": "EN",
+"description": "khp Netflix 6 month subscription"
+}
+],
+"total_count": 1
+},
+"status": "Active",
+"credit_granted": {
+"object": "Credit"
+},
+"prices": {
+"object": "List",
+"data": [
+  {
+"object": "ProductPrice",
+"amount": 50,
+"currency": "USD"
+},
+  {
+"object": "ProductPrice",
+"amount": 60,
+"currency": "CAD"
+}
+],
+"total_count": 2
+}
+}
+],
+"total_count": 2,
+"url": "/products?account=HariK1",
+"next": "/products?account=HariK1&starting_after=khp_netflix_6month-sub",
+"previous": "/products?account=HariK1&ending_before=khp_netflix_basic_sub"
+}
