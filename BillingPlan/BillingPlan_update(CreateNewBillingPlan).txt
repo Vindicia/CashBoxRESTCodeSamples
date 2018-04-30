@@ -1,0 +1,47 @@
+SOAP call : BillingPlan.update (create a new BP)
+
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/billing_plans
+
+JSON Request:
+
+{  
+   "object":"BillingPlan",
+   "id":"KHP TESTARC billing plan",
+   "description":"KHP TESTARC billing plan",
+   "periods":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"BillingPlanPeriod",
+            "type":"Month",
+            "quantity":10,
+            "cycles":0,
+            "prices":{  
+               "object":"List",
+               "data":[  
+                  {  
+                     "object":"BillingPlanPrice",
+                     "amount":0,
+                     "currency":"USD"
+                  }
+               ]
+            },
+            "do_not_notify_first_bill":false
+         }
+      ],
+      "total_count":1
+   },
+   "billing_notification_days":1,
+   "entitlements":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"Entitlement",
+            "id":"access_gold",
+            "description":"Access To gold Subsription"
+         }
+      ]
+   }
+}

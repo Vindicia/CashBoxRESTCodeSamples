@@ -1,0 +1,15 @@
+SOAP call : BillingPlan.update (update an existin BP)
+
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/billing_plans/KHP TESTARC billing plan
+
+JSON Request:
+{
+"object": "BillingPlan",
+"id": "KHP TESTARC billing plan",
+
+"description": "MODIFIED KHP TESTARC billing plan",
+"status": "Suspended"
+
+}	

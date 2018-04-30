@@ -1,0 +1,54 @@
+SOAP call : BillingPlan.fetchByMerchantBillingPlanId
+
+REST Method:  GET
+
+Endpoint :  https://api.prodtest.vindicia.com/billing_plans/KHP TESTARC billing plan
+
+JSON Response:
+
+{  
+   "object":"BillingPlan",
+   "id":"KHP TESTARC billing plan",
+   "vid":"3d9c7d0d11faae63d5b529cae74cb0b1f7c0add0",
+   "created":"2018-04-16T13:12:20-07:00",
+   "description":"MODIFIED KHP TESTARC billing plan",
+   "status":"Suspended",
+   "periods":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"BillingPlanPeriod",
+            "type":"Month",
+            "quantity":10,
+            "cycles":0,
+            "prices":{  
+               "object":"List",
+               "data":[  
+                  {  
+                     "object":"BillingPlanPrice",
+                     "amount":0,
+                     "currency":"USD"
+                  }
+               ],
+               "total_count":1
+            },
+            "do_not_notify_first_bill":false
+         }
+      ],
+      "total_count":1
+   },
+   "billing_notification_days":1,
+   "entitlements":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"Entitlement",
+            "id":"access_gold",
+            "description":"Access To gold Subsription"
+         }
+      ],
+      "total_count":1
+   },
+   "times_to_run":"1",
+   "used_on_subscriptions":false
+}
