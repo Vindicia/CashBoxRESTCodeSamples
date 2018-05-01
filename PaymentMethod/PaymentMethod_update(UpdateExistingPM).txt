@@ -1,0 +1,22 @@
+SOAP call : PaymentMethod.update
+
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com//payment_methods/1122
+(change the expiration date and account_holder name)
+
+JSON Request:
+
+{
+  "object": "PaymentMethod",
+  "id": "1122",
+  
+  "type": "CreditCard",
+  "credit_card":{
+    "expiration_date": "201907"
+  },
+  
+  "account_holder": "ABCDEF"
+
+  
+}

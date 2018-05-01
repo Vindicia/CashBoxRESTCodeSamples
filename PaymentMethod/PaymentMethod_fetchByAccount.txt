@@ -1,0 +1,45 @@
+SOAP call : PaymentMethod.fetchByAccount
+
+REST Method:  GET
+
+Endpoint :  https://api.prodtest.vindicia.com//payment_methods?account=HariK1
+
+JSON Response:
+
+{
+"object": "List",
+"data": [
+  {
+"object": "PaymentMethod",
+"id": "1122",
+"vid": "10a299623c2e0b72319102af5ea06b8569fb98d9",
+"created": "2017-07-11T15:24:06-07:00",
+"type": "CreditCard",
+"credit_card": {
+"object": "CreditCard",
+"vid": "469191fbf680b9e62758c7dff7780e747257e907",
+"account": "448598XXXXXX2217",
+"bin": "448598",
+"last_digits": "2217",
+"account_length": 16,
+"expiration_date": "201807"
+},
+"account_holder": "ABCD",
+"billing_address": {
+"object": "Address",
+"vid": "0660748635ad1d4735852c6e7f9564cce3525425",
+"line1": "220 N Mathilda Ave",
+"city": "Sunnyvale",
+"district": "CA",
+"postal_code": "94086",
+"country": "US"
+},
+"primary": true,
+"active": true
+}
+],
+"total_count": 1,
+"url": "/payment_methods?account=HariK1",
+"next": "/payment_methods?account=HariK1&starting_after=1122",
+"previous": "/payment_methods?account=HariK1&ending_before=1122"
+}
