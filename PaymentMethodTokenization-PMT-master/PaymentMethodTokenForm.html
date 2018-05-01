@@ -1,0 +1,245 @@
+<html>
+    <head>
+      <title>PMT Payment Method Tokenization Test</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/bootstrap-theme.css" rel="stylesheet">
+      <link href="css/theme.css" rel="stylesheet">
+    </head>
+
+    <body>
+    <div class="container">
+       <form id="mainForm" method="POST">
+        <input name="vin_session_id" value="KHPApril12T2" type="hidden" />
+        <input name="vin_session_hash" value="GENERATEDHMACKEY" type="hidden" />
+       
+        <div class="row">
+           <div class="col-sm-10 col-md-8 col-lg-8">
+               <h3>PMT Payment Method Tokenization Test</h3>
+               <p>Use your finger instead of the Done button to change fields and notice no onblur events are triggered</p>
+           </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+               <label for="vin_account_holder" class="control-label col-sm-3">Full Name</label>
+               <div class="col-sm-4">
+                   <input type="text" id="vin_account_holder" name="vin_account_holder" placeholder="Enter Name" />
+               </div><!-- end input box -->
+            </div><!-- end form-group -->
+        </div><!-- end row -->
+
+        <div class="row">
+            <div class="form-group">
+               <label for="vin_billing_address_line1" class="control-label col-sm-3">Address Line 1</label>
+               <div class="col-sm-4">
+                   <input type="text" id="vin_billing_address_line1" name="vin_billing_address_line1" placeholder="Enter Address Line 1" />
+               </div><!-- end input box -->
+            </div><!-- end form-group -->
+        </div><!-- end row -->
+
+        <div class="row">
+            <div class="form-group">
+               <label for="vin_billing_address_line2" class="control-label col-sm-3">Address Line 2</label>
+               <div class="col-sm-4">
+                   <input type="text" id="vin_billing_address_line2" name="vin_billing_address_line2" placeholder="Enter Address Line 2" />
+               </div><!-- end input box -->
+            </div><!-- end form-group -->
+        </div><!-- end row -->
+
+        <div class="row">
+            <div class="form-group">
+               <label for="vin_billing_address_line3" class="control-label col-sm-3">Address Line 3</label>
+               <div class="col-sm-4">
+                   <input type="text" id="vin_billing_address_line3" name="vin_billing_address_line3" placeholder="Enter Address Line 3" />
+               </div><!-- end input box -->
+            </div><!-- end form-group -->
+        </div><!-- end row -->
+
+        <div class="row">
+            <div class="form-group">
+               <label for="vin_billing_address_city" class="control-label col-sm-3">City</label>
+               <div class="col-sm-4">
+                   <input type="text" id="vin_billing_address_city" name="vin_billing_address_city" placeholder="Enter City" />
+               </div><!-- end input box -->
+            </div><!-- end form-group -->
+        </div><!-- end row -->
+
+        <div class="row">
+            <div class="form-group">
+               <label for="vin_billing_address_district" class="control-label col-sm-3">State</label>
+               <div class="col-sm-4">
+                   <input type="text" id="vin_billing_address_district" name="vin_billing_address_district" placeholder="Enter State" />
+               </div><!-- end input box -->
+            </div><!-- end form-group -->
+        </div><!-- end row -->
+
+        <div class="row">
+            <div class="form-group">
+               <label for="vin_billing_address_postal_code" class="control-label col-sm-3">Zipcode</label>
+               <div class="col-sm-4">
+                   <input type="text" id="vin_billing_address_postal_code" name="vin_billing_address_postal_code" placeholder="Enter Zipcode" />
+               </div><!-- end input box -->
+            </div><!-- end form-group -->
+        </div><!-- end row -->
+
+        <div class="row">
+            <div class="form-group">
+               <label for="vin_billing_address_country" class="control-label col-sm-3">Country</label>
+               <div class="col-sm-4">
+                   <input type="text" id="vin_billing_address_country" name="vin_billing_address_country" placeholder="Enter Country" />
+               </div><!-- end input box -->
+            </div><!-- end form-group -->
+        </div><!-- end row -->
+
+        <div class="row">
+            <div class="form-group">
+               <label for="vin_credit_card_account" class="control-label col-sm-3">Credit Card Number</label>
+               <div class="col-sm-4">
+                   <div id="vin_credit_card_account"></div>
+               </div><!-- end input box -->
+            </div><!-- end form-group -->
+        </div><!-- end row -->
+
+        <div class="row">
+             <div class="form-group">
+                 <label for="vin_credit_card_expiration_month" class="control-label col-sm-3">Expiration Date</label>
+                 <div class="col-sm-2">
+                     <div id="vin_credit_card_expiration_month"></div>
+                 </div>
+                 <div class="col-sm-2">
+                     <div id="vin_credit_card_expiration_year"></div>
+                 </div><!-- end input box -->
+             </div><!-- end form-group -->
+        </div><!-- end row -->
+
+        <div class="row">
+             <div class="form-group">
+                 <label for="vin_credit_card_cvn" class="control-label col-sm-3">Card CVV</label>
+                 <div class="col-sm-4">
+                     <div id="vin_credit_card_cvn"></div>
+                 </div><!-- end input box -->
+             </div><!-- end form-group -->
+        </div><!-- end row -->
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-10 col-md-offset-3 col-lg-offset-3">
+                  <button type="submit" id="submitButton" class="btn btn-default">Submit</button>
+                  <span id="message"></span>
+                </div>
+            </div><!-- end form-group -->
+        </div><!-- end row -->
+        </form>
+ 
+        <div class="row">
+           <div class="col-sm-10 col-md-8 col-lg-8">
+               <p><a href="#" onclick="alert(vindicia.isValid()); return false;">Is Credit Card Info Valid?</a></p>
+               <p><a href="#" onclick="alert(vindicia.isSynced()); return false;">Are iframes synced?</a></p>
+               <p><a href="#" onclick="alert(vindicia.isComplete()); return false;">Is submit complete?</a></p>
+               <h3>Actions To Test</h3>
+               <p><a href="#" onclick="vindicia.syncData(); return false;">syncData()</a></p>
+               <p><a href="#" onclick="vindicia.clearData(); return false;">clearData()</a></p>
+               <p><a href="#" onclick="vindicia.resetCompleteStatus(); $('#message').html('Reset submit complete'); return false;">resetCompleteStatus()</a></p>
+           </div>
+        </div><!-- end row -->
+        <iframe src="https://wikipedia.org" width="400px" height="100px"></iframe>
+   </div>
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://secure.prodtest.sj.vindicia.com/pmt/vindicia.js"></script>
+    <script>
+     $(function(){
+     vindicia.setup({
+         formId: "mainForm",
+         vindiciaAuthId: "AUTHID", // Authorization: Basic header"
+           vindiciaServer: "secure.prodtest.sj.vindicia.com", // to load the iframes from
+           vindiciaRestServer: "api.prodtest.vindicia.com", // to submit the JSON data to
+         hostedFields: {
+             cardNumber: {
+                 selector: "#vin_credit_card_account",
+                 placeholder: 'Credit card number',
+             },
+             expirationMonth: { // optional dropdown field or use expirationDate
+               selector: "#vin_credit_card_expiration_month",
+               format: "N - A" // "N", "A", "N A", "N-A", "N - A" where (N=numeric month, A=Alphabetic Month)
+             },
+             expirationYear: { // optional dropdown field or use expirationDate
+               selector: "#vin_credit_card_expiration_year",
+               format: "YYYY" // or "YYYY", defaults to YYYY
+             },   
+             cvn: { 
+               selector: "#vin_credit_card_cvn",
+               placeholder: "Enter CVV" // optional field
+             },
+             styles: { // optional
+               "input": {
+                 "width": "100%",
+                 "font-family": "'Helvetica Neue',Helvetica,Arial,sans-serif",
+                 "font-size": "14px",
+                 "color": "#555",
+                 "height": "34px",
+                 "padding": "6px 12px",
+                 "margin": "5px 0px",
+                 "line-height": "1.42857",
+                 "border": "1px solid #ccc",
+                 "border-radius": "4px",
+                 "box-shadow": "0px 1px 1px rgba(0,0,0,0.075) inset",
+                 "-webkit-transition": "border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s",
+                 "transition": "border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s",
+               },
+               "select": {
+                 "width": "100%",
+                 "font-family": "'Helvetica Neue',Helvetica,Arial,sans-serif",
+                 "font-size": "14px",
+                 "color": "#555",
+                 "height": "34px",
+                 "padding": "6px 12px",
+                 "margin": "5px 0px",
+                 "line-height": "1.42857",
+                 "border": "1px solid #ccc",
+                 "border-radius": "4px",
+                 "box-shadow": "0px 1px 1px rgba(0,0,0,0.075) inset",
+                 "-webkit-transition": "border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s",
+                 "transition": "border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s",
+               },
+               ":focus": {
+                  "border-color": "#66afe9",
+                  "outline": "0",
+                  "-webkit-box-shadow": "inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6)",
+                  "box-shadow": "inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6)"
+               },
+               ".valid": {
+                  "border-color": "#228B22",
+               },
+               ".notValid": {
+                  "border-color": "#ff0000",
+               },
+               // custom width
+               "@media (min-width: 600px) and (max-width: 800px)": {
+                  "input": {
+                     "font-size": "16pt"
+                  }
+               }
+             },
+         },
+         onSubmitCompleteEvent: function(data) {
+             $('#message').html('submitted OK');
+             return true;
+         },
+         onSubmitCompleteFailedEvent: function(data) {
+             $('#message').html('submitted Failed');
+             console.log(data.detail.status);
+             if (data.detail.error) {
+                 console.log(data.detail.error);
+             }
+             return true;
+         },
+         iframeHeightPadding: 0
+     });
+     });
+    </script>
+</html>
