@@ -1,4 +1,4 @@
-SOAP call : PaymentMethod.fetch
+SOAP call : PaymentMethod.fetchByPaymentMethodID
 
 REST Method:  GET
 
