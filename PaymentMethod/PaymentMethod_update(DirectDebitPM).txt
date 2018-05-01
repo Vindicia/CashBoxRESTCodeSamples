@@ -1,0 +1,59 @@
+SOAP call : PaymentMethod.update
+
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/payment_methods
+(DirectDebit PM, account_holder and billing_address are REQUIRED, currency is NOT required)
+
+JSON Request:
+
+{
+  "object": "PaymentMethod",
+  "id": "PMT4",
+  "type": "DirectDebit",
+  "direct_debit": {
+    "object": "DirectDebit",
+    "account": "5598220966990171",
+    "country_code": "UK",
+    "bank_sort_code": "561971053"
+  },
+ 
+  "account_holder": "Road Runner",
+  "billing_address": {
+   "object": "Address",
+   "country": "UK"
+ }
+ 
+  
+}
+
+
+
+If validation of PM is needed, the request is:
+
+{
+  "object": "PaymentMethod",
+  "id": "PMApril192018T3",
+  "type": "DirectDebit",
+  "direct_debit": {
+    "object": "DirectDebit",
+    "account": "5598220966990171",
+    "country_code": "UK",
+    "bank_sort_code": "561971053"
+   
+  },
+ 
+  
+  "currency": "GBP",
+  "account_holder": "Road Runner",
+  "billing_address": {
+    "object": "Address",
+    "country": "UK"
+  },
+  "policy": {
+   
+    "validate": 1
+  }
+ 
+}
+

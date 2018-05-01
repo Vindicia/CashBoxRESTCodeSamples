@@ -1,0 +1,64 @@
+SOAP call : PaymentMethod.fetch
+
+REST Method:  GET
+
+Endpoint :  https://api.prodtest.vindicia.com/payment_methods/PMT4
+(DirectDebit PM)
+
+JSON Response:
+
+{
+"object": "PaymentMethod",
+"id": "PMT4",
+"vid": "7c3513f3044bdf9e563b9974d6e1a2954fe5b51f",
+"created": "2018-05-01T14:00:24-07:00",
+"type": "DirectDebit",
+"direct_debit": {
+"object": "DirectDebit",
+"account": "",
+"last_digits": null,
+"account_length": null,
+"country_code": "UK",
+"bank_sort_code": "561971053",
+"rib_code": null
+},
+"account_holder": "Road Runner",
+"billing_address": {
+"object": "Address",
+"vid": "f4ec451b1382a76e9e10a76230b892f70df97b30",
+"country": "UK"
+},
+"primary": true,
+"active": true
+}
+
+Endpoint : https://api.prodtest.vindicia.com/payment_methods/PMID1524098389258 
+(CC PaymentMethod)
+
+{
+"object": "PaymentMethod",
+"id": "PMID1524098389258",
+"vid": "c20bf430a29a05660c202b21c289195b08235b1c",
+"created": "2018-04-18T17:39:50-07:00",
+"type": "CreditCard",
+"credit_card": {
+"object": "CreditCard",
+"vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+"account": "411111XXXXXX1111",
+"bin": "411111",
+"last_digits": "1111",
+"account_length": 16,
+"expiration_date": "201908"
+},
+"account_holder": "CCPayerName1524098389258",
+"billing_address": {
+"object": "Address",
+"vid": "e4ca810da25e7534d5e914bfa2ef840620f0471d",
+"line1": "2226 Mary Ave",
+"city": "Santa Clara",
+"postal_code": "95050",
+"phone": "408408408"
+},
+"primary": true,
+"active": true
+}
