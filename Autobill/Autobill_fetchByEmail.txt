@@ -1,0 +1,231 @@
+SOAP call : Autobill.fetchByEmail
+
+REST Method:  GET	
+
+Endpoint : https://api.prodtest.vindicia.com/subscriptions?email=testRESTOct13@example.com
+
+
+JSON Response:
+
+{  
+   "object":"List",
+   "data":[  
+      {  
+         "object":"Subscription",
+         "id":"vin-ARC-ABID-2018April16",
+         "vid":"e50282725b925d73046239ed8cd48e9da93d744f",
+         "created":"2018-04-16T16:07:46-07:00",
+         "account":{  
+            "object":"Account",
+            "id":"child44Account",
+            "vid":"8896f6b23243cfa9e1c85b457e68c3d0e160d33a",
+            "created":"2018-04-16T11:22:35-07:00",
+            "parent":{  
+               "object":"Account",
+               "id":"Hari2",
+               "vid":"5b333e25ce9ac8b745b11400af331143122f0fba"
+            },
+            "default_currency":"USD",
+            "email":"testRESTOct13@example.com",
+            "email_type":"html",
+            "language":"EN",
+            "notify_before_billing":false,
+            "name":"Child Account44 via REST ",
+            "shipping_address":{  
+               "object":"Address",
+               "vid":"bfea478eb208b41877d9134a477ad31eda3a5fc2",
+               "name":"My address",
+               "line1":"123 Main Street",
+               "city":"San Carlos",
+               "district":"CA",
+               "postal_code":"94105",
+               "country":"US",
+               "phone":"415-555-3212"
+            }
+         },
+         "billing_plan":{  
+            "object":"BillingPlan",
+            "id":"KHP Daily billing plan",
+            "vid":"120c7035599094a863b0d55b45000dc6c89abc09",
+            "created":"2017-10-26T15:43:37-07:00",
+            "description":"KHP Daily billing plan",
+            "status":"Active",
+            "periods":{  
+               "object":"List",
+               "data":[  
+                  {  
+                     "object":"BillingPlanPeriod",
+                     "type":"Day",
+                     "quantity":1,
+                     "cycles":0,
+                     "prices":{  
+                        "object":"List",
+                        "data":[  
+                           {  
+                              "object":"BillingPlanPrice",
+                              "amount":0,
+                              "currency":"USD"
+                           }
+                        ],
+                        "total_count":1
+                     },
+                     "do_not_notify_first_bill":false
+                  }
+               ],
+               "total_count":1
+            },
+            "billing_notification_days":3,
+            "entitlements":{  
+               "object":"List",
+               "data":[  
+                  {  
+                     "object":"Entitlement",
+                     "id":"access_gold",
+                     "description":"Access To gold Subsription"
+                  },
+                  {  
+                     "object":"Entitlement",
+                     "id":"basic_access",
+                     "description":"basic Access description"
+                  },
+                  {  
+                     "object":"Entitlement",
+                     "id":"MonthlyAccess",
+                     "description":"Customer gets access to regular monthly subscription"
+                  }
+               ],
+               "total_count":3
+            },
+            "used_on_subscriptions":true
+         },
+         "payment_method":{  
+            "object":"PaymentMethod",
+            "vid":"163bf65ae110839793582506effc25cb41b61e67",
+            "created":"2017-07-13T10:45:59-07:00",
+            "type":"CreditCard",
+            "credit_card":{  
+               "object":"CreditCard",
+               "vid":"469191fbf680b9e62758c7dff7780e747257e907",
+               "account":"448598XXXXXX2217",
+               "bin":"448598",
+               "last_digits":"2217",
+               "account_length":16,
+               "expiration_date":"203707"
+            },
+            "billing_address":{  
+               "object":"Address",
+               "vid":"e2959ec4b244d6517c69c021fcfe17bbc80a1828"
+            },
+            "primary":true,
+            "active":true
+         },
+         "currency":"USD",
+         "status":"Active",
+         "billing_state":"Good Standing",
+         "starts":"2018-04-16T16:07:46-07:00",
+         "ends":"2018-05-29T00:00:00-07:00",
+         "entitled_through":"2018-05-29T00:00:00-07:00",
+         "items":{  
+            "object":"List",
+            "data":[  
+               {  
+                  "object":"SubscriptionItem",
+                  "id":"vin-ARC-ABItemID1",
+                  "vid":"283a8a8ea654fd560d574acd5e2d3fdf00e9ad10",
+                  "index":0,
+                  "product":{  
+                     "object":"Product",
+                     "id":"khp_netflix_basic_sub",
+                     "vid":"4279c4acde0f6d3f31cc493e7b09d1d796f62f5f",
+                     "created":"2017-07-11T15:07:58-07:00",
+                     "descriptions":{  
+                        "object":"List",
+                        "data":[  
+                           {  
+                              "object":"ProductDescription",
+                              "language":"EN",
+                              "description":"Changed Description"
+                           }
+                        ],
+                        "total_count":1
+                     },
+                     "status":"Active",
+                     "tax_classification":"Tax9999",
+                     "metadata":{  
+                        "vind:Division":"movie"
+                     },
+                     "entitlements":{  
+                        "object":"List",
+                        "data":[  
+                           {  
+                              "object":"Entitlement",
+                              "id":"basic_access",
+                              "description":"basic Access description"
+                           }
+                        ],
+                        "total_count":1
+                     },
+                     "credit_granted":{  
+                        "object":"Credit"
+                     },
+                     "prices":{  
+                        "object":"List",
+                        "data":[  
+                           {  
+                              "object":"ProductPrice",
+                              "amount":2,
+                              "currency":"USD"
+                           },
+                           {  
+                              "object":"ProductPrice",
+                              "amount":700,
+                              "currency":"INR"
+                           }
+                        ],
+                        "total_count":2
+                     }
+                  },
+                  "amount":124,
+                  "quantity":20,
+                  "created":"2018-04-16T16:07:46-07:00",
+                  "starts":"2018-04-16T00:00:00-07:00"
+               }
+            ],
+            "total_count":1
+         },
+         "source_ip":"192.168.99.130",
+         "billing_day":2,
+         "minimum_commitment":0,
+         "notify_on_transition":false,
+         "next_billing":{  
+            "object":"Transaction",
+            "created":"2018-05-02T00:00:00-07:00",
+            "amount":2480,
+            "currency":"USD",
+            "items":{  
+               "object":"List",
+               "data":[  
+                  {  
+                     "object":"TransactionItem",
+                     "sku":"khp_netflix_basic_sub",
+                     "item_type":"Purchase",
+                     "name":"Changed Description",
+                     "price":2480,
+                     "quantity":1,
+                     "tax_classification":"Tax9999",
+                     "tax_type":"Exclusive Sales",
+                     "subtotal":2480,
+                     "total":2480
+                  }
+               ],
+               "total_count":1
+            }
+         },
+         "balance":0
+      }
+   ],
+   "total_count":1,
+   "url":"/subscriptions?email=testRESTOct13%40example.com",
+   "next":"/subscriptions?email=testRESTOct13%40example.com&starting_after=vin-ARC-ABID-2018April16",
+   "previous":"/subscriptions?email=testRESTOct13%40example.com&ending_before=vin-ARC-ABID-2018April16"
+}

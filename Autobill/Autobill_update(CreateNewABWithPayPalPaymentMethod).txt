@@ -1,0 +1,88 @@
+SOAP call : Autobill.update	
+
+REST Method:  POST	
+
+Endpoint : https://api.prodtest.vindicia.com/subscriptions?dry_run=0
+
+(Create new Account, use existing Billing Plan, use existing Product, use Paypal as Payment Method)
+
+JSON Request:
+
+{
+         "object": "Subscription",
+         "id": "PayPalABIDApril6Test11",
+         
+         "account":{
+            
+            "id": "AccountIDApril6Test11",
+            "email": "hkoppuravuri@vindicia.com",
+            "email_type": "html",
+            "name": "Acct Name April6"
+         },
+
+         "billing_plan": {
+            "id": "KHP Daily billing plan"
+        
+         },
+         "payment_method": {
+            
+            "id": "PMIDPayPalApril6Test11",
+            
+            "type": "PayPal",
+            "paypal": {
+               "object": "PayPal",
+               "return_url": "http://localhost/~hariprko",
+               "cancel_url": "http://localhost/~hariprko"
+               
+               
+            },
+            "account_holder":"Road Runner",
+            "billing_address": {
+               "object": "Address",
+               "line1": "2226 Mary Ave",
+               "city": "Santa Clara",
+               "postal_code": "95050",
+               "phone": "408408408"
+            },
+            
+            "active": true
+         },
+        
+         
+         
+         "items": 
+         [
+            {
+            
+               "object": "SubscriptionItem",
+               "id": "PaypalABItemIDApril5Test1",
+               
+               "product": {
+                  "id": "NewProduct-Nov102017"
+            
+                  }
+            }
+                  
+         ]
+
+  
+}
+
+
+
+=====
+
+Get the vindicia_vid value from this redirect_url and use it to make final REST call to AB.finalizePaypalAuth
+
+This is the sample URL:
+
+http://localhost/~hariprko/?vindicia_vid=7620d89b44102a772fcd0eaa185b362273cdf7e1&token=EC-4RT878936R210713E&PayerID=YEP3UM7CWKEZ8
+
+
+  -----
+
+Endpoint to Autobill.finalizePaypalAuth is:
+
+ https://api.prodtest.vindicia.com/subscriptions/7620d89b44102a772fcd0eaa185b362273cdf7e1/actions/finish
+
+ no JSON input is required for this REST call

@@ -1,0 +1,27 @@
+SOAP call : Autobill.update	
+
+REST Method:  POST	
+
+Endpoint : https://api.prodtest.vindicia.com/subscriptions?dry_run=0
+
+
+JSON Request:
+
+{
+  "id": "vin-ARC-ABID-2018April16",
+  "items": [
+    {
+      "id": "vin-ARC-ABItemID1",
+      "product": {
+        "id": "khp_netflix_basic_sub"
+      }
+    }
+  ],
+  "source_ip": "192.168.99.130",
+  "account": {
+    "id": "child44Account"
+  },
+  "billing_plan": {
+    "id": "KHP Daily billing plan"
+  }
+}
