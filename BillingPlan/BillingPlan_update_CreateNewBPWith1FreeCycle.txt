@@ -1,0 +1,62 @@
+SOAP Call : BillingPlan.update
+
+EndPoint : https://api.prodtest.vindicia.com/billing_plans
+
+Method: POST
+
+JSON Request:
+
+{  
+   "object":"BillingPlan",
+   "id":"Experian_Monthly_BP_1freeCycle",
+   
+   
+   "trial":{  
+      "object":"BillingPlanPeriod",
+      "type":"Month",
+      "quantity":1,
+      "cycles":1,
+      "do_not_notify_first_bill":false
+   },
+   "periods":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"BillingPlanPeriod",
+            "type":"Month",
+            "quantity":1,
+            "cycles":0,
+            "prices":{  
+               "object":"List",
+               "data":[  
+                  
+                  {  
+                     "object":"BillingPlanPrice",
+                     "amount":0,
+                     "currency":"GBP"
+                  }
+               ]
+               
+            },
+            "do_not_notify_first_bill":false
+         }
+      ]
+     
+   },
+   
+
+   "entitlements": {
+   "object": "List",
+   "data": [
+     {
+   "object": "Entitlement",
+   "id": "access_gold",
+   "description": "Access To gold Subsription"
+   }
+
+   ]
+
+   }
+}
+
+
