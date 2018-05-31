@@ -1,0 +1,25 @@
+SOAP call : Autobill.fetchBillingItemHistory	
+
+REST Method:  GET	
+
+Endpoint : https://api.prodtest.vindicia.com/subscriptions/AutoBillID1122/billing_plan_history
+
+
+JSON Response:
+
+{
+"object": "List",
+"data": [
+  {
+"object": "BillingPlanHistory",
+"billing_plan": {
+"object": "BillingPlan",
+"id": "Experian_Monthly_BP_NOfreeCycle",
+"vid": "3291881a16d65a677a6fe183393a2a296c19a9b6"
+},
+"starts": "2018-05-04T22:06:52-07:00"
+}
+],
+"total_count": 1,
+"url": "/subscriptions/AutoBillID1122/billing_plan_history"
+}
