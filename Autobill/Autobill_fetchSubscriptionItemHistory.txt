@@ -1,0 +1,44 @@
+SOAP call : Autobill.fetchSubscriptionItemHistory  
+
+REST Method:  GET 
+
+Endpoint : https://api.prodtest.vindicia.com/subscriptions/AutoBillID1122/subscription_item_history
+
+
+JSON Response:
+
+{  
+   "object":"List",
+   "data":[  
+      {  
+         "object":"SubscriptionItemHistory",
+         "action":"Add",
+         "effective":"2018-05-04T22:06:52-07:00",
+         "created":"2018-05-04T22:06:52-07:00"
+      },
+      {  
+         "object":"SubscriptionItemHistory",
+         "subscription_item":{  
+            "object":"SubscriptionItem",
+            "id":"ABItemID1122",
+            "vid":"023c0536ad32a518502ef6e8e8adbcae1006f9c9",
+            "index":0,
+            "product":{  
+               "object":"Product",
+               "id":"ExperianProductID2",
+               "vid":"16260dba6bd8f3b20aae4bdfcc600be83d23201d"
+            },
+            "currency":"GBP",
+            "quantity":1,
+            "created":"2018-05-04T22:06:52-07:00",
+            "ends":"2018-05-31T14:57:07-07:00",
+            "starts":"2018-05-04T00:00:00-07:00"
+         },
+         "action":"Remove",
+         "created":"2018-05-31T14:57:07-07:00"
+      }
+   ],
+   "total_count":2,
+   "url":"/subscriptions/AutoBillID1122/subscription_item_history"
+}
+
