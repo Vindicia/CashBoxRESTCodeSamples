@@ -1,0 +1,229 @@
+SOAP call : Autobill.cancel
+
+REST Method:  POST	
+
+Endpoint : https://api.prodtest.vindicia.com/subscriptions/AutoBillID1527291768634/actions/cancel?disentitle=Yes
+
+No JSON Request
+
+JSON Response:
+
+{  
+   "object":"Subscription",
+   "id":"AutoBillID1527291768634",
+   "vid":"ec41eaf8a066897077c2bab23d6b956dcaaf80c0",
+   "created":"2018-05-25T16:42:50-07:00",
+   "account":{  
+      "object":"Account",
+      "id":"AccountID1527291768634",
+      "vid":"ff3c54bcb8d21bf6e4aa27eb2a7a100bd37975ab",
+      "created":"2018-05-25T16:42:49-07:00",
+      "email":"hkoppuravuri@vindicia.com",
+      "email_type":"html",
+      "name":"Acct Name 1527291768634",
+      "payment_methods":{  
+         "object":"List",
+         "data":[  
+            {  
+               "object":"PaymentMethod",
+               "id":"PMID1527291768634",
+               "vid":"0ab0499da8ccfa6b1fd3872b3af11fa5f5431d0c",
+               "created":"2018-05-25T16:42:49-07:00",
+               "type":"CreditCard",
+               "credit_card":{  
+                  "object":"CreditCard",
+                  "vid":"dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                  "account":"411111XXXXXX1111",
+                  "bin":"411111",
+                  "last_digits":"1111",
+                  "account_length":16,
+                  "expiration_date":"201908"
+               },
+               "account_holder":"CCPayerName1527291768634",
+               "billing_address":{  
+                  "object":"Address",
+                  "vid":"081a8f700847fa8ab08c259ea3bec8d6cceb0d12",
+                  "line1":"2226 Mary Ave",
+                  "city":"Santa Clara",
+                  "postal_code":"95050",
+                  "phone":"408408408"
+               },
+               "primary":true,
+               "active":true
+            },
+            {  
+               "object":"PaymentMethod",
+               "id":"PMIDMay29T1",
+               "vid":"419eee0ec2a9210b01afede231e90d5f0af9221a",
+               "created":"2018-05-29T14:27:10-07:00",
+               "type":"DirectDebit",
+               "direct_debit":{  
+                  "object":"DirectDebit",
+                  "account":"",
+                  "last_digits":null,
+                  "account_length":null,
+                  "country_code":"UK",
+                  "bank_sort_code":"12345678",
+                  "rib_code":null
+               },
+               "account_holder":"Road Runner",
+               "billing_address":{  
+                  "object":"Address",
+                  "vid":"a24696e053990bc5748c551f568f086d79e0ba4b",
+                  "country":"UK"
+               },
+               "primary":false,
+               "active":true
+            }
+         ],
+         "total_count":2
+      }
+   },
+   "billing_plan":{  
+      "object":"BillingPlan",
+      "id":"KHP TESTARC billing plan",
+      "vid":"3d9c7d0d11faae63d5b529cae74cb0b1f7c0add0",
+      "created":"2018-04-16T13:12:20-07:00",
+      "description":"MODIFIED KHP TESTARC billing plan",
+      "status":"Suspended",
+      "periods":{  
+         "object":"List",
+         "data":[  
+            {  
+               "object":"BillingPlanPeriod",
+               "type":"Month",
+               "quantity":10,
+               "cycles":0,
+               "prices":{  
+                  "object":"List",
+                  "data":[  
+                     {  
+                        "object":"BillingPlanPrice",
+                        "amount":0,
+                        "currency":"USD"
+                     }
+                  ],
+                  "total_count":1
+               },
+               "do_not_notify_first_bill":false
+            }
+         ],
+         "total_count":1
+      },
+      "billing_notification_days":1,
+      "entitlements":{  
+         "object":"List",
+         "data":[  
+            {  
+               "object":"Entitlement",
+               "id":"access_gold",
+               "description":"Access To gold Subsription"
+            }
+         ],
+         "total_count":1
+      },
+      "times_to_run":"1",
+      "used_on_subscriptions":true
+   },
+   "payment_method":{  
+      "object":"PaymentMethod",
+      "id":"PMID1527291768634",
+      "vid":"0ab0499da8ccfa6b1fd3872b3af11fa5f5431d0c",
+      "created":"2018-05-25T16:42:49-07:00",
+      "type":"CreditCard",
+      "credit_card":{  
+         "object":"CreditCard",
+         "vid":"dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+         "account":"411111XXXXXX1111",
+         "bin":"411111",
+         "last_digits":"1111",
+         "account_length":16,
+         "expiration_date":"201908"
+      },
+      "account_holder":"CCPayerName1527291768634",
+      "billing_address":{  
+         "object":"Address",
+         "vid":"081a8f700847fa8ab08c259ea3bec8d6cceb0d12",
+         "line1":"2226 Mary Ave",
+         "city":"Santa Clara",
+         "postal_code":"95050",
+         "phone":"408408408"
+      },
+      "primary":true,
+      "active":true
+   },
+   "currency":"USD",
+   "status":"Cancelled",
+   "billing_state":"Billing Completed",
+   "starts":"2018-05-25T16:42:49-07:00",
+   "ends":"2018-05-31T13:51:02-07:00",
+   "entitled_through":"2018-05-31T13:51:02-07:00",
+   "items":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"SubscriptionItem",
+            "id":"ABItemID1527291768634",
+            "vid":"0c83e74478de2a648927d6cab57d3a60ad9204de",
+            "index":0,
+            "product":{  
+               "object":"Product",
+               "id":"khp_ARC_product2018",
+               "vid":"1c358a7d2f12ee1d1ace26375753b6bc3eb20bd2",
+               "created":"2018-04-16T14:27:12-07:00",
+               "descriptions":{  
+                  "object":"List",
+                  "data":[  
+                     {  
+                        "object":"ProductDescription",
+                        "language":"EN",
+                        "description":"Description For New ProductARC"
+                     }
+                  ],
+                  "total_count":1
+               },
+               "status":"Active",
+               "tax_classification":"TaxExempt",
+               "metadata":{  
+                  "vind:Division":"ARC Movie"
+               },
+               "entitlements":{  
+                  "object":"List",
+                  "data":[  
+                     {  
+                        "object":"Entitlement",
+                        "id":"basic_access",
+                        "description":"basic Access description"
+                     }
+                  ],
+                  "total_count":1
+               },
+               "prices":{  
+                  "object":"List",
+                  "data":[  
+                     {  
+                        "object":"ProductPrice",
+                        "amount":112,
+                        "currency":"USD"
+                     }
+                  ],
+                  "total_count":1
+               }
+            },
+            "currency":"USD",
+            "quantity":1,
+            "created":"2018-05-25T16:42:49-07:00",
+            "ends":"2018-05-31T13:51:02-07:00",
+            "starts":"2018-05-25T00:00:00-07:00"
+         }
+      ],
+      "total_count":1
+   },
+   "source_ip":"123.123.123.123",
+   "billing_day":25,
+   "minimum_commitment":0,
+   "affiliate":"400",
+   "notify_on_transition":false,
+   "balance":0
+}
+
