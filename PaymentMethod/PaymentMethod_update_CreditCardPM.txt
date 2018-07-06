@@ -1,0 +1,65 @@
+SOAP call : PaymentMethod.update
+
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/payment_methods
+(Create a PM of type CreditCard)
+
+JSON Request:
+
+{
+  "object": "PaymentMethod",
+  "id": "PMJuly22018",
+  "type": "CreditCard",
+  "credit_card": {
+    "object": "CreditCard",
+    "account": "4111111111111111",
+	"expiration_date": "201907"
+   
+  },
+ 
+  "account_holder": "Maze Runner",
+  "billing_address": {
+   "object": "Address",
+   "line1": "220 N Mathilda Ave",
+	"city": "Sunnyvale",
+	"district": "CA",
+	"postal_code": "94086",
+	"country": "US"
+   
+ }
+ 
+  
+}
+
+JSON Response:
+
+{
+   "object": "PaymentMethod",
+   "id": "PMJuly22018",
+   "vid": "544669a16a6af607fe5c9fc6cc2b2a340aa96f58",
+   "created": "2018-07-02T15:43:19-07:00",
+   "type": "CreditCard",
+   "credit_card": {
+      "object": "CreditCard",
+      "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+      "account": "411111XXXXXX1111",
+      "bin": "411111",
+      "last_digits": "1111",
+      "account_length": 16,
+      "expiration_date": "201907"
+   },
+   "account_holder": "Maze Runner",
+   "billing_address": {
+      "object": "Address",
+      "vid": "9ecfe11287b73d81d6ea693466249cb40589a0a1",
+      "line1": "220 N Mathilda Ave",
+      "city": "Sunnyvale",
+      "district": "CA",
+      "postal_code": "94086",
+      "country": "US"
+   },
+   "primary": true,
+   "active": true,
+   "validation_status": null
+}
