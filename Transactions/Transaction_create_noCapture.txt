@@ -1,0 +1,425 @@
+SOAP call : Transaction.create
+
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/transactions
+
+
+JSON Request:
+
+{
+    "object": "Transaction",
+    "id": "TXIDJuly22018_T1",
+    "account": {
+       "object": "Account",
+       "id": "Account-Jul22018"
+    },
+    "source_payment_method": {
+       "object": "PaymentMethod",
+       "type": "CreditCard",
+       "id": "PMJuly22018"
+    },
+    "shipping_address": {
+       "object": "Address",
+       "name": "c/o Charlie Brown",
+       "line1": "123 Main Street",
+       "city": "San Francisco",
+       "district": "CA",
+       "postal_code": "94105",
+       "country": "US"
+    },
+    "items": [
+       {
+          "object": "TransactionItem",
+          "sku": "OTT_Basic_monthly_package",
+          "name":"OTT Basic Monthly Package for $19.99",
+          "price": 19.99,
+          "quantity": 1
+       }
+    ],
+    "source_ip": "63.201.132.182",
+    "policy": {
+       "min_chargeback_probability": 99,
+       "send_email_notification": 0
+    },
+    "to_be_captured": false
+ }
+
+ JSON Response:
+
+ {
+   "object": "Transaction",
+   "id": "TXIDJuly22018_T1",
+   "vid": "1b3b87f90fe15d8cc7f713f37f3f740ca4187cb2",
+   "created": "2018-07-02T15:49:41-07:00",
+   "amount": 21.44,
+   "currency": "USD",
+   "account": {
+      "object": "Account",
+      "id": "Account-Jul22018",
+      "vid": "5b31fd2715832f12a71f393a5b2a3eeca7168e32",
+      "created": "2018-07-02T11:39:08-07:00",
+      "email": "Jan99@gmail.com",
+      "email_type": "plaintext",
+      "notify_before_billing": false,
+      "name": "Acct via java API ",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "185abd7b84d84db4318b1942059f6adac0372283",
+         "name": "Account July 2",
+         "line1": "2226 Mary Ave",
+         "city": "Santa Clara",
+         "postal_code": "95050",
+         "phone": "408408408"
+      },
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "PMJuly22018",
+               "vid": "544669a16a6af607fe5c9fc6cc2b2a340aa96f58",
+               "created": "2018-07-02T15:43:19-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                  "account": "411111XXXXXX1111",
+                  "bin": "411111",
+                  "last_digits": "1111",
+                  "account_length": 16,
+                  "expiration_date": "201907"
+               },
+               "account_holder": "Maze Runner",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "9ecfe11287b73d81d6ea693466249cb40589a0a1",
+                  "line1": "220 N Mathilda Ave",
+                  "city": "Sunnyvale",
+                  "district": "CA",
+                  "postal_code": "94086",
+                  "country": "US"
+               },
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "source_payment_method": {
+      "object": "PaymentMethod",
+      "id": "PMJuly22018",
+      "vid": "544669a16a6af607fe5c9fc6cc2b2a340aa96f58",
+      "created": "2018-07-02T15:43:19-07:00",
+      "type": "CreditCard",
+      "credit_card": {
+         "object": "CreditCard",
+         "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+         "account": "411111XXXXXX1111",
+         "bin": "411111",
+         "last_digits": "1111",
+         "account_length": 16,
+         "expiration_date": "201907"
+      },
+      "account_holder": "Maze Runner",
+      "billing_address": {
+         "object": "Address",
+         "vid": "9ecfe11287b73d81d6ea693466249cb40589a0a1",
+         "line1": "220 N Mathilda Ave",
+         "city": "Sunnyvale",
+         "district": "CA",
+         "postal_code": "94086",
+         "country": "US"
+      },
+      "primary": true,
+      "active": true
+   },
+   "status_log": {
+      "object": "List",
+      "data": [
+         {
+            "object": "TransactionStatus",
+            "status": "Authorized",
+            "created": "2018-07-02T15:49:42-07:00",
+            "payment_method_type": "CreditCard",
+            "credit_card_status": {
+               "object": "TransactionStatusCreditCard",
+               "auth_code": "T00"
+            },
+            "note": "T00 - NA"
+         },
+         {
+            "object": "TransactionStatus",
+            "status": "New",
+            "created": "2018-07-02T15:49:42-07:00",
+            "payment_method_type": "CreditCard",
+            "credit_card_status": {
+               "object": "TransactionStatusCreditCard",
+               "auth_code": "T00"
+            }
+         }
+      ],
+      "total_count": 2
+   },
+   "payment_processor": "Test",
+   "payment_processor_transaction_id": "TXIDJuly22018_T1",
+   "shipping_address": {
+      "object": "Address",
+      "vid": "a1c476837c151f2bae1f3c878376cd1f41516b8a",
+      "name": "c/o Charlie Brown",
+      "line1": "123 Main Street",
+      "city": "San Francisco",
+      "district": "CA",
+      "postal_code": "94105",
+      "country": "US"
+   },
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "TransactionItem",
+            "sku": "OTT_Basic_monthly_package",
+            "index_number": 1,
+            "item_type": "Purchase",
+            "name": "OTT Basic Monthly Package for $19.99",
+            "price": 19.99,
+            "quantity": 1,
+            "tax_classification": null,
+            "tax_type": "Exclusive Sales",
+            "tax": {
+               "object": "List",
+               "data": [
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "COUNTY_075",
+                     "name": "SAN FRANCISCO COUNTY SALES TAX",
+                     "amount": 0.05,
+                     "external_tax_name": "CA COUNTY TAX",
+                     "external_jurisdiction_name": "SAN FRANCISCO",
+                     "tax_rate": 0.0025
+                  },
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "SPECIAL_EMTV0",
+                     "name": "SAN FRANCISCO CO LOCAL TAX SL SPECIAL SALES TAX",
+                     "amount": 0.2,
+                     "external_tax_name": "CA SPECIAL TAX",
+                     "external_jurisdiction_name": "SAN FRANCISCO CO LOCAL TAX SL",
+                     "tax_rate": 0.01
+                  },
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "STATE_06",
+                     "name": "CALIFORNIA STATE SALES TAX",
+                     "amount": 1.2,
+                     "external_tax_name": "CA STATE TAX",
+                     "external_jurisdiction_name": "CALIFORNIA",
+                     "tax_rate": 0.06
+                  }
+               ],
+               "total_count": 3
+            },
+            "subtotal": 19.99,
+            "total": 21.44
+         },
+         {
+            "object": "TransactionItem",
+            "sku": "Total Tax",
+            "index_number": 2,
+            "item_type": "Purchase",
+            "name": "Total Tax",
+            "price": 0,
+            "quantity": 1,
+            "tax_classification": "TaxExempt",
+            "tax_type": "Exclusive Sales",
+            "tax": {
+               "object": "List",
+               "data": [
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "COUNTY_075",
+                     "name": "SAN FRANCISCO COUNTY SALES TAX",
+                     "amount": 0.05
+                  },
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "SPECIAL_EMTV0",
+                     "name": "SAN FRANCISCO CO LOCAL TAX SL SPECIAL SALES TAX",
+                     "amount": 0.2
+                  },
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "STATE_06",
+                     "name": "CALIFORNIA STATE SALES TAX",
+                     "amount": 1.2
+                  }
+               ],
+               "total_count": 3
+            },
+            "discount": 0,
+            "subtotal": 0,
+            "total": 1.45
+         }
+      ],
+      "total_count": 2
+   },
+   "source_ip": "63.201.132.182",
+   "sales_tax_address": {
+      "object": "Address",
+      "vid": "374cd167498a13529d4dfb2f08957335bebe9cda",
+      "name": "c/o Charlie Brown",
+      "line1": "123 Main Street",
+      "city": "SAN FRANCISCO",
+      "district": "CA",
+      "postal_code": "94105",
+      "country": "US"
+   },
+   "score": 1,
+   "score_codes": {
+      "object": "List",
+      "data": [
+         {
+            "object": "ScoreCode",
+            "id": "13",
+            "description": "<explanation>: explanation: This order is low risk. This order is higher risk because the distance between the billing address and the user's actual location is so great (This order is low risk. This order is higher risk because the distance between the billing address and the user's actual location is so great)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "14",
+            "description": "<shipCityPostalMatch>: Shipping city and state match zipcode (Yes)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "15",
+            "description": "<cityPostalMatch>: Billing city and state match zipcode (Yes)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "16",
+            "description": "<shipForward>: Shipping address is in database of known risky mail drops (No)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "21",
+            "description": "<binMatch>: Country of issuing bank matches billing address country (Yes)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "42",
+            "description": "<freeMail>: Email address is from a free email provider (No)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "52",
+            "description": "<anonymousProxy>: IP address is an anonymous proxy (No)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "63",
+            "description": "<highRiskCountry>: IP address or billing address country is in a high risk country (No)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "64",
+            "description": "<distance>: Distance between IP address and billing address is 4280 kilometers (4280)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "65",
+            "description": "<countryMatch>: IP address and billing address are in same country (Yes)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "100",
+            "description": "<binCountry>: (US)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "101",
+            "description": "<binName>: ()"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "102",
+            "description": "<binNameMatch>: (NA)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "103",
+            "description": "<binPhone>: ()"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "104",
+            "description": "<binPhoneMatch>: (NA)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "105",
+            "description": "<countryCode>: (US)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "106",
+            "description": "<custPhoneInBillingLoc>: (NotFound)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "107",
+            "description": "<ip_city>: (New York)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "108",
+            "description": "<ip_isp>: (AT&T Internet Services)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "109",
+            "description": "<ip_latitude>: (40.7143)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "110",
+            "description": "<ip_longitude>: (-74.0060)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "111",
+            "description": "<ip_org>: (AT&T Internet Services)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "112",
+            "description": "<ip_region>: (NY)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "113",
+            "description": "<maxmindID>: (TXCM9BAA)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "114",
+            "description": "<proxyScore>: (0.00)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "115",
+            "description": "<riskScore>: (0.64)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "116",
+            "description": "<score>: (2.14)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "219",
+            "description": "<queriesRemaining>: (4796183)"
+         }
+      ],
+      "total_count": 28
+   }
+}

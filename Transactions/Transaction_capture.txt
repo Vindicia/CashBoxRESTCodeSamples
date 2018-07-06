@@ -1,0 +1,12 @@
+
+
+SOAP call : Transaction.capture
+
+REST Method:  POST
+
+Endpoint :  https://api.vindicia.com/transactions/TXIDJuly22018_T1/actions/capture
+
+JSON Request:
+
+NONE
+
