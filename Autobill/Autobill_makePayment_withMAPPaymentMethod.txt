@@ -1,0 +1,58 @@
+First make PaymentMethod.update call, get the ID.
+ 
+POST: https://api.prodtest.vindicia.com/payment_methods
+ 
+JSON Request:
+ 
+{
+  "object": "PaymentMethod",
+  "id": "MAPID77",
+  "type": "MerchantAcceptedPayment",
+  "merchant_accepted_payment": {
+    "amount": 10,
+    "currency": "USD",
+    "payment_type": "Pay By invoice",
+    "account": "ThisIsMAP"
+  },
+  "account_holder": "Incredibles",
+  "billing_address": {
+    "object": "Address",
+    "line1": "220 N Mathilda Ave",
+    "city": "Sunnyvale",
+    "district": "CA",
+    "postal_code": "94086",
+    "country": "US"
+  }
+}
+ 
+Second make Autobill.makePayment call using the above MAP ID
+ 
+POST: https://api.prodtest.vindicia.com/payments
+ 
+JSON Request:
+ 
+ 
+{
+    "id":"Test11",
+  
+    "account": {
+        "object":"Account",
+        "id": "AccountID61"
+    },
+   "subscription":"AutoBillID61",
+  
+ 
+    "invoice":"AccountID61-00000001",
+    "currency": "USD",
+    "payment_method": {
+            "object":"PaymentMethod",
+            "id":"MAPID77"
+           
+    },     
+    "amount":50,
+    "overage_disposition":"applyToThisAutoBill"
+   
+    
+}
+ 
+ 
