@@ -1,0 +1,147 @@
+Method: POST
+
+Endpoint: https://api.prodtest.vindicia.com/payment_methods
+
+JSON Request:
+
+{
+  "object": "PaymentMethod",
+  "id": "PMTJune18",
+  "type": "DirectDebit",
+  "direct_debit": {
+    "object": "DirectDebit",
+    "account": "5598220966990171",
+    "country_code": "UK",
+    "bank_sort_code": "561971053"
+  },
+  "account_holder": "Incredibles2",
+  "billing_address": {
+    "object": "Address",
+    "country": "UK"
+  }
+}
+
+JSON Response:
+
+{  
+   "object":"PaymentMethod",
+   "id":"PMTJune18",
+   "vid":"e4bfb5442b1d097772fbfcb3dd0137057cfe5b83",
+   "created":"2018-06-18T12:01:10-07:00",
+   "type":"DirectDebit",
+   "direct_debit":{  
+      "object":"DirectDebit",
+      "account":"XXXXXXXXXXXX0171",
+      "last_digits":"0171",
+      "account_length":16,
+      "country_code":"UK",
+      "bank_sort_code":"561971053",
+      "rib_code":null
+   },
+   "account_holder":"Incredibles2",
+   "billing_address":{  
+      "object":"Address",
+      "vid":"7165fc26b868410d53d1753190204705ca3f00c9",
+      "country":"UK"
+   },
+   "primary":true,
+   "active":true,
+   "validation_status":null
+}
+
+
+---
+
+Use the vid received in response from the above REST call (PaymentMethod.update with DirectDebit Account information) to do Account.update 
+
+
+Method: POST
+
+Endpoint: https://api.prodtest.vindicia.com/accounts/AccountID1527863068252
+
+JSON Request:
+
+
+{
+  "id": "AccountID1527863068252",
+  "payment_methods": {
+    "object": "List",
+    "data": [
+      {
+        "object": "PaymentMethod",
+        "type":"DirectDebit",
+        "vid":"e4bfb5442b1d097772fbfcb3dd0137057cfe5b83"
+      }
+    ]
+  }
+}
+
+
+JSON Response:
+
+{  
+   "object":"Account",
+   "id":"AccountID1527863068252",
+   "vid":"d7beba1edb43be30ef8e1f432365cc4c5a124537",
+   "created":"2018-06-01T07:24:32-07:00",
+   "email":"hkoppuravuri@vindicia.com",
+   "email_type":"html",
+   "name":"Acct Name 1527863068252",
+   "payment_methods":{  
+      "object":"List",
+      "data":[  
+         {  
+            "object":"PaymentMethod",
+            "id":"PMID1527863068252",
+            "vid":"d9d263a91aa3ff546c114d74323a866ac9600469",
+            "created":"2018-06-01T07:24:32-07:00",
+            "type":"CreditCard",
+            "credit_card":{  
+               "object":"CreditCard",
+               "vid":"dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+               "account":"411111XXXXXX1111",
+               "bin":"411111",
+               "last_digits":"1111",
+               "account_length":16,
+               "expiration_date":"201908"
+            },
+            "account_holder":"CCPayerName1527863068252",
+            "billing_address":{  
+               "object":"Address",
+               "vid":"9880deafd7dc4cff161fc3446fb7b5866a70ac38",
+               "line1":"2226 Campus Ave",
+               "city":"Santa Clara",
+               "postal_code":"95050",
+               "phone":"408408408"
+            },
+            "primary":true,
+            "active":true
+         },
+         {  
+            "object":"PaymentMethod",
+            "id":"PMTJune18",
+            "vid":"e4bfb5442b1d097772fbfcb3dd0137057cfe5b83",
+            "created":"2018-06-18T12:01:10-07:00",
+            "type":"DirectDebit",
+            "direct_debit":{  
+               "object":"DirectDebit",
+               "account":"XXXXXXXXXXXX0171",
+               "last_digits":"0171",
+               "account_length":16,
+               "country_code":"UK",
+               "bank_sort_code":"561971053",
+               "rib_code":null
+            },
+            "account_holder":"Incredibles2",
+            "billing_address":{  
+               "object":"Address",
+               "vid":"7165fc26b868410d53d1753190204705ca3f00c9",
+               "country":"UK"
+            },
+            "primary":false,
+            "active":true
+         }
+      ],
+      "total_count":2
+   }
+}
