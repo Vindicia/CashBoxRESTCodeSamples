@@ -1,0 +1,235 @@
+POST
+https://api.prodtest.vindicia.com/subscriptions/AutoBillID1529436586673/actions/cancel?disentitle=true&settle=false
+
+No JSON Request is required
+
+JSON Response:
+
+
+{
+   "object": "Subscription",
+   "id": "AutoBillID1529436586673",
+   "vid": "dc10d5610ce4c64da123f341dba6e3a8da73a94b",
+   "created": "2018-06-19T12:29:51-07:00",
+   "account": {
+      "object": "Account",
+      "id": "AccountID1529436586673",
+      "vid": "89c8ef2543da39132c0e2cde761b58223f488552",
+      "created": "2018-06-19T12:29:47-07:00",
+      "email": "hkoppuravuri@vindicia.com",
+      "email_type": "html",
+      "language": "DE",
+      "name": "Acct Name 1529436586673",
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "PMID1529436586673",
+               "vid": "2956b190c8324e04bf3aa90724dfaf5deb8ee5f6",
+               "created": "2018-06-19T12:29:47-07:00",
+               "type": "DirectDebit",
+               "direct_debit": {
+                  "object": "DirectDebit",
+                  "account": "XXXXXXXXXXXX0171",
+                  "last_digits": "0171",
+                  "account_length": 16,
+                  "country_code": "DE",
+                  "bank_sort_code": "561971053",
+                  "rib_code": null
+               },
+               "account_holder": "DD PayerName1529436586673",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "94dfd67e5a41080ea2c94a9e7353e2e675e54d5e",
+                  "line1": "2226 Mary Ave",
+                  "city": "Santa Clara",
+                  "postal_code": "95050",
+                  "country": "DE",
+                  "phone": "408408408"
+               },
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "billing_plan": {
+      "object": "BillingPlan",
+      "id": "KHP Daily billing plan",
+      "vid": "120c7035599094a863b0d55b45000dc6c89abc09",
+      "created": "2017-10-26T15:43:37-07:00",
+      "description": "KHP Daily billing plan",
+      "status": "Active",
+      "periods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "BillingPlanPeriod",
+               "type": "Day",
+               "quantity": 1,
+               "cycles": 0,
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "USD"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "do_not_notify_first_bill": false
+            }
+         ],
+         "total_count": 1
+      },
+      "billing_notification_days": 3,
+      "entitlements": {
+         "object": "List",
+         "data": [
+            {
+               "object": "Entitlement",
+               "id": "access_gold",
+               "description": "Access To gold Subsription"
+            },
+            {
+               "object": "Entitlement",
+               "id": "basic_access",
+               "description": "basic Access description"
+            },
+            {
+               "object": "Entitlement",
+               "id": "MonthlyAccess",
+               "description": "Customer gets access to regular monthly subscription"
+            }
+         ],
+         "total_count": 3
+      },
+      "used_on_subscriptions": true
+   },
+   "payment_method": {
+      "object": "PaymentMethod",
+      "id": "PMID1529436586673",
+      "vid": "2956b190c8324e04bf3aa90724dfaf5deb8ee5f6",
+      "created": "2018-06-19T12:29:47-07:00",
+      "type": "DirectDebit",
+      "direct_debit": {
+         "object": "DirectDebit",
+         "account": "XXXXXXXXXXXX0171",
+         "last_digits": "0171",
+         "account_length": 16,
+         "country_code": "DE",
+         "bank_sort_code": "561971053",
+         "rib_code": null
+      },
+      "account_holder": "DD PayerName1529436586673",
+      "billing_address": {
+         "object": "Address",
+         "vid": "94dfd67e5a41080ea2c94a9e7353e2e675e54d5e",
+         "line1": "2226 Mary Ave",
+         "city": "Santa Clara",
+         "postal_code": "95050",
+         "country": "DE",
+         "phone": "408408408"
+      },
+      "primary": true,
+      "active": true
+   },
+   "currency": "USD",
+   "status": "Cancelled",
+   "billing_state": "Billing Completed",
+   "starts": "2018-06-19T12:29:48-07:00",
+   "ends": "2018-07-10T15:27:52-07:00",
+   "entitled_through": "2018-07-10T15:27:52-07:00",
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "SubscriptionItem",
+            "id": "ABItemID1529436586673",
+            "vid": "d91d4b6461085e7e7858d783e46e17b9420a269b",
+            "index": 0,
+            "product": {
+               "object": "Product",
+               "id": "NewProduct-Nov102017",
+               "vid": "52496ca6c3709a7f25c68d6f3bace4ac5fb9ae60",
+               "created": "2017-11-10T11:23:35-08:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "NewProduct-Nov102017"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "status": "Active",
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "lpbc",
+                        "description": "Catalog"
+                     },
+                     {
+                        "object": "Entitlement",
+                        "id": "dailyAccess",
+                        "description": "dailyAccess"
+                     },
+                     {
+                        "object": "Entitlement",
+                        "id": "TestNewEntitlement-Nov10",
+                        "description": "TestNewEntitlement-Nov10"
+                     }
+                  ],
+                  "total_count": 3
+               },
+               "credit_granted": {
+                  "object": "Credit"
+               },
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 29,
+                        "currency": "USD"
+                     }
+                  ],
+                  "total_count": 1
+               }
+            },
+            "currency": "USD",
+            "quantity": 1,
+            "created": "2018-06-19T12:29:48-07:00",
+            "ends": "2018-06-20T00:00:00-07:00",
+            "starts": "2018-06-19T00:00:00-07:00"
+         }
+      ],
+      "total_count": 1
+   },
+   "source_ip": "123.123.123.123",
+   "billing_day": 20,
+   "minimum_commitment": 0,
+   "affiliate": "400",
+   "notify_on_transition": false,
+   "metadata": {
+      "vin:MandateFlag": "1",
+      "vin:MandateID": "MandateIDJune2018",
+      "vin:MandateBankName": "Deutsche Bank",
+      "vin:MandateVersion": "2.0"
+   },
+   "mandate": {
+      "object": "Mandate",
+      "created": "2018-06-19T12:29:49-07:00",
+      "identifier": "MandateIDJune2018",
+      "status": "Active"
+   },
+   "balance": 0
+}

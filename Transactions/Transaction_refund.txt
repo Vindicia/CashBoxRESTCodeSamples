@@ -1,0 +1,285 @@
+POST
+https://api.prodtest.vindicia.com/transactions/KHPNFD00003567/refunds
+
+JSON Request:
+{
+  "object": "Refund",
+  "id": "RefundID11",
+  "amount": 29.00,
+  "amount_includes_tax": false,
+  "currency": "USD",
+  "note": "Refund test with out AB cancel?"
+  
+}
+
+JSON Response:
+
+{
+   "object": "Refund",
+   "id": "RefundID11",
+   "vid": "d252eb2f5bdbe50cd7e21e11203e921e2b01e01b",
+   "created": "2018-07-12T11:37:47-07:00",
+   "transaction": {
+      "object": "Transaction",
+      "id": "KHPNFD00003567",
+      "vid": "add1b28c7be2a859b98e14a8351c5f38deaa6eb9",
+      "created": "2018-07-11T00:11:03-07:00",
+      "amount": 31.1,
+      "currency": "USD",
+      "account": {
+         "object": "Account",
+         "id": "vin_test_acct_1528749940878",
+         "vid": "1607cbdf9bd45335bb28010cf6939b1bac6bb1bc",
+         "created": "2018-06-11T13:45:43-07:00",
+         "email": "hkoppuravuri@vindicia.com",
+         "email_type": "html",
+         "name": "TestKHPMay22",
+         "payment_methods": {
+            "object": "List",
+            "data": [
+               {
+                  "object": "PaymentMethod",
+                  "id": "vin_test_acct_cc_1528749940878",
+                  "vid": "9d881f5b964214313ce31c5a3c8d0187f30f1c77",
+                  "created": "2018-06-11T13:45:44-07:00",
+                  "type": "CreditCard",
+                  "credit_card": {
+                     "object": "CreditCard",
+                     "vid": "5321df6e7ea612812bb03f33d5a1160fcfcb0482",
+                     "account": "491665XXXXXX7608",
+                     "bin": "491665",
+                     "last_digits": "7608",
+                     "account_length": 16,
+                     "expiration_date": "201809"
+                  },
+                  "account_holder": "TestKHPMay22_accountHolder",
+                  "billing_address": {
+                     "object": "Address",
+                     "vid": "c8a4a3ea0d9f4fca35e7e8faee6caf5489773c7a",
+                     "line1": "3750 Deedham Drive",
+                     "city": "San Jose",
+                     "district": "CA",
+                     "postal_code": "95148",
+                     "country": "US"
+                  },
+                  "primary": true,
+                  "active": true
+               }
+            ],
+            "total_count": 1
+         }
+      },
+      "source_payment_method": {
+         "object": "PaymentMethod",
+         "id": "vin_test_acct_cc_1528749940878",
+         "vid": "9d881f5b964214313ce31c5a3c8d0187f30f1c77",
+         "created": "2018-06-11T13:45:44-07:00",
+         "type": "CreditCard",
+         "credit_card": {
+            "object": "CreditCard",
+            "vid": "5321df6e7ea612812bb03f33d5a1160fcfcb0482",
+            "account": "491665XXXXXX7608",
+            "bin": "491665",
+            "last_digits": "7608",
+            "account_length": 16,
+            "expiration_date": "201809"
+         },
+         "account_holder": "TestKHPMay22_accountHolder",
+         "billing_address": {
+            "object": "Address",
+            "vid": "c8a4a3ea0d9f4fca35e7e8faee6caf5489773c7a",
+            "line1": "3750 Deedham Drive",
+            "city": "San Jose",
+            "district": "CA",
+            "postal_code": "95148",
+            "country": "US"
+         },
+         "primary": true,
+         "active": true
+      },
+      "status_log": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionStatus",
+               "status": "Refunded",
+               "created": "2018-07-12T11:37:48-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard",
+                  "auth_code": "T00"
+               }
+            },
+            {
+               "object": "TransactionStatus",
+               "status": "Captured",
+               "created": "2018-07-11T01:45:45-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard",
+                  "auth_code": "T00",
+                  "avs_code": "N",
+                  "cvn_code": "M"
+               },
+               "vin_avs": "NoMatch",
+               "note": "T00"
+            },
+            {
+               "object": "TransactionStatus",
+               "status": "New",
+               "created": "2018-07-11T00:11:05-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard",
+                  "auth_code": "T00"
+               }
+            }
+         ],
+         "total_count": 3
+      },
+      "payment_processor": "Test",
+      "payment_processor_transaction_id": "KHPNFD00003567",
+      "metadata": {
+         "vin:RetryNumber": "0",
+         "vin:BillingCycle": "30"
+      },
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "KHP Daily billing plan",
+               "index_number": 1,
+               "item_type": "Purchase",
+               "name": "KHP Daily billing plan",
+               "quantity": 1,
+               "tax_classification": null,
+               "service_period_starts": "2018-07-11T00:00:00-07:00",
+               "service_period_ends": "2018-07-11T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "NewProduct-Nov102017",
+               "index_number": 2,
+               "item_type": "Purchase",
+               "name": "NewProduct-Nov102017",
+               "subscription_item": {
+                  "object": "SubscriptionItem",
+                  "id": "item-1-1528749940878",
+                  "vid": "645f0763bb5e3c7448ae4b46cb93b77de78b5fd4"
+               },
+               "price": 29,
+               "quantity": 1,
+               "tax_classification": null,
+               "service_period_starts": "2018-07-11T00:00:00-07:00",
+               "service_period_ends": "2018-07-11T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "tax": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "COUNTY_085",
+                        "name": "SANTA CLARA COUNTY SALES TAX",
+                        "amount": 0.07,
+                        "external_tax_name": "CA COUNTY TAX",
+                        "external_jurisdiction_name": "SANTA CLARA",
+                        "tax_rate": 0.0025
+                     },
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "SPECIAL_EMUA0",
+                        "name": "SANTA CLARA CO LOCAL TAX SL SPECIAL SALES TAX",
+                        "amount": 0.29,
+                        "external_tax_name": "CA SPECIAL TAX",
+                        "external_jurisdiction_name": "SANTA CLARA CO LOCAL TAX SL",
+                        "tax_rate": 0.01
+                     },
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "STATE_06",
+                        "name": "CALIFORNIA STATE SALES TAX",
+                        "amount": 1.74,
+                        "external_tax_name": "CA STATE TAX",
+                        "external_jurisdiction_name": "CALIFORNIA",
+                        "tax_rate": 0.06
+                     }
+                  ],
+                  "total_count": 3
+               },
+               "subtotal": 29,
+               "total": 31.1
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Total Tax",
+               "index_number": 3,
+               "item_type": "Purchase",
+               "name": "Total Tax",
+               "price": 0,
+               "quantity": 1,
+               "tax_classification": "TaxExempt",
+               "service_period_starts": "2018-07-11T00:00:00-07:00",
+               "service_period_ends": "2018-07-11T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "tax": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "COUNTY_085",
+                        "name": "SANTA CLARA COUNTY SALES TAX",
+                        "amount": 0.07
+                     },
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "SPECIAL_EMUA0",
+                        "name": "SANTA CLARA CO LOCAL TAX SL SPECIAL SALES TAX",
+                        "amount": 0.29
+                     },
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "STATE_06",
+                        "name": "CALIFORNIA STATE SALES TAX",
+                        "amount": 1.74
+                     }
+                  ],
+                  "total_count": 3
+               },
+               "discount": 0,
+               "subtotal": 0,
+               "total": 2.1
+            }
+         ],
+         "total_count": 3
+      },
+      "source_ip": "192.168.228.1",
+      "sales_tax_address": {
+         "object": "Address",
+         "vid": "b55a163479a4bfe5f9ef4fe0529d9c9829c5bfa0",
+         "line1": "3750 Deedham Drive",
+         "city": "SAN JOSE",
+         "district": "CA",
+         "postal_code": "95148",
+         "country": "US"
+      },
+      "subscription_sequence": 31,
+      "billing_plan_sequence": 31,
+      "original_billing_date": "2018-07-11T00:00:00-07:00",
+      "billing_attempt": 0,
+      "subscription": {
+         "object": "Subscription",
+         "id": "vin_test_ab_1528749940878",
+         "vid": "b71fe09acf411c8966ff2bebffc98762f104ff84"
+      }
+   },
+   "refund_distribution_strategy": "None",
+   "amount": 29,
+   "amount_includes_tax": false,
+   "currency": "USD",
+   "note": "Refund test with out AB cancel?",
+   "token_action": "None",
+   "status": "Processing"
+}
