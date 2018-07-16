@@ -1,0 +1,542 @@
+SOAP call : Autobill.update 
+
+REST Method:  POST
+
+
+Endpoint:https://api.prodtest.vindicia.com/subscriptions?dry_run=0
+
+Get the "vid" of payment method from PMT response and use it as payment method to create a AB.
+
+{
+   "object": "PaymentMethod",
+   "id": "TokenJuly162018",
+   "vid": "16aba1c5345267bb1942c89954ba78218f70aeac"
+}
+
+
+
+
+
+
+JSON Request:
+
+
+{
+         "object": "Subscription",
+         "id": "ABIDTestJuly162018",
+         
+         "account":{
+            
+            "id": "AccountIDJJuly162018",
+            "email": "myemail@vindicia.com",
+            "email_type": "html",
+            "name": "AccountIDJuly162018"
+         },
+
+         "billing_plan": {
+            "id": "KHP Daily billing plan"
+         },
+  
+         "payment_method": {
+            
+               "vid":"16aba1c5345267bb1942c89954ba78218f70aeac",
+               "primary": true
+               
+            },
+       
+      "source_ip":"192.168.99.130",
+  
+         "items": 
+         [
+            {
+            
+               "object": "SubscriptionItem",
+               "id": "ABItemIDJJuly162018",
+               
+               "product": {
+                  "id": "NewProduct-Nov102017"
+                  }
+            }
+                  
+         ]
+
+  
+}
+
+JSON Response:
+
+{
+   "object": "Subscription",
+   "id": "ABIDTestJuly162018",
+   "vid": "9efc2b19137f09c06427ea88b5ac1932e9c19587",
+   "created": "2018-07-16T15:08:24-07:00",
+   "account": {
+      "object": "Account",
+      "id": "AccountIDJJuly162018",
+      "vid": "bb2c3b2a6085e86b2296a30d0d6b9616cc8168e7",
+      "created": "2018-07-16T15:08:23-07:00",
+      "email": "myemail@vindicia.com",
+      "email_type": "html",
+      "name": "AccountIDJuly162018",
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "TokenJuly162018",
+               "vid": "16aba1c5345267bb1942c89954ba78218f70aeac",
+               "created": "2018-07-16T14:19:22-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                  "account": "411111XXXXXX1111",
+                  "bin": "411111",
+                  "last_digits": "1111",
+                  "account_length": 16,
+                  "expiration_date": "202502"
+               },
+               "account_holder": "Test PMT july 2018",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "e11c2678cc74d4135b75caf39b1b32e30772c1b3",
+                  "line1": "100 Campus Dri",
+                  "city": "San Jose",
+                  "district": "CA",
+                  "postal_code": "95051",
+                  "country": "United States"
+               },
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "billing_plan": {
+      "object": "BillingPlan",
+      "id": "KHP Daily billing plan",
+      "vid": "120c7035599094a863b0d55b45000dc6c89abc09",
+      "created": "2017-10-26T15:43:37-07:00",
+      "description": "KHP Daily billing plan",
+      "status": "Active",
+      "periods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "BillingPlanPeriod",
+               "type": "Day",
+               "quantity": 1,
+               "cycles": 0,
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "USD"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "do_not_notify_first_bill": false
+            }
+         ],
+         "total_count": 1
+      },
+      "billing_notification_days": 3,
+      "entitlements": {
+         "object": "List",
+         "data": [
+            {
+               "object": "Entitlement",
+               "id": "access_gold",
+               "description": "Access To gold Subsription"
+            },
+            {
+               "object": "Entitlement",
+               "id": "basic_access",
+               "description": "basic Access description"
+            },
+            {
+               "object": "Entitlement",
+               "id": "MonthlyAccess",
+               "description": "Customer gets access to regular monthly subscription"
+            }
+         ],
+         "total_count": 3
+      },
+      "used_on_subscriptions": true
+   },
+   "payment_method": {
+      "object": "PaymentMethod",
+      "id": "TokenJuly162018",
+      "vid": "16aba1c5345267bb1942c89954ba78218f70aeac",
+      "created": "2018-07-16T14:19:22-07:00",
+      "type": "CreditCard",
+      "credit_card": {
+         "object": "CreditCard",
+         "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+         "account": "411111XXXXXX1111",
+         "bin": "411111",
+         "last_digits": "1111",
+         "account_length": 16,
+         "expiration_date": "202502"
+      },
+      "account_holder": "Test PMT july 2018",
+      "billing_address": {
+         "object": "Address",
+         "vid": "e11c2678cc74d4135b75caf39b1b32e30772c1b3",
+         "line1": "100 Campus Dri",
+         "city": "San Jose",
+         "district": "CA",
+         "postal_code": "95051",
+         "country": "United States"
+      },
+      "primary": true,
+      "active": true
+   },
+   "currency": "USD",
+   "status": "Active",
+   "billing_state": "Good Standing",
+   "starts": "2018-07-16T15:08:24-07:00",
+   "ends": "2018-08-13T00:00:00-07:00",
+   "entitled_through": "2018-08-13T00:00:00-07:00",
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "SubscriptionItem",
+            "id": "ABItemIDJJuly162018",
+            "vid": "ae03ed9db4cf0f66258fa9b0f5d459de5026ed80",
+            "index": 0,
+            "product": {
+               "object": "Product",
+               "id": "NewProduct-Nov102017",
+               "vid": "52496ca6c3709a7f25c68d6f3bace4ac5fb9ae60",
+               "created": "2017-11-10T11:23:35-08:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "NewProduct-Nov102017"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "status": "Active",
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "lpbc",
+                        "description": "Catalog"
+                     },
+                     {
+                        "object": "Entitlement",
+                        "id": "dailyAccess",
+                        "description": "dailyAccess"
+                     },
+                     {
+                        "object": "Entitlement",
+                        "id": "TestNewEntitlement-Nov10",
+                        "description": "TestNewEntitlement-Nov10"
+                     }
+                  ],
+                  "total_count": 3
+               },
+               "credit_granted": {
+                  "object": "Credit"
+               },
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 29,
+                        "currency": "USD"
+                     }
+                  ],
+                  "total_count": 1
+               }
+            },
+            "quantity": 1,
+            "created": "2018-07-16T15:08:24-07:00",
+            "starts": "2018-07-16T00:00:00-07:00"
+         }
+      ],
+      "total_count": 1
+   },
+   "source_ip": "192.168.99.130",
+   "billing_day": 17,
+   "notify_on_transition": false,
+   "most_recent_billing": {
+      "object": "Transaction",
+      "id": "KHPNFD00003647",
+      "vid": "af37f543898e2e48364b178ecab4c8a3c5dd9d9a",
+      "created": "2018-07-16T15:08:24-07:00",
+      "amount": 31.1,
+      "currency": "USD",
+      "account": {
+         "object": "Account",
+         "id": "AccountIDJJuly162018",
+         "vid": "bb2c3b2a6085e86b2296a30d0d6b9616cc8168e7",
+         "created": "2018-07-16T15:08:23-07:00",
+         "email": "myemail@vindicia.com",
+         "email_type": "html",
+         "name": "AccountIDJuly162018",
+         "payment_methods": {
+            "object": "List",
+            "data": [
+               {
+                  "object": "PaymentMethod",
+                  "id": "TokenJuly162018",
+                  "vid": "16aba1c5345267bb1942c89954ba78218f70aeac",
+                  "created": "2018-07-16T14:19:22-07:00",
+                  "type": "CreditCard",
+                  "credit_card": {
+                     "object": "CreditCard",
+                     "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                     "account": "411111XXXXXX1111",
+                     "bin": "411111",
+                     "last_digits": "1111",
+                     "account_length": 16,
+                     "expiration_date": "202502"
+                  },
+                  "account_holder": "Test PMT july 2018",
+                  "billing_address": {
+                     "object": "Address",
+                     "vid": "e11c2678cc74d4135b75caf39b1b32e30772c1b3",
+                     "line1": "100 Campus Dri",
+                     "city": "San Jose",
+                     "district": "CA",
+                     "postal_code": "95051",
+                     "country": "United States"
+                  },
+                  "primary": true,
+                  "active": true
+               }
+            ],
+            "total_count": 1
+         }
+      },
+      "source_payment_method": {
+         "object": "PaymentMethod",
+         "id": "TokenJuly162018",
+         "vid": "16aba1c5345267bb1942c89954ba78218f70aeac",
+         "created": "2018-07-16T14:19:22-07:00",
+         "type": "CreditCard",
+         "credit_card": {
+            "object": "CreditCard",
+            "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+            "account": "411111XXXXXX1111",
+            "bin": "411111",
+            "last_digits": "1111",
+            "account_length": 16,
+            "expiration_date": "202502"
+         },
+         "account_holder": "Test PMT july 2018",
+         "billing_address": {
+            "object": "Address",
+            "vid": "e11c2678cc74d4135b75caf39b1b32e30772c1b3",
+            "line1": "100 Campus Dri",
+            "city": "San Jose",
+            "district": "CA",
+            "postal_code": "95051",
+            "country": "United States"
+         },
+         "primary": true,
+         "active": true
+      },
+      "status_log": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionStatus",
+               "status": "Authorized",
+               "created": "2018-07-16T15:08:25-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard",
+                  "auth_code": "T00"
+               },
+               "note": "T00 - NA"
+            },
+            {
+               "object": "TransactionStatus",
+               "status": "New",
+               "created": "2018-07-16T15:08:24-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard",
+                  "auth_code": "T00"
+               }
+            }
+         ],
+         "total_count": 2
+      },
+      "payment_processor": "Test",
+      "payment_processor_transaction_id": "KHPNFD00003647",
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "KHP Daily billing plan",
+               "index_number": 1,
+               "item_type": "Purchase",
+               "name": "KHP Daily billing plan",
+               "quantity": 1,
+               "tax_classification": null,
+               "service_period_starts": "2018-07-16T00:00:00-07:00",
+               "service_period_ends": "2018-07-16T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "NewProduct-Nov102017",
+               "index_number": 2,
+               "item_type": "Purchase",
+               "name": "NewProduct-Nov102017",
+               "subscription_item": {
+                  "object": "SubscriptionItem",
+                  "id": "ABItemIDJJuly162018",
+                  "vid": "ae03ed9db4cf0f66258fa9b0f5d459de5026ed80"
+               },
+               "price": 29,
+               "quantity": 1,
+               "tax_classification": null,
+               "service_period_starts": "2018-07-16T00:00:00-07:00",
+               "service_period_ends": "2018-07-16T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "tax": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "COUNTY_085",
+                        "name": "SANTA CLARA COUNTY SALES TAX",
+                        "amount": 0.07,
+                        "external_tax_name": "CA COUNTY TAX",
+                        "external_jurisdiction_name": "SANTA CLARA",
+                        "tax_rate": 0.0025
+                     },
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "SPECIAL_EMUA0",
+                        "name": "SANTA CLARA CO LOCAL TAX SL SPECIAL SALES TAX",
+                        "amount": 0.29,
+                        "external_tax_name": "CA SPECIAL TAX",
+                        "external_jurisdiction_name": "SANTA CLARA CO LOCAL TAX SL",
+                        "tax_rate": 0.01
+                     },
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "STATE_06",
+                        "name": "CALIFORNIA STATE SALES TAX",
+                        "amount": 1.74,
+                        "external_tax_name": "CA STATE TAX",
+                        "external_jurisdiction_name": "CALIFORNIA",
+                        "tax_rate": 0.06
+                     }
+                  ],
+                  "total_count": 3
+               },
+               "subtotal": 29,
+               "total": 31.1
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Total Tax",
+               "index_number": 3,
+               "item_type": "Purchase",
+               "name": "Total Tax",
+               "price": 0,
+               "quantity": 1,
+               "tax_classification": "TaxExempt",
+               "service_period_starts": "2018-07-16T00:00:00-07:00",
+               "service_period_ends": "2018-07-16T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "tax": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "COUNTY_085",
+                        "name": "SANTA CLARA COUNTY SALES TAX",
+                        "amount": 0.07
+                     },
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "SPECIAL_EMUA0",
+                        "name": "SANTA CLARA CO LOCAL TAX SL SPECIAL SALES TAX",
+                        "amount": 0.29
+                     },
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "STATE_06",
+                        "name": "CALIFORNIA STATE SALES TAX",
+                        "amount": 1.74
+                     }
+                  ],
+                  "total_count": 3
+               },
+               "discount": 0,
+               "subtotal": 0,
+               "total": 2.1
+            }
+         ],
+         "total_count": 3
+      },
+      "source_ip": "192.168.99.130",
+      "sales_tax_address": {
+         "object": "Address",
+         "vid": "22b7dafbabcf6782ab7797aa035c24bd1ad27461",
+         "line1": "100 Campus Dri",
+         "city": "SAN JOSE",
+         "district": "CA",
+         "postal_code": "95051",
+         "country": "US"
+      },
+      "subscription_sequence": 1,
+      "billing_plan_sequence": 1,
+      "original_billing_date": "2018-07-16T00:00:00-07:00",
+      "subscription": {
+         "object": "Subscription",
+         "id": "ABIDTestJuly162018",
+         "vid": "9efc2b19137f09c06427ea88b5ac1932e9c19587"
+      }
+   },
+   "next_billing": {
+      "object": "Transaction",
+      "created": "2018-07-17T00:00:00-07:00",
+      "amount": 29,
+      "currency": "USD",
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "NewProduct-Nov102017",
+               "item_type": "Purchase",
+               "name": "NewProduct-Nov102017",
+               "price": 29,
+               "quantity": 1,
+               "tax_classification": null,
+               "tax_type": "Exclusive Sales",
+               "subtotal": 29,
+               "total": 29
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "balance": 0
+}
+
+
+
