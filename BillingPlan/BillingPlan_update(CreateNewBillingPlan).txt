@@ -6,42 +6,91 @@ Endpoint :  https://api.prodtest.vindicia.com/billing_plans
 
 JSON Request:
 
-{  
-   "object":"BillingPlan",
-   "id":"KHP TESTARC billing plan",
-   "description":"KHP TESTARC billing plan",
-   "periods":{  
-      "object":"List",
-      "data":[  
-         {  
-            "object":"BillingPlanPeriod",
-            "type":"Month",
-            "quantity":10,
-            "cycles":0,
-            "prices":{  
-               "object":"List",
-               "data":[  
-                  {  
-                     "object":"BillingPlanPrice",
-                     "amount":0,
-                     "currency":"USD"
+{
+  "object": "BillingPlan",
+  "id": "CB Monthly billing plan",
+  "description": "CB Monthly billing plan",
+  "periods": {
+    "object": "List",
+    "data": [
+      {
+        "object": "BillingPlanPeriod",
+        "type": "Month",
+        "quantity": 10,
+        "cycles": 0,
+        "prices": {
+          "object": "List",
+          "data": [
+            {
+              "object": "BillingPlanPrice",
+              "amount": 0,
+              "currency": "USD"
+            }
+          ]
+        },
+        "do_not_notify_first_bill": false
+      }
+    ],
+    "total_count": 1
+  },
+  "billing_notification_days": 1,
+  "entitlements": {
+    "object": "List",
+    "data": [
+      {
+        "object": "Entitlement",
+        "id": "access_gold",
+        "description": "Access To gold Subsription"
+      }
+    ]
+  }
+}
+
+JSON Response:
+
+{
+   "object": "BillingPlan",
+   "id": "CB Monthly billing plan",
+   "vid": "30a85f4d2b804d778eb7dceb4fa54c823534ee88",
+   "created": "2018-07-16T12:05:00-07:00",
+   "description": "CB Monthly billing plan",
+   "status": "Active",
+   "periods": {
+      "object": "List",
+      "data": [
+         {
+            "object": "BillingPlanPeriod",
+            "type": "Month",
+            "quantity": 10,
+            "cycles": 0,
+            "prices": {
+               "object": "List",
+               "data": [
+                  {
+                     "object": "BillingPlanPrice",
+                     "amount": 0,
+                     "currency": "USD"
                   }
-               ]
+               ],
+               "total_count": 1
             },
-            "do_not_notify_first_bill":false
+            "do_not_notify_first_bill": false
          }
       ],
-      "total_count":1
+      "total_count": 1
    },
-   "billing_notification_days":1,
-   "entitlements":{  
-      "object":"List",
-      "data":[  
-         {  
-            "object":"Entitlement",
-            "id":"access_gold",
-            "description":"Access To gold Subsription"
+   "billing_notification_days": 1,
+   "entitlements": {
+      "object": "List",
+      "data": [
+         {
+            "object": "Entitlement",
+            "id": "access_gold",
+            "description": "Access To gold Subsription"
          }
-      ]
-   }
+      ],
+      "total_count": 1
+   },
+   "times_to_run": "1",
+   "used_on_subscriptions": false
 }
