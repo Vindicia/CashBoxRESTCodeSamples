@@ -4,9 +4,17 @@ SOAP call : Transaction.capture
 
 REST Method:  POST
 
-Endpoint :  https://api.vindicia.com/transactions/TXIDJuly22018_T1/actions/capture
+Endpoint :  https://api.prodtest.vindicia.com/transactions/TXIDJuly22018_T1/actions/capture
 
 JSON Request:
 
 NONE
 
+
+JSON Response:
+
+{
+"object": "Transaction",
+"id": "TXIDJuly22018_T1",
+"vid": "1b3b87f90fe15d8cc7f713f37f3f740ca4187cb2"
+}

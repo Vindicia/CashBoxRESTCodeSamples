@@ -4,4 +4,30 @@ REST Method:  GET
 
 Endpoint : https://api.prodtest.vindicia.com/accounts/HariK1/credits
 
+Note: Credit shouldn't be consumed yet , so the data shows up in response.
+If the credit is consumed fully, then and empty credit object is returned.
+
+
+
 JSON response:
+
+{
+   "object": "Credit",
+   "currency_amounts": {
+      "object": "List",
+      "data": [
+         {
+            "object": "CurrencyAmount",
+            "vid": "c30d1baae9c5211b66b1365375842d7c5f15e22d",
+            "currency": "USD",
+            "amount": 15,
+            "description": "Test June28 Credit",
+            "reason": "Test June28 Credit",
+            "granted_by_cashbox": false,
+            "granted": "2018-06-28T23:25:16-07:00",
+            "source": "Account"
+         }
+      ],
+      "total_count": 1
+   }
+}

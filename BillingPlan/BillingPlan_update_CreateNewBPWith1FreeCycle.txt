@@ -6,57 +6,104 @@ Method: POST
 
 JSON Request:
 
-{  
-   "object":"BillingPlan",
-   "id":"Experian_Monthly_BP_1freeCycle",
-   
-   
-   "trial":{  
-      "object":"BillingPlanPeriod",
-      "type":"Month",
-      "quantity":1,
-      "cycles":1,
-      "do_not_notify_first_bill":false
+{
+  "object": "BillingPlan",
+  "id": "CB_Monthly_BP_1freeCycle",
+  "trial": {
+    "object": "BillingPlanPeriod",
+    "type": "Month",
+    "quantity": 1,
+    "cycles": 1,
+    "do_not_notify_first_bill": false
+  },
+  "periods": {
+    "object": "List",
+    "data": [
+      {
+        "object": "BillingPlanPeriod",
+        "type": "Month",
+        "quantity": 1,
+        "cycles": 0,
+        "prices": {
+          "object": "List",
+          "data": [
+            {
+              "object": "BillingPlanPrice",
+              "amount": 0,
+              "currency": "USD"
+            }
+          ]
+        },
+        "do_not_notify_first_bill": false
+      }
+    ]
+  },
+  "entitlements": {
+    "object": "List",
+    "data": [
+      {
+        "object": "Entitlement",
+        "id": "access_gold",
+        "description": "Access To gold Subscription"
+      }
+    ]
+  }
+}
+
+
+JSON Response:
+
+{
+   "object": "BillingPlan",
+   "id": "CB_Monthly_BP_1freeCycle",
+   "vid": "df2990d8135e9a1da820863c2b13af1410a4b901",
+   "created": "2018-07-16T13:04:01-07:00",
+   "status": "Active",
+   "trial": {
+      "object": "BillingPlanPeriod",
+      "type": "Month",
+      "quantity": 1,
+      "cycles": 1,
+      "do_not_notify_first_bill": false
    },
-   "periods":{  
-      "object":"List",
-      "data":[  
-         {  
-            "object":"BillingPlanPeriod",
-            "type":"Month",
-            "quantity":1,
-            "cycles":0,
-            "prices":{  
-               "object":"List",
-               "data":[  
-                  
-                  {  
-                     "object":"BillingPlanPrice",
-                     "amount":0,
-                     "currency":"GBP"
+   "periods": {
+      "object": "List",
+      "data": [
+         {
+            "object": "BillingPlanPeriod",
+            "type": "Month",
+            "quantity": 1,
+            "cycles": 0,
+            "prices": {
+               "object": "List",
+               "data": [
+                  {
+                     "object": "BillingPlanPrice",
+                     "amount": 0,
+                     "currency": "USD"
                   }
-               ]
-               
+               ],
+               "total_count": 1
             },
-            "do_not_notify_first_bill":false
+            "do_not_notify_first_bill": false
          }
-      ]
-     
+      ],
+      "total_count": 1
    },
-   
-
+   "skip_initial_billing_notification": false,
    "entitlements": {
-   "object": "List",
-   "data": [
-     {
-   "object": "Entitlement",
-   "id": "access_gold",
-   "description": "Access To gold Subsription"
-   }
-
-   ]
-
-   }
+      "object": "List",
+      "data": [
+         {
+            "object": "Entitlement",
+            "id": "access_gold",
+            "description": "Access To gold Subsription"
+         }
+      ],
+      "total_count": 1
+   },
+   "times_to_run": "1",
+   "used_on_subscriptions": false
 }
 
 
