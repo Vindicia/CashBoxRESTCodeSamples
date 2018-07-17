@@ -3,7 +3,7 @@ SOAP call : Transaction.fetchBySubscriptionID
 
 REST Method:  GET
 
-Endpoint :  https://api.prodtest.vindicia.com/transactions?subscription=ABIDTestJuly22018
+Endpoint :  https://api.prodtest.vindicia.com/transactions?subscription=AutoBillID1531781936499
 
 JSON Response:
 
@@ -12,27 +12,27 @@ JSON Response:
    "data": [
       {
          "object": "Transaction",
-         "id": "KHPNFD00003346",
-         "vid": "349df38584ec604efeec0a4352e6a565c6131da5",
-         "created": "2018-07-02T14:35:15-07:00",
-         "amount": 29,
+         "id": "KHPNFD00003648",
+         "vid": "5f2fb587e3102c9228d4c2f94695e5986526ed12",
+         "created": "2018-07-16T15:58:58-07:00",
+         "amount": 112,
          "currency": "USD",
          "account": {
             "object": "Account",
-            "id": "AccountIDJuly22018",
-            "vid": "f2ff6de72426bf6a2a5b14d6f1d0f5e4624aedb3",
-            "created": "2018-07-02T14:35:14-07:00",
-            "email": "hkoppuravuri@vindicia.com",
+            "id": "AccountID1531781936499",
+            "vid": "2f608e82762d32c12443cc229dcf96b8c4d28866",
+            "created": "2018-07-16T15:58:57-07:00",
+            "email": "myemail@vindicia.com",
             "email_type": "html",
-            "name": "AccountIDJuly22018",
+            "name": "Acct Name 1531781936499",
             "payment_methods": {
                "object": "List",
                "data": [
                   {
                      "object": "PaymentMethod",
-                     "id": "PMIDCCPMJuly2018",
-                     "vid": "f6d56e891e738712b97824abf4e9f4969ec2b633",
-                     "created": "2018-07-02T14:35:16-07:00",
+                     "id": "PMID1531781936499",
+                     "vid": "ab909ada43bfe52915af7c0bd4f64d756f9b2d7b",
+                     "created": "2018-07-16T15:58:57-07:00",
                      "type": "CreditCard",
                      "credit_card": {
                         "object": "CreditCard",
@@ -41,13 +41,13 @@ JSON Response:
                         "bin": "411111",
                         "last_digits": "1111",
                         "account_length": 16,
-                        "expiration_date": "201909"
+                        "expiration_date": "201908"
                      },
-                     "account_holder": "CCaccountholderJuly2018",
+                     "account_holder": "CCPayerName1531781936499",
                      "billing_address": {
                         "object": "Address",
-                        "vid": "51e0b7b1e1945decc7a5a5c481af5d54c00656fd",
-                        "line1": "2226 Mary Ave",
+                        "vid": "0f9362f2cd22a38a4b64e7fdb0485c3c851a7107",
+                        "line1": "2226 Campus Ave",
                         "city": "Santa Clara",
                         "postal_code": "95050",
                         "phone": "408408408"
@@ -61,9 +61,9 @@ JSON Response:
          },
          "source_payment_method": {
             "object": "PaymentMethod",
-            "id": "PMIDCCPMJuly2018",
-            "vid": "f6d56e891e738712b97824abf4e9f4969ec2b633",
-            "created": "2018-07-02T14:35:16-07:00",
+            "id": "PMID1531781936499",
+            "vid": "ab909ada43bfe52915af7c0bd4f64d756f9b2d7b",
+            "created": "2018-07-16T15:58:57-07:00",
             "type": "CreditCard",
             "credit_card": {
                "object": "CreditCard",
@@ -72,13 +72,13 @@ JSON Response:
                "bin": "411111",
                "last_digits": "1111",
                "account_length": 16,
-               "expiration_date": "201909"
+               "expiration_date": "201908"
             },
-            "account_holder": "CCaccountholderJuly2018",
+            "account_holder": "CCPayerName1531781936499",
             "billing_address": {
                "object": "Address",
-               "vid": "51e0b7b1e1945decc7a5a5c481af5d54c00656fd",
-               "line1": "2226 Mary Ave",
+               "vid": "0f9362f2cd22a38a4b64e7fdb0485c3c851a7107",
+               "line1": "2226 Campus Ave",
                "city": "Santa Clara",
                "postal_code": "95050",
                "phone": "408408408"
@@ -92,7 +92,7 @@ JSON Response:
                {
                   "object": "TransactionStatus",
                   "status": "Captured",
-                  "created": "2018-07-02T14:50:12-07:00",
+                  "created": "2018-07-16T16:03:45-07:00",
                   "payment_method_type": "CreditCard",
                   "credit_card_status": {
                      "object": "TransactionStatusCreditCard",
@@ -103,7 +103,7 @@ JSON Response:
                {
                   "object": "TransactionStatus",
                   "status": "Authorized",
-                  "created": "2018-07-02T14:35:16-07:00",
+                  "created": "2018-07-16T15:58:59-07:00",
                   "payment_method_type": "CreditCard",
                   "credit_card_status": {
                      "object": "TransactionStatusCreditCard",
@@ -114,7 +114,7 @@ JSON Response:
                {
                   "object": "TransactionStatus",
                   "status": "New",
-                  "created": "2018-07-02T14:35:15-07:00",
+                  "created": "2018-07-16T15:58:58-07:00",
                   "payment_method_type": "CreditCard",
                   "credit_card_status": {
                      "object": "TransactionStatusCreditCard",
@@ -125,10 +125,11 @@ JSON Response:
             "total_count": 3
          },
          "payment_processor": "Test",
-         "payment_processor_transaction_id": "KHPNFD00003346",
+         "payment_processor_transaction_id": "KHPNFD00003648",
          "metadata": {
             "vin:RetryNumber": "0",
             "vin:TaxError_1": "Can't compute sales tax due to lack of shipping and billing addresses",
+            "vin:recurring": "1",
             "vin:BillingCycle": "0"
          },
          "items": {
@@ -136,36 +137,36 @@ JSON Response:
             "data": [
                {
                   "object": "TransactionItem",
-                  "sku": "KHP Daily billing plan",
+                  "sku": "KHP TESTARC billing plan",
                   "index_number": 1,
                   "item_type": "Purchase",
-                  "name": "KHP Daily billing plan",
+                  "name": "MODIFIED KHP TESTARC billing plan",
                   "quantity": 1,
-                  "tax_classification": null,
-                  "service_period_starts": "2018-07-02T00:00:00-07:00",
-                  "service_period_ends": "2018-07-02T00:00:00-07:00",
+                  "tax_classification": "TaxExempt",
+                  "service_period_starts": "2018-07-16T00:00:00-07:00",
+                  "service_period_ends": "2019-05-15T00:00:00-07:00",
                   "tax_type": "Exclusive Sales",
                   "total": 0
                },
                {
                   "object": "TransactionItem",
-                  "sku": "NewProduct-Nov102017",
+                  "sku": "khp_ARC_product2018",
                   "index_number": 2,
                   "item_type": "Purchase",
-                  "name": "NewProduct-Nov102017",
+                  "name": "Description For New ProductARC",
                   "subscription_item": {
                      "object": "SubscriptionItem",
-                     "id": "ABItemIDJune42018",
-                     "vid": "0253cb5b51d3f9633dd96f7e828e1a3d62a57b65"
+                     "id": "ABItemID1531781936499",
+                     "vid": "5703d036f82e469b443c46e602ade8b56fc73fa2"
                   },
-                  "price": 29,
+                  "price": 112,
                   "quantity": 1,
-                  "tax_classification": null,
-                  "service_period_starts": "2018-07-02T00:00:00-07:00",
-                  "service_period_ends": "2018-07-02T00:00:00-07:00",
+                  "tax_classification": "TaxExempt",
+                  "service_period_starts": "2018-07-16T00:00:00-07:00",
+                  "service_period_ends": "2019-05-15T00:00:00-07:00",
                   "tax_type": "Exclusive Sales",
-                  "subtotal": 29,
-                  "total": 29
+                  "subtotal": 112,
+                  "total": 112
                },
                {
                   "object": "TransactionItem",
@@ -176,8 +177,8 @@ JSON Response:
                   "price": 0,
                   "quantity": 1,
                   "tax_classification": "TaxExempt",
-                  "service_period_starts": "2018-07-02T00:00:00-07:00",
-                  "service_period_ends": "2018-07-02T00:00:00-07:00",
+                  "service_period_starts": "2018-07-16T00:00:00-07:00",
+                  "service_period_ends": "2019-05-15T00:00:00-07:00",
                   "tax_type": "Exclusive Sales",
                   "discount": 0,
                   "subtotal": 0,
@@ -186,197 +187,21 @@ JSON Response:
             ],
             "total_count": 3
          },
-         "source_ip": "192.168.99.130",
+         "affiliate": "400",
+         "source_ip": "123.123.123.123",
          "subscription_sequence": 1,
          "billing_plan_sequence": 1,
-         "original_billing_date": "2018-07-02T00:00:00-07:00",
+         "original_billing_date": "2018-07-16T00:00:00-07:00",
          "billing_attempt": 0,
          "subscription": {
             "object": "Subscription",
-            "id": "ABIDTestJuly22018",
-            "vid": "7865e84a0acf64b1434278766930a8309760ebb8"
-         }
-      },
-      {
-         "object": "Transaction",
-         "id": "KHPNFD00003347",
-         "vid": "9052a5488cdb63f4933ffbcdb841c77c4e5d88de",
-         "created": "2018-07-03T00:02:37-07:00",
-         "amount": 29,
-         "currency": "USD",
-         "account": {
-            "object": "Account",
-            "id": "AccountIDJuly22018",
-            "vid": "f2ff6de72426bf6a2a5b14d6f1d0f5e4624aedb3",
-            "created": "2018-07-02T14:35:14-07:00",
-            "email": "hkoppuravuri@vindicia.com",
-            "email_type": "html",
-            "name": "AccountIDJuly22018",
-            "payment_methods": {
-               "object": "List",
-               "data": [
-                  {
-                     "object": "PaymentMethod",
-                     "id": "PMIDCCPMJuly2018",
-                     "vid": "f6d56e891e738712b97824abf4e9f4969ec2b633",
-                     "created": "2018-07-02T14:35:16-07:00",
-                     "type": "CreditCard",
-                     "credit_card": {
-                        "object": "CreditCard",
-                        "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
-                        "account": "411111XXXXXX1111",
-                        "bin": "411111",
-                        "last_digits": "1111",
-                        "account_length": 16,
-                        "expiration_date": "201909"
-                     },
-                     "account_holder": "CCaccountholderJuly2018",
-                     "billing_address": {
-                        "object": "Address",
-                        "vid": "51e0b7b1e1945decc7a5a5c481af5d54c00656fd",
-                        "line1": "2226 Mary Ave",
-                        "city": "Santa Clara",
-                        "postal_code": "95050",
-                        "phone": "408408408"
-                     },
-                     "primary": true,
-                     "active": true
-                  }
-               ],
-               "total_count": 1
-            }
-         },
-         "source_payment_method": {
-            "object": "PaymentMethod",
-            "id": "PMIDCCPMJuly2018",
-            "vid": "f6d56e891e738712b97824abf4e9f4969ec2b633",
-            "created": "2018-07-02T14:35:16-07:00",
-            "type": "CreditCard",
-            "credit_card": {
-               "object": "CreditCard",
-               "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
-               "account": "411111XXXXXX1111",
-               "bin": "411111",
-               "last_digits": "1111",
-               "account_length": 16,
-               "expiration_date": "201909"
-            },
-            "account_holder": "CCaccountholderJuly2018",
-            "billing_address": {
-               "object": "Address",
-               "vid": "51e0b7b1e1945decc7a5a5c481af5d54c00656fd",
-               "line1": "2226 Mary Ave",
-               "city": "Santa Clara",
-               "postal_code": "95050",
-               "phone": "408408408"
-            },
-            "primary": true,
-            "active": true
-         },
-         "status_log": {
-            "object": "List",
-            "data": [
-               {
-                  "object": "TransactionStatus",
-                  "status": "Captured",
-                  "created": "2018-07-03T00:21:10-07:00",
-                  "payment_method_type": "CreditCard",
-                  "credit_card_status": {
-                     "object": "TransactionStatusCreditCard",
-                     "auth_code": "T00"
-                  },
-                  "note": "T00"
-               },
-               {
-                  "object": "TransactionStatus",
-                  "status": "New",
-                  "created": "2018-07-03T00:02:40-07:00",
-                  "payment_method_type": "CreditCard",
-                  "credit_card_status": {
-                     "object": "TransactionStatusCreditCard",
-                     "auth_code": "T00"
-                  }
-               }
-            ],
-            "total_count": 2
-         },
-         "payment_processor": "Test",
-         "payment_processor_transaction_id": "KHPNFD00003347",
-         "metadata": {
-            "vin:RetryNumber": "0",
-            "vin:BillingCycle": "1"
-         },
-         "items": {
-            "object": "List",
-            "data": [
-               {
-                  "object": "TransactionItem",
-                  "sku": "KHP Daily billing plan",
-                  "index_number": 1,
-                  "item_type": "Purchase",
-                  "name": "KHP Daily billing plan",
-                  "quantity": 1,
-                  "tax_classification": null,
-                  "service_period_starts": "2018-07-03T00:00:00-07:00",
-                  "service_period_ends": "2018-07-03T00:00:00-07:00",
-                  "tax_type": "Exclusive Sales",
-                  "total": 0
-               },
-               {
-                  "object": "TransactionItem",
-                  "sku": "NewProduct-Nov102017",
-                  "index_number": 2,
-                  "item_type": "Purchase",
-                  "name": "NewProduct-Nov102017",
-                  "subscription_item": {
-                     "object": "SubscriptionItem",
-                     "id": "ABItemIDJune42018",
-                     "vid": "0253cb5b51d3f9633dd96f7e828e1a3d62a57b65"
-                  },
-                  "price": 29,
-                  "quantity": 1,
-                  "tax_classification": null,
-                  "service_period_starts": "2018-07-03T00:00:00-07:00",
-                  "service_period_ends": "2018-07-03T00:00:00-07:00",
-                  "tax_type": "Exclusive Sales",
-                  "subtotal": 29,
-                  "total": 29
-               },
-               {
-                  "object": "TransactionItem",
-                  "sku": "Total Tax",
-                  "index_number": 3,
-                  "item_type": "Purchase",
-                  "name": "Total Tax",
-                  "price": 0,
-                  "quantity": 1,
-                  "tax_classification": "TaxExempt",
-                  "service_period_starts": "2018-07-03T00:00:00-07:00",
-                  "service_period_ends": "2018-07-03T00:00:00-07:00",
-                  "tax_type": "Exclusive Sales",
-                  "discount": 0,
-                  "subtotal": 0,
-                  "total": 0
-               }
-            ],
-            "total_count": 3
-         },
-         "source_ip": "192.168.99.130",
-         "subscription_sequence": 2,
-         "billing_plan_sequence": 2,
-         "original_billing_date": "2018-07-03T00:00:00-07:00",
-         "billing_attempt": 0,
-         "subscription": {
-            "object": "Subscription",
-            "id": "ABIDTestJuly22018",
-            "vid": "7865e84a0acf64b1434278766930a8309760ebb8"
+            "id": "AutoBillID1531781936499",
+            "vid": "60bd6724dcadf2f191259ebf0ca7ca819d46ff63"
          }
       }
    ],
-   "total_count": 2,
-   "url": "/transactions?subscription=ABIDTestJuly22018",
-   "next": "/transactions?subscription=ABIDTestJuly22018&starting_after=KHPNFD00003347",
-   "previous": "/transactions?subscription=ABIDTestJuly22018&ending_before=KHPNFD00003346"
+   "total_count": 1,
+   "url": "/transactions?subscription=AutoBillID1531781936499",
+   "next": "/transactions?subscription=AutoBillID1531781936499&starting_after=KHPNFD00003648",
+   "previous": "/transactions?subscription=AutoBillID1531781936499&ending_before=KHPNFD00003648"
 }
-
-
