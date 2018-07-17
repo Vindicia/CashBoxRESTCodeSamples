@@ -2,218 +2,227 @@ SOAP call : Autobill.fetchByMerchantAutoBillId
 
 REST Method:  GET	
 
-Endpoint : https://api.prodtest.vindicia.com/subscriptions/vin_test_ab_1513274482836
+Endpoint : https://api.prodtest.vindicia.com/subscriptions/AutoBillID1531781936499
 
 
 JSON Response:
 
-{  
-   "object":"Subscription",
-   "id":"vin_test_ab_1513274482836",
-   "vid":"489e6625d861dad9dfca57563cdf732026dd9e1a",
-   "created":"2017-12-14T10:01:30-08:00",
-   "account":{  
-      "object":"Account",
-      "id":"vin_test_acct_1513274482836",
-      "vid":"6b05a49c37dc7476d641981d32480ae0255e53be",
-      "created":"2017-12-14T10:01:26-08:00",
-      "email":"hkoppuravuri@vindicia.com",
-      "email_type":"html",
-      "name":"HariPriyaK dec14",
-      "payment_methods":{  
-         "object":"List",
-         "data":[  
-            {  
-               "object":"PaymentMethod",
-               "id":"vin_test_acct_cc_1513274482836",
-               "vid":"8b4e4eee2d227d84dfb11caf0ddd9ec6d759baf1",
-               "created":"2017-12-14T10:01:27-08:00",
-               "type":"CreditCard",
-               "credit_card":{  
-                  "object":"CreditCard",
-                  "vid":"6f79adbb4bd3c229ab998adae34e1ce0d7956370",
-                  "account":"433665XXXXXX2654",
-                  "bin":"433665",
-                  "last_digits":"2654",
-                  "account_length":16,
-                  "expiration_date":"201909"
+{
+   "object": "Subscription",
+   "id": "AutoBillID1531781936499",
+   "vid": "60bd6724dcadf2f191259ebf0ca7ca819d46ff63",
+   "created": "2018-07-16T15:59:00-07:00",
+   "account": {
+      "object": "Account",
+      "id": "AccountID1531781936499",
+      "vid": "2f608e82762d32c12443cc229dcf96b8c4d28866",
+      "created": "2018-07-16T15:58:57-07:00",
+      "email": "myemail@vindicia.com",
+      "email_type": "html",
+      "name": "Acct Name 1531781936499",
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "PMID1531781936499",
+               "vid": "ab909ada43bfe52915af7c0bd4f64d756f9b2d7b",
+               "created": "2018-07-16T15:58:57-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                  "account": "411111XXXXXX1111",
+                  "bin": "411111",
+                  "last_digits": "1111",
+                  "account_length": 16,
+                  "expiration_date": "201908"
                },
-               "account_holder":"HariPriyaK dec 14",
-               "billing_address":{  
-                  "object":"Address",
-                  "vid":"7466be9d023e1a7c6569393061a501f052f526a6",
-                  "line1":"3750 Deedham Drive",
-                  "city":"San Jose",
-                  "district":"CA",
-                  "postal_code":"95148",
-                  "country":"US"
+               "account_holder": "CCPayerName1531781936499",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "0f9362f2cd22a38a4b64e7fdb0485c3c851a7107",
+                  "line1": "2226 Campus Ave",
+                  "city": "Santa Clara",
+                  "postal_code": "95050",
+                  "phone": "408408408"
                },
-               "primary":true,
-               "active":true
+               "primary": true,
+               "active": true
             }
          ],
-         "total_count":1
+         "total_count": 1
       }
    },
-   "billing_plan":{  
-      "object":"BillingPlan",
-      "id":"OTT-Yearly-BillingPlan",
-      "vid":"c8e2206bb4e0319a3f28edfb9b5c22f086ae0a96",
-      "created":"2017-10-17T08:49:46-07:00",
-      "description":"OTT-Yearly-BillingPlan",
-      "status":"Active",
-      "periods":{  
-         "object":"List",
-         "data":[  
-            {  
-               "object":"BillingPlanPeriod",
-               "type":"Year",
-               "quantity":1,
-               "cycles":0,
-               "prices":{  
-                  "object":"List",
-                  "data":[  
-                     {  
-                        "object":"BillingPlanPrice",
-                        "amount":0,
-                        "currency":"USD"
+   "billing_plan": {
+      "object": "BillingPlan",
+      "id": "KHP TESTARC billing plan",
+      "vid": "3d9c7d0d11faae63d5b529cae74cb0b1f7c0add0",
+      "created": "2018-04-16T13:12:20-07:00",
+      "description": "MODIFIED KHP TESTARC billing plan",
+      "status": "Suspended",
+      "periods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "BillingPlanPeriod",
+               "type": "Month",
+               "quantity": 10,
+               "cycles": 0,
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "USD"
                      }
                   ],
-                  "total_count":1
+                  "total_count": 1
                },
-               "do_not_notify_first_bill":false
+               "do_not_notify_first_bill": false
             }
          ],
-         "total_count":1
+         "total_count": 1
       },
-      "billing_notification_days":7,
-      "used_on_subscriptions":true
+      "billing_notification_days": 1,
+      "entitlements": {
+         "object": "List",
+         "data": [
+            {
+               "object": "Entitlement",
+               "id": "access_gold",
+               "description": "Access To gold Subsription"
+            }
+         ],
+         "total_count": 1
+      },
+      "times_to_run": "1",
+      "used_on_subscriptions": true
    },
-   "payment_method":{  
-      "object":"PaymentMethod",
-      "id":"vin_test_acct_cc_1513274482836",
-      "vid":"8b4e4eee2d227d84dfb11caf0ddd9ec6d759baf1",
-      "created":"2017-12-14T10:01:27-08:00",
-      "type":"CreditCard",
-      "credit_card":{  
-         "object":"CreditCard",
-         "vid":"6f79adbb4bd3c229ab998adae34e1ce0d7956370",
-         "account":"433665XXXXXX2654",
-         "bin":"433665",
-         "last_digits":"2654",
-         "account_length":16,
-         "expiration_date":"201909"
+   "payment_method": {
+      "object": "PaymentMethod",
+      "id": "PMID1531781936499",
+      "vid": "ab909ada43bfe52915af7c0bd4f64d756f9b2d7b",
+      "created": "2018-07-16T15:58:57-07:00",
+      "type": "CreditCard",
+      "credit_card": {
+         "object": "CreditCard",
+         "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+         "account": "411111XXXXXX1111",
+         "bin": "411111",
+         "last_digits": "1111",
+         "account_length": 16,
+         "expiration_date": "201908"
       },
-      "account_holder":"HariPriyaK dec 14",
-      "billing_address":{  
-         "object":"Address",
-         "vid":"7466be9d023e1a7c6569393061a501f052f526a6",
-         "line1":"3750 Deedham Drive",
-         "city":"San Jose",
-         "district":"CA",
-         "postal_code":"95148",
-         "country":"US"
+      "account_holder": "CCPayerName1531781936499",
+      "billing_address": {
+         "object": "Address",
+         "vid": "0f9362f2cd22a38a4b64e7fdb0485c3c851a7107",
+         "line1": "2226 Campus Ave",
+         "city": "Santa Clara",
+         "postal_code": "95050",
+         "phone": "408408408"
       },
-      "primary":true,
-      "active":true
+      "primary": true,
+      "active": true
    },
-   "currency":"USD",
-   "status":"Active",
-   "billing_state":"Good Standing",
-   "starts":"2017-12-14T10:01:26-08:00",
-   "ends":"2019-01-10T00:00:00-08:00",
-   "entitled_through":"2019-01-10T00:00:00-08:00",
-   "items":{  
-      "object":"List",
-      "data":[  
-         {  
-            "object":"SubscriptionItem",
-            "id":"item-1-1513274482836",
-            "vid":"8ebe4d6b0ef9b459e5a8623c7b30eb076a867786",
-            "index":0,
-            "product":{  
-               "object":"Product",
-               "id":"OTT_Basic_monthly_package",
-               "vid":"1bc6c4e24884fb20f4a57bb1a4a954cd7120a313",
-               "created":"2017-10-16T12:33:13-07:00",
-               "descriptions":{  
-                  "object":"List",
-                  "data":[  
-                     {  
-                        "object":"ProductDescription",
-                        "language":"EN",
-                        "description":"OTT Basic Monthly Package for $19.99"
+   "currency": "USD",
+   "status": "Active",
+   "billing_state": "Good Standing",
+   "starts": "2018-07-16T15:58:58-07:00",
+   "ends": "2019-06-12T00:00:00-07:00",
+   "entitled_through": "2019-06-12T00:00:00-07:00",
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "SubscriptionItem",
+            "id": "ABItemID1531781936499",
+            "vid": "5703d036f82e469b443c46e602ade8b56fc73fa2",
+            "index": 0,
+            "product": {
+               "object": "Product",
+               "id": "khp_ARC_product2018",
+               "vid": "1c358a7d2f12ee1d1ace26375753b6bc3eb20bd2",
+               "created": "2018-04-16T14:27:12-07:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "Description For New ProductARC"
                      }
                   ],
-                  "total_count":1
+                  "total_count": 1
                },
-               "status":"Active",
-               "entitlements":{  
-                  "object":"List",
-                  "data":[  
-                     {  
-                        "object":"Entitlement",
-                        "id":"MonthlyAccess",
-                        "description":"Customer gets access to regular monthly subscription"
+               "status": "Active",
+               "tax_classification": "TaxExempt",
+               "metadata": {
+                  "vind:Division": "ARC Movie"
+               },
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "basic_access",
+                        "description": "basic Access description"
                      }
                   ],
-                  "total_count":1
+                  "total_count": 1
                },
-               "billing_descriptor":"OTT_Basic_monthly_package",
-               "credit_granted":{  
-                  "object":"Credit"
-               },
-               "prices":{  
-                  "object":"List",
-                  "data":[  
-                     {  
-                        "object":"ProductPrice",
-                        "amount":19.99,
-                        "currency":"USD"
-                     },
-                     {  
-                        "object":"ProductPrice",
-                        "amount":24.99,
-                        "currency":"CAD"
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 112,
+                        "currency": "USD"
                      }
                   ],
-                  "total_count":2
+                  "total_count": 1
                }
             },
-            "quantity":1,
-            "created":"2017-12-14T10:01:26-08:00",
-            "starts":"2017-12-14T00:00:00-08:00"
+            "currency": "USD",
+            "quantity": 1,
+            "created": "2018-07-16T15:58:58-07:00",
+            "starts": "2018-07-16T00:00:00-07:00"
          }
       ],
-      "total_count":1
+      "total_count": 1
    },
-   "source_ip":"192.168.228.1",
-   "billing_day":14,
-   "minimum_commitment":0,
-   "notify_on_transition":false,
-   "next_billing":{  
-      "object":"Transaction",
-      "created":"2018-12-14T00:00:00-08:00",
-      "amount":19.99,
-      "currency":"USD",
-      "items":{  
-         "object":"List",
-         "data":[  
-            {  
-               "object":"TransactionItem",
-               "sku":"OTT_Basic_monthly_package",
-               "item_type":"Purchase",
-               "name":"OTT Basic Monthly Package for $19.99",
-               "price":19.99,
-               "quantity":1,
-               "tax_classification":null,
-               "tax_type":"Exclusive Sales",
-               "subtotal":19.99,
-               "total":19.99
+   "source_ip": "123.123.123.123",
+   "billing_day": 16,
+   "minimum_commitment": 0,
+   "affiliate": "400",
+   "notify_on_transition": false,
+   "next_billing": {
+      "object": "Transaction",
+      "created": "2019-05-16T00:00:00-07:00",
+      "amount": 112,
+      "currency": "USD",
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "khp_ARC_product2018",
+               "item_type": "Purchase",
+               "name": "Description For New ProductARC",
+               "price": 112,
+               "quantity": 1,
+               "tax_classification": "TaxExempt",
+               "tax_type": "Exclusive Sales",
+               "subtotal": 112,
+               "total": 112
             }
          ],
-         "total_count":1
+         "total_count": 1
       }
    },
-   "balance":0
+   "balance": 0
 }
+
+   
