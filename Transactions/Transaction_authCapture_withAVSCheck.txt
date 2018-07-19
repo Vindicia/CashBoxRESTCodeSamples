@@ -1,0 +1,436 @@
+SOAP call : Transaction.authCapture
+
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/transactions
+
+(Product(sku) is not an existing product from the merchant catalog, it is a new product for which 1 time TX is created, product is a non-physical goods)
+(Creditcard is good, but the card has AVSResponseCode = N means no match)
+(Tx goes from New to Authorized to Cancelled due to AVS check)
+
+JSON Request:
+{
+    "object": "Transaction",
+    "id": "OneTimeTXID2244",
+    "account": {
+       "object": "Account",
+       "id": "AccountID1531860090569"
+    },
+    "source_payment_method": {
+       "object": "PaymentMethod",
+       "type": "CreditCard",
+       "account_holder": "Sally Brown",
+       "credit_card": {
+                  "object":"CreditCard",
+                  "account":"4916654211627608",
+                  "expiration_date":"201911"
+            },
+      
+      "billing_address": {
+        "object": "Address",
+        "name": "Sally Brown",
+        "line1": "123 Main Street",
+        "city": "San Francisco",
+        "district": "CA",
+        "postal_code": "94105",
+        "country": "US",
+        "phone": "415-555-3212"
+        }
+    },
+    
+    "items": [
+       {
+          "object": "TransactionItem",
+          "sku": "NewProduct_For1TimeTX",
+          "name":"NewProduct Price 0.99",
+          "price": 0.99,
+          "quantity": 1
+       }
+    ],
+    "source_ip": "63.201.132.182",
+    "policy": {
+       "min_chargeback_probability": 99,
+       "send_email_notification": 0,
+       "ignore_avs_policy":0
+    },
+    "to_be_captured": true
+ }
+
+ JSON Response:
+
+ {
+   "object": "Transaction",
+   "id": "OneTimeTXID2244",
+   "vid": "d1cc9a016af320c99aba43416d29316bd97ec65a",
+   "created": "2018-07-17T13:44:18-07:00",
+   "amount": 1.06,
+   "currency": "USD",
+   "account": {
+      "object": "Account",
+      "id": "AccountID1531860090569",
+      "vid": "fd58dbc2679e89ffdd5e68cda24e1f4d8e9e3e9f",
+      "created": "2018-07-17T13:41:31-07:00",
+      "email": "MyEmail@gmail.com",
+      "email_type": "plaintext",
+      "notify_before_billing": false,
+      "name": "Acct Name 1531860090569",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "971bc402ee942d90daba1db621ca73f3bafacbd7",
+         "name": "Tommy Hill",
+         "line1": "2226 Mary Ave",
+         "city": "Santa Clara",
+         "postal_code": "95050",
+         "country": "US",
+         "phone": "408408408"
+      },
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "vid": "efcdf1047f037114995a3b221f5be361d2881c67",
+               "created": "2018-07-17T13:44:19-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "5321df6e7ea612812bb03f33d5a1160fcfcb0482",
+                  "account": "491665XXXXXX7608",
+                  "bin": "491665",
+                  "last_digits": "7608",
+                  "account_length": 16,
+                  "expiration_date": "201911"
+               },
+               "account_holder": "Sally Brown",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "079342272125e56c4112624cfed13e8ec2c40ca2",
+                  "name": "Sally Brown",
+                  "line1": "123 Main Street",
+                  "city": "San Francisco",
+                  "district": "CA",
+                  "postal_code": "94105",
+                  "country": "US",
+                  "phone": "415-555-3212"
+               },
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "source_payment_method": {
+      "object": "PaymentMethod",
+      "vid": "efcdf1047f037114995a3b221f5be361d2881c67",
+      "created": "2018-07-17T13:44:19-07:00",
+      "type": "CreditCard",
+      "credit_card": {
+         "object": "CreditCard",
+         "vid": "5321df6e7ea612812bb03f33d5a1160fcfcb0482",
+         "account": "491665XXXXXX7608",
+         "bin": "491665",
+         "last_digits": "7608",
+         "account_length": 16,
+         "expiration_date": "201911"
+      },
+      "account_holder": "Sally Brown",
+      "billing_address": {
+         "object": "Address",
+         "vid": "079342272125e56c4112624cfed13e8ec2c40ca2",
+         "name": "Sally Brown",
+         "line1": "123 Main Street",
+         "city": "San Francisco",
+         "district": "CA",
+         "postal_code": "94105",
+         "country": "US",
+         "phone": "415-555-3212"
+      },
+      "primary": true,
+      "active": true
+   },
+   "status_log": {
+      "object": "List",
+      "data": [
+         {
+            "object": "TransactionStatus",
+            "status": "Cancelled",
+            "created": "2018-07-17T13:44:20-07:00",
+            "payment_method_type": "CreditCard",
+            "credit_card_status": {
+               "object": "TransactionStatusCreditCard",
+               "auth_code": "T00"
+            }
+         },
+         {
+            "object": "TransactionStatus",
+            "status": "Authorized",
+            "created": "2018-07-17T13:44:18-07:00",
+            "payment_method_type": "CreditCard",
+            "credit_card_status": {
+               "object": "TransactionStatusCreditCard",
+               "auth_code": "T00",
+               "avs_code": "N",
+               "cvn_code": "M"
+            },
+            "vin_avs": "NoMatch",
+            "note": "T00 - NA"
+         },
+         {
+            "object": "TransactionStatus",
+            "status": "New",
+            "created": "2018-07-17T13:44:18-07:00",
+            "payment_method_type": "CreditCard",
+            "credit_card_status": {
+               "object": "TransactionStatusCreditCard",
+               "auth_code": "T00"
+            }
+         }
+      ],
+      "total_count": 3
+   },
+   "payment_processor": "Test",
+   "payment_processor_transaction_id": "OneTimeTXID2244",
+   "shipping_address": {
+      "object": "Address",
+      "vid": "971bc402ee942d90daba1db621ca73f3bafacbd7",
+      "name": "Tommy Hill",
+      "line1": "2226 Mary Ave",
+      "city": "Santa Clara",
+      "postal_code": "95050",
+      "country": "US",
+      "phone": "408408408"
+   },
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "TransactionItem",
+            "sku": "NewProduct_For1TimeTX",
+            "index_number": 1,
+            "item_type": "Purchase",
+            "name": "NewProduct Price 0.99",
+            "price": 0.99,
+            "quantity": 1,
+            "tax_classification": null,
+            "tax_type": "Exclusive Sales",
+            "tax": {
+               "object": "List",
+               "data": [
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "SPECIAL_EMUA0",
+                     "name": "SANTA CLARA CO LOCAL TAX SL SPECIAL SALES TAX",
+                     "amount": 0.01,
+                     "external_tax_name": "CA SPECIAL TAX",
+                     "external_jurisdiction_name": "SANTA CLARA CO LOCAL TAX SL",
+                     "tax_rate": 0.01
+                  },
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "STATE_06",
+                     "name": "CALIFORNIA STATE SALES TAX",
+                     "amount": 0.06,
+                     "external_tax_name": "CA STATE TAX",
+                     "external_jurisdiction_name": "CALIFORNIA",
+                     "tax_rate": 0.06
+                  }
+               ],
+               "total_count": 2
+            },
+            "subtotal": 0.99,
+            "total": 1.06
+         },
+         {
+            "object": "TransactionItem",
+            "sku": "Total Tax",
+            "index_number": 2,
+            "item_type": "Purchase",
+            "name": "Total Tax",
+            "price": 0,
+            "quantity": 1,
+            "tax_classification": "TaxExempt",
+            "tax_type": "Exclusive Sales",
+            "tax": {
+               "object": "List",
+               "data": [
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "SPECIAL_EMUA0",
+                     "name": "SANTA CLARA CO LOCAL TAX SL SPECIAL SALES TAX",
+                     "amount": 0.01
+                  },
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "STATE_06",
+                     "name": "CALIFORNIA STATE SALES TAX",
+                     "amount": 0.06
+                  }
+               ],
+               "total_count": 2
+            },
+            "discount": 0,
+            "subtotal": 0,
+            "total": 0.07
+         }
+      ],
+      "total_count": 2
+   },
+   "source_ip": "63.201.132.182",
+   "sales_tax_address": {
+      "object": "Address",
+      "vid": "baed70284ed16dc73cdbaafe4bc6155bd752c186",
+      "name": "Tommy Hill",
+      "line1": "2226 Mary Ave",
+      "city": "SANTA CLARA",
+      "postal_code": "95050",
+      "country": "US"
+   },
+   "score": 2,
+   "score_codes": {
+      "object": "List",
+      "data": [
+         {
+            "object": "ScoreCode",
+            "id": "13",
+            "description": "<explanation>: explanation: You should review this order carefully, as it is considered high risk. We suggest you be very cautious about accepting this order. This order is higher risk because the distance between the billing address and the user's actual location is so great. The o (You should review this order carefully, as it is considered high risk. We suggest you be very cautious about accepting this order. This order is higher risk because the distance between the billing address and the user's actual location is so great. The o)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "14",
+            "description": "<shipCityPostalMatch>: Shipping city and state match zipcode (Yes)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "15",
+            "description": "<cityPostalMatch>: Billing city and state match zipcode (Yes)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "16",
+            "description": "<shipForward>: Shipping address is in database of known risky mail drops (No)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "21",
+            "description": "<binMatch>: Country of issuing bank matches billing address country (No)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "42",
+            "description": "<freeMail>: Email address is from a free email provider (No)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "52",
+            "description": "<anonymousProxy>: IP address is an anonymous proxy (No)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "63",
+            "description": "<highRiskCountry>: IP address or billing address country is in a high risk country (No)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "64",
+            "description": "<distance>: Distance between IP address and billing address is 4131 kilometers (4131)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "65",
+            "description": "<countryMatch>: IP address and billing address are in same country (Yes)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "100",
+            "description": "<binCountry>: ()"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "101",
+            "description": "<binName>: ()"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "102",
+            "description": "<binNameMatch>: (NA)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "103",
+            "description": "<binPhone>: ()"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "104",
+            "description": "<binPhoneMatch>: (NA)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "105",
+            "description": "<countryCode>: (US)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "106",
+            "description": "<custPhoneInBillingLoc>: (NotFound)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "107",
+            "description": "<ip_city>: (New York)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "108",
+            "description": "<ip_isp>: (AT&T Internet Services)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "109",
+            "description": "<ip_latitude>: (40.7143)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "110",
+            "description": "<ip_longitude>: (-74.0060)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "111",
+            "description": "<ip_org>: (AT&T Internet Services)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "112",
+            "description": "<ip_region>: (NY)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "113",
+            "description": "<maxmindID>: (OQRWHYAV)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "114",
+            "description": "<proxyScore>: (0.00)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "115",
+            "description": "<riskScore>: (2.03)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "116",
+            "description": "<score>: (4.06)"
+         },
+         {
+            "object": "ScoreCode",
+            "id": "219",
+            "description": "<queriesRemaining>: (3790567)"
+         }
+      ],
+      "total_count": 28
+   }
+}
