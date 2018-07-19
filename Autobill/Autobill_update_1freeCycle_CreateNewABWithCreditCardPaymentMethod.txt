@@ -1,0 +1,456 @@
+SOAP call : Autobill.update	
+
+REST Method:  POST	
+
+Endpoint : https://api.prodtest.vindicia.com/subscriptions?dry_run=0
+
+(portal doesn't show values for Autobill status and Billing state right after the REST call is made, but after sometime? the values are populated?? )
+(ABID = ABIDTestId2233, ABIDTestId123)
+
+JSON Request:
+
+
+{
+  "object": "Subscription",
+  "id": "ABIDTestId2233",
+  "account": {
+    "id": "AccountID2233",
+    "email": "myemail@vindicia.com",
+    "email_type": "html",
+    "name": "AccountID2233"
+  },
+  "billing_plan": {
+    "id": "CB_Monthly_BP_1freeCycle"
+  },
+  "payment_method": {
+    "id": "PMID2233",
+    "type": "CreditCard",
+    "credit_card": {
+      "object": "CreditCard",
+      "account": "4111111111111111",
+      "expiration_date": "201909"
+    },
+    "account_holder": "Peter Rabbit",
+    "billing_address": {
+      "object": "Address",
+      "line1": "2226 Mary Ave",
+      "city": "Santa Clara",
+      "postal_code": "95050",
+      "phone": "408408408"
+    },
+    "active": true
+  },
+  "source_ip": "192.168.99.130",
+  "items": [
+    {
+      "object": "SubscriptionItem",
+      "id": "ABItemID2233",
+      "product": {
+        "id": "NewProduct-Nov102017"
+      }
+    }
+  ]
+}
+
+JSON Response:
+
+{
+   "object": "Subscription",
+   "id": "ABIDTestId2233",
+   "vid": "67a65182e98f0460be06149201a92949431f2cb1",
+   "created": "2018-07-17T13:51:25-07:00",
+   "account": {
+      "object": "Account",
+      "id": "AccountID2233",
+      "vid": "81164db76b182e275661b7d1abb6ffb796ffd4ed",
+      "created": "2018-07-17T13:51:24-07:00",
+      "email": "myemail@vindicia.com",
+      "email_type": "html",
+      "name": "AccountID2233",
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "PMID2233",
+               "vid": "a59cdda62028f89c8112c3ca0e9bf95b8755c88f",
+               "created": "2018-07-17T13:51:26-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                  "account": "411111XXXXXX1111",
+                  "bin": "411111",
+                  "last_digits": "1111",
+                  "account_length": 16,
+                  "expiration_date": "201909"
+               },
+               "account_holder": "Peter Rabbit",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "7377217b57d67b0ef570698120a354fca6a8f8f1",
+                  "line1": "2226 Mary Ave",
+                  "city": "Santa Clara",
+                  "postal_code": "95050",
+                  "phone": "408408408"
+               },
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "billing_plan": {
+      "object": "BillingPlan",
+      "id": "CB_Monthly_BP_1freeCycle",
+      "vid": "df2990d8135e9a1da820863c2b13af1410a4b901",
+      "created": "2018-07-16T13:04:01-07:00",
+      "status": "Active",
+      "trial": {
+         "object": "BillingPlanPeriod",
+         "type": "Month",
+         "quantity": 1,
+         "cycles": 1,
+         "do_not_notify_first_bill": false
+      },
+      "periods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "BillingPlanPeriod",
+               "type": "Month",
+               "quantity": 1,
+               "cycles": 0,
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "USD"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "do_not_notify_first_bill": false
+            }
+         ],
+         "total_count": 1
+      },
+      "skip_initial_billing_notification": false,
+      "entitlements": {
+         "object": "List",
+         "data": [
+            {
+               "object": "Entitlement",
+               "id": "access_gold",
+               "description": "Access To gold Subsription"
+            }
+         ],
+         "total_count": 1
+      },
+      "times_to_run": "1",
+      "used_on_subscriptions": false
+   },
+   "payment_method": {
+      "object": "PaymentMethod",
+      "id": "PMID2233",
+      "vid": "a59cdda62028f89c8112c3ca0e9bf95b8755c88f",
+      "created": "2018-07-17T13:51:26-07:00",
+      "type": "CreditCard",
+      "credit_card": {
+         "object": "CreditCard",
+         "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+         "account": "411111XXXXXX1111",
+         "bin": "411111",
+         "last_digits": "1111",
+         "account_length": 16,
+         "expiration_date": "201909"
+      },
+      "account_holder": "Peter Rabbit",
+      "billing_address": {
+         "object": "Address",
+         "vid": "7377217b57d67b0ef570698120a354fca6a8f8f1",
+         "line1": "2226 Mary Ave",
+         "city": "Santa Clara",
+         "postal_code": "95050",
+         "phone": "408408408"
+      },
+      "primary": true,
+      "active": true
+   },
+   "currency": "USD",
+   "status": "Active",
+   "billing_state": "Good Standing",
+   "starts": "2018-07-17T13:51:25-07:00",
+   "ends": "2018-09-13T00:00:00-07:00",
+   "entitled_through": "2018-09-13T00:00:00-07:00",
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "SubscriptionItem",
+            "id": "ABItemID2233",
+            "vid": "48fa24d23db0dc87bb5875ca793ab28f83d884bb",
+            "index": 0,
+            "product": {
+               "object": "Product",
+               "id": "NewProduct-Nov102017",
+               "vid": "52496ca6c3709a7f25c68d6f3bace4ac5fb9ae60",
+               "created": "2017-11-10T11:23:35-08:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "NewProduct-Nov102017"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "status": "Active",
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "lpbc",
+                        "description": "Catalog"
+                     },
+                     {
+                        "object": "Entitlement",
+                        "id": "dailyAccess",
+                        "description": "dailyAccess"
+                     },
+                     {
+                        "object": "Entitlement",
+                        "id": "TestNewEntitlement-Nov10",
+                        "description": "TestNewEntitlement-Nov10"
+                     }
+                  ],
+                  "total_count": 3
+               },
+               "credit_granted": {
+                  "object": "Credit"
+               },
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 29,
+                        "currency": "USD"
+                     }
+                  ],
+                  "total_count": 1
+               }
+            },
+            "quantity": 1,
+            "created": "2018-07-17T13:51:25-07:00",
+            "starts": "2018-07-17T00:00:00-07:00"
+         }
+      ],
+      "total_count": 1
+   },
+   "source_ip": "192.168.99.130",
+   "billing_day": 17,
+   "notify_on_transition": false,
+   "most_recent_billing": {
+      "object": "Transaction",
+      "id": "KHPNFD00003651",
+      "vid": "1b6c7a137d50943856024e246beff6c38449a4aa",
+      "created": "2018-07-17T13:51:25-07:00",
+      "amount": 0,
+      "currency": "USD",
+      "account": {
+         "object": "Account",
+         "id": "AccountID2233",
+         "vid": "81164db76b182e275661b7d1abb6ffb796ffd4ed",
+         "created": "2018-07-17T13:51:24-07:00",
+         "email": "myemail@vindicia.com",
+         "email_type": "html",
+         "name": "AccountID2233",
+         "payment_methods": {
+            "object": "List",
+            "data": [
+               {
+                  "object": "PaymentMethod",
+                  "id": "PMID2233",
+                  "vid": "a59cdda62028f89c8112c3ca0e9bf95b8755c88f",
+                  "created": "2018-07-17T13:51:26-07:00",
+                  "type": "CreditCard",
+                  "credit_card": {
+                     "object": "CreditCard",
+                     "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                     "account": "411111XXXXXX1111",
+                     "bin": "411111",
+                     "last_digits": "1111",
+                     "account_length": 16,
+                     "expiration_date": "201909"
+                  },
+                  "account_holder": "Peter Rabbit",
+                  "billing_address": {
+                     "object": "Address",
+                     "vid": "7377217b57d67b0ef570698120a354fca6a8f8f1",
+                     "line1": "2226 Mary Ave",
+                     "city": "Santa Clara",
+                     "postal_code": "95050",
+                     "phone": "408408408"
+                  },
+                  "primary": true,
+                  "active": true
+               }
+            ],
+            "total_count": 1
+         }
+      },
+      "source_payment_method": {
+         "object": "PaymentMethod",
+         "id": "PMID2233",
+         "vid": "a59cdda62028f89c8112c3ca0e9bf95b8755c88f",
+         "created": "2018-07-17T13:51:26-07:00",
+         "type": "CreditCard",
+         "credit_card": {
+            "object": "CreditCard",
+            "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+            "account": "411111XXXXXX1111",
+            "bin": "411111",
+            "last_digits": "1111",
+            "account_length": 16,
+            "expiration_date": "201909"
+         },
+         "account_holder": "Peter Rabbit",
+         "billing_address": {
+            "object": "Address",
+            "vid": "7377217b57d67b0ef570698120a354fca6a8f8f1",
+            "line1": "2226 Mary Ave",
+            "city": "Santa Clara",
+            "postal_code": "95050",
+            "phone": "408408408"
+         },
+         "primary": true,
+         "active": true
+      },
+      "status_log": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionStatus",
+               "status": "Authorized",
+               "created": "2018-07-17T13:51:25-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard",
+                  "auth_code": "T00"
+               },
+               "note": "T00 - NA"
+            },
+            {
+               "object": "TransactionStatus",
+               "status": "New",
+               "created": "2018-07-17T13:51:25-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard",
+                  "auth_code": "T00"
+               }
+            }
+         ],
+         "total_count": 2
+      },
+      "payment_processor": "Test",
+      "payment_processor_transaction_id": "KHPNFD00003651",
+      "metadata": {
+         "vin:TaxError_1": "Can't compute sales tax due to lack of shipping and billing addresses"
+      },
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "CB_Monthly_BP_1freeCycle",
+               "index_number": 1,
+               "item_type": "Purchase",
+               "name": "Recurring Charge, Billing Plan CB_Monthly_BP_1freeCycle",
+               "quantity": 1,
+               "tax_classification": null,
+               "service_period_starts": "2018-07-17T00:00:00-07:00",
+               "service_period_ends": "2018-08-16T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "NewProduct-Nov102017",
+               "index_number": 2,
+               "item_type": "Purchase",
+               "name": "NewProduct-Nov102017",
+               "subscription_item": {
+                  "object": "SubscriptionItem",
+                  "id": "ABItemID2233",
+                  "vid": "48fa24d23db0dc87bb5875ca793ab28f83d884bb"
+               },
+               "quantity": 1,
+               "tax_classification": null,
+               "service_period_starts": "2018-07-17T00:00:00-07:00",
+               "service_period_ends": "2018-08-16T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Total Tax",
+               "index_number": 3,
+               "item_type": "Purchase",
+               "name": "Total Tax",
+               "price": 0,
+               "quantity": 1,
+               "tax_classification": "TaxExempt",
+               "service_period_starts": "2018-07-17T00:00:00-07:00",
+               "service_period_ends": "2018-08-16T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "discount": 0,
+               "subtotal": 0,
+               "total": 0
+            }
+         ],
+         "total_count": 3
+      },
+      "source_ip": "192.168.99.130",
+      "subscription_sequence": 1,
+      "billing_plan_sequence": 1,
+      "original_billing_date": "2018-07-17T00:00:00-07:00",
+      "subscription": {
+         "object": "Subscription",
+         "id": "ABIDTestId2233",
+         "vid": "67a65182e98f0460be06149201a92949431f2cb1"
+      }
+   },
+   "next_billing": {
+      "object": "Transaction",
+      "created": "2018-08-17T00:00:00-07:00",
+      "amount": 29,
+      "currency": "USD",
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "NewProduct-Nov102017",
+               "item_type": "Purchase",
+               "name": "NewProduct-Nov102017",
+               "price": 29,
+               "quantity": 1,
+               "tax_classification": null,
+               "tax_type": "Exclusive Sales",
+               "subtotal": 29,
+               "total": 29
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "balance": 0
+}
