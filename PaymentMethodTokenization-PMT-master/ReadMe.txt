@@ -35,14 +35,21 @@ For "vin_session_hash", give the value that is saved in Step2
 
 Make sure the following values are pointed to PRODTES Urls. 
 
-vindiciaServer: "secure.prodtest.sj.vindicia.com", // to load the iframes from vindiciaRestServer: "api.prodtest.vindicia.com", // to submit the JSON data to
+vindiciaServer: "secure.prodtest.sj.vindicia.com", // to load the iframes from 
+vindiciaRestServer: "api.prodtest.vindicia.com", // to submit the JSON data to
+
+
 
 For "vindiciaAuthId", get the value from Header section after entering the REST user credentials that are provided by Vindicia.
 
 After the changes are done, load your application , enter the credit card credentials, submit and in the response retrieve the values for "vid" which will be used later to update the existing Account with this new Payment Method.
 Example response:
 
-{ "object": "PaymentMethod", "id": "paymeth_104", "vid": "21536bbe3143b8a474448519102423fe51209848" }
+{ 
+"object": "PaymentMethod", 
+"id": "paymeth_104", 
+"vid": "21536bbe3143b8a474448519102423fe51209848" 
+}
 
 
 
