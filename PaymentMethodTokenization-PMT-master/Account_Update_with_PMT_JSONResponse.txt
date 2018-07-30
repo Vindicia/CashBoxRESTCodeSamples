@@ -1,72 +1,56 @@
 JSON response :
 
 {
-"object": "Account",
-"id": "AccountID1523568051076",
-"vid": "47fe3b0c9ceff26739e4d80bf736096763fabf2e",
-"created": "2018-04-12T14:20:53-07:00",
-"email": "hkoppuravuri@vindicia.com",
-"email_type": "html",
-"name": "Acct Name 1523568051076",
-"payment_methods": {
-"object": "List",
-"data": [
-  {
-"object": "PaymentMethod",
-"id": "paymeth_104",
-"vid": "21536bbe3143b8a474448519102423fe51209848",
-"created": "2018-04-12T14:23:47-07:00",
-"type": "CreditCard",
-"credit_card": {
-"object": "CreditCard",
-"vid": "6f79adbb4bd3c229ab998adae34e1ce0d7956370",
-"account": "433665XXXXXX2654",
-"bin": "433665",
-"last_digits": "2654",
-"account_length": 16,
-"expiration_date": "202104"
-},
-"account_holder": "Test PMT April 12 T2",
-"billing_address": {
-"object": "Address",
-"vid": "a2943c94aded4fe9a68c0fe47fc0ff9027e9d8ae",
-"line1": "ABC",
-"city": "San Jose",
-"district": "CA",
-"postal_code": "95148",
-"country": "United States"
-},
-"primary": true,
-"active": true
-},
-  {
-"object": "PaymentMethod",
-"id": "PMID1523568051076",
-"vid": "57ca21c4096bda33dcb04e70332d324b7b57013d",
-"created": "2018-04-12T14:20:53-07:00",
-"type": "CreditCard",
-"credit_card": {
-"object": "CreditCard",
-"vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
-"account": "411111XXXXXX1111",
-"bin": "411111",
-"last_digits": "1111",
-"account_length": 16,
-"expiration_date": "201908"
-},
-"account_holder": "CCPayerName1523568051076",
-"billing_address": {
-"object": "Address",
-"vid": "a36feccf1938a86760fb3d77306f4408418f5eda",
-"line1": "2226 Mary Ave",
-"city": "Santa Clara",
-"postal_code": "95050",
-"phone": "408408408"
-},
-"primary": true,
-"active": true
-}
-],
-"total_count": 2
-}
+   "object": "Account",
+   "id": "AccountID1532986706979",
+   "vid": "454a3c29f7e01ea41a584d23aea0e6cfc1d375e8",
+   "created": "2018-07-30T14:38:28-07:00",
+   "email": "MyEmail@gmail.com",
+   "email_type": "plaintext",
+   "notify_before_billing": false,
+   "name": "Acct Name 1532986706979",
+   "shipping_address": {
+      "object": "Address",
+      "vid": "0bd11e89f3bcf4b773966bd10a598bf594fa7093",
+      "name": "Tommy Hill",
+      "line1": "2226 Mary Ave",
+      "city": "Santa Clara",
+      "postal_code": "95050",
+      "country": "US",
+      "phone": "408408408"
+   },
+   "payment_methods": {
+      "object": "List",
+      "data": [
+         {
+            "object": "PaymentMethod",
+            "id": "TokenJuly30",
+            "vid": "444354f265cefac930ea24b7b63cf4a883267e4c",
+            "created": "2018-07-30T14:37:44-07:00",
+            "type": "CreditCard",
+            "credit_card": {
+               "object": "CreditCard",
+               "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+               "account": "411111XXXXXX1111",
+               "bin": "411111",
+               "last_digits": "1111",
+               "account_length": 16,
+               "expiration_date": "202106"
+            },
+            "account_holder": "KHP",
+            "billing_address": {
+               "object": "Address",
+               "vid": "307450f3baac7460ab7e774830a88ef5824eb809",
+               "line1": "100 Campus Dri",
+               "city": "San Jose",
+               "district": "CA",
+               "postal_code": "95051",
+               "country": "United States"
+            },
+            "primary": true,
+            "active": true
+         }
+      ],
+      "total_count": 1
+   }
 }
