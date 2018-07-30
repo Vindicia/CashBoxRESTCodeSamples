@@ -1,17 +1,17 @@
-Endpoint:https://api.prodtest.vindicia.com/accounts/AccountID1523568051076
+Endpoint:https://api.prodtest.vindicia.com/accounts/AccountID1532986706979
 
 Method:POST
 
 JSON request:
 
 {
-  "id": "AccountID1523568051076",
+  "id": "AccountID1532986706979",
   "payment_methods": {
     "object": "List",
     "data": [
       {
         "object": "PaymentMethod",
-        "vid":"21536bbe3143b8a474448519102423fe51209848",
+        "vid":"444354f265cefac930ea24b7b63cf4a883267e4c",
         "primary": true
       
         }
