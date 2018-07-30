@@ -9,7 +9,7 @@ Steps:
 1.Open the file hmac_forRESTHOA_prodtest.pl and edit the following field values: 
 
 $private_key (Vindicia provides a key) 
-$token(Create you own value for this field, ex:PMTToken1)
+$token(Create you own value for this field, ex:KHPApril12T2)
 
 
 
