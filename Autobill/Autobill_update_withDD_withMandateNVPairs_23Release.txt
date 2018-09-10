@@ -1,0 +1,479 @@
+Autobill.update
+
+Endpoint: https://api.prodtest.vindicia.com/subscription
+
+(Note: The Mandate uploaded on prodtest merchant has  
+    my $country_code = "DE";
+    my $language = "DE"; 
+
+    which means in the following JSON Request, billing_address object, should have country = "DE" )
+
+JSON Request:
+
+{
+  "object": "Subscription",
+  "id": "ABID11122334466",
+  "account": {
+    "id": "AcctID11122334466",
+    "email": "myemail@myemail.com",
+    "email_type": "html",
+    "name": "AcctName 11122334466"
+  },
+  "metadata": {
+    "vin:MandateFlag": 1,
+    "vin:MandateVersion": "2.0",
+    "vin:MandateBankName": "Deutsche Bank",
+    "vin:MandateID": "MandateIDAug302018T11"
+  },
+  
+  "source_ip": "123.123.123.123",
+  "currency": "GBP",
+  "billing_plan": {
+    "id": "MonthlyBPWithGBP"
+  },
+  "payment_method": {
+    "object": "PaymentMethod",
+    "id": "PMID11122334466",
+    "type": "DirectDebit",
+    "customer_specified_type": "EDD",
+    "direct_debit": {
+      "object": "DirectDebit",
+      "account": "34697856",
+      "bank_sort_code": "309136",
+      "country_code": "GB"
+    },
+    "account_holder": "DD AccountHolder 11122334466",
+    "billing_address": {
+      "object": "Address",
+      "line1": "14 Tottenham Court Road",
+      "city": "KILBIRNIE",
+      "postal_code": "KA25 7HB",
+      "country": "DE",
+      "phone": "408408408"
+    },
+    "active": true
+  },
+  "items": [
+    {
+      "object": "SubscriptionItem",
+      "id": "ABItemID11122334466",
+      "product": {
+        "id": "NewProduct1GBP"
+      }
+    }
+  ]
+}
+
+
+
+
+JSON Response:
+
+
+{
+   "object": "Subscription",
+   "id": "ABID11122334466",
+   "vid": "4fd09641adba6fe4ee179c7ba2ab3b9371669e60",
+   "created": "2018-09-06T11:51:04-07:00",
+   "account": {
+      "object": "Account",
+      "id": "AcctID11122334466",
+      "vid": "bee4437ee99c74c7a3de9b2d1c14d95b71d8a005",
+      "created": "2018-09-06T11:51:03-07:00",
+      "email": "myemail@myemail.com",
+      "email_type": "html",
+      "name": "AcctName 11122334466",
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "PMID11122334466",
+               "vid": "586a813bc674ddfbee2e17279402fd331d50ecb6",
+               "created": "2018-09-06T11:51:05-07:00",
+               "type": "DirectDebit",
+               "direct_debit": {
+                  "object": "DirectDebit",
+                  "account": "XXXX7856",
+                  "last_digits": "7856",
+                  "account_length": 8,
+                  "country_code": "GB",
+                  "bank_sort_code": "309136",
+                  "rib_code": null
+               },
+               "account_holder": "DD AccountHolder 11122334466",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "e580568d6d97d35ff52b0e44667408383616342c",
+                  "line1": "14 Tottenham Court Road",
+                  "city": "KILBIRNIE",
+                  "postal_code": "KA25 7HB",
+                  "country": "DE",
+                  "phone": "408408408"
+               },
+               "customer_specified_type": "EDD",
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "billing_plan": {
+      "object": "BillingPlan",
+      "id": "MonthlyBPWithGBP",
+      "vid": "a5a0383270d232bfd8736fc806fe673c355bbf24",
+      "created": "2018-09-06T11:49:25-07:00",
+      "description": "CB Monthly billing plan with GBP",
+      "status": "Active",
+      "periods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "BillingPlanPeriod",
+               "type": "Month",
+               "quantity": 1,
+               "cycles": 0,
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "GBP"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "do_not_notify_first_bill": false
+            }
+         ],
+         "total_count": 1
+      },
+      "billing_notification_days": 1,
+      "entitlements": {
+         "object": "List",
+         "data": [
+            {
+               "object": "Entitlement",
+               "id": "access_gold",
+               "description": "Access To gold Subsription"
+            }
+         ],
+         "total_count": 1
+      },
+      "times_to_run": "1",
+      "used_on_subscriptions": true
+   },
+   "payment_method": {
+      "object": "PaymentMethod",
+      "id": "PMID11122334466",
+      "vid": "586a813bc674ddfbee2e17279402fd331d50ecb6",
+      "created": "2018-09-06T11:51:05-07:00",
+      "type": "DirectDebit",
+      "direct_debit": {
+         "object": "DirectDebit",
+         "account": "XXXX7856",
+         "last_digits": "7856",
+         "account_length": 8,
+         "country_code": "GB",
+         "bank_sort_code": "309136",
+         "rib_code": null
+      },
+      "account_holder": "DD AccountHolder 11122334466",
+      "billing_address": {
+         "object": "Address",
+         "vid": "e580568d6d97d35ff52b0e44667408383616342c",
+         "line1": "14 Tottenham Court Road",
+         "city": "KILBIRNIE",
+         "postal_code": "KA25 7HB",
+         "country": "DE",
+         "phone": "408408408"
+      },
+      "customer_specified_type": "EDD",
+      "primary": true,
+      "active": true
+   },
+   "currency": "GBP",
+   "status": "Processing",
+   "billing_state": "Unbilled",
+   "starts": "2018-09-06T11:51:04-07:00",
+   "ends": "2018-11-02T00:00:00-07:00",
+   "entitled_through": "2018-11-02T00:00:00-07:00",
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "SubscriptionItem",
+            "id": "ABItemID11122334466",
+            "vid": "a53eda8aecd5539e7eb568ae7565efdcc651fcd9",
+            "index": 0,
+            "product": {
+               "object": "Product",
+               "id": "NewProduct1GBP",
+               "vid": "5d7e61595ea180492420de005e1b18cb34623c74",
+               "created": "2018-09-04T12:41:54-07:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "Monthly service Product Price in GBP"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "status": "Active",
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "MonthlyAccess",
+                        "description": "Customer gets access to regular monthly subscription"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 4.99,
+                        "currency": "GBP"
+                     }
+                  ],
+                  "total_count": 1
+               }
+            },
+            "quantity": 1,
+            "created": "2018-09-06T11:51:04-07:00",
+            "starts": "2018-09-06T00:00:00-07:00"
+         }
+      ],
+      "total_count": 1
+   },
+   "source_ip": "123.123.123.123",
+   "billing_day": 6,
+   "minimum_commitment": 0,
+   "notify_on_transition": false,
+   "most_recent_billing": {
+      "object": "Transaction",
+      "id": "KHPNFD00003882",
+      "vid": "e94a2d29c2028d988cc0f49c30a28e8c2c04a154",
+      "created": "2018-09-06T11:51:04-07:00",
+      "amount": 4.99,
+      "currency": "GBP",
+      "division_number": "732214",
+      "account": {
+         "object": "Account",
+         "id": "AcctID11122334466",
+         "vid": "bee4437ee99c74c7a3de9b2d1c14d95b71d8a005",
+         "created": "2018-09-06T11:51:03-07:00",
+         "email": "myemail@myemail.com",
+         "email_type": "html",
+         "name": "AcctName 11122334466",
+         "payment_methods": {
+            "object": "List",
+            "data": [
+               {
+                  "object": "PaymentMethod",
+                  "id": "PMID11122334466",
+                  "vid": "586a813bc674ddfbee2e17279402fd331d50ecb6",
+                  "created": "2018-09-06T11:51:05-07:00",
+                  "type": "DirectDebit",
+                  "direct_debit": {
+                     "object": "DirectDebit",
+                     "account": "XXXX7856",
+                     "last_digits": "7856",
+                     "account_length": 8,
+                     "country_code": "GB",
+                     "bank_sort_code": "309136",
+                     "rib_code": null
+                  },
+                  "account_holder": "DD AccountHolder 11122334466",
+                  "billing_address": {
+                     "object": "Address",
+                     "vid": "e580568d6d97d35ff52b0e44667408383616342c",
+                     "line1": "14 Tottenham Court Road",
+                     "city": "KILBIRNIE",
+                     "postal_code": "KA25 7HB",
+                     "country": "DE",
+                     "phone": "408408408"
+                  },
+                  "customer_specified_type": "EDD",
+                  "primary": true,
+                  "active": true
+               }
+            ],
+            "total_count": 1
+         }
+      },
+      "source_payment_method": {
+         "object": "PaymentMethod",
+         "id": "PMID11122334466",
+         "vid": "586a813bc674ddfbee2e17279402fd331d50ecb6",
+         "created": "2018-09-06T11:51:05-07:00",
+         "type": "DirectDebit",
+         "direct_debit": {
+            "object": "DirectDebit",
+            "account": "XXXX7856",
+            "last_digits": "7856",
+            "account_length": 8,
+            "country_code": "GB",
+            "bank_sort_code": "309136",
+            "rib_code": null
+         },
+         "account_holder": "DD AccountHolder 11122334466",
+         "billing_address": {
+            "object": "Address",
+            "vid": "e580568d6d97d35ff52b0e44667408383616342c",
+            "line1": "14 Tottenham Court Road",
+            "city": "KILBIRNIE",
+            "postal_code": "KA25 7HB",
+            "country": "DE",
+            "phone": "408408408"
+         },
+         "customer_specified_type": "EDD",
+         "primary": true,
+         "active": true
+      },
+      "status_log": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionStatus",
+               "status": "New",
+               "created": "2018-09-06T11:51:04-07:00",
+               "payment_method_type": "DirectDebit",
+               "direct_debit_status": {
+                  "object": "TransactionStatusDirectDebit"
+               }
+            }
+         ],
+         "total_count": 1
+      },
+      "payment_processor": "Paymentech",
+      "metadata": {
+         "vin:MandateFlag": "1",
+         "vin:MandateID": "MandateIDAug302018T11",
+         "vin:MandateBankName": "Deutsche Bank",
+         "vin:RetryNumber": "0",
+         "vin:MandateVersion": "2.0",
+         "vin:recurring": "1",
+         "vin:BillingCycle": "0"
+      },
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "MonthlyBPWithGBP",
+               "index_number": 1,
+               "item_type": "Purchase",
+               "name": "CB Monthly billing plan with GBP",
+               "quantity": 1,
+               "tax_classification": null,
+               "service_period_starts": "2018-09-06T00:00:00-07:00",
+               "service_period_ends": "2018-10-05T00:00:00-07:00",
+               "tax_type": "Inclusive Sales",
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "NewProduct1GBP",
+               "index_number": 2,
+               "item_type": "Purchase",
+               "name": "Monthly service Product Price in GBP",
+               "subscription_item": {
+                  "object": "SubscriptionItem",
+                  "id": "ABItemID11122334466",
+                  "vid": "a53eda8aecd5539e7eb568ae7565efdcc651fcd9"
+               },
+               "price": 4.99,
+               "quantity": 1,
+               "tax_classification": null,
+               "service_period_starts": "2018-09-06T00:00:00-07:00",
+               "service_period_ends": "2018-10-05T00:00:00-07:00",
+               "tax_type": "Inclusive Sales",
+               "subtotal": 4.99,
+               "total": 4.99
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Total Tax",
+               "index_number": 3,
+               "item_type": "Purchase",
+               "name": "Total Tax",
+               "price": 0,
+               "quantity": 1,
+               "tax_classification": "TaxExempt",
+               "service_period_starts": "2018-09-06T00:00:00-07:00",
+               "service_period_ends": "2018-10-05T00:00:00-07:00",
+               "tax_type": "Inclusive Sales",
+               "discount": 0,
+               "subtotal": 0,
+               "total": 0
+            }
+         ],
+         "total_count": 3
+      },
+      "source_ip": "123.123.123.123",
+      "sales_tax_address": {
+         "object": "Address",
+         "vid": "15e03ea05f27ed5ea81171d2c8edf0e1834c6277",
+         "line1": "14 Tottenham Court Road",
+         "city": "KILBIRNIE",
+         "postal_code": "KA25 7HB",
+         "country": "DE"
+      },
+      "subscription_sequence": 1,
+      "billing_plan_sequence": 1,
+      "original_billing_date": "2018-09-06T00:00:00-07:00",
+      "billing_attempt": 0,
+      "subscription": {
+         "object": "Subscription",
+         "id": "ABID11122334466",
+         "vid": "4fd09641adba6fe4ee179c7ba2ab3b9371669e60"
+      }
+   },
+   "next_billing": {
+      "object": "Transaction",
+      "created": "2018-10-06T00:00:00-07:00",
+      "amount": 4.99,
+      "currency": "GBP",
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "NewProduct1GBP",
+               "item_type": "Purchase",
+               "name": "Monthly service Product Price in GBP",
+               "price": 4.99,
+               "quantity": 1,
+               "tax_classification": null,
+               "tax_type": "Exclusive Sales",
+               "subtotal": 4.99,
+               "total": 4.99
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "metadata": {
+      "vin:MandateFlag": "1",
+      "vin:MandateID": "MandateIDAug302018T11",
+      "vin:MandateBankName": "Deutsche Bank",
+      "vin:MandateVersion": "2.0"
+   },
+   "mandate": {
+      "object": "Mandate",
+      "created": "2018-09-06T11:51:04-07:00",
+      "identifier": "MandateIDAug302018T11",
+      "status": "Active"
+   },
+   "balance": 4.99
+}

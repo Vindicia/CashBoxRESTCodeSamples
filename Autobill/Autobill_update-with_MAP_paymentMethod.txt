@@ -1,0 +1,476 @@
+SOAP call : Autobill.update 
+
+REST Method:  POST 
+
+Endpoint : https://api.prodtest.vindicia.com/subscriptions
+
+JSON Request:
+
+{
+  "object": "Subscription",
+  "id": "ABIDSep10T1",
+  "billing_plan": {
+    "id": "MonthlyBPWithGBP"
+  },
+  "account": {
+    "id": "AcctIDSep10T1",
+    "email": "myemail@myemail.com",
+    "email_type": "html",
+    "name": "AcctName Sep10T1",
+    "default_currency": "GBP",
+    "shipping_address": {
+      "object": "Address",
+      "line1": "14 Tottenham Court Road",
+      "city": "KILBIRNIE",
+      "postal_code": "KA25 7HB",
+      "country": "DE",
+      "phone": "408408408"
+    }
+  },
+  "source_ip": "123.123.123.123",
+    
+  "policy": {
+      "ignore_cvn_policy": true,
+      "ignore_avs_policy": true,
+      "min_chargeback_probability": 100,
+      "immediate_auth_failure_policy": "putAutoBillInRetryCycleIfPaymentMethodIsValid",
+      "validate_for_future_payment": true
+    },
+ 
+  "payment_method": {
+    "id": "PMIDSep10T1",
+    "type": "MerchantAcceptedPayment",
+    "merchant_accepted_payment": {
+      "currency": "GBP",
+      "account": "112233-6677",
+      "payment_type": "Google Play Account"
+    },
+    "account_holder": "Peter Rabbit",
+    "billing_address": {
+      "object": "Address",
+      "line1": "2226 Mary Ave",
+      "city": "Santa Clara",
+      "postal_code": "95050",
+      "country": "US",
+      "phone": "408408408"
+    }
+  },
+  "items": [
+    {
+      "object": "SubscriptionItem",
+      "id": "ABItemSep10T1",
+      "product": {
+        "id": "NewProduct1GBP"
+      }
+    }
+  ]
+}
+
+JSON Response:
+
+{
+   "object": "Subscription",
+   "id": "ABIDSep10T1",
+   "vid": "a61e1fa4fecc39a21f581530f009056c58ceb013",
+   "created": "2018-09-10T15:21:47-07:00",
+   "account": {
+      "object": "Account",
+      "id": "AcctIDSep10T1",
+      "vid": "fa26d142049d3babd82432302d279925a018996b",
+      "created": "2018-09-10T15:21:46-07:00",
+      "default_currency": "GBP",
+      "email": "myemail@myemail.com",
+      "email_type": "html",
+      "name": "AcctName Sep10T1",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "fc50f5af5ee2906814db222553eb9ad23dbf3ff2",
+         "line1": "14 Tottenham Court Road",
+         "city": "KILBIRNIE",
+         "postal_code": "KA25 7HB",
+         "country": "DE",
+         "phone": "408408408"
+      },
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "PMIDSep10T1",
+               "vid": "648172d01440fc0721ba08a68d8174a861b1448a",
+               "created": "2018-09-10T15:21:47-07:00",
+               "type": "MerchantAcceptedPayment",
+               "merchant_accepted_payment": {
+                  "object": "MerchantAcceptedPayment",
+                  "amount": 0,
+                  "currency": "GBP",
+                  "created": "2018-09-10T15:21:47-07:00",
+                  "payment_type": "Google Play Account",
+                  "account": "XXXXXXX6677",
+                  "last_digits": "6677"
+               },
+               "account_holder": "Peter Rabbit",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "5da8d432464efd106b3278b12c3161f3d2967696",
+                  "line1": "2226 Mary Ave",
+                  "city": "Santa Clara",
+                  "postal_code": "95050",
+                  "country": "US",
+                  "phone": "408408408"
+               },
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "billing_plan": {
+      "object": "BillingPlan",
+      "id": "MonthlyBPWithGBP",
+      "vid": "a5a0383270d232bfd8736fc806fe673c355bbf24",
+      "created": "2018-09-06T11:49:25-07:00",
+      "description": "CB Monthly billing plan with GBP",
+      "status": "Active",
+      "periods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "BillingPlanPeriod",
+               "type": "Month",
+               "quantity": 1,
+               "cycles": 0,
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "GBP"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "do_not_notify_first_bill": false
+            }
+         ],
+         "total_count": 1
+      },
+      "billing_notification_days": 1,
+      "entitlements": {
+         "object": "List",
+         "data": [
+            {
+               "object": "Entitlement",
+               "id": "access_gold",
+               "description": "Access To gold Subsription"
+            }
+         ],
+         "total_count": 1
+      },
+      "times_to_run": "1",
+      "used_on_subscriptions": true
+   },
+   "payment_method": {
+      "object": "PaymentMethod",
+      "id": "PMIDSep10T1",
+      "vid": "648172d01440fc0721ba08a68d8174a861b1448a",
+      "created": "2018-09-10T15:21:47-07:00",
+      "type": "MerchantAcceptedPayment",
+      "merchant_accepted_payment": {
+         "object": "MerchantAcceptedPayment",
+         "amount": 0,
+         "currency": "GBP",
+         "created": "2018-09-10T15:21:47-07:00",
+         "payment_type": "Google Play Account",
+         "account": "XXXXXXX6677",
+         "last_digits": "6677"
+      },
+      "account_holder": "Peter Rabbit",
+      "billing_address": {
+         "object": "Address",
+         "vid": "5da8d432464efd106b3278b12c3161f3d2967696",
+         "line1": "2226 Mary Ave",
+         "city": "Santa Clara",
+         "postal_code": "95050",
+         "country": "US",
+         "phone": "408408408"
+      },
+      "primary": true,
+      "active": true
+   },
+   "currency": "GBP",
+   "status": "Active",
+   "billing_state": "Good Standing",
+   "starts": "2018-09-10T15:21:47-07:00",
+   "ends": "2018-11-06T00:00:00-08:00",
+   "entitled_through": "2018-11-06T00:00:00-08:00",
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "SubscriptionItem",
+            "id": "ABItemSep10T1",
+            "vid": "8a3aac22a3405d4025fee41a67abd9cc8b775512",
+            "index": 0,
+            "product": {
+               "object": "Product",
+               "id": "NewProduct1GBP",
+               "vid": "5d7e61595ea180492420de005e1b18cb34623c74",
+               "created": "2018-09-04T12:41:54-07:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "Monthly service Product Price in GBP"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "status": "Active",
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "MonthlyAccess",
+                        "description": "Customer gets access to regular monthly subscription"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 4.99,
+                        "currency": "GBP"
+                     }
+                  ],
+                  "total_count": 1
+               }
+            },
+            "quantity": 1,
+            "created": "2018-09-10T15:21:47-07:00",
+            "starts": "2018-09-10T00:00:00-07:00"
+         }
+      ],
+      "total_count": 1
+   },
+   "source_ip": "123.123.123.123",
+   "billing_day": 10,
+   "notify_on_transition": false,
+   "most_recent_billing": {
+      "object": "Transaction",
+      "id": "KHPNFD00003890",
+      "created": "2018-09-10T15:21:47-07:00",
+      "amount": 4.99,
+      "currency": "GBP",
+      "account": {
+         "object": "Account",
+         "id": "AcctIDSep10T1",
+         "vid": "fa26d142049d3babd82432302d279925a018996b",
+         "created": "2018-09-10T15:21:46-07:00",
+         "default_currency": "GBP",
+         "email": "myemail@myemail.com",
+         "email_type": "html",
+         "name": "AcctName Sep10T1",
+         "shipping_address": {
+            "object": "Address",
+            "vid": "fc50f5af5ee2906814db222553eb9ad23dbf3ff2",
+            "line1": "14 Tottenham Court Road",
+            "city": "KILBIRNIE",
+            "postal_code": "KA25 7HB",
+            "country": "DE",
+            "phone": "408408408"
+         },
+         "payment_methods": {
+            "object": "List",
+            "data": [
+               {
+                  "object": "PaymentMethod",
+                  "id": "PMIDSep10T1",
+                  "vid": "648172d01440fc0721ba08a68d8174a861b1448a",
+                  "created": "2018-09-10T15:21:47-07:00",
+                  "type": "MerchantAcceptedPayment",
+                  "merchant_accepted_payment": {
+                     "object": "MerchantAcceptedPayment",
+                     "amount": 0,
+                     "currency": "GBP",
+                     "created": "2018-09-10T15:21:47-07:00",
+                     "payment_type": "Google Play Account",
+                     "account": "XXXXXXX6677",
+                     "last_digits": "6677"
+                  },
+                  "account_holder": "Peter Rabbit",
+                  "billing_address": {
+                     "object": "Address",
+                     "vid": "5da8d432464efd106b3278b12c3161f3d2967696",
+                     "line1": "2226 Mary Ave",
+                     "city": "Santa Clara",
+                     "postal_code": "95050",
+                     "country": "US",
+                     "phone": "408408408"
+                  },
+                  "primary": true,
+                  "active": true
+               }
+            ],
+            "total_count": 1
+         }
+      },
+      "source_payment_method": {
+         "object": "PaymentMethod",
+         "id": "PMIDSep10T1",
+         "vid": "648172d01440fc0721ba08a68d8174a861b1448a",
+         "created": "2018-09-10T15:21:47-07:00",
+         "type": "MerchantAcceptedPayment",
+         "merchant_accepted_payment": {
+            "object": "MerchantAcceptedPayment",
+            "amount": 0,
+            "currency": "GBP",
+            "created": "2018-09-10T15:21:47-07:00",
+            "payment_type": "Google Play Account",
+            "account": "XXXXXXX6677",
+            "last_digits": "6677"
+         },
+         "account_holder": "Peter Rabbit",
+         "billing_address": {
+            "object": "Address",
+            "vid": "5da8d432464efd106b3278b12c3161f3d2967696",
+            "line1": "2226 Mary Ave",
+            "city": "Santa Clara",
+            "postal_code": "95050",
+            "country": "US",
+            "phone": "408408408"
+         },
+         "primary": true,
+         "active": true
+      },
+      "status_log": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionStatus",
+               "status": "New",
+               "created": "2018-09-10T15:21:47-07:00",
+               "payment_method_type": "MerchantAcceptedPayment"
+            }
+         ],
+         "total_count": 1
+      },
+      "shipping_address": {
+         "object": "Address",
+         "vid": "fc50f5af5ee2906814db222553eb9ad23dbf3ff2",
+         "line1": "14 Tottenham Court Road",
+         "city": "KILBIRNIE",
+         "postal_code": "KA25 7HB",
+         "country": "DE",
+         "phone": "408408408"
+      },
+      "metadata": {
+         "vin:AutoBillVID": null
+      },
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "MonthlyBPWithGBP",
+               "index_number": 1,
+               "item_type": "Purchase",
+               "name": "CB Monthly billing plan with GBP",
+               "quantity": 1,
+               "tax_classification": null,
+               "service_period_starts": "2018-09-10T00:00:00-07:00",
+               "service_period_ends": "2018-10-09T00:00:00-07:00",
+               "tax_type": "Inclusive Sales",
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "NewProduct1GBP",
+               "index_number": 2,
+               "item_type": "Purchase",
+               "name": "Monthly service Product Price in GBP",
+               "subscription_item": {
+                  "object": "SubscriptionItem",
+                  "id": "ABItemSep10T1",
+                  "vid": "8a3aac22a3405d4025fee41a67abd9cc8b775512"
+               },
+               "price": 4.99,
+               "quantity": 1,
+               "tax_classification": null,
+               "service_period_starts": "2018-09-10T00:00:00-07:00",
+               "service_period_ends": "2018-10-09T00:00:00-07:00",
+               "tax_type": "Inclusive Sales",
+               "subtotal": 4.99,
+               "total": 4.99
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Total Tax",
+               "index_number": 3,
+               "item_type": "Purchase",
+               "name": "Total Tax",
+               "price": 0,
+               "quantity": 1,
+               "tax_classification": "TaxExempt",
+               "service_period_starts": "2018-09-10T00:00:00-07:00",
+               "service_period_ends": "2018-10-09T00:00:00-07:00",
+               "tax_type": "Inclusive Sales",
+               "discount": 0,
+               "subtotal": 0,
+               "total": 0
+            }
+         ],
+         "total_count": 3
+      },
+      "source_ip": "123.123.123.123",
+      "sales_tax_address": {
+         "object": "Address",
+         "line1": "14 Tottenham Court Road",
+         "city": "KILBIRNIE",
+         "postal_code": "KA25 7HB",
+         "country": "DE"
+      },
+      "subscription_sequence": 1,
+      "billing_plan_sequence": 1,
+      "original_billing_date": "2018-09-10T00:00:00-07:00",
+      "subscription": {
+         "object": "Subscription",
+         "id": "ABIDSep10T1",
+         "vid": null
+      }
+   },
+   "next_billing": {
+      "object": "Transaction",
+      "created": "2018-10-10T00:00:00-07:00",
+      "amount": 4.99,
+      "currency": "GBP",
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "NewProduct1GBP",
+               "item_type": "Purchase",
+               "name": "Monthly service Product Price in GBP",
+               "price": 4.99,
+               "quantity": 1,
+               "tax_classification": null,
+               "tax_type": "Exclusive Sales",
+               "subtotal": 4.99,
+               "total": 4.99
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "balance": 4.99
+}
+
