@@ -1,0 +1,764 @@
+SOAP Call: AutBill.modify() 
+
+REST Method: POST 
+
+Endpoint: https://api.prodtest.vindicia.com/subscriptions/AB_w8Zfg8MZGJLwTPoY?effective_date=today&bill_prorated_period=true&dryrun=false
+
+JSON Request 
+
+{"billing_plan": {"object": "BillingPlan", "id": "Company_YEARLY"}, "object": "Subscription", "id": "AB_w8Zfg8MZGJLwTPoY"}
+
+
+JSON Response 
+
+{
+   "object": "Subscription",
+   "id": "AB_w8Zfg8MZGJLwTPoY",
+   "vid": "f426830ee5709b417a7e14d5671fd6507d18a12b",
+   "created": "2018-09-11T11:00:23-07:00",
+   "account": {
+      "object": "Account",
+      "id": "w8Zfg8MZGJLwTPoY",
+      "vid": "0c0235f92f88fad88ba51a32c7bb3b47292914a1",
+      "created": "2018-09-11T11:00:23-07:00",
+      "default_currency": "USD",
+      "email": "lmaxwell@vindicia.com",
+      "email_type": "html",
+      "language": "EN",
+      "name": "Jerome Whatever",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "6f483818f81cb9a8aa052e742eb51f2b07377f40",
+         "name": "Jerome Whatever",
+         "line1": "21298 Sangamon Ave",
+         "city": "New York",
+         "district": "NY",
+         "postal_code": "10278",
+         "country": "US"
+      },
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "CC_w8Zfg8MZGJLwTPoY",
+               "vid": "47f20ddcc30e50b3a6d7eab73a291b4775c39620",
+               "created": "2018-09-11T11:00:24-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+                  "account": "411390XXXXXX0007",
+                  "bin": "411390",
+                  "last_digits": "0007",
+                  "account_length": 16,
+                  "expiration_date": "202003",
+                  "last_au_request_date": null,
+                  "last_update_date": null,
+                  "au_response_code": null
+               },
+               "account_holder": "Jerome Whatever",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "ccca156b9a152665590d3c6486dd71d8f5a1997e",
+                  "name": "Jerome Whatever",
+                  "line1": "21298 Sangamon Ave",
+                  "city": "New York",
+                  "district": "NY",
+                  "postal_code": "10278",
+                  "country": "US"
+               },
+               "customer_description": "Credit Card",
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "billing_plan": {
+      "object": "BillingPlan",
+      "id": "Company_YEARLY",
+      "vid": "e497dbf9f25d77cbf8bfdbd87f501f3e14cae9a3",
+      "created": "2018-01-23T13:13:32-08:00",
+      "description": "Company Annual Plan",
+      "status": "Active",
+      "periods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "BillingPlanPeriod",
+               "type": "Year",
+               "quantity": 1,
+               "cycles": 0,
+               "do_not_notify_first_bill": false
+            }
+         ],
+         "total_count": 1
+      },
+      "used_on_subscriptions": true
+   },
+   "payment_method": {
+      "object": "PaymentMethod",
+      "id": "CC_w8Zfg8MZGJLwTPoY",
+      "vid": "47f20ddcc30e50b3a6d7eab73a291b4775c39620",
+      "created": "2018-09-11T11:00:24-07:00",
+      "type": "CreditCard",
+      "credit_card": {
+         "object": "CreditCard",
+         "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+         "account": "411390XXXXXX0007",
+         "bin": "411390",
+         "last_digits": "0007",
+         "account_length": 16,
+         "expiration_date": "202003",
+         "last_au_request_date": null,
+         "last_update_date": null,
+         "au_response_code": null
+      },
+      "account_holder": "Jerome Whatever",
+      "billing_address": {
+         "object": "Address",
+         "vid": "ccca156b9a152665590d3c6486dd71d8f5a1997e",
+         "name": "Jerome Whatever",
+         "line1": "21298 Sangamon Ave",
+         "city": "New York",
+         "district": "NY",
+         "postal_code": "10278",
+         "country": "US"
+      },
+      "customer_description": "Credit Card",
+      "primary": true,
+      "active": true
+   },
+   "currency": "USD",
+   "description": "Subscription_w8Zfg8MZGJLwTPoY",
+   "status": "Active",
+   "billing_state": "Good Standing",
+   "starts": "2018-09-11T11:00:23-07:00",
+   "ends": "2019-09-24T00:00:00-07:00",
+   "entitled_through": "2019-09-24T00:00:00-07:00",
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "SubscriptionItem",
+            "id": "ABI_w8Zfg8MZGJLwTPoY_1",
+            "vid": "9f61109e2a32fa8862aa54ebb0d481d645d50c52",
+            "index": 0,
+            "product": {
+               "object": "Product",
+               "id": "Company_MONTHLY",
+               "vid": "26ec90f3e8ffd509fe16c5311a3d42a4f96a9237",
+               "created": "2018-01-23T13:10:02-08:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "Company"
+                     },
+                     {
+                        "object": "ProductDescription",
+                        "language": "ES",
+                        "description": "Company"
+                     }
+                  ],
+                  "total_count": 2
+               },
+               "status": "Active",
+               "tax_classification": "DA051012",
+               "metadata": {
+                  "CompanyMeta2": "Bar",
+                  "CompanyMeta1": "Foo",
+                  "export": "1"
+               },
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "Company",
+                        "description": "Company"
+                     },
+                     {
+                        "object": "Entitlement",
+                        "id": "Company Entitlement 2",
+                        "description": "number_2"
+                     }
+                  ],
+                  "total_count": 2
+               },
+               "billing_descriptor": "800-615-4059",
+               "credit_granted": {
+                  "object": "Credit",
+                  "token_amounts": {
+                     "object": "List",
+                     "data": [
+                        {
+                           "object": "TokenAmount",
+                           "token": {
+                              "object": "Token",
+                              "id": "purchasePoints",
+                              "vid": "1550e52d11fbd0c60c04289445c946b26bce9439",
+                              "description": "Points that can be redeemed for value"
+                           },
+                           "amount": 15,
+                           "vid": "857635bac69397bb1cfff7f83a245deec011d548"
+                        }
+                     ],
+                     "total_count": 1
+                  }
+               },
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 15.99,
+                        "currency": "USD"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 18.99,
+                        "currency": "CAD"
+                     }
+                  ],
+                  "total_count": 2
+               }
+            },
+            "quantity": 1,
+            "created": "2018-09-11T11:00:23-07:00",
+            "starts": "2018-09-11T00:00:00-07:00"
+         }
+      ],
+      "total_count": 1
+   },
+   "billing_day": 11,
+   "minimum_commitment": 0,
+   "notify_on_transition": false,
+   "most_recent_billing": {
+      "object": "Transaction",
+      "id": "LM00031303",
+      "vid": "59676ca9b6917fcd4212a5484eceb0d4665899f4",
+      "created": "2018-09-11T11:01:07-07:00",
+      "amount": 0,
+      "currency": "USD",
+      "account": {
+         "object": "Account",
+         "id": "w8Zfg8MZGJLwTPoY",
+         "vid": "0c0235f92f88fad88ba51a32c7bb3b47292914a1",
+         "created": "2018-09-11T11:00:23-07:00",
+         "default_currency": "USD",
+         "email": "lmaxwell@vindicia.com",
+         "email_type": "html",
+         "language": "EN",
+         "name": "Jerome Whatever",
+         "shipping_address": {
+            "object": "Address",
+            "vid": "6f483818f81cb9a8aa052e742eb51f2b07377f40",
+            "name": "Jerome Whatever",
+            "line1": "21298 Sangamon Ave",
+            "city": "New York",
+            "district": "NY",
+            "postal_code": "10278",
+            "country": "US"
+         },
+         "payment_methods": {
+            "object": "List",
+            "data": [
+               {
+                  "object": "PaymentMethod",
+                  "id": "CC_w8Zfg8MZGJLwTPoY",
+                  "vid": "47f20ddcc30e50b3a6d7eab73a291b4775c39620",
+                  "created": "2018-09-11T11:00:24-07:00",
+                  "type": "CreditCard",
+                  "credit_card": {
+                     "object": "CreditCard",
+                     "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+                     "account": "411390XXXXXX0007",
+                     "bin": "411390",
+                     "last_digits": "0007",
+                     "account_length": 16,
+                     "expiration_date": "202003",
+                     "last_au_request_date": null,
+                     "last_update_date": null,
+                     "au_response_code": null
+                  },
+                  "account_holder": "Jerome Whatever",
+                  "billing_address": {
+                     "object": "Address",
+                     "vid": "ccca156b9a152665590d3c6486dd71d8f5a1997e",
+                     "name": "Jerome Whatever",
+                     "line1": "21298 Sangamon Ave",
+                     "city": "New York",
+                     "district": "NY",
+                     "postal_code": "10278",
+                     "country": "US"
+                  },
+                  "customer_description": "Credit Card",
+                  "primary": true,
+                  "active": true
+               }
+            ],
+            "total_count": 1
+         }
+      },
+      "source_payment_method": {
+         "object": "PaymentMethod",
+         "id": "CC_w8Zfg8MZGJLwTPoY",
+         "vid": "47f20ddcc30e50b3a6d7eab73a291b4775c39620",
+         "created": "2018-09-11T11:00:24-07:00",
+         "type": "CreditCard",
+         "credit_card": {
+            "object": "CreditCard",
+            "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+            "account": "411390XXXXXX0007",
+            "bin": "411390",
+            "last_digits": "0007",
+            "account_length": 16,
+            "expiration_date": "202003",
+            "last_au_request_date": null,
+            "last_update_date": null,
+            "au_response_code": null
+         },
+         "account_holder": "Jerome Whatever",
+         "billing_address": {
+            "object": "Address",
+            "vid": "ccca156b9a152665590d3c6486dd71d8f5a1997e",
+            "name": "Jerome Whatever",
+            "line1": "21298 Sangamon Ave",
+            "city": "New York",
+            "district": "NY",
+            "postal_code": "10278",
+            "country": "US"
+         },
+         "customer_description": "Credit Card",
+         "primary": true,
+         "active": true
+      },
+      "status_log": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionStatus",
+               "status": "New",
+               "created": "2018-09-11T11:01:07-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard"
+               }
+            }
+         ],
+         "total_count": 1
+      },
+      "shipping_address": {
+         "object": "Address",
+         "vid": "6f483818f81cb9a8aa052e742eb51f2b07377f40",
+         "name": "Jerome Whatever",
+         "line1": "21298 Sangamon Ave",
+         "city": "New York",
+         "district": "NY",
+         "postal_code": "10278",
+         "country": "US"
+      },
+      "metadata": {
+         "vin:type": "modify",
+         "vin:RetryNumber": "0",
+         "vin:BillingCycle": "1"
+      },
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "Company_YEARLY",
+               "index_number": 1,
+               "item_type": "Purchase",
+               "name": "Company Annual Plan",
+               "quantity": 1,
+               "tax_classification": "DA051012",
+               "service_period_starts": "2018-09-11T00:00:00-07:00",
+               "service_period_ends": "2019-09-10T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Company_MONTHLY",
+               "index_number": 2,
+               "item_type": "Purchase",
+               "name": "Company #1 Audio Fitness App",
+               "subscription_item": {
+                  "object": "SubscriptionItem",
+                  "id": "ABI_w8Zfg8MZGJLwTPoY_1",
+                  "vid": "9f61109e2a32fa8862aa54ebb0d481d645d50c52"
+               },
+               "price": 15.99,
+               "quantity": 1,
+               "tax_classification": "DA051012",
+               "service_period_starts": "2018-09-11T00:00:00-07:00",
+               "service_period_ends": "2019-09-10T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "subtotal": 15.99,
+               "total": 15.99
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Company_MONTHLY",
+               "index_number": 3,
+               "item_type": "TaxableCredit",
+               "name": "Credit for merchantProductId Company_MONTHLY",
+               "subscription_item": {
+                  "object": "SubscriptionItem",
+                  "id": "ABI_w8Zfg8MZGJLwTPoY_1",
+                  "vid": "9f61109e2a32fa8862aa54ebb0d481d645d50c52"
+               },
+               "price": -15.99,
+               "quantity": 1,
+               "tax_classification": "DA051012",
+               "service_period_starts": "2018-09-11T00:00:00-07:00",
+               "service_period_ends": "2018-10-10T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "related_transactions": [
+                  "LM00031302"
+               ],
+               "subtotal": -15.99,
+               "total": -15.99
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Company_MONTHLY",
+               "index_number": 4,
+               "item_type": "TaxableCredit",
+               "name": "Credit for merchantBillingPlanId Company_MONTHLY",
+               "price": -15.99,
+               "quantity": 1,
+               "tax_classification": "DA051012",
+               "service_period_starts": "2018-09-11T00:00:00-07:00",
+               "service_period_ends": "2018-10-10T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "related_transactions": [
+                  "LM00031302"
+               ],
+               "subtotal": -15.99,
+               "total": -15.99
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Total Tax",
+               "index_number": 5,
+               "item_type": "Purchase",
+               "name": "Total Tax",
+               "price": 0,
+               "quantity": 1,
+               "tax_classification": "TaxExempt",
+               "tax_type": "Exclusive Sales",
+               "discount": 0,
+               "subtotal": 0,
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Modification Refund",
+               "index_number": 6,
+               "item_type": "ModificationRefund",
+               "name": "Modification Refund LM00031304 against Transaction LM00031302",
+               "price": 15.99,
+               "quantity": 1,
+               "tax_classification": "TaxExempt",
+               "tax_type": "Exclusive Sales",
+               "related_transactions": [
+                  "LM00031302"
+               ],
+               "subtotal": 15.99,
+               "total": 15.99
+            }
+         ],
+         "total_count": 6
+      },
+      "billing_descriptor": "800-615-4059",
+      "sales_tax_address": {
+         "object": "Address",
+         "vid": "82ad0651c40875989807b82badbabad80580a01f",
+         "name": "Jerome Whatever",
+         "line1": "21298 Sangamon Ave",
+         "city": "NEW YORK",
+         "district": "NY",
+         "postal_code": "10278",
+         "country": "US"
+      },
+      "subscription_sequence": 2,
+      "billing_plan_sequence": 1,
+      "billing_attempt": 0,
+      "subscription": {
+         "object": "Subscription",
+         "id": "AB_w8Zfg8MZGJLwTPoY",
+         "vid": "f426830ee5709b417a7e14d5671fd6507d18a12b"
+      }
+   },
+   "most_recent_refunds": {
+      "object": "List",
+      "data": [
+         {
+            "object": "Refund",
+            "id": "LM00031304",
+            "vid": "0eec7f570a4712b04223662f1763b559636ddfe5",
+            "created": "2018-09-11T11:01:08-07:00",
+            "transaction": {
+               "object": "Transaction",
+               "id": "LM00031302",
+               "vid": "e8df3534063f014d30df5d09b40ccbd744c76423",
+               "created": "2018-09-11T11:00:23-07:00",
+               "amount": 15.99,
+               "currency": "USD",
+               "account": {
+                  "object": "Account",
+                  "id": "w8Zfg8MZGJLwTPoY",
+                  "vid": "0c0235f92f88fad88ba51a32c7bb3b47292914a1",
+                  "created": "2018-09-11T11:00:23-07:00",
+                  "default_currency": "USD",
+                  "email": "lmaxwell@vindicia.com",
+                  "email_type": "html",
+                  "language": "EN",
+                  "name": "Jerome Whatever",
+                  "shipping_address": {
+                     "object": "Address",
+                     "vid": "6f483818f81cb9a8aa052e742eb51f2b07377f40",
+                     "name": "Jerome Whatever",
+                     "line1": "21298 Sangamon Ave",
+                     "city": "New York",
+                     "district": "NY",
+                     "postal_code": "10278",
+                     "country": "US"
+                  },
+                  "payment_methods": {
+                     "object": "List",
+                     "data": [
+                        {
+                           "object": "PaymentMethod",
+                           "id": "CC_w8Zfg8MZGJLwTPoY",
+                           "vid": "47f20ddcc30e50b3a6d7eab73a291b4775c39620",
+                           "created": "2018-09-11T11:00:24-07:00",
+                           "type": "CreditCard",
+                           "credit_card": {
+                              "object": "CreditCard",
+                              "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+                              "account": "411390XXXXXX0007",
+                              "bin": "411390",
+                              "last_digits": "0007",
+                              "account_length": 16,
+                              "expiration_date": "202003",
+                              "last_au_request_date": null,
+                              "last_update_date": null,
+                              "au_response_code": null
+                           },
+                           "account_holder": "Jerome Whatever",
+                           "billing_address": {
+                              "object": "Address",
+                              "vid": "ccca156b9a152665590d3c6486dd71d8f5a1997e",
+                              "name": "Jerome Whatever",
+                              "line1": "21298 Sangamon Ave",
+                              "city": "New York",
+                              "district": "NY",
+                              "postal_code": "10278",
+                              "country": "US"
+                           },
+                           "customer_description": "Credit Card",
+                           "primary": true,
+                           "active": true
+                        }
+                     ],
+                     "total_count": 1
+                  }
+               },
+               "source_payment_method": {
+                  "object": "PaymentMethod",
+                  "id": "CC_w8Zfg8MZGJLwTPoY",
+                  "vid": "47f20ddcc30e50b3a6d7eab73a291b4775c39620",
+                  "created": "2018-09-11T11:00:24-07:00",
+                  "type": "CreditCard",
+                  "credit_card": {
+                     "object": "CreditCard",
+                     "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+                     "account": "411390XXXXXX0007",
+                     "bin": "411390",
+                     "last_digits": "0007",
+                     "account_length": 16,
+                     "expiration_date": "202003",
+                     "last_au_request_date": null,
+                     "last_update_date": null,
+                     "au_response_code": null
+                  },
+                  "account_holder": "Jerome Whatever",
+                  "billing_address": {
+                     "object": "Address",
+                     "vid": "ccca156b9a152665590d3c6486dd71d8f5a1997e",
+                     "name": "Jerome Whatever",
+                     "line1": "21298 Sangamon Ave",
+                     "city": "New York",
+                     "district": "NY",
+                     "postal_code": "10278",
+                     "country": "US"
+                  },
+                  "customer_description": "Credit Card",
+                  "primary": true,
+                  "active": true
+               },
+               "status_log": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "TransactionStatus",
+                        "status": "Authorized",
+                        "created": "2018-09-11T11:00:24-07:00",
+                        "payment_method_type": "CreditCard",
+                        "credit_card_status": {
+                           "object": "TransactionStatusCreditCard",
+                           "auth_code": "T00"
+                        },
+                        "note": "T00 - NA"
+                     },
+                     {
+                        "object": "TransactionStatus",
+                        "status": "New",
+                        "created": "2018-09-11T11:00:23-07:00",
+                        "payment_method_type": "CreditCard",
+                        "credit_card_status": {
+                           "object": "TransactionStatusCreditCard",
+                           "auth_code": "T00"
+                        }
+                     }
+                  ],
+                  "total_count": 2
+               },
+               "payment_processor": "Test",
+               "payment_processor_transaction_id": "LM00031302",
+               "shipping_address": {
+                  "object": "Address",
+                  "vid": "6f483818f81cb9a8aa052e742eb51f2b07377f40",
+                  "name": "Jerome Whatever",
+                  "line1": "21298 Sangamon Ave",
+                  "city": "New York",
+                  "district": "NY",
+                  "postal_code": "10278",
+                  "country": "US"
+               },
+               "metadata": {
+                  "vin:RetryNumber": "0",
+                  "vin:BillingCycle": "0"
+               },
+               "items": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "TransactionItem",
+                        "sku": "Company_MONTHLY",
+                        "index_number": 1,
+                        "item_type": "Purchase",
+                        "name": "Company Monthly Plan",
+                        "quantity": 1,
+                        "tax_classification": "DA051012",
+                        "service_period_starts": "2018-09-11T00:00:00-07:00",
+                        "service_period_ends": "2018-10-10T00:00:00-07:00",
+                        "tax_type": "Exclusive Sales",
+                        "total": 0
+                     },
+                     {
+                        "object": "TransactionItem",
+                        "sku": "Company_MONTHLY",
+                        "index_number": 2,
+                        "item_type": "Purchase",
+                        "name": "Company #1 Audio Fitness App",
+                        "subscription_item": {
+                           "object": "SubscriptionItem",
+                           "id": "ABI_w8Zfg8MZGJLwTPoY_1",
+                           "vid": "9f61109e2a32fa8862aa54ebb0d481d645d50c52"
+                        },
+                        "price": 15.99,
+                        "quantity": 1,
+                        "tax_classification": "DA051012",
+                        "service_period_starts": "2018-09-11T00:00:00-07:00",
+                        "service_period_ends": "2018-10-10T00:00:00-07:00",
+                        "tax_type": "Exclusive Sales",
+                        "subtotal": 15.99,
+                        "total": 15.99
+                     },
+                     {
+                        "object": "TransactionItem",
+                        "sku": "Total Tax",
+                        "index_number": 3,
+                        "item_type": "Purchase",
+                        "name": "Total Tax",
+                        "price": 0,
+                        "quantity": 1,
+                        "tax_classification": "TaxExempt",
+                        "service_period_starts": "2018-09-11T00:00:00-07:00",
+                        "service_period_ends": "2018-10-10T00:00:00-07:00",
+                        "tax_type": "Exclusive Sales",
+                        "discount": 0,
+                        "subtotal": 0,
+                        "total": 0
+                     }
+                  ],
+                  "total_count": 3
+               },
+               "billing_descriptor": "800-615-4059",
+               "sales_tax_address": {
+                  "object": "Address",
+                  "vid": "2069e608d9a248c983e3adcc5e08ca5b02815187",
+                  "name": "Jerome Whatever",
+                  "line1": "21298 Sangamon Ave",
+                  "city": "NEW YORK",
+                  "district": "NY",
+                  "postal_code": "10278",
+                  "country": "US"
+               },
+               "subscription_sequence": 1,
+               "billing_plan_sequence": 1,
+               "original_billing_date": "2018-09-11T00:00:00-07:00",
+               "billing_attempt": 0,
+               "subscription": {
+                  "object": "Subscription",
+                  "id": "AB_w8Zfg8MZGJLwTPoY",
+                  "vid": "f426830ee5709b417a7e14d5671fd6507d18a12b"
+               }
+            },
+            "refund_distribution_strategy": "None",
+            "amount": 15.99,
+            "amount_includes_tax": false,
+            "currency": "USD",
+            "note": "Subscription modification refund with transaction.id LM00031303",
+            "token_action": "None",
+            "status": "Processing"
+         }
+      ],
+      "total_count": 1
+   },
+   "next_billing": {
+      "object": "Transaction",
+      "created": "2019-09-11T00:00:00-07:00",
+      "amount": 15.99,
+      "currency": "USD",
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "Company_MONTHLY",
+               "item_type": "Purchase",
+               "name": "Company #1 Audio Fitness App",
+               "price": 15.99,
+               "quantity": 1,
+               "tax_classification": "DA051012",
+               "tax_type": "Exclusive Sales",
+               "subtotal": 15.99,
+               "total": 15.99
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "balance": 0
+}
