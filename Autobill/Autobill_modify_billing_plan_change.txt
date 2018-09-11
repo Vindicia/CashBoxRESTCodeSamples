@@ -22,7 +22,7 @@ JSON Response
       "vid": "0c0235f92f88fad88ba51a32c7bb3b47292914a1",
       "created": "2018-09-11T11:00:23-07:00",
       "default_currency": "USD",
-      "email": "lmaxwell@vindicia.com",
+      "email": "testEmail@testemail.co1",
       "email_type": "html",
       "language": "EN",
       "name": "Jerome Whatever",
