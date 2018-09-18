@@ -8,14 +8,15 @@
             "email": "hkoppuravuri@vindicia.com",
             "email_type": "html",
             "name": "Acct Name June182018T2",
-            "language": 'EN'
+            "language": "EN"
             
          },
 
          "metadata": {
             "vin:MandateFlag":1,
             "vin:MandateVersion": "1.0",
-            "vin:MandateBankName": "Barclays Bank
+            "vin:MandateBankName": "Barclays Bank",
+            "vin:MandateId" : "12384930"
          },
 
 
