@@ -16,7 +16,7 @@
             "vin:MandateFlag":1,
             "vin:MandateVersion": "1.0",
             "vin:MandateBankName": "Barclays Bank",
-            "vin:MandateId" : "12384930"
+            "vin:MandateID" : "12384930"
          },
 
 
