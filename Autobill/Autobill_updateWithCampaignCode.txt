@@ -91,7 +91,7 @@ JSON Response:
       "id":"AccountIDJune52018T1",
       "vid":"c88701db3e092dbb782301b11bed5b21c6689faa",
       "created":"2018-06-05T12:04:46-07:00",
-      "email":"hkoppuravuri@vindicia.com",
+      "email":"myemail@vindicia.com",
       "email_type":"html",
       "name":"AccountID June4 2018 T1",
       "payment_methods":{  
