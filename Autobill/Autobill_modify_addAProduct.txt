@@ -1,0 +1,568 @@
+SOAP Call: Autobill.Modify()
+
+Add a new Product to the existing Subscription/Autobill.
+
+REST Endpoint: 
+https://api.prodtest.vindicia.com/subscriptions/ABID1539140316227?effective_date=today&bill_prorated_period=true
+
+
+JSON Request:
+
+{
+ "object": "Subscription",
+   "id": "ABID1539140316227",
+	
+	
+
+   "items": [
+      {
+         "object": "SubscriptionItem",
+         "id": "ABItemIDPOct102018T22",
+         "product": {
+            "object": "Product",
+            "id": "NewProduct1GBP"
+         }
+
+      }
+
+   ]
+	
+	
+
+}
+
+
+
+
+
+
+
+
+JSON RESPONSE:
+
+{
+	"object": "Subscription",
+	"id": "ABID1539140316227",
+	"vid": "82f3add26c629e69dd8b5d7798566ec3a61ad627",
+	"created": "2018-10-09T19:58:41-07:00",
+	"account": {
+		"object": "Account",
+		"id": "AcctID1539140316227",
+		"vid": "863bfdffc854966d41fe50d914cad28e917f317d",
+		"created": "2018-10-09T19:58:38-07:00",
+		"email": "hkoppuravuri@vindicia.com",
+		"email_type": "html",
+		"language": "EN",
+		"name": "My Acct Name",
+		"payment_methods": {
+			"object": "List",
+			"data": [
+				{
+					"object": "PaymentMethod",
+					"id": "PMID1539140316227",
+					"vid": "e3d16f0da71cbf847aab017da91b1b4bf6c7e349",
+					"created": "2018-10-09T19:58:38-07:00",
+					"type": "CreditCard",
+					"credit_card": {
+						"object": "CreditCard",
+						"vid": "b695b131e7397bc56bc328de91e178b3d7375846",
+						"account": "511656XXXXXX1119",
+						"bin": "511656",
+						"last_digits": "1119",
+						"account_length": 16,
+						"expiration_date": "201908",
+						"last_au_request_date": null,
+						"last_update_date": null,
+						"extended_card_attributes": {
+							"object": "ExtendedCardAttributes",
+							"commercial_card": 1,
+							"signature_debit_card": 0,
+							"pinless_debit_card": 0,
+							"prepaid_card": 1,
+							"payroll_card": 0,
+							"healthcare_card": 0,
+							"country_of_issuance": "GBR",
+							"durbin_regulated": 0,
+							"affluent": 0
+						}
+					},
+					"account_holder": "CCHolder Name",
+					"billing_address": {
+						"object": "Address",
+						"vid": "8e8226aaa50a540bdf436f4f92c20293030bfc2e",
+						"line1": "2226 Mary Ave",
+						"city": "Birmingham",
+						"postal_code": "B3 2EW",
+						"country": "GB",
+						"phone": "408408408"
+					},
+					"primary": true,
+					"active": true
+				}
+			],
+			"total_count": 1
+		}
+	},
+	"billing_plan": {
+		"object": "BillingPlan",
+		"id": "Experian_Monthly_BP_NOfreeCycle",
+		"vid": "3291881a16d65a677a6fe183393a2a296c19a9b6",
+		"created": "2018-05-04T21:37:00-07:00",
+		"status": "Active",
+		"periods": {
+			"object": "List",
+			"data": [
+				{
+					"object": "BillingPlanPeriod",
+					"type": "Month",
+					"quantity": 1,
+					"cycles": 0,
+					"prices": {
+						"object": "List",
+						"data": [
+							{
+								"object": "BillingPlanPrice",
+								"amount": 0,
+								"currency": "GBP"
+							}
+						],
+						"total_count": 1
+					},
+					"do_not_notify_first_bill": false
+				}
+			],
+			"total_count": 1
+		},
+		"entitlements": {
+			"object": "List",
+			"data": [
+				{
+					"object": "Entitlement",
+					"id": "access_gold",
+					"description": "Access To gold Subsription"
+				}
+			],
+			"total_count": 1
+		},
+		"times_to_run": "1",
+		"used_on_subscriptions": true
+	},
+	"payment_method": {
+		"object": "PaymentMethod",
+		"id": "PMID1539140316227",
+		"vid": "e3d16f0da71cbf847aab017da91b1b4bf6c7e349",
+		"created": "2018-10-09T19:58:38-07:00",
+		"type": "CreditCard",
+		"credit_card": {
+			"object": "CreditCard",
+			"vid": "b695b131e7397bc56bc328de91e178b3d7375846",
+			"account": "511656XXXXXX1119",
+			"bin": "511656",
+			"last_digits": "1119",
+			"account_length": 16,
+			"expiration_date": "201908",
+			"last_au_request_date": null,
+			"last_update_date": null,
+			"extended_card_attributes": {
+				"object": "ExtendedCardAttributes",
+				"commercial_card": 1,
+				"signature_debit_card": 0,
+				"pinless_debit_card": 0,
+				"prepaid_card": 1,
+				"payroll_card": 0,
+				"healthcare_card": 0,
+				"country_of_issuance": "GBR",
+				"durbin_regulated": 0,
+				"affluent": 0
+			}
+		},
+		"account_holder": "CCHolder Name",
+		"billing_address": {
+			"object": "Address",
+			"vid": "8e8226aaa50a540bdf436f4f92c20293030bfc2e",
+			"line1": "2226 Mary Ave",
+			"city": "Birmingham",
+			"postal_code": "B3 2EW",
+			"country": "GB",
+			"phone": "408408408"
+		},
+		"primary": true,
+		"active": true
+	},
+	"currency": "GBP",
+	"status": "Active",
+	"billing_state": "Good Standing",
+	"starts": "2018-10-09T19:58:39-07:00",
+	"ends": "2018-12-06T00:00:00-08:00",
+	"entitled_through": "2018-12-06T00:00:00-08:00",
+	"items": {
+		"object": "List",
+		"data": [
+			{
+				"object": "SubscriptionItem",
+				"id": "ABItemID1539140316227",
+				"vid": "2f48e7e73bd5003841806917c2953dc08aa9ee33",
+				"index": 0,
+				"product": {
+					"object": "Product",
+					"id": "ExperianProductID1",
+					"vid": "342a116b751ee2627d3738dd8cfa6628db70b294",
+					"created": "2018-05-03T13:43:37-07:00",
+					"descriptions": {
+						"object": "List",
+						"data": [
+							{
+								"object": "ProductDescription",
+								"language": "EN",
+								"description": "Monthly service"
+							}
+						],
+						"total_count": 1
+					},
+					"status": "Active",
+					"entitlements": {
+						"object": "List",
+						"data": [
+							{
+								"object": "Entitlement",
+								"id": "MonthlyAccess",
+								"description": "Customer gets access to regular monthly subscription"
+							}
+						],
+						"total_count": 1
+					},
+					"prices": {
+						"object": "List",
+						"data": [
+							{
+								"object": "ProductPrice",
+								"amount": 20,
+								"currency": "USD"
+							},
+							{
+								"object": "ProductPrice",
+								"amount": 14.99,
+								"currency": "GBP"
+							}
+						],
+						"total_count": 2
+					}
+				},
+				"currency": "GBP",
+				"quantity": 1,
+				"created": "2018-10-09T19:58:39-07:00",
+				"starts": "2018-10-09T00:00:00-07:00"
+			},
+			{
+				"object": "SubscriptionItem",
+				"id": "ABItemIDPOct102018T22",
+				"vid": "3f0ef3f53fda73276bf1d6080b25a8d2fb33ced0",
+				"index": 1,
+				"product": {
+					"object": "Product",
+					"id": "NewProduct1GBP",
+					"vid": "5d7e61595ea180492420de005e1b18cb34623c74",
+					"created": "2018-09-04T12:41:54-07:00",
+					"descriptions": {
+						"object": "List",
+						"data": [
+							{
+								"object": "ProductDescription",
+								"language": "EN",
+								"description": "Monthly service Product Price in GBP"
+							}
+						],
+						"total_count": 1
+					},
+					"status": "Active",
+					"entitlements": {
+						"object": "List",
+						"data": [
+							{
+								"object": "Entitlement",
+								"id": "MonthlyAccess",
+								"description": "Customer gets access to regular monthly subscription"
+							}
+						],
+						"total_count": 1
+					},
+					"prices": {
+						"object": "List",
+						"data": [
+							{
+								"object": "ProductPrice",
+								"amount": 4.99,
+								"currency": "GBP"
+							}
+						],
+						"total_count": 1
+					}
+				},
+				"quantity": 1,
+				"created": "2018-10-10T18:30:16-07:00",
+				"starts": "2018-10-10T00:00:00-07:00"
+			}
+		],
+		"total_count": 2
+	},
+	"source_ip": "34.247.191.161",
+	"billing_day": 9,
+	"minimum_commitment": 0,
+	"affiliate": "400",
+	"notify_on_transition": false,
+	"most_recent_billing": {
+		"object": "Transaction",
+		"id": "KHPNFD00003955",
+		"vid": "facac70f2834a6998587f45991baabecf838c7d7",
+		"created": "2018-10-10T18:30:16-07:00",
+		"amount": 4.83,
+		"currency": "GBP",
+		"division_number": "352058",
+		"account": {
+			"object": "Account",
+			"id": "AcctID1539140316227",
+			"vid": "863bfdffc854966d41fe50d914cad28e917f317d",
+			"created": "2018-10-09T19:58:38-07:00",
+			"email": "hkoppuravuri@vindicia.com",
+			"email_type": "html",
+			"language": "EN",
+			"name": "My Acct Name",
+			"payment_methods": {
+				"object": "List",
+				"data": [
+					{
+						"object": "PaymentMethod",
+						"id": "PMID1539140316227",
+						"vid": "e3d16f0da71cbf847aab017da91b1b4bf6c7e349",
+						"created": "2018-10-09T19:58:38-07:00",
+						"type": "CreditCard",
+						"credit_card": {
+							"object": "CreditCard",
+							"vid": "b695b131e7397bc56bc328de91e178b3d7375846",
+							"account": "511656XXXXXX1119",
+							"bin": "511656",
+							"last_digits": "1119",
+							"account_length": 16,
+							"expiration_date": "201908",
+							"last_au_request_date": null,
+							"last_update_date": null,
+							"extended_card_attributes": {
+								"object": "ExtendedCardAttributes",
+								"commercial_card": 1,
+								"signature_debit_card": 0,
+								"pinless_debit_card": 0,
+								"prepaid_card": 1,
+								"payroll_card": 0,
+								"healthcare_card": 0,
+								"country_of_issuance": "GBR",
+								"durbin_regulated": 0,
+								"affluent": 0
+							}
+						},
+						"account_holder": "CCHolder Name",
+						"billing_address": {
+							"object": "Address",
+							"vid": "8e8226aaa50a540bdf436f4f92c20293030bfc2e",
+							"line1": "2226 Mary Ave",
+							"city": "Birmingham",
+							"postal_code": "B3 2EW",
+							"country": "GB",
+							"phone": "408408408"
+						},
+						"primary": true,
+						"active": true
+					}
+				],
+				"total_count": 1
+			}
+		},
+		"source_payment_method": {
+			"object": "PaymentMethod",
+			"id": "PMID1539140316227",
+			"vid": "e3d16f0da71cbf847aab017da91b1b4bf6c7e349",
+			"created": "2018-10-09T19:58:38-07:00",
+			"type": "CreditCard",
+			"credit_card": {
+				"object": "CreditCard",
+				"vid": "b695b131e7397bc56bc328de91e178b3d7375846",
+				"account": "511656XXXXXX1119",
+				"bin": "511656",
+				"last_digits": "1119",
+				"account_length": 16,
+				"expiration_date": "201908",
+				"last_au_request_date": null,
+				"last_update_date": null,
+				"extended_card_attributes": {
+					"object": "ExtendedCardAttributes",
+					"commercial_card": 1,
+					"signature_debit_card": 0,
+					"pinless_debit_card": 0,
+					"prepaid_card": 1,
+					"payroll_card": 0,
+					"healthcare_card": 0,
+					"country_of_issuance": "GBR",
+					"durbin_regulated": 0,
+					"affluent": 0
+				}
+			},
+			"account_holder": "CCHolder Name",
+			"billing_address": {
+				"object": "Address",
+				"vid": "8e8226aaa50a540bdf436f4f92c20293030bfc2e",
+				"line1": "2226 Mary Ave",
+				"city": "Birmingham",
+				"postal_code": "B3 2EW",
+				"country": "GB",
+				"phone": "408408408"
+			},
+			"primary": true,
+			"active": true
+		},
+		"status_log": {
+			"object": "List",
+			"data": [
+				{
+					"object": "TransactionStatus",
+					"status": "Authorized",
+					"created": "2018-10-10T18:30:17-07:00",
+					"payment_method_type": "CreditCard",
+					"credit_card_status": {
+						"object": "TransactionStatusCreditCard",
+						"auth_code": "100",
+						"avs_code": "I3",
+						"extended_card_attributes": {
+							"object": "ExtendedCardAttributes",
+							"commercial_card": 1,
+							"signature_debit_card": 0,
+							"pinless_debit_card": 0,
+							"prepaid_card": 1,
+							"payroll_card": 0,
+							"healthcare_card": 0,
+							"country_of_issuance": "GBR",
+							"durbin_regulated": 0,
+							"affluent": 0
+						}
+					},
+					"vin_avs": "FullMatch",
+					"note": "100 - NA"
+				},
+				{
+					"object": "TransactionStatus",
+					"status": "New",
+					"created": "2018-10-10T18:30:16-07:00",
+					"payment_method_type": "CreditCard",
+					"credit_card_status": {
+						"object": "TransactionStatusCreditCard",
+						"auth_code": "100",
+						"extended_card_attributes": {
+							"object": "ExtendedCardAttributes",
+							"commercial_card": 1,
+							"signature_debit_card": 0,
+							"pinless_debit_card": 0,
+							"prepaid_card": 1,
+							"payroll_card": 0,
+							"healthcare_card": 0,
+							"country_of_issuance": "GBR",
+							"durbin_regulated": 0,
+							"affluent": 0
+						}
+					}
+				}
+			],
+			"total_count": 2
+		},
+		"payment_processor": "Paymentech",
+		"payment_processor_transaction_id": "55930000DFNPHK",
+		"metadata": {
+			"vin:type": "modify"
+		},
+		"items": {
+			"object": "List",
+			"data": [
+				{
+					"object": "TransactionItem",
+					"sku": "NewProduct1GBP",
+					"index_number": 1,
+					"item_type": "Purchase",
+					"name": "Monthly service Product Price in GBP",
+					"subscription_item": {
+						"object": "SubscriptionItem",
+						"id": "ABItemIDPOct102018T22",
+						"vid": "3f0ef3f53fda73276bf1d6080b25a8d2fb33ced0"
+					},
+					"price": 4.83,
+					"quantity": 1,
+					"tax_classification": null,
+					"service_period_starts": "2018-10-10T00:00:00-07:00",
+					"service_period_ends": "2018-11-08T00:00:00-08:00",
+					"tax_type": "Inclusive Sales",
+					"subtotal": 4.83,
+					"total": 4.83
+				},
+				{
+					"object": "TransactionItem",
+					"sku": "Total Tax",
+					"index_number": 2,
+					"item_type": "Purchase",
+					"name": "Total Tax",
+					"price": 0,
+					"quantity": 1,
+					"tax_classification": "TaxExempt",
+					"tax_type": "Inclusive Sales",
+					"discount": 0,
+					"subtotal": 0,
+					"total": 0
+				}
+			],
+			"total_count": 2
+		},
+		"affiliate": "400",
+		"source_ip": "34.247.191.161",
+		"sales_tax_address": {
+			"object": "Address",
+			"vid": "54c1cbbcb3049d0a1207232127f1d7a0afa72b3b",
+			"line1": "2226 Mary Ave",
+			"city": "BIRMINGHAM",
+			"postal_code": "B3 2EW",
+			"country": "GB"
+		},
+		"subscription_sequence": 1,
+		"billing_plan_sequence": 1,
+		"subscription": {
+			"object": "Subscription",
+			"id": "ABID1539140316227",
+			"vid": "82f3add26c629e69dd8b5d7798566ec3a61ad627"
+		}
+	},
+	"next_billing": {
+		"object": "Transaction",
+		"created": "2018-11-09T00:00:00-08:00",
+		"amount": 19.98,
+		"currency": "GBP",
+		"items": {
+			"object": "List",
+			"data": [
+				{
+					"object": "TransactionItem",
+					"sku": "ExperianProductID1",
+					"item_type": "Purchase",
+					"name": "Monthly service",
+					"price": 19.98,
+					"quantity": 1,
+					"tax_classification": null,
+					"tax_type": "Exclusive Sales",
+					"subtotal": 19.98,
+					"total": 19.98
+				}
+			],
+			"total_count": 1
+		}
+	},
+	"balance": 0
+}
+
+
+
+
+
+
