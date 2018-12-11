@@ -1,0 +1,9 @@
+          {
+            "object": "ActivityNote",
+            "activity_type": "Note",
+            "timestamp": "2018-12-05T07:45:00-08:00",
+            "note": "Adding example activity of type:  Note",
+            "account": {
+                "id": "rmmtest_20181204_001"
+                }
+            }
