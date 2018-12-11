@@ -1,0 +1,11 @@
+POST https://api.prodtest.vindicia.com/activities
+
+          {
+            "object": "ActivityLogout",
+            "activity_type": "Logout",
+            "timestamp": "2018-12-05T10:00:00-08:00",
+			"ip": "127.0.0.0.1",
+            "account": {
+                "id": "rmmtest_20181204_001"
+                }
+            }
