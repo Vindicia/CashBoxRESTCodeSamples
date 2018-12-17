@@ -1,4 +1,12 @@
-          {
+SOAP call : Activity.record
+
+REST Method:  POST
+
+Endpoint : https://api.prodtest.vindicia.com/activities
+
+JSON request:
+        
+        {
             "object": "ActivityNote",
             "activity_type": "Note",
             "timestamp": "2018-12-05T07:45:00-08:00",
