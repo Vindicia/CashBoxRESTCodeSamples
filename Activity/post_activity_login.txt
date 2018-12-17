@@ -1,6 +1,11 @@
-POST https://api.prodtest.vindicia.com/activities
+SOAP call : Activity.record
 
-JSON body: 
+REST Method:  POST
+
+Endpoint : https://api.prodtest.vindicia.com/activities
+
+JSON request:
+  
 
   	{
             "object": "ActivityLogin",
