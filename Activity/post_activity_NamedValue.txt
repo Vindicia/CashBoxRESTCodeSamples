@@ -1,0 +1,46 @@
+SOAP call : Activity.record
+
+REST Method:  POST
+
+Endpoint : https://api.prodtest.vindicia.com/activities
+
+JSON Request:
+
+{
+            "object": "Activity",
+            "type": "NamedValue",
+            "timestamp": "2018-12-05T09:55:00-08:00",
+            "namedvalue_args" : {
+							
+							"type":"species",
+							"name":"foo",
+							"value":"123abcdef"
+						} ,
+	
+	
+            "account": {
+                "id": "AccountJan82019T1"
+            }
+}
+
+
+
+JSON Response:
+
+{
+	"object": "Activity",
+	"vid": "7c58250730164694bfa5f23213b6f9c187c7804b",
+	"account": {
+		"object": "Account",
+		"id": "AccountJan82019T1",
+		"vid": "64821fceaf58d13f8db7e919cca9cb8695be03a1"
+	},
+	"timestamp": "2018-12-05T09:55:00-08:00",
+	"type": "NamedValue",
+	"namedvalue_args": {
+		"object": "ActivityNamedValue",
+		"type": "species",
+		"name": "foo",
+		"value": "123abcdef"
+	}
+}
