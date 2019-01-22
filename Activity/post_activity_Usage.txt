@@ -1,0 +1,55 @@
+SOAP call : Activity.record
+
+REST Method:  POST
+
+Endpoint : https://api.prodtest.vindicia.com/activities
+
+JSON Request:
+
+{
+            "object": "Activity",
+            "type": "Usage",
+            "timestamp": "2018-12-05T09:55:00-08:00",
+            "usage_args" : {
+							
+							"description" :"Testing Usage",
+							"total":41,
+							"last_day":2,
+							"last_week":4,
+							"last_month":9,
+							"last_year":1,
+							"last_usage_date":"2018-11-25T09:55:00"
+						} ,
+	
+	
+            "account": {
+                "id": "AccountJan82019T1"
+            }
+}
+
+
+
+
+JSON Response:
+
+{
+	"object": "Activity",
+	"vid": "963fb3abaac88ea4f2d03594fdb21e78709d4089",
+	"account": {
+		"object": "Account",
+		"id": "AccountJan82019T1",
+		"vid": "64821fceaf58d13f8db7e919cca9cb8695be03a1"
+	},
+	"timestamp": "2018-12-05T09:55:00-08:00",
+	"type": "Usage",
+	"usage_args": {
+		"object": "ActivityUsage",
+		"description": "Testing Usage",
+		"total": 41,
+		"last_day": 2,
+		"last_week": 4,
+		"last_month": 9,
+		"last_year": 1,
+		"last_usage_date": "2018-11-25T09:55:00-08:00"
+	}
+}
