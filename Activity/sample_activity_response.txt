@@ -2,422 +2,93 @@ GET //api.prodtest.vindicia.com/activities/?account=rmmtest_20181204_001
 
 Reponse: 
 {
-   "object": "List",
-   "data": [
-      {
-         "object": "ActivityLogout",
-         "vid": "228e46fa767dc3ac0c9cc504f81c0a8cd5aff09d",
-         "account": {
-            "object": "Account",
-            "id": "rmmtest_20181204_001",
-            "vid": "1ac464b49be9a9f3e373ea74c9c975001682a11c",
-            "created": "2018-12-04T13:19:23-08:00",
-            "email": "rmorrison@vindicia.com",
-            "email_type": "html",
-            "language": "EN",
-            "notify_before_billing": true,
-            "company": "Vindicia",
-            "name": "Ralph Morrison",
-            "shipping_address": {
-               "object": "Address",
-               "vid": "80f3a61b34d260c4093caa363801f4cd8cd938d6",
-               "name": "Ralph Morrison",
-               "line1": "2988 Campus Dr",
-               "line2": "Suite 300",
-               "city": "San Mateo",
-               "district": "CA",
-               "postal_code": "94403",
-               "country": "US",
-               "phone": "415-555-1111"
+    "object": "List",
+    "data": [
+        {
+            "object": "Activity",
+            "vid": "29e06b445c9eb779a049aa98f63b8974fcf173bc",
+            "account": {
+                "object": "Account",
+                "id": "rmm5279-994474",
+                "vid": "37f08ddc6e4bda3e525fc6d15088c7e73ac0d449"
             },
-            "payment_methods": {
-               "object": "List",
-               "data": [
-                  {
-                     "object": "PaymentMethod",
-                     "id": "pm-rmmtest_20181204_001",
-                     "vid": "8d299611aae1e792dc8cf15148bf025b2c8deedb",
-                     "created": "2018-12-05T07:22:02-08:00",
-                     "type": "CreditCard",
-                     "credit_card": {
-                        "object": "CreditCard",
-                        "vid": "469191fbf680b9e62758c7dff7780e747257e907",
-                        "account": "448598XXXXXX2217",
-                        "bin": "448598",
-                        "last_digits": "2217",
-                        "account_length": 16,
-                        "expiration_date": "202512",
-                        "last_au_request_date": null,
-                        "last_update_date": null,
-                        "extended_card_attributes": {
-                           "object": "ExtendedCardAttributes",
-                           "commercial_card": 1,
-                           "signature_debit_card": 0,
-                           "pinless_debit_card": 0,
-                           "prepaid_card": 0,
-                           "healthcare_card": 0,
-                           "country_of_issuance": "USA",
-                           "durbin_regulated": 0,
-                           "affluent": 0
-                        }
-                     },
-                     "account_holder": "Ralph Morrison",
-                     "billing_address": {
-                        "object": "Address",
-                        "vid": "908a06fc7cbeea804e65586085ed5c4d52183c12",
-                        "name": "Ralph Morrison",
-                        "line1": "2988 Campus Drive",
-                        "line2": "Suite 300",
-                        "city": "San Mateo",
-                        "district": "CA",
-                        "postal_code": "94403",
-                        "country": "US"
-                     },
-                     "customer_specified_type": "Visa",
-                     "primary": true,
-                     "active": true
-                  }
-               ],
-               "total_count": 1
+            "timestamp": "2019-01-22T06:45:00-08:00",
+            "type": "Cancellation",
+            "cancellation_args": {
+                "object": "ActivityCancellation",
+                "reason": "System too slow for streaming",
+                "confirmation_code": 10001,
+                "initiator": "Customer"
             }
-         },
-         "activity_type": "Logout",
-         "timestamp": "2018-12-05T10:00:00-08:00",
-         "ip": "127.0.0.0.1"
-      },
-      {
-         "object": "ActivityLogin",
-         "vid": "e0c184ae6e219544fb7fe5f24ca828a4e809c270",
-         "account": {
-            "object": "Account",
-            "id": "rmmtest_20181204_001",
-            "vid": "1ac464b49be9a9f3e373ea74c9c975001682a11c",
-            "created": "2018-12-04T13:19:23-08:00",
-            "email": "rmorrison@vindicia.com",
-            "email_type": "html",
-            "language": "EN",
-            "notify_before_billing": true,
-            "company": "Vindicia",
-            "name": "Ralph Morrison",
-            "shipping_address": {
-               "object": "Address",
-               "vid": "80f3a61b34d260c4093caa363801f4cd8cd938d6",
-               "name": "Ralph Morrison",
-               "line1": "2988 Campus Dr",
-               "line2": "Suite 300",
-               "city": "San Mateo",
-               "district": "CA",
-               "postal_code": "94403",
-               "country": "US",
-               "phone": "415-555-1111"
+        },
+        {
+            "object": "Activity",
+            "vid": "5d359af7d061337097c1bf161950473f276a8579",
+            "account": {
+                "object": "Account",
+                "id": "rmm5279-994474",
+                "vid": "37f08ddc6e4bda3e525fc6d15088c7e73ac0d449"
             },
-            "payment_methods": {
-               "object": "List",
-               "data": [
-                  {
-                     "object": "PaymentMethod",
-                     "id": "pm-rmmtest_20181204_001",
-                     "vid": "8d299611aae1e792dc8cf15148bf025b2c8deedb",
-                     "created": "2018-12-05T07:22:02-08:00",
-                     "type": "CreditCard",
-                     "credit_card": {
-                        "object": "CreditCard",
-                        "vid": "469191fbf680b9e62758c7dff7780e747257e907",
-                        "account": "448598XXXXXX2217",
-                        "bin": "448598",
-                        "last_digits": "2217",
-                        "account_length": 16,
-                        "expiration_date": "202512",
-                        "last_au_request_date": null,
-                        "last_update_date": null,
-                        "extended_card_attributes": {
-                           "object": "ExtendedCardAttributes",
-                           "commercial_card": 1,
-                           "signature_debit_card": 0,
-                           "pinless_debit_card": 0,
-                           "prepaid_card": 0,
-                           "healthcare_card": 0,
-                           "country_of_issuance": "USA",
-                           "durbin_regulated": 0,
-                           "affluent": 0
-                        }
-                     },
-                     "account_holder": "Ralph Morrison",
-                     "billing_address": {
-                        "object": "Address",
-                        "vid": "908a06fc7cbeea804e65586085ed5c4d52183c12",
-                        "name": "Ralph Morrison",
-                        "line1": "2988 Campus Drive",
-                        "line2": "Suite 300",
-                        "city": "San Mateo",
-                        "district": "CA",
-                        "postal_code": "94403",
-                        "country": "US"
-                     },
-                     "customer_specified_type": "Visa",
-                     "primary": true,
-                     "active": true
-                  }
-               ],
-               "total_count": 1
+            "timestamp": "2019-01-22T10:00:00-08:00",
+            "type": "Logout",
+            "logout_args": {
+                "object": "ActivityLogout",
+                "ip": "127.0.0.0.1"
             }
-         },
-         "activity_type": "Login",
-         "timestamp": "2018-12-05T09:45:00-08:00",
-         "ip": "127.0.0.0.1"
-      },
-      {
-         "object": "ActivityPhone",
-         "vid": "8b5610fb29adb6d4a91a3dfa1198de5d6bdde8dc",
-         "account": {
-            "object": "Account",
-            "id": "rmmtest_20181204_001",
-            "vid": "1ac464b49be9a9f3e373ea74c9c975001682a11c",
-            "created": "2018-12-04T13:19:23-08:00",
-            "email": "rmorrison@vindicia.com",
-            "email_type": "html",
-            "language": "EN",
-            "notify_before_billing": true,
-            "company": "Vindicia",
-            "name": "Ralph Morrison",
-            "shipping_address": {
-               "object": "Address",
-               "vid": "80f3a61b34d260c4093caa363801f4cd8cd938d6",
-               "name": "Ralph Morrison",
-               "line1": "2988 Campus Dr",
-               "line2": "Suite 300",
-               "city": "San Mateo",
-               "district": "CA",
-               "postal_code": "94403",
-               "country": "US",
-               "phone": "415-555-1111"
+        },
+        {
+            "object": "Activity",
+            "vid": "6e41f37b772ec06bbe42c3c20b5ad4bddcf75c58",
+            "account": {
+                "object": "Account",
+                "id": "rmm5279-994474",
+                "vid": "37f08ddc6e4bda3e525fc6d15088c7e73ac0d449"
             },
-            "payment_methods": {
-               "object": "List",
-               "data": [
-                  {
-                     "object": "PaymentMethod",
-                     "id": "pm-rmmtest_20181204_001",
-                     "vid": "8d299611aae1e792dc8cf15148bf025b2c8deedb",
-                     "created": "2018-12-05T07:22:02-08:00",
-                     "type": "CreditCard",
-                     "credit_card": {
-                        "object": "CreditCard",
-                        "vid": "469191fbf680b9e62758c7dff7780e747257e907",
-                        "account": "448598XXXXXX2217",
-                        "bin": "448598",
-                        "last_digits": "2217",
-                        "account_length": 16,
-                        "expiration_date": "202512",
-                        "last_au_request_date": null,
-                        "last_update_date": null,
-                        "extended_card_attributes": {
-                           "object": "ExtendedCardAttributes",
-                           "commercial_card": 1,
-                           "signature_debit_card": 0,
-                           "pinless_debit_card": 0,
-                           "prepaid_card": 0,
-                           "healthcare_card": 0,
-                           "country_of_issuance": "USA",
-                           "durbin_regulated": 0,
-                           "affluent": 0
-                        }
-                     },
-                     "account_holder": "Ralph Morrison",
-                     "billing_address": {
-                        "object": "Address",
-                        "vid": "908a06fc7cbeea804e65586085ed5c4d52183c12",
-                        "name": "Ralph Morrison",
-                        "line1": "2988 Campus Drive",
-                        "line2": "Suite 300",
-                        "city": "San Mateo",
-                        "district": "CA",
-                        "postal_code": "94403",
-                        "country": "US"
-                     },
-                     "customer_specified_type": "Visa",
-                     "primary": true,
-                     "active": true
-                  }
-               ],
-               "total_count": 1
+            "timestamp": "2019-01-22T09:45:00-08:00",
+            "type": "Login",
+            "login_args": {
+                "object": "ActivityLogin",
+                "ip": "127.0.0.0.1"
             }
-         },
-         "activity_type": "Phone",
-         "timestamp": "2018-12-05T07:45:00-08:00",
-         "src_phone_number": "555-123-1234",
-         "dest_phone_number": "800-123-1234",
-         "cid_phone_number": "555-123-3456",
-         "ani_phone_number": "555-123-6789",
-         "duration_seconds": 300,
-         "note": "Customer called to request subscription upgrade.",
-         "type": "FromCustomerToMerchant"
-      },
-      {
-         "object": "ActivityNote",
-         "vid": "5632094e0a8c57a1c501d04bbcafc7013e1b27bf",
-         "account": {
-            "object": "Account",
-            "id": "rmmtest_20181204_001",
-            "vid": "1ac464b49be9a9f3e373ea74c9c975001682a11c",
-            "created": "2018-12-04T13:19:23-08:00",
-            "email": "rmorrison@vindicia.com",
-            "email_type": "html",
-            "language": "EN",
-            "notify_before_billing": true,
-            "company": "Vindicia",
-            "name": "Ralph Morrison",
-            "shipping_address": {
-               "object": "Address",
-               "vid": "80f3a61b34d260c4093caa363801f4cd8cd938d6",
-               "name": "Ralph Morrison",
-               "line1": "2988 Campus Dr",
-               "line2": "Suite 300",
-               "city": "San Mateo",
-               "district": "CA",
-               "postal_code": "94403",
-               "country": "US",
-               "phone": "415-555-1111"
+        },
+        {
+            "object": "Activity",
+            "vid": "b05f35f3528e36e5eb2acb5c208f6d7174798552",
+            "account": {
+                "object": "Account",
+                "id": "rmm5279-994474",
+                "vid": "37f08ddc6e4bda3e525fc6d15088c7e73ac0d449"
             },
-            "payment_methods": {
-               "object": "List",
-               "data": [
-                  {
-                     "object": "PaymentMethod",
-                     "id": "pm-rmmtest_20181204_001",
-                     "vid": "8d299611aae1e792dc8cf15148bf025b2c8deedb",
-                     "created": "2018-12-05T07:22:02-08:00",
-                     "type": "CreditCard",
-                     "credit_card": {
-                        "object": "CreditCard",
-                        "vid": "469191fbf680b9e62758c7dff7780e747257e907",
-                        "account": "448598XXXXXX2217",
-                        "bin": "448598",
-                        "last_digits": "2217",
-                        "account_length": 16,
-                        "expiration_date": "202512",
-                        "last_au_request_date": null,
-                        "last_update_date": null,
-                        "extended_card_attributes": {
-                           "object": "ExtendedCardAttributes",
-                           "commercial_card": 1,
-                           "signature_debit_card": 0,
-                           "pinless_debit_card": 0,
-                           "prepaid_card": 0,
-                           "healthcare_card": 0,
-                           "country_of_issuance": "USA",
-                           "durbin_regulated": 0,
-                           "affluent": 0
-                        }
-                     },
-                     "account_holder": "Ralph Morrison",
-                     "billing_address": {
-                        "object": "Address",
-                        "vid": "908a06fc7cbeea804e65586085ed5c4d52183c12",
-                        "name": "Ralph Morrison",
-                        "line1": "2988 Campus Drive",
-                        "line2": "Suite 300",
-                        "city": "San Mateo",
-                        "district": "CA",
-                        "postal_code": "94403",
-                        "country": "US"
-                     },
-                     "customer_specified_type": "Visa",
-                     "primary": true,
-                     "active": true
-                  }
-               ],
-               "total_count": 1
+            "timestamp": "2019-01-21T15:43:00-08:00",
+            "type": "Phone",
+            "phone_args": {
+                "object": "ActivityPhone",
+                "type": "FromCustomerToMerchant",
+                "src_phone_number": "555-123-1234",
+                "dest_phone_number": "800-123-1234",
+                "cid_phone_number": "555-123-3456",
+                "ani_phone_number": "555-123-6789",
+                "duration_seconds": 300,
+                "note": "Customer called to request subscription upgrade."
             }
-         },
-         "activity_type": "Note",
-         "timestamp": "2018-12-05T07:45:00-08:00",
-         "note": "Adding 2nd activity of type:  Note"
-      },
-      {
-         "object": "ActivityNote",
-         "vid": "0d27fb02f76b9d572f3b5c495c45527309879e44",
-         "account": {
-            "object": "Account",
-            "id": "rmmtest_20181204_001",
-            "vid": "1ac464b49be9a9f3e373ea74c9c975001682a11c",
-            "created": "2018-12-04T13:19:23-08:00",
-            "email": "rmorrison@vindicia.com",
-            "email_type": "html",
-            "language": "EN",
-            "notify_before_billing": true,
-            "company": "Vindicia",
-            "name": "Ralph Morrison",
-            "shipping_address": {
-               "object": "Address",
-               "vid": "80f3a61b34d260c4093caa363801f4cd8cd938d6",
-               "name": "Ralph Morrison",
-               "line1": "2988 Campus Dr",
-               "line2": "Suite 300",
-               "city": "San Mateo",
-               "district": "CA",
-               "postal_code": "94403",
-               "country": "US",
-               "phone": "415-555-1111"
+        },
+        {
+            "object": "Activity",
+            "vid": "bafa5ee07bce73cfffb52a68dddee455168da555",
+            "account": {
+                "object": "Account",
+                "id": "rmm5279-994474",
+                "vid": "37f08ddc6e4bda3e525fc6d15088c7e73ac0d449"
             },
-            "payment_methods": {
-               "object": "List",
-               "data": [
-                  {
-                     "object": "PaymentMethod",
-                     "id": "pm-rmmtest_20181204_001",
-                     "vid": "8d299611aae1e792dc8cf15148bf025b2c8deedb",
-                     "created": "2018-12-05T07:22:02-08:00",
-                     "type": "CreditCard",
-                     "credit_card": {
-                        "object": "CreditCard",
-                        "vid": "469191fbf680b9e62758c7dff7780e747257e907",
-                        "account": "448598XXXXXX2217",
-                        "bin": "448598",
-                        "last_digits": "2217",
-                        "account_length": 16,
-                        "expiration_date": "202512",
-                        "last_au_request_date": null,
-                        "last_update_date": null,
-                        "extended_card_attributes": {
-                           "object": "ExtendedCardAttributes",
-                           "commercial_card": 1,
-                           "signature_debit_card": 0,
-                           "pinless_debit_card": 0,
-                           "prepaid_card": 0,
-                           "healthcare_card": 0,
-                           "country_of_issuance": "USA",
-                           "durbin_regulated": 0,
-                           "affluent": 0
-                        }
-                     },
-                     "account_holder": "Ralph Morrison",
-                     "billing_address": {
-                        "object": "Address",
-                        "vid": "908a06fc7cbeea804e65586085ed5c4d52183c12",
-                        "name": "Ralph Morrison",
-                        "line1": "2988 Campus Drive",
-                        "line2": "Suite 300",
-                        "city": "San Mateo",
-                        "district": "CA",
-                        "postal_code": "94403",
-                        "country": "US"
-                     },
-                     "customer_specified_type": "Visa",
-                     "primary": true,
-                     "active": true
-                  }
-               ],
-               "total_count": 1
+            "timestamp": "2018-12-05T07:45:00-08:00",
+            "type": "Note",
+            "note_args": {
+                "object": "ActivityNote",
+                "note": "Adding 2nd activity of type:  Note"
             }
-         },
-         "activity_type": "Note",
-         "timestamp": "2018-12-05T06:43:34-08:00",
-         "note": "Testing Activity type:  Note"
-      }
-   ],
-   "total_count": 5,
-   "url": "/activities/?account=rmmtest_20181204_001",
-   "next": "/activities/?account=rmmtest_20181204_001&starting_after=0d27fb02f76b9d572f3b5c495c45527309879e44",
-   "previous": "/activities/?account=rmmtest_20181204_001&ending_before=228e46fa767dc3ac0c9cc504f81c0a8cd5aff09d"
-}
+        }
+    ],
+    "total_count": 5,
+    "url": "/activities/?account=rmm5279-994474",
+    "next": "/activities/?account=rmm5279-994474&starting_after=bafa5ee07bce73cfffb52a68dddee455168da555",
+    "previous": "/activities/?account=rmm5279-994474&ending_before=29e06b445c9eb779a049aa98f63b8974fcf173bc"
