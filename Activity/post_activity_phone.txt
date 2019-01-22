@@ -6,18 +6,21 @@ Endpoint : https://api.prodtest.vindicia.com/activities
 
 JSON request:
   
- {
-            "object": "ActivityPhone",
-            "activity_type": "Phone",
-            "timestamp": "2018-12-05T07:45:00-08:00",
-            "src_phone_number": "555-123-1234",
-            "dest_phone_number": "800-123-1234",
-            "cid_phone_number": "555-123-3456",
-            "ani_phone_number": "555-123-6789",
-            "note": "Customer called to request subscription upgrade.",
-            "type": "FromCustomerToMerchant",
-            "duration_seconds": "300",
-            "account": {
-                "id": "rmmtest_20181204_001"
-                }
-            }
+{ "object": "Activity",
+    "account": 
+        {
+            "id": "rmmtest_20181204_001" 
+        },
+    "timestamp": "2019-01-21T15:43:00-08:00",
+    "type": "Phone",
+    "phone_args": {
+        "object": "ActivityPhone",
+        "type": "FromCustomerToMerchant",
+        "src_phone_number": "555-123-1234",
+        "dest_phone_number": "800-123-1234",
+        "cid_phone_number": "555-123-3456",
+        "ani_phone_number": "555-123-6789",
+        "duration_seconds": "300",
+        "note": "Customer called to request subscription upgrade."
+    }
+}
