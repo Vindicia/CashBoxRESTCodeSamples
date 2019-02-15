@@ -23,5 +23,12 @@ JSON Request:
   },
   "billing_plan": {
     "id": "KHP Daily billing plan"
+  },
+  "policy": {
+    "ignore_cvn_policy": 0,
+    "ignore_avs_policy": 0,
+    "min_chargeback_probability": 100,
+    "immediate_auth_failure_policy": "doNotSaveAutoBill",
+    "validate_for_future_payment": 0
   }
 }
