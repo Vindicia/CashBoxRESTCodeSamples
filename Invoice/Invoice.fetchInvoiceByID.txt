@@ -1,0 +1,310 @@
+SOAP call : ??
+
+REST Method:  GET
+
+Endpoint :  https://api.prodtest.vindicia.com/invoices/AutoBillID25494-00000000
+
+JSON Response:
+
+{
+	"object": "Invoice",
+	"id": "AutoBillID25494-00000000",
+	"billing_service_period_start": "2018-12-18T00:00:00-08:00",
+	"billing_service_period_end": "2018-12-18T00:00:00-08:00",
+	"due_date": "2019-02-16T00:00:00-08:00",
+	"invoice_date": "2018-12-18T00:00:00-08:00",
+	"status": "Paid",
+	"invoice_currency": "USD",
+	"invoice_balance": 0,
+	"gross_charges_total": 112,
+	"tax_charges_total": 0,
+	"credit_total": 0,
+	"payments_received_total": 112,
+	"invoice_line_items": {
+		"object": "List",
+		"data": [
+			{
+				"object": "InvoiceItem",
+				"index_number": 0,
+				"type": "RecurringCharge",
+				"sku": "KHP Daily billing plan",
+				"description": "KHP Daily billing plan",
+				"quantity": 1,
+				"unit_amount": 0,
+				"tax_classification": "TaxExempt",
+				"item_added": "2018-12-18T00:00:00-08:00",
+				"item_removed": null,
+				"item_serviceperiod_start": "2018-12-18T00:00:00-08:00",
+				"item_serviceperiod_end": "2018-12-18T00:00:00-08:00",
+				"billing_plan": {
+					"object": "BillingPlan",
+					"id": "KHP Daily billing plan",
+					"vid": "120c7035599094a863b0d55b45000dc6c89abc09"
+				}
+			},
+			{
+				"object": "InvoiceItem",
+				"index_number": 1,
+				"type": "RecurringCharge",
+				"sku": "khp_ARC_product2018",
+				"description": "Description For New ProductARC",
+				"quantity": 1,
+				"unit_amount": 112,
+				"tax_classification": "TaxExempt",
+				"item_added": "2018-12-18T00:00:00-08:00",
+				"item_removed": null,
+				"item_serviceperiod_start": "2018-12-18T00:00:00-08:00",
+				"item_serviceperiod_end": "2018-12-18T00:00:00-08:00",
+				"subscription_item": {
+					"object": "SubscriptionItem",
+					"id": "ABItemID25494",
+					"vid": "5cff1a182efd38c5728d73839c0b48876b4f503b"
+				}
+			}
+		],
+		"total_count": 2
+	},
+	"invoice_tax_items": {
+		"object": "List",
+		"data": [
+			{
+				"object": "InvoiceItem",
+				"index_number": 2,
+				"type": "Tax",
+				"sku": "VIN_SALES_TAX",
+				"description": "Sales Tax Total",
+				"quantity": 1,
+				"unit_amount": 0,
+				"tax_classification": "TaxExempt",
+				"item_added": "2018-12-18T00:00:00-08:00",
+				"item_removed": null,
+				"item_serviceperiod_start": "2018-12-18T00:00:00-08:00",
+				"item_serviceperiod_end": "2018-12-18T00:00:00-08:00"
+			}
+		],
+		"total_count": 1
+	},
+	"invoice_payments": {
+		"object": "List",
+		"data": [
+			{
+				"object": "Transaction",
+				"id": "KHPNFD00004103",
+				"vid": "39f7bc439ece6a1f85b00df12a645af8249fb1d4",
+				"created": "2018-12-18T15:35:11-08:00",
+				"amount": 112,
+				"currency": "USD",
+				"account": {
+					"object": "Account",
+					"id": "AccountID25494",
+					"vid": "ae98f662a5278fac0e53fa4e4106c659895fb83e",
+					"created": "2018-12-18T11:38:33-08:00",
+					"email": "mysupport@email.com",
+					"email_type": "html",
+					"name": "Acct Name 25494",
+					"payment_methods": {
+						"object": "List",
+						"data": [
+							{
+								"object": "PaymentMethod",
+								"id": "MAPID25494",
+								"vid": "4029eec48cbdc9e1570c6cf6ed0d77822302d6f8",
+								"created": "2018-12-18T11:38:34-08:00",
+								"type": "MerchantAcceptedPayment",
+								"merchant_accepted_payment": {
+									"object": "MerchantAcceptedPayment",
+									"amount": 0,
+									"currency": "USD",
+									"created": "2018-12-18T11:38:34-08:00",
+									"payment_type": "Pay By invoice",
+									"account": "XXX"
+								},
+								"account_holder": "MAP Accout Holder Name",
+								"billing_address": {
+									"object": "Address",
+									"vid": "30b717cb0f0228a0ba0346c150844caf8c12be5c",
+									"line1": "2226 Tully Ave",
+									"city": "Santa Clara",
+									"postal_code": "95050",
+									"country": "US",
+									"phone": "6506506501"
+								},
+								"customer_description": "MAP",
+								"primary": true,
+								"active": true
+							},
+							{
+								"object": "PaymentMethod",
+								"id": "PMID3822717",
+								"vid": "657c23b9f2ad8f95393a8cc7be73849e18de39bf",
+								"created": "2018-12-19T11:01:20-08:00",
+								"type": "CreditCard",
+								"credit_card": {
+									"object": "CreditCard",
+									"vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+									"account": "411111XXXXXX1111",
+									"bin": "411111",
+									"last_digits": "1111",
+									"account_length": 16,
+									"expiration_date": "201908",
+									"last_au_request_date": null,
+									"last_update_date": null,
+									"extended_card_attributes": {
+										"object": "ExtendedCardAttributes",
+										"commercial_card": 0,
+										"signature_debit_card": 0,
+										"pinless_debit_card": 0,
+										"prepaid_card": 0,
+										"healthcare_card": 0,
+										"country_of_issuance": "USA",
+										"durbin_regulated": 0,
+										"affluent": 0
+									}
+								},
+								"account_holder": "CCHolder Name",
+								"primary": false,
+								"active": true
+							}
+						],
+						"total_count": 2
+					}
+				},
+				"source_payment_method": {
+					"object": "PaymentMethod",
+					"id": "MAP-ID-NEW-12345",
+					"vid": "04ee0edabb7e9828de496a3190a12905ee19cdc1",
+					"created": "2018-12-18T15:35:11-08:00",
+					"type": "MerchantAcceptedPayment",
+					"merchant_accepted_payment": {
+						"object": "MerchantAcceptedPayment",
+						"amount": 112,
+						"currency": "USD",
+						"created": "2018-12-18T15:35:11-08:00",
+						"payment_type": "Pay with NEW MAP id",
+						"account": "XXX"
+					},
+					"account_holder": "MAP Accout Holder Name",
+					"customer_description": "MAP description",
+					"primary": false,
+					"active": false
+				},
+				"status_log": {
+					"object": "List",
+					"data": [
+						{
+							"object": "TransactionStatus",
+							"status": "Captured",
+							"created": "2018-12-18T15:37:42-08:00",
+							"payment_method_type": "MerchantAcceptedPayment",
+							"note": "VIN_900"
+						},
+						{
+							"object": "TransactionStatus",
+							"status": "Authorized",
+							"created": "2018-12-18T15:35:13-08:00",
+							"payment_method_type": "MerchantAcceptedPayment",
+							"note": "VIN_900 - N/A"
+						},
+						{
+							"object": "TransactionStatus",
+							"status": "New",
+							"created": "2018-12-18T15:35:12-08:00",
+							"payment_method_type": "MerchantAcceptedPayment"
+						}
+					],
+					"total_count": 3
+				},
+				"payment_processor": "Vindicia",
+				"metadata": {
+					"vin:RetryNumber": "0",
+					"vin:BillingCycle": "0"
+				},
+				"items": {
+					"object": "List",
+					"data": [
+						{
+							"object": "TransactionItem",
+							"sku": "KHP Daily billing plan",
+							"index_number": 1,
+							"item_type": "Purchase",
+							"name": "KHP Daily billing plan",
+							"quantity": 1,
+							"tax_classification": "TaxExempt",
+							"service_period_starts": "2018-12-18T00:00:00-08:00",
+							"service_period_ends": "2018-12-18T00:00:00-08:00",
+							"tax_type": "Exclusive Sales",
+							"total": 0
+						},
+						{
+							"object": "TransactionItem",
+							"sku": "khp_ARC_product2018",
+							"index_number": 2,
+							"item_type": "Purchase",
+							"name": "Description For New ProductARC",
+							"subscription_item": {
+								"object": "SubscriptionItem",
+								"id": "ABItemID25494",
+								"vid": "5cff1a182efd38c5728d73839c0b48876b4f503b"
+							},
+							"price": 112,
+							"quantity": 1,
+							"tax_classification": "TaxExempt",
+							"service_period_starts": "2018-12-18T00:00:00-08:00",
+							"service_period_ends": "2018-12-18T00:00:00-08:00",
+							"tax_type": "Exclusive Sales",
+							"subtotal": 112,
+							"total": 112
+						},
+						{
+							"object": "TransactionItem",
+							"sku": "Total Tax",
+							"index_number": 3,
+							"item_type": "Purchase",
+							"name": "Total Tax",
+							"price": 0,
+							"quantity": 1,
+							"tax_classification": "TaxExempt",
+							"service_period_starts": "2018-12-18T00:00:00-08:00",
+							"service_period_ends": "2018-12-18T00:00:00-08:00",
+							"tax_type": "Exclusive Sales",
+							"discount": 0,
+							"subtotal": 0,
+							"total": 0
+						}
+					],
+					"total_count": 3
+				},
+				"source_ip": "123.123.123.123",
+				"sales_tax_address": {
+					"object": "Address",
+					"vid": "de4682a88101a47804eae861157411745a40a172",
+					"line1": "2226 Tully Ave",
+					"city": "SANTA CLARA",
+					"postal_code": "95050",
+					"country": "US"
+				},
+				"subscription_sequence": 1,
+				"billing_plan_sequence": 1,
+				"original_billing_date": "2018-12-18T00:00:00-08:00",
+				"billing_attempt": 0,
+				"subscription": {
+					"object": "Subscription",
+					"id": "AutoBillID25494",
+					"vid": "b1ee742406f6b2f7e29bdc664369ec28dc2fb3a3"
+				}
+			}
+		],
+		"total_count": 1
+	},
+	"account": {
+		"object": "Account",
+		"id": "AccountID25494",
+		"vid": "ae98f662a5278fac0e53fa4e4106c659895fb83e"
+	},
+	"subscription": {
+		"object": "Subscription",
+		"id": "AutoBillID25494",
+		"vid": "b1ee742406f6b2f7e29bdc664369ec28dc2fb3a3"
+	},
+	"billing_sequence": 0
+}
