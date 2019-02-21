@@ -2,7 +2,7 @@ SOAP call : PaymentMethod.fetchByAccount
 
 REST Method:  GET
 
-Endpoint :  https://api.prodtest.vindicia.com//payment_methods?account=HariK1
+Endpoint :  https://api.prodtest.vindicia.com/payment_methods?account=HariK1
 
 JSON Response:
 
