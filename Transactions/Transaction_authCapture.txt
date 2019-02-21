@@ -22,7 +22,7 @@ JSON Request:
                   "object":"CreditCard",
                   "account":"4111111111111111",
                   "expiration_date":"201909"
-            },
+            }
     },
     "shipping_address": {
        "object": "Address",
