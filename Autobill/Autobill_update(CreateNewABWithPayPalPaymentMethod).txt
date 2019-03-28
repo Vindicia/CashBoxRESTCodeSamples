@@ -2,7 +2,7 @@ SOAP call : Autobill.update
 
 REST Method:  POST	
 
-Endpoint : https://api.prodtest.vindicia.com/subscriptions?dry_run=0
+Endpoint : https://api.prodtest.vindicia.com/subscriptions?dryrun=0
 
 (Create new Account, use existing Billing Plan, use existing Product, use Paypal as Payment Method)
 
