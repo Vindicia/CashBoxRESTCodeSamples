@@ -1,0 +1,560 @@
+SOAP Call: Autobill.Modify()
+
+Replace an existing product with a new product in a Subscription/Autobill.
+
+REST Endpoint: 
+https://api.prodtest.vindicia.com/subscriptions/ABIDOct5T1?effective_date=today&bill_prorated_period=true
+
+
+
+JSON Request:
+
+{
+    "object": "Subscription",
+    "id": "ABIDOct5T1",
+    
+    "items": [
+       {
+          "object": "SubscriptionItem",
+          "id": "ABItemIDT7788",
+          "product": {
+             "object": "Product",
+             "id": "NewProduct2GBP"
+          },
+           "replaces": {
+                 "object": "SubscriptionItem",
+                 "product": {
+                    "object": "Product",
+                    "id": "NewProduct1GBP"
+                    
+                 }
+           }
+       }
+    ]
+}
+
+
+
+JSON Response:
+
+{
+	"object": "Subscription",
+	"id": "ABIDOct5T1",
+	"vid": "3150f967927d4133cc7701febf0db931fc8ba846",
+	"created": "2018-10-05T15:41:48-07:00",
+	"account": {
+		"object": "Account",
+		"id": "AcctIDOct5T1",
+		"vid": "a9081f02db7b8eb2222c682ed91681f530551e9f",
+		"created": "2018-10-05T15:41:47-07:00",
+		"default_currency": "GBP",
+		"email": "myemail@myemail.com",
+		"email_type": "html",
+		"name": "AcctName ",
+		"shipping_address": {
+			"object": "Address",
+			"vid": "15a1cb4da2eec4192cddb70d14700d1844770466",
+			"line1": "14 Tottenham Court Road",
+			"city": "KILBIRNIE",
+			"postal_code": "KA25 7HB",
+			"country": "DE",
+			"phone": "408408408"
+		},
+		"payment_methods": {
+			"object": "List",
+			"data": [
+				{
+					"object": "PaymentMethod",
+					"id": "PMIDOct5T1",
+					"vid": "bb2adac1a0822b4b6c64c02b0ed0ed128e20b85c",
+					"created": "2018-10-05T15:41:48-07:00",
+					"type": "CreditCard",
+					"credit_card": {
+						"object": "CreditCard",
+						"vid": "b695b131e7397bc56bc328de91e178b3d7375846",
+						"account": "511656XXXXXX1119",
+						"bin": "511656",
+						"last_digits": "1119",
+						"account_length": 16,
+						"expiration_date": "201909",
+						"last_au_request_date": null,
+						"last_update_date": null,
+						"extended_card_attributes": {
+							"object": "ExtendedCardAttributes",
+							"commercial_card": 1,
+							"signature_debit_card": 0,
+							"pinless_debit_card": 0,
+							"prepaid_card": 1,
+							"payroll_card": 0,
+							"healthcare_card": 0,
+							"country_of_issuance": "GBR",
+							"durbin_regulated": 0,
+							"affluent": 0
+						}
+					},
+					"account_holder": "Peter Rabbit",
+					"billing_address": {
+						"object": "Address",
+						"vid": "9a1bf03b4bcb3d7becadc2114d992e5b39b17322",
+						"line1": "2226 Mary Ave",
+						"city": "Santa Clara",
+						"postal_code": "95050",
+						"country": "US",
+						"phone": "408408408"
+					},
+					"primary": true,
+					"active": true
+				}
+			],
+			"total_count": 1
+		}
+	},
+	"billing_plan": {
+		"object": "BillingPlan",
+		"id": "MonthlyBPWithGBP",
+		"vid": "a5a0383270d232bfd8736fc806fe673c355bbf24",
+		"created": "2018-09-06T11:49:25-07:00",
+		"description": "CB Monthly billing plan with GBP",
+		"status": "Active",
+		"periods": {
+			"object": "List",
+			"data": [
+				{
+					"object": "BillingPlanPeriod",
+					"type": "Month",
+					"quantity": 1,
+					"cycles": 0,
+					"prices": {
+						"object": "List",
+						"data": [
+							{
+								"object": "BillingPlanPrice",
+								"amount": 0,
+								"currency": "GBP"
+							}
+						],
+						"total_count": 1
+					},
+					"do_not_notify_first_bill": false
+				}
+			],
+			"total_count": 1
+		},
+		"billing_notification_days": 1,
+		"entitlements": {
+			"object": "List",
+			"data": [
+				{
+					"object": "Entitlement",
+					"id": "access_gold",
+					"description": "Access To gold Subsription"
+				}
+			],
+			"total_count": 1
+		},
+		"times_to_run": "1",
+		"used_on_subscriptions": true
+	},
+	"payment_method": {
+		"object": "PaymentMethod",
+		"id": "PMIDOct5T1",
+		"vid": "bb2adac1a0822b4b6c64c02b0ed0ed128e20b85c",
+		"created": "2018-10-05T15:41:48-07:00",
+		"type": "CreditCard",
+		"credit_card": {
+			"object": "CreditCard",
+			"vid": "b695b131e7397bc56bc328de91e178b3d7375846",
+			"account": "511656XXXXXX1119",
+			"bin": "511656",
+			"last_digits": "1119",
+			"account_length": 16,
+			"expiration_date": "201909",
+			"last_au_request_date": null,
+			"last_update_date": null,
+			"extended_card_attributes": {
+				"object": "ExtendedCardAttributes",
+				"commercial_card": 1,
+				"signature_debit_card": 0,
+				"pinless_debit_card": 0,
+				"prepaid_card": 1,
+				"payroll_card": 0,
+				"healthcare_card": 0,
+				"country_of_issuance": "GBR",
+				"durbin_regulated": 0,
+				"affluent": 0
+			}
+		},
+		"account_holder": "Peter Rabbit",
+		"billing_address": {
+			"object": "Address",
+			"vid": "9a1bf03b4bcb3d7becadc2114d992e5b39b17322",
+			"line1": "2226 Mary Ave",
+			"city": "Santa Clara",
+			"postal_code": "95050",
+			"country": "US",
+			"phone": "408408408"
+		},
+		"primary": true,
+		"active": true
+	},
+	"currency": "GBP",
+	"status": "Active",
+	"billing_state": "Good Standing",
+	"starts": "2018-10-05T15:41:47-07:00",
+	"ends": "2018-12-02T00:00:00-08:00",
+	"entitled_through": "2018-12-02T00:00:00-08:00",
+	"items": {
+		"object": "List",
+		"data": [
+			{
+				"object": "SubscriptionItem",
+				"id": "ABItemIDT7788",
+				"vid": "61a090a24b8079e4a3cba0decc7f3c0a56b5ca3f",
+				"index": 0,
+				"product": {
+					"object": "Product",
+					"id": "NewProduct2GBP",
+					"vid": "22335f53f80491c7842b023efd1fcee2eccab9ae",
+					"created": "2018-09-04T13:17:15-07:00",
+					"descriptions": {
+						"object": "List",
+						"data": [
+							{
+								"object": "ProductDescription",
+								"language": "EN",
+								"description": "Monthly service Product Price in GBP"
+							}
+						],
+						"total_count": 1
+					},
+					"status": "Active",
+					"entitlements": {
+						"object": "List",
+						"data": [
+							{
+								"object": "Entitlement",
+								"id": "MonthlyAccess",
+								"description": "Customer gets access to regular monthly subscription"
+							}
+						],
+						"total_count": 1
+					},
+					"prices": {
+						"object": "List",
+						"data": [
+							{
+								"object": "ProductPrice",
+								"amount": 64.989,
+								"currency": "GBP"
+							}
+						],
+						"total_count": 1
+					}
+				},
+				"quantity": 1,
+				"created": "2018-10-10T20:20:29-07:00",
+				"starts": "2018-10-10T00:00:00-07:00",
+				"replaces": {
+					"object": "SubscriptionItem",
+					"id": "ABItemOct5T1",
+					"vid": "e942666f69036eb0bc3045df39a2ad47ce7ea19b"
+				}
+			}
+		],
+		"total_count": 1
+	},
+	"source_ip": "123.123.123.123",
+	"billing_day": 5,
+	"minimum_commitment": 0,
+	"notify_on_transition": false,
+	"most_recent_billing": {
+		"object": "Transaction",
+		"id": "KHPNFD00003956",
+		"vid": "8cc5e1fe35f489b3d8606c79ca0e9632ad5d17cf",
+		"created": "2018-10-10T20:20:29-07:00",
+		"amount": 50.32,
+		"currency": "GBP",
+		"division_number": "352058",
+		"account": {
+			"object": "Account",
+			"id": "AcctIDOct5T1",
+			"vid": "a9081f02db7b8eb2222c682ed91681f530551e9f",
+			"created": "2018-10-05T15:41:47-07:00",
+			"default_currency": "GBP",
+			"email": "myemail@myemail.com",
+			"email_type": "html",
+			"name": "AcctName ",
+			"shipping_address": {
+				"object": "Address",
+				"vid": "15a1cb4da2eec4192cddb70d14700d1844770466",
+				"line1": "14 Tottenham Court Road",
+				"city": "KILBIRNIE",
+				"postal_code": "KA25 7HB",
+				"country": "DE",
+				"phone": "408408408"
+			},
+			"payment_methods": {
+				"object": "List",
+				"data": [
+					{
+						"object": "PaymentMethod",
+						"id": "PMIDOct5T1",
+						"vid": "bb2adac1a0822b4b6c64c02b0ed0ed128e20b85c",
+						"created": "2018-10-05T15:41:48-07:00",
+						"type": "CreditCard",
+						"credit_card": {
+							"object": "CreditCard",
+							"vid": "b695b131e7397bc56bc328de91e178b3d7375846",
+							"account": "511656XXXXXX1119",
+							"bin": "511656",
+							"last_digits": "1119",
+							"account_length": 16,
+							"expiration_date": "201909",
+							"last_au_request_date": null,
+							"last_update_date": null,
+							"extended_card_attributes": {
+								"object": "ExtendedCardAttributes",
+								"commercial_card": 1,
+								"signature_debit_card": 0,
+								"pinless_debit_card": 0,
+								"prepaid_card": 1,
+								"payroll_card": 0,
+								"healthcare_card": 0,
+								"country_of_issuance": "GBR",
+								"durbin_regulated": 0,
+								"affluent": 0
+							}
+						},
+						"account_holder": "Peter Rabbit",
+						"billing_address": {
+							"object": "Address",
+							"vid": "9a1bf03b4bcb3d7becadc2114d992e5b39b17322",
+							"line1": "2226 Mary Ave",
+							"city": "Santa Clara",
+							"postal_code": "95050",
+							"country": "US",
+							"phone": "408408408"
+						},
+						"primary": true,
+						"active": true
+					}
+				],
+				"total_count": 1
+			}
+		},
+		"source_payment_method": {
+			"object": "PaymentMethod",
+			"id": "PMIDOct5T1",
+			"vid": "bb2adac1a0822b4b6c64c02b0ed0ed128e20b85c",
+			"created": "2018-10-05T15:41:48-07:00",
+			"type": "CreditCard",
+			"credit_card": {
+				"object": "CreditCard",
+				"vid": "b695b131e7397bc56bc328de91e178b3d7375846",
+				"account": "511656XXXXXX1119",
+				"bin": "511656",
+				"last_digits": "1119",
+				"account_length": 16,
+				"expiration_date": "201909",
+				"last_au_request_date": null,
+				"last_update_date": null,
+				"extended_card_attributes": {
+					"object": "ExtendedCardAttributes",
+					"commercial_card": 1,
+					"signature_debit_card": 0,
+					"pinless_debit_card": 0,
+					"prepaid_card": 1,
+					"payroll_card": 0,
+					"healthcare_card": 0,
+					"country_of_issuance": "GBR",
+					"durbin_regulated": 0,
+					"affluent": 0
+				}
+			},
+			"account_holder": "Peter Rabbit",
+			"billing_address": {
+				"object": "Address",
+				"vid": "9a1bf03b4bcb3d7becadc2114d992e5b39b17322",
+				"line1": "2226 Mary Ave",
+				"city": "Santa Clara",
+				"postal_code": "95050",
+				"country": "US",
+				"phone": "408408408"
+			},
+			"primary": true,
+			"active": true
+		},
+		"status_log": {
+			"object": "List",
+			"data": [
+				{
+					"object": "TransactionStatus",
+					"status": "Authorized",
+					"created": "2018-10-10T20:20:30-07:00",
+					"payment_method_type": "CreditCard",
+					"credit_card_status": {
+						"object": "TransactionStatusCreditCard",
+						"auth_code": "100",
+						"avs_code": "I3",
+						"extended_card_attributes": {
+							"object": "ExtendedCardAttributes",
+							"commercial_card": 1,
+							"signature_debit_card": 0,
+							"pinless_debit_card": 0,
+							"prepaid_card": 1,
+							"payroll_card": 0,
+							"healthcare_card": 0,
+							"country_of_issuance": "GBR",
+							"durbin_regulated": 0,
+							"affluent": 0
+						}
+					},
+					"vin_avs": "FullMatch",
+					"note": "100 - NA"
+				},
+				{
+					"object": "TransactionStatus",
+					"status": "New",
+					"created": "2018-10-10T20:20:29-07:00",
+					"payment_method_type": "CreditCard",
+					"credit_card_status": {
+						"object": "TransactionStatusCreditCard",
+						"auth_code": "100",
+						"extended_card_attributes": {
+							"object": "ExtendedCardAttributes",
+							"commercial_card": 1,
+							"signature_debit_card": 0,
+							"pinless_debit_card": 0,
+							"prepaid_card": 1,
+							"payroll_card": 0,
+							"healthcare_card": 0,
+							"country_of_issuance": "GBR",
+							"durbin_regulated": 0,
+							"affluent": 0
+						}
+					}
+				}
+			],
+			"total_count": 2
+		},
+		"payment_processor": "Paymentech",
+		"payment_processor_transaction_id": "65930000DFNPHK",
+		"shipping_address": {
+			"object": "Address",
+			"vid": "15a1cb4da2eec4192cddb70d14700d1844770466",
+			"line1": "14 Tottenham Court Road",
+			"city": "KILBIRNIE",
+			"postal_code": "KA25 7HB",
+			"country": "DE",
+			"phone": "408408408"
+		},
+		"metadata": {
+			"vin:type": "modify"
+		},
+		"items": {
+			"object": "List",
+			"data": [
+				{
+					"object": "TransactionItem",
+					"sku": "NewProduct2GBP",
+					"index_number": 1,
+					"item_type": "Purchase",
+					"name": "Monthly service Product Price in GBP",
+					"subscription_item": {
+						"object": "SubscriptionItem",
+						"id": "ABItemIDT7788",
+						"vid": "61a090a24b8079e4a3cba0decc7f3c0a56b5ca3f"
+					},
+					"price": 54.51,
+					"quantity": 1,
+					"tax_classification": null,
+					"service_period_starts": "2018-10-10T00:00:00-07:00",
+					"service_period_ends": "2018-11-04T00:00:00-07:00",
+					"tax_type": "Inclusive Sales",
+					"subtotal": 54.51,
+					"total": 54.51
+				},
+				{
+					"object": "TransactionItem",
+					"sku": "NewProduct1GBP",
+					"index_number": 2,
+					"item_type": "TaxableCredit",
+					"name": "Credit for merchantProductId NewProduct1GBP",
+					"subscription_item": {
+						"object": "SubscriptionItem",
+						"id": "ABItemOct5T1",
+						"vid": "e942666f69036eb0bc3045df39a2ad47ce7ea19b"
+					},
+					"price": -4.19,
+					"quantity": 1,
+					"tax_classification": null,
+					"service_period_starts": "2018-10-10T00:00:00-07:00",
+					"service_period_ends": "2018-11-04T00:00:00-07:00",
+					"tax_type": "Inclusive Sales",
+					"related_transactions": [
+						"KHPNFD00003943"
+					],
+					"subtotal": -4.19,
+					"total": -4.19
+				},
+				{
+					"object": "TransactionItem",
+					"sku": "Total Tax",
+					"index_number": 3,
+					"item_type": "Purchase",
+					"name": "Total Tax",
+					"price": 0,
+					"quantity": 1,
+					"tax_classification": "TaxExempt",
+					"tax_type": "Inclusive Sales",
+					"discount": 0,
+					"subtotal": 0,
+					"total": 0
+				}
+			],
+			"total_count": 3
+		},
+		"source_ip": "123.123.123.123",
+		"sales_tax_address": {
+			"object": "Address",
+			"vid": "5780fb2e063864c930b2d73fd8c450aa1549728c",
+			"line1": "14 Tottenham Court Road",
+			"city": "KILBIRNIE",
+			"postal_code": "KA25 7HB",
+			"country": "DE"
+		},
+		"subscription_sequence": 1,
+		"billing_plan_sequence": 1,
+		"subscription": {
+			"object": "Subscription",
+			"id": "ABIDOct5T1",
+			"vid": "3150f967927d4133cc7701febf0db931fc8ba846"
+		}
+	},
+	"next_billing": {
+		"object": "Transaction",
+		"created": "2018-11-05T00:00:00-08:00",
+		"amount": 64.99,
+		"currency": "GBP",
+		"items": {
+			"object": "List",
+			"data": [
+				{
+					"object": "TransactionItem",
+					"sku": "NewProduct2GBP",
+					"item_type": "Purchase",
+					"name": "Monthly service Product Price in GBP",
+					"price": 64.99,
+					"quantity": 1,
+					"tax_classification": null,
+					"tax_type": "Exclusive Sales",
+					"subtotal": 64.99,
+					"total": 64.99
+				}
+			],
+			"total_count": 1
+		}
+	},
+	"balance": 0
+}
+

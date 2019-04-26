@@ -4,6 +4,8 @@ REST Method:  GET
 
 Endpoint :  https://api.prodtest.vindicia.com/accounts/HariAccount2/entitlements/basic_access 
 
+Note:This end point is throwing 404 error as of March 15 2019, it is deprecated?
+
 JSON Response:
 
 {

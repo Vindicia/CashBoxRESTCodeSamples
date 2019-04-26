@@ -1,0 +1,72 @@
+SOAP call : Activity.record
+
+REST Method:  POST
+
+Endpoint : https://api.prodtest.vindicia.com/activities
+
+JSON Request:
+
+{
+            "object": "Activity",
+            "type": "Fulfillment",
+            "timestamp": "2019-01-22T09:55:00-08:00",
+            "fulfillment_args" : {
+							"shipper": "USPS",
+							"tracking_string": "12345abcdef",
+							"shipping_address":{
+								
+								"name":"Test Fulfillment",
+								"line1":"11235 Fibonacci St",
+								"city":"San Jose",
+								"postal_code":"94403",
+								"country":"US",
+								"phone":"4086506500"
+								
+							},
+							"delivered":1,
+							"received_ts":"2019-01-22T11:55:00-08:00",
+							"receipt_name":"Rambo"
+							
+							
+						} ,
+	
+	
+            "account": {
+                "id": "AccountJan82019T1"
+            }
+}
+
+
+
+JSON Response:
+
+{
+	"object": "Activity",
+	"vid": "716047092cd6ca36360f1307fc32b18623540d5e",
+	"account": {
+		"object": "Account",
+		"id": "AccountJan82019T1",
+		"vid": "64821fceaf58d13f8db7e919cca9cb8695be03a1"
+	},
+	"timestamp": "2019-01-22T09:55:00-08:00",
+	"type": "Fulfillment",
+	"fulfillment_args": {
+		"object": "ActivityFulfillment",
+		"shipper": "USPS",
+		"tracking_string": "12345abcdef",
+		"shipping_address": {
+			"object": "Address",
+			"vid": "4725213638af4a63e815bc032b43ea42b4b880dc",
+			"name": "Test Fulfillment",
+			"line1": "11235 Fibonacci St",
+			"city": "San Jose",
+			"postal_code": "94403",
+			"country": "US",
+			"phone": "4086506500"
+		},
+		"delivered": true,
+		"received_ts": "2019-01-22T11:55:00-08:00",
+		"receipt_name": "Rambo"
+	}
+}
+

@@ -1,0 +1,302 @@
+SOAP call : Autobill.delayBillingToDate
+
+REST Method:  POST	
+
+Endpoint : https://api.prodtest.vindicia.com/subscriptions/vin_test_abill1538516192817/billing_day_changes?to_date=2019-02-15&perm=true
+
+No JSON Request
+
+JSON Response:
+
+{
+   "object": "Subscription",
+   "id": "vin_test_abill1538516192817",
+   "vid": "48632fe34cc253f4b5fa6d22f0cbbfd5ec6eb05c",
+   "created": "2018-10-02T14:36:30-07:00",
+   "account": {
+       "object": "Account",
+       "id": "vin_cc_test_1538516192817",
+       "vid": "2640135e85a58fe57e51605a42606d91d1933e12",
+       "created": "2018-10-02T14:36:29-07:00",
+       "email_type": "html",
+       "payment_methods": {
+           "object": "List",
+           "data": [
+               {
+                   "object": "PaymentMethod",
+                   "id": "pm-1538516192817",
+                   "vid": "8d501ebd1182e389eb53dfed013d0ee4b31fa2a6",
+                   "created": "2018-10-02T14:36:30-07:00",
+                   "type": "CreditCard",
+                   "credit_card": {
+                       "object": "CreditCard",
+                       "vid": "4d3fb07311589ccaa3b0aa1451d017ceb60a0499",
+                       "account": "445701XXXXXX0247",
+                       "bin": "445701",
+                       "last_digits": "0247",
+                       "account_length": 16,
+                       "expiration_date": "201908",
+                       "last_au_request_date": null,
+                       "last_update_date": null
+                   },
+                   "account_holder": "CC Payer",
+                   "billing_address": {
+                       "object": "Address",
+                       "vid": "f109711a0844ee1385d92db3e4ac57288881074a",
+                       "line1": "328 Copley Dr",
+                       "city": "Lancaster",
+                       "district": "PA",
+                       "postal_code": "17601",
+                       "country": "US"
+                   },
+                   "primary": true,
+                   "active": true
+               }
+           ],
+           "total_count": 1
+       },
+       "discount_tickets": []
+   },
+   "billing_plan": {
+       "object": "BillingPlan",
+       "id": "1DayFree",
+       "vid": "758da9751472fd7cf039c06121870e8bb53e7825",
+       "created": "2018-10-02T14:22:04-07:00",
+       "status": "Active",
+       "trial": {
+           "object": "BillingPlanPeriod",
+           "type": "Day",
+           "quantity": 1,
+           "cycles": 1,
+           "do_not_notify_first_bill": false
+       },
+       "periods": {
+           "object": "List",
+           "data": [
+               {
+                   "object": "BillingPlanPeriod",
+                   "type": "Month",
+                   "quantity": 1,
+                   "cycles": 0,
+                   "prices": {
+                       "object": "List",
+                       "data": [
+                           {
+                               "object": "BillingPlanPrice",
+                               "amount": 0,
+                               "currency": "USD"
+                           }
+                       ],
+                       "total_count": 1
+                   },
+                   "do_not_notify_first_bill": false
+               }
+           ],
+           "total_count": 1
+       },
+       "skip_initial_billing_notification": false,
+       "billing_descriptor": "One day free only",
+       "used_on_subscriptions": true
+   },
+   "payment_method": {
+       "object": "PaymentMethod",
+       "id": "pm-1538516192817",
+       "vid": "8d501ebd1182e389eb53dfed013d0ee4b31fa2a6",
+       "created": "2018-10-02T14:36:30-07:00",
+       "type": "CreditCard",
+       "credit_card": {
+           "object": "CreditCard",
+           "vid": "4d3fb07311589ccaa3b0aa1451d017ceb60a0499",
+           "account": "445701XXXXXX0247",
+           "bin": "445701",
+           "last_digits": "0247",
+           "account_length": 16,
+           "expiration_date": "201908",
+           "last_au_request_date": null,
+           "last_update_date": null
+       },
+       "account_holder": "CC Payer",
+       "billing_address": {
+           "object": "Address",
+           "vid": "f109711a0844ee1385d92db3e4ac57288881074a",
+           "line1": "328 Copley Dr",
+           "city": "Lancaster",
+           "district": "PA",
+           "postal_code": "17601",
+           "country": "US"
+       },
+       "primary": true,
+       "active": true
+   },
+   "currency": "USD",
+   "status": "Active",
+   "billing_state": "Good Standing",
+   "starts": "2018-10-02T14:36:30-07:00",
+   "ends": "2019-03-14T23:59:59-07:00",
+   "entitled_through": "2019-03-14T23:59:59-07:00",
+   "items": {
+       "object": "List",
+       "data": [
+           {
+               "object": "SubscriptionItem",
+               "vid": "e35b61afb8937374e3c497d74fb700d168bbd221",
+               "index": 0,
+               "product": {
+                   "object": "Product",
+                   "id": "regular-product",
+                   "vid": "18a5fb11f2c23a7e6afd4d74f3d239d42bdc8104",
+                   "created": "2012-08-02T19:12:32-07:00",
+                   "descriptions": {
+                       "object": "List",
+                       "data": [
+                           {
+                               "object": "ProductDescription",
+                               "language": "EN",
+                               "description": "Regular product"
+                           }
+                       ],
+                       "total_count": 1
+                   },
+                   "status": "Active",
+                   "tax_classification": "Service",
+                   "default_billing_plan": {
+                       "object": "BillingPlan",
+                       "id": "regular-monthly",
+                       "vid": "cc8091bb03992666fedfd761b3ebebcf20d6d9f3",
+                       "created": "2012-08-02T19:09:27-07:00",
+                       "description": "Monthly LJC Home Delivery",
+                       "status": "Active",
+                       "tax_classification": "PN058970",
+                       "periods": {
+                           "object": "List",
+                           "data": [
+                               {
+                                   "object": "BillingPlanPeriod",
+                                   "type": "Month",
+                                   "quantity": 1,
+                                   "cycles": 0,
+                                   "prices": {
+                                       "object": "List",
+                                       "data": [
+                                           {
+                                               "object": "BillingPlanPrice",
+                                               "amount": 6,
+                                               "currency": "AUD"
+                                           },
+                                           {
+                                               "object": "BillingPlanPrice",
+                                               "amount": 4,
+                                               "currency": "USD"
+                                           }
+                                       ],
+                                       "total_count": 2
+                                   },
+                                   "do_not_notify_first_bill": true
+                               }
+                           ],
+                           "total_count": 1
+                       },
+                       "entitlements": {
+                           "object": "List",
+                           "data": [
+                               {
+                                   "object": "Entitlement",
+                                   "id": "reg-month",
+                                   "description": "regular monthly"
+                               }
+                           ],
+                           "total_count": 1
+                       },
+                       "used_on_subscriptions": true
+                   },
+                   "entitlements": {
+                       "object": "List",
+                       "data": [
+                           {
+                               "object": "Entitlement",
+                               "id": "reg-month",
+                               "description": "regular monthly"
+                           }
+                       ],
+                       "total_count": 1
+                   },
+                   "credit_granted": {
+                       "object": "Credit"
+                   },
+                   "prices": {
+                       "object": "List",
+                       "data": [
+                           {
+                               "object": "ProductPrice",
+                               "amount": 50,
+                               "currency": "USD"
+                           },
+                           {
+                               "object": "ProductPrice",
+                               "amount": 100,
+                               "currency": "AUD"
+                           }
+                       ],
+                       "total_count": 2
+                   }
+               },
+               "quantity": 1,
+               "created": "2018-10-02T14:36:30-07:00",
+               "starts": "2018-10-02T00:00:00-07:00",
+               "discount_tickets": [
+                   {
+                       "object": "DiscountTicket",
+                       "added_date": "2018-10-02T14:36:30-07:00",
+                       "start_billing_sequence": 0,
+                       "campaign_id": "LL_TEST",
+                       "metadata": {
+                           "effective_date_log": "1538550043,1538550000|1541228874,1541228400|1543826938,1543824000",
+                           "use_type": "SpecifiedItem",
+                           "final_billing_cutoff_used": "2018-12-19 02:36:30",
+                           "current_autobill_item_id": "21426632"
+                       }
+                   }
+               ]
+           }
+       ],
+       "total_count": 1
+   },
+   "source_ip": "233.56.67.23",
+   "billing_day": 15,
+   "minimum_commitment": 0,
+   "notify_on_transition": false,
+   "next_billing": {
+       "object": "Transaction",
+       "created": "2019-02-15T00:00:00-08:00",
+       "amount": 50,
+       "currency": "USD",
+       "items": {
+           "object": "List",
+           "data": [
+               {
+                   "object": "TransactionItem",
+                   "sku": "regular-product",
+                   "item_type": "Purchase",
+                   "name": "Regular product",
+                   "price": 50,
+                   "quantity": 1,
+                   "tax_classification": "Service",
+                   "tax_type": "Exclusive Sales",
+                   "item_refunds": [],
+                   "discount": 0,
+                   "subtotal": 50,
+                   "total": 50
+               }
+           ],
+           "total_count": 1
+       },
+       "purchase_level_discount_tickets": [],
+       "cvn_checked": "No",
+       "cvn_code": null,
+       "avs_code": null
+   },
+   "balance": 0
+}
+
+
+

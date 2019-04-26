@@ -1,0 +1,52 @@
+SOAP call : Activity.record
+
+REST Method:  POST
+
+Endpoint : https://api.prodtest.vindicia.com/activities
+
+
+
+JSON Request:
+{
+            "object": "Activity",
+            "type": "URIView",
+            "timestamp": "2018-12-05T09:55:00-08:00",
+            "uriview_args" : {
+							"ip": "127.0.0.0.1",
+							"uri": "http://example.com",
+							"size":"22",
+							"bytes_transferred":22,
+							"transfer_time":22,
+							"description" :"Testing URIView"
+						} ,
+	
+	
+            "account": {
+                "id": "AccountJan82019T1"
+            }
+}
+
+
+JSON Response:
+
+{
+	"object": "Activity",
+	"vid": "2e7748ab5ae891905360e0dfb8414e79575c511f",
+	"account": {
+		"object": "Account",
+		"id": "AccountJan82019T1",
+		"vid": "64821fceaf58d13f8db7e919cca9cb8695be03a1"
+	},
+	"timestamp": "2018-12-05T09:55:00-08:00",
+	"type": "URIView",
+	"uriview_args": {
+		"object": "ActivityURIView",
+		"ip": "127.0.0.0.1",
+		"uri": "http://example.com",
+		"size": 22,
+		"bytes_transferred": 22,
+		"transfer_time": 22,
+		"description": "Testing URIView"
+	}
+}
+

@@ -1,0 +1,18 @@
+SOAP call : Activity.record
+
+REST Method:  POST
+
+Endpoint : https://api.prodtest.vindicia.com/activities
+
+JSON request:
+        
+        {
+            "object": "Activity",
+            "type": "Note",
+            "timestamp": "2018-12-05T07:45:00-08:00",
+            "note_args" : { 
+            "note": "Adding 2nd activity of type:  Note" } ,
+            "account": {
+                "id": "rmmtest_20181204_001"
+                }
+            }

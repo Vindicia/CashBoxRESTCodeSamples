@@ -14,7 +14,7 @@ JSON Request:
          "account":{
             
             "id": "AccountIDJune52018T1",
-            "email": "myemail@email.com",
+            "email": "myemail@vindicia.com",
             "email_type": "html",
             "name": "AccountID June4 2018 T1"
          },

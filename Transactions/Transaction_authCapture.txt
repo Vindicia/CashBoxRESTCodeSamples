@@ -22,7 +22,7 @@ JSON Request:
                   "object":"CreditCard",
                   "account":"4111111111111111",
                   "expiration_date":"201909"
-            },
+            }
     },
     "shipping_address": {
        "object": "Address",
@@ -45,7 +45,9 @@ JSON Request:
     "source_ip": "63.201.132.182",
     "policy": {
        "min_chargeback_probability": 99,
-       "send_email_notification": 0
+       "send_email_notification": 0,
+       "ignore_cvn_policy": 0,
+       "ignore_avs_policy": 0
     },
     "to_be_captured": true
  }

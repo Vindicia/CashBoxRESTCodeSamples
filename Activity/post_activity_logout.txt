@@ -1,0 +1,18 @@
+SOAP call : Activity.record
+
+REST Method:  POST
+
+Endpoint : https://api.prodtest.vindicia.com/activities
+
+JSON request:
+  
+ 	{
+            "object": "Activity",
+            "type": "Logout",
+            "timestamp": "2019-01-22T10:00:00-08:00",
+            "logout_args" : {
+			"ip": "127.0.0.0.1" },
+            "account": {
+                "id": "rmmtest_20181204_001"
+                }
+            }

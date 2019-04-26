@@ -2,7 +2,7 @@ SOAP call : Autobill.update
 
 REST Method:  POST	
 
-Endpoint : https://api.prodtest.vindicia.com/subscriptions?dry_run=0
+Endpoint : https://api.prodtest.vindicia.com/subscriptions?dryrun=0
 
 
 JSON Request:
@@ -23,5 +23,12 @@ JSON Request:
   },
   "billing_plan": {
     "id": "KHP Daily billing plan"
+  },
+  "policy": {
+    "ignore_cvn_policy": 0,
+    "ignore_avs_policy": 0,
+    "min_chargeback_probability": 100,
+    "immediate_auth_failure_policy": "doNotSaveAutoBill",
+    "validate_for_future_payment": 0
   }
 }

@@ -1,0 +1,22 @@
+SOAP call : Activity.record
+
+REST Method:  POST
+
+Endpoint : https://api.prodtest.vindicia.com/activities
+
+JSON request:
+  
+		{
+            "object": "Activity",
+            "account": {
+                "id": "rmmtest_20181204_001"
+                },
+            "type": "Cancellation",
+            "timestamp": "2019-01-22T06:45:00-08:00",
+            "cancellation_args": {
+            "reason": "System too slow for streaming",
+            "initiator": "Customer",
+            "confirmation_code": "10001"
+            }
+            
+        }

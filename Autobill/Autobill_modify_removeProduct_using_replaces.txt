@@ -1,0 +1,358 @@
+SOAP call: Autobill.modify
+
+This is REST sample code to remove a product on an Autobill using "replaces".
+
+REST Endpoint: https://api.prodtest.vindicia.com/subscriptions/AutoBillID1542671493204?effective_date=today
+
+Note: NewProduct-Nov102017 is the product ID that will be removed after this REST call is made.
+
+JSON Request:
+{
+   "object": "Subscription",
+   "id": "AutoBillID1542671493204",
+  
+   "items": [
+      {
+         "object": "SubscriptionItem",
+				
+         "replaces": {
+            "object": "SubscriptionItem",
+            "product": {
+            		"object": "Product",
+           			"id": "NewProduct-Nov102017"
+         		}
+         }
+      }
+   ]
+}
+
+JSON Response:
+
+{
+	"object": "Subscription",
+	"id": "AutoBillID1542671493204",
+	"vid": "cb55e550ae29eb11f853ad90ba2a7a998df5f28e",
+	"created": "2018-11-19T15:51:37-08:00",
+	"account": {
+		"object": "Account",
+		"id": "AccountID1542671493204",
+		"vid": "a197d78b98f73109bc5673fecb343ee769974c62",
+		"created": "2018-11-19T15:51:35-08:00",
+		"email": "vinkhp2018+KHP445@gmail.com",
+		"email_type": "html",
+		"name": "Acct Name 1542671493204",
+		"payment_methods": {
+			"object": "List",
+			"data": [
+				{
+					"object": "PaymentMethod",
+					"id": "PMID1542671493204",
+					"vid": "ae8fa979eff4291770790ee7b849ef43f512f8f5",
+					"created": "2018-11-19T15:51:35-08:00",
+					"type": "CreditCard",
+					"credit_card": {
+						"object": "CreditCard",
+						"vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+						"account": "411111XXXXXX1111",
+						"bin": "411111",
+						"last_digits": "1111",
+						"account_length": 16,
+						"expiration_date": "201908",
+						"last_au_request_date": null,
+						"last_update_date": null,
+						"extended_card_attributes": {
+							"object": "ExtendedCardAttributes",
+							"commercial_card": 0,
+							"signature_debit_card": 0,
+							"pinless_debit_card": 0,
+							"prepaid_card": 0,
+							"healthcare_card": 0,
+							"country_of_issuance": "USA",
+							"durbin_regulated": 0,
+							"affluent": 0
+						}
+					},
+					"account_holder": "CCPayerName1542671493204",
+					"billing_address": {
+						"object": "Address",
+						"vid": "78ad05686ef4effaeeb66e2a7951c2897f2bc521",
+						"line1": "2226 Mary Ave",
+						"city": "Santa Clara",
+						"district": "CA",
+						"postal_code": "95050",
+						"country": "US",
+						"phone": "408408408"
+					},
+					"primary": true,
+					"active": true
+				}
+			],
+			"total_count": 1
+		},
+		"discount_tickets": []
+	},
+	"billing_plan": {
+		"object": "BillingPlan",
+		"id": "KHP Daily billing plan",
+		"vid": "120c7035599094a863b0d55b45000dc6c89abc09",
+		"created": "2017-10-26T15:43:37-07:00",
+		"description": "KHP Daily billing plan",
+		"status": "Active",
+		"periods": {
+			"object": "List",
+			"data": [
+				{
+					"object": "BillingPlanPeriod",
+					"type": "Day",
+					"quantity": 1,
+					"cycles": 0,
+					"prices": {
+						"object": "List",
+						"data": [
+							{
+								"object": "BillingPlanPrice",
+								"amount": 0,
+								"currency": "USD"
+							}
+						],
+						"total_count": 1
+					},
+					"do_not_notify_first_bill": false
+				}
+			],
+			"total_count": 1
+		},
+		"billing_notification_days": 3,
+		"entitlements": {
+			"object": "List",
+			"data": [
+				{
+					"object": "Entitlement",
+					"id": "access_gold",
+					"description": "Access To gold Subsription"
+				},
+				{
+					"object": "Entitlement",
+					"id": "basic_access",
+					"description": "basic Access description"
+				},
+				{
+					"object": "Entitlement",
+					"id": "MonthlyAccess",
+					"description": "Customer gets access to regular monthly subscription"
+				}
+			],
+			"total_count": 3
+		},
+		"used_on_subscriptions": true
+	},
+	"payment_method": {
+		"object": "PaymentMethod",
+		"id": "PMID1542671493204",
+		"vid": "ae8fa979eff4291770790ee7b849ef43f512f8f5",
+		"created": "2018-11-19T15:51:35-08:00",
+		"type": "CreditCard",
+		"credit_card": {
+			"object": "CreditCard",
+			"vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+			"account": "411111XXXXXX1111",
+			"bin": "411111",
+			"last_digits": "1111",
+			"account_length": 16,
+			"expiration_date": "201908",
+			"last_au_request_date": null,
+			"last_update_date": null,
+			"extended_card_attributes": {
+				"object": "ExtendedCardAttributes",
+				"commercial_card": 0,
+				"signature_debit_card": 0,
+				"pinless_debit_card": 0,
+				"prepaid_card": 0,
+				"healthcare_card": 0,
+				"country_of_issuance": "USA",
+				"durbin_regulated": 0,
+				"affluent": 0
+			}
+		},
+		"account_holder": "CCPayerName1542671493204",
+		"billing_address": {
+			"object": "Address",
+			"vid": "78ad05686ef4effaeeb66e2a7951c2897f2bc521",
+			"line1": "2226 Mary Ave",
+			"city": "Santa Clara",
+			"district": "CA",
+			"postal_code": "95050",
+			"country": "US",
+			"phone": "408408408"
+		},
+		"primary": true,
+		"active": true
+	},
+	"currency": "USD",
+	"status": "Active",
+	"billing_state": "Grace Period",
+	"starts": "2018-11-19T15:51:35-08:00",
+	"ends": "2019-01-12T23:59:59-08:00",
+	"entitled_through": "2019-01-12T23:59:59-08:00",
+	"items": {
+		"object": "List",
+		"data": [
+			{
+				"object": "SubscriptionItem",
+				"id": "TestNewProductAddT123",
+				"vid": "4e4f8e6956df4e029b10a667c0019c464e11b3a4",
+				"index": 0,
+				"product": {
+					"object": "Product",
+					"id": "ExperianProductID1",
+					"vid": "342a116b751ee2627d3738dd8cfa6628db70b294",
+					"created": "2018-05-03T13:43:37-07:00",
+					"descriptions": {
+						"object": "List",
+						"data": [
+							{
+								"object": "ProductDescription",
+								"language": "EN",
+								"description": "Monthly service"
+							}
+						],
+						"total_count": 1
+					},
+					"status": "Active",
+					"entitlements": {
+						"object": "List",
+						"data": [
+							{
+								"object": "Entitlement",
+								"id": "MonthlyAccess",
+								"description": "Customer gets access to regular monthly subscription"
+							}
+						],
+						"total_count": 1
+					},
+					"prices": {
+						"object": "List",
+						"data": [
+							{
+								"object": "ProductPrice",
+								"amount": 20,
+								"currency": "USD"
+							},
+							{
+								"object": "ProductPrice",
+								"amount": 14.99,
+								"currency": "GBP"
+							}
+						],
+						"total_count": 2
+					}
+				},
+				"quantity": 1,
+				"created": "2019-01-08T12:43:45-08:00",
+				"starts": "2019-01-08T00:00:00-08:00",
+				"discount_tickets": []
+			},
+			{
+				"object": "SubscriptionItem",
+				"id": "ABItemID1542671493204",
+				"vid": "8f34623c1145fff1ac5856ca0fd8f8253f98244f",
+				"index": 1,
+				"product": {
+					"object": "Product",
+					"id": "NewProduct-Nov102017",
+					"vid": "52496ca6c3709a7f25c68d6f3bace4ac5fb9ae60",
+					"created": "2017-11-10T11:23:35-08:00",
+					"descriptions": {
+						"object": "List",
+						"data": [
+							{
+								"object": "ProductDescription",
+								"language": "EN",
+								"description": "NewProduct-Nov102017"
+							}
+						],
+						"total_count": 1
+					},
+					"status": "Active",
+					"entitlements": {
+						"object": "List",
+						"data": [
+							{
+								"object": "Entitlement",
+								"id": "lpbc",
+								"description": "Catalog"
+							},
+							{
+								"object": "Entitlement",
+								"id": "dailyAccess",
+								"description": "dailyAccess"
+							},
+							{
+								"object": "Entitlement",
+								"id": "TestNewEntitlement-Nov10",
+								"description": "TestNewEntitlement-Nov10"
+							}
+						],
+						"total_count": 3
+					},
+					"credit_granted": {
+						"object": "Credit"
+					},
+					"prices": {
+						"object": "List",
+						"data": [
+							{
+								"object": "ProductPrice",
+								"amount": 29,
+								"currency": "USD"
+							}
+						],
+						"total_count": 1
+					}
+				},
+				"currency": "USD",
+				"quantity": 1,
+				"created": "2018-11-19T15:51:35-08:00",
+				"ends": "2019-01-08T15:37:27-08:00",
+				"starts": "2018-11-19T00:00:00-08:00",
+				"discount_tickets": []
+			}
+		],
+		"total_count": 2
+	},
+	"source_ip": "123.123.123.123",
+	"billing_day": 17,
+	"minimum_commitment": 0,
+	"affiliate": "400",
+	"notify_on_transition": false,
+	"next_billing": {
+		"object": "Transaction",
+		"created": "2018-12-17T00:00:00-08:00",
+		"amount": 29,
+		"currency": "USD",
+		"items": {
+			"object": "List",
+			"data": [
+				{
+					"object": "TransactionItem",
+					"sku": "ExperianProductID1",
+					"item_type": "Purchase",
+					"name": "Monthly service",
+					"price": 29,
+					"quantity": 1,
+					"tax_type": "Exclusive Sales",
+					"item_refunds": [],
+					"discount": 0,
+					"subtotal": 29,
+					"total": 29
+				}
+			],
+			"total_count": 1
+		},
+		"purchase_level_discount_tickets": [],
+		"cvn_checked": "No",
+		"cvn_code": null,
+		"avs_code": null
+	},
+	"balance": 62.2
+}

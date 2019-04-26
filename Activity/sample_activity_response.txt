@@ -1,0 +1,94 @@
+GET //api.prodtest.vindicia.com/activities/?account=rmmtest_20181204_001
+
+Reponse: 
+{
+    "object": "List",
+    "data": [
+        {
+            "object": "Activity",
+            "vid": "29e06b445c9eb779a049aa98f63b8974fcf173bc",
+            "account": {
+                "object": "Account",
+                "id": "rmm5279-994474",
+                "vid": "37f08ddc6e4bda3e525fc6d15088c7e73ac0d449"
+            },
+            "timestamp": "2019-01-22T06:45:00-08:00",
+            "type": "Cancellation",
+            "cancellation_args": {
+                "object": "ActivityCancellation",
+                "reason": "System too slow for streaming",
+                "confirmation_code": 10001,
+                "initiator": "Customer"
+            }
+        },
+        {
+            "object": "Activity",
+            "vid": "5d359af7d061337097c1bf161950473f276a8579",
+            "account": {
+                "object": "Account",
+                "id": "rmm5279-994474",
+                "vid": "37f08ddc6e4bda3e525fc6d15088c7e73ac0d449"
+            },
+            "timestamp": "2019-01-22T10:00:00-08:00",
+            "type": "Logout",
+            "logout_args": {
+                "object": "ActivityLogout",
+                "ip": "127.0.0.0.1"
+            }
+        },
+        {
+            "object": "Activity",
+            "vid": "6e41f37b772ec06bbe42c3c20b5ad4bddcf75c58",
+            "account": {
+                "object": "Account",
+                "id": "rmm5279-994474",
+                "vid": "37f08ddc6e4bda3e525fc6d15088c7e73ac0d449"
+            },
+            "timestamp": "2019-01-22T09:45:00-08:00",
+            "type": "Login",
+            "login_args": {
+                "object": "ActivityLogin",
+                "ip": "127.0.0.0.1"
+            }
+        },
+        {
+            "object": "Activity",
+            "vid": "b05f35f3528e36e5eb2acb5c208f6d7174798552",
+            "account": {
+                "object": "Account",
+                "id": "rmm5279-994474",
+                "vid": "37f08ddc6e4bda3e525fc6d15088c7e73ac0d449"
+            },
+            "timestamp": "2019-01-21T15:43:00-08:00",
+            "type": "Phone",
+            "phone_args": {
+                "object": "ActivityPhone",
+                "type": "FromCustomerToMerchant",
+                "src_phone_number": "555-123-1234",
+                "dest_phone_number": "800-123-1234",
+                "cid_phone_number": "555-123-3456",
+                "ani_phone_number": "555-123-6789",
+                "duration_seconds": 300,
+                "note": "Customer called to request subscription upgrade."
+            }
+        },
+        {
+            "object": "Activity",
+            "vid": "bafa5ee07bce73cfffb52a68dddee455168da555",
+            "account": {
+                "object": "Account",
+                "id": "rmm5279-994474",
+                "vid": "37f08ddc6e4bda3e525fc6d15088c7e73ac0d449"
+            },
+            "timestamp": "2018-12-05T07:45:00-08:00",
+            "type": "Note",
+            "note_args": {
+                "object": "ActivityNote",
+                "note": "Adding 2nd activity of type:  Note"
+            }
+        }
+    ],
+    "total_count": 5,
+    "url": "/activities/?account=rmm5279-994474",
+    "next": "/activities/?account=rmm5279-994474&starting_after=bafa5ee07bce73cfffb52a68dddee455168da555",
+    "previous": "/activities/?account=rmm5279-994474&ending_before=29e06b445c9eb779a049aa98f63b8974fcf173bc"
