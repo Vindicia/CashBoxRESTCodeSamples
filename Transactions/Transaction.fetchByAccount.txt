@@ -1,0 +1,247 @@
+SOAP call : Transaction.fetchByAccount
+
+REST Method:  GET
+
+Endpoint :  https://api.prodtest.vindicia.com/transactions?account=zC18eIhfp6Dx0Me6
+
+JSON Response:
+
+{
+   "object": "List",
+   "data": [
+      {
+         "object": "Transaction",
+         "id": "LM00043249",
+         "vid": "b63d8fb65ffd7e3d28707fd795eb2236441543bd",
+         "created": "2019-04-01T13:37:25-07:00",
+         "amount": 6.29,
+         "currency": "USD",
+         "account": {
+            "object": "Account",
+            "id": "zC18eIhfp6Dx0Me6",
+            "vid": "6d0ffb4f1f70b2764e852ff94357ca859905f864",
+            "created": "2019-04-01T13:37:24-07:00",
+            "default_currency": "USD",
+            "email": "foo@foo.com",
+            "email_type": "html",
+            "language": "EN",
+            "name": "Laura Drake",
+            "shipping_address": {
+               "object": "Address",
+               "vid": "452bdb4ddf460b8654fcde5da3bb2d153c6880c2",
+               "name": "Laura Drake",
+               "line1": "9454 Strawberry Fields",
+               "city": "Portland",
+               "district": "OR",
+               "postal_code": "97209",
+               "country": "US"
+            },
+            "payment_methods": {
+               "object": "List",
+               "data": [
+                  {
+                     "object": "PaymentMethod",
+                     "id": "CC_zC18eIhfp6Dx0Me6",
+                     "vid": "ec831ef704cf0fc1828b9bf400cce657d920a293",
+                     "created": "2019-04-01T13:37:26-07:00",
+                     "type": "CreditCard",
+                     "credit_card": {
+                        "object": "CreditCard",
+                        "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+                        "account": "411390XXXXXX0007",
+                        "bin": "411390",
+                        "last_digits": "0007",
+                        "account_length": 16,
+                        "expiration_date": "202003",
+                        "last_au_request_date": null,
+                        "last_update_date": null
+                     },
+                     "account_holder": "Laura Drake",
+                     "billing_address": {
+                        "object": "Address",
+                        "vid": "96ca8329a6ce956911b7a538855de1f90ad728d7",
+                        "name": "Laura Drake",
+                        "line1": "9454 Strawberry Fields",
+                        "city": "Portland",
+                        "district": "OR",
+                        "postal_code": "97209",
+                        "country": "US"
+                     },
+                     "customer_description": "Credit Card",
+                     "primary": true,
+                     "active": true
+                  }
+               ],
+               "total_count": 1
+            }
+         },
+         "source_payment_method": {
+            "object": "PaymentMethod",
+            "id": "CC_zC18eIhfp6Dx0Me6",
+            "vid": "ec831ef704cf0fc1828b9bf400cce657d920a293",
+            "created": "2019-04-01T13:37:26-07:00",
+            "type": "CreditCard",
+            "credit_card": {
+               "object": "CreditCard",
+               "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+               "account": "411390XXXXXX0007",
+               "bin": "411390",
+               "last_digits": "0007",
+               "account_length": 16,
+               "expiration_date": "202003",
+               "last_au_request_date": null,
+               "last_update_date": null
+            },
+            "account_holder": "Laura Drake",
+            "billing_address": {
+               "object": "Address",
+               "vid": "96ca8329a6ce956911b7a538855de1f90ad728d7",
+               "name": "Laura Drake",
+               "line1": "9454 Strawberry Fields",
+               "city": "Portland",
+               "district": "OR",
+               "postal_code": "97209",
+               "country": "US"
+            },
+            "customer_description": "Credit Card",
+            "primary": true,
+            "active": true
+         },
+         "status_log": {
+            "object": "List",
+            "data": [
+               {
+                  "object": "TransactionStatus",
+                  "status": "Captured",
+                  "created": "2019-04-01T13:44:31-07:00",
+                  "payment_method_type": "CreditCard",
+                  "credit_card_status": {
+                     "object": "TransactionStatusCreditCard",
+                     "auth_code": "T00"
+                  },
+                  "note": "T00"
+               },
+               {
+                  "object": "TransactionStatus",
+                  "status": "Authorized",
+                  "created": "2019-04-01T13:37:26-07:00",
+                  "payment_method_type": "CreditCard",
+                  "credit_card_status": {
+                     "object": "TransactionStatusCreditCard",
+                     "auth_code": "T00"
+                  },
+                  "note": "T00 - NA"
+               },
+               {
+                  "object": "TransactionStatus",
+                  "status": "New",
+                  "created": "2019-04-01T13:37:25-07:00",
+                  "payment_method_type": "CreditCard",
+                  "credit_card_status": {
+                     "object": "TransactionStatusCreditCard",
+                     "auth_code": "T00"
+                  }
+               }
+            ],
+            "total_count": 3
+         },
+         "payment_processor": "Test",
+         "payment_processor_transaction_id": "LM00043249",
+         "shipping_address": {
+            "object": "Address",
+            "vid": "452bdb4ddf460b8654fcde5da3bb2d153c6880c2",
+            "name": "Laura Drake",
+            "line1": "9454 Strawberry Fields",
+            "city": "Portland",
+            "district": "OR",
+            "postal_code": "97209",
+            "country": "US"
+         },
+         "metadata": {
+            "vin:RetryNumber": "0",
+            "vin:BillingCycle": "0"
+         },
+         "items": {
+            "object": "List",
+            "data": [
+               {
+                  "object": "TransactionItem",
+                  "sku": "MONTHLY",
+                  "index_number": 1,
+                  "item_type": "Purchase",
+                  "name": "Monthly Subscription",
+                  "quantity": 1,
+                  "service_period_starts": "2019-04-01T00:00:00-07:00",
+                  "service_period_ends": "2019-04-30T00:00:00-07:00",
+                  "tax_type": "Exclusive Sales",
+                  "total": 0
+               },
+               {
+                  "object": "TransactionItem",
+                  "sku": "Generic",
+                  "index_number": 2,
+                  "item_type": "Purchase",
+                  "name": "Generic Subscription",
+                  "subscription_item": {
+                     "object": "SubscriptionItem",
+                     "id": "Item_zC18eIhfp6Dx0Me6_1",
+                     "vid": "493b85d232516dbee38855df497a8ff0845f06e6"
+                  },
+                  "price": 6.99,
+                  "quantity": 1,
+                  "campaign_id": "Coupon Example 10 Percent Off for 12 months",
+                  "campaign_description": "10 Percent Off for 12 months",
+                  "service_period_starts": "2019-04-01T00:00:00-07:00",
+                  "service_period_ends": "2019-04-30T00:00:00-07:00",
+                  "tax_type": "Exclusive Sales",
+                  "discount": -0.7,
+                  "subtotal": 6.99,
+                  "total": 6.29
+               },
+               {
+                  "object": "TransactionItem",
+                  "sku": "Total Tax",
+                  "index_number": 4,
+                  "item_type": "Purchase",
+                  "name": "Total Tax",
+                  "price": 0,
+                  "quantity": 1,
+                  "tax_classification": "TaxExempt",
+                  "service_period_starts": "2019-04-01T00:00:00-07:00",
+                  "service_period_ends": "2019-04-30T00:00:00-07:00",
+                  "tax_type": "Exclusive Sales",
+                  "discount": 0,
+                  "subtotal": 0,
+                  "total": 0
+               }
+            ],
+            "total_count": 3
+         },
+         "billing_descriptor": "Generic",
+         "sales_tax_address": {
+            "object": "Address",
+            "vid": "36348330eb9c08caca89e323151eb80759539188",
+            "name": "Laura Drake",
+            "line1": "9454 Strawberry Fields",
+            "city": "PORTLAND",
+            "district": "OR",
+            "postal_code": "97209",
+            "country": "US"
+         },
+         "subscription_sequence": 1,
+         "billing_plan_sequence": 1,
+         "original_billing_date": "2019-04-01T00:00:00-07:00",
+         "billing_attempt": 0,
+         "subscription": {
+            "object": "Subscription",
+            "id": "Subscription_zC18eIhfp6Dx0Me6",
+            "vid": "f0084235dde423f31214e921c970f36d326a4470"
+         },
+         "cvn_checked": false
+      }
+   ],
+   "total_count": 1,
+   "url": "/transactions?account=zC18eIhfp6Dx0Me6",
+   "next": "/transactions?account=zC18eIhfp6Dx0Me6&starting_after=LM00043249",
+   "previous": "/transactions?account=zC18eIhfp6Dx0Me6&ending_before=LM00043249"
+}
