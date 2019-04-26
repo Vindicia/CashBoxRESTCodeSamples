@@ -1,0 +1,579 @@
+SOAP Call: AutBill.modify() 
+
+REST Method: POST 
+
+Endpoint: https://api.prodtest.vindicia.com/subscriptions/Subscription_Yz1kmpJVp2HyWdi1?effective_date=today&bill_prorated_period=true
+
+JSON REQUEST 
+
+{
+  "billing_plan": {
+    "object": "BillingPlan",
+    "id": "Premium_Yearly"
+  },
+  "object": "Subscription",
+  "id": "Subscription_Yz1kmpJVp2HyWdi1",
+  "items": [
+    {
+      "product": {
+        "object": "Product",
+        "id": "Eros_Now_Premium_Yearly"
+      },
+      "object": "SubscriptionItem",
+      "replaces": {
+        "product": {
+          "object": "Product",
+          "id": "Eros_Now_Plus_Monthly"
+        },
+        "object": "SubscriptionItem"
+      },
+      "id": "Item_Jb02D3003pBI2bmt"
+    }
+  ]
+}
+
+JSON RESPONSE 
+
+{
+   "object": "Subscription",
+   "id": "Subscription_Yz1kmpJVp2HyWdi1",
+   "vid": "bb0ab21d5be51bcfb2e70740cfebc447d368d007",
+   "created": "2019-04-24T12:26:00-07:00",
+   "account": {
+      "object": "Account",
+      "id": "Yz1kmpJVp2HyWdi1",
+      "vid": "cb1949fab8276f640d8b469c4fe23cefbff209a6",
+      "created": "2019-04-24T12:26:00-07:00",
+      "email_type": "html",
+      "name": "Uma Maxwell",
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "CC_Yz1kmpJVp2HyWdi1",
+               "vid": "59f5813e3237f73e83c755a7e3746d7c52460332",
+               "created": "2019-04-24T12:26:01-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+                  "account": "411390XXXXXX0007",
+                  "bin": "411390",
+                  "last_digits": "0007",
+                  "account_length": 16,
+                  "expiration_date": "202003",
+                  "last_au_request_date": null,
+                  "last_update_date": null
+               },
+               "account_holder": "Uma Maxwell",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "e56216000d53a9294c3a57bbc9d68f9d01daffdf",
+                  "postal_code": "400072",
+                  "country": "IN"
+               },
+               "customer_description": "Credit Card",
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "billing_plan": {
+      "object": "BillingPlan",
+      "id": "Premium_Yearly",
+      "vid": "3f5790cc5ab9d6ce09e0ce65187e4599b9f21a65",
+      "created": "2019-04-01T02:33:21-07:00",
+      "description": "Premium_Yearly",
+      "status": "Active",
+      "periods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "BillingPlanPeriod",
+               "type": "Year",
+               "quantity": 1,
+               "cycles": 0,
+               "expire_warning_days": 15,
+               "do_not_notify_first_bill": false
+            }
+         ],
+         "total_count": 1
+      },
+      "billing_notification_days": 5,
+      "skip_initial_billing_notification": false,
+      "entitlements": {
+         "object": "List",
+         "data": [
+            {
+               "object": "Entitlement",
+               "id": "Sample 1",
+               "description": "Example"
+            },
+            {
+               "object": "Entitlement",
+               "id": "Sample 2",
+               "description": "Example"
+            },
+            {
+               "object": "Entitlement",
+               "id": "Sample 3",
+               "description": "Example"
+            }
+         ],
+         "total_count": 3
+      },
+      "billing_descriptor": "Premium_Yearly",
+      "used_on_subscriptions": true,
+      "grace_period_override": 25
+   },
+   "payment_method": {
+      "object": "PaymentMethod",
+      "id": "CC_Yz1kmpJVp2HyWdi1",
+      "vid": "59f5813e3237f73e83c755a7e3746d7c52460332",
+      "created": "2019-04-24T12:26:01-07:00",
+      "type": "CreditCard",
+      "credit_card": {
+         "object": "CreditCard",
+         "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+         "account": "411390XXXXXX0007",
+         "bin": "411390",
+         "last_digits": "0007",
+         "account_length": 16,
+         "expiration_date": "202003",
+         "last_au_request_date": null,
+         "last_update_date": null
+      },
+      "account_holder": "Uma Maxwell",
+      "billing_address": {
+         "object": "Address",
+         "vid": "e56216000d53a9294c3a57bbc9d68f9d01daffdf",
+         "postal_code": "400072",
+         "country": "IN"
+      },
+      "customer_description": "Credit Card",
+      "primary": true,
+      "active": true
+   },
+   "currency": "INR",
+   "description": "Subscription_Yz1kmpJVp2HyWdi1",
+   "status": "Active",
+   "billing_state": "Good Standing",
+   "starts": "2019-04-24T12:26:00-07:00",
+   "ends": "2020-05-19T00:00:00-07:00",
+   "entitled_through": "2020-05-19T00:00:00-07:00",
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "SubscriptionItem",
+            "id": "Item_Jb02D3003pBI2bmt",
+            "vid": "669296561914723bd8d3583caf359255f41dc0e5",
+            "index": 0,
+            "product": {
+               "object": "Product",
+               "id": "Eros_Now_Premium_Yearly",
+               "vid": "2d505a04c9ff5c60dd87867b016df4a38ec9a227",
+               "created": "2019-04-01T00:37:24-07:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "Eros_Now_Premium_Yearly"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "status": "Active",
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "Sample 1",
+                        "description": "Example"
+                     },
+                     {
+                        "object": "Entitlement",
+                        "id": "Sample 2",
+                        "description": "Example"
+                     },
+                     {
+                        "object": "Entitlement",
+                        "id": "Sample 3",
+                        "description": "Example"
+                     }
+                  ],
+                  "total_count": 3
+               },
+               "billing_descriptor": "Eros_Now_Premium_Yearly",
+               "credit_granted": {
+                  "object": "Credit"
+               },
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 71.88,
+                        "currency": "USD"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 53.88,
+                        "currency": "EUR"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 53.88,
+                        "currency": "GBP"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 60,
+                        "currency": "CAD"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 950,
+                        "currency": "INR"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 71.88,
+                        "currency": "AUD"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 172.7,
+                        "currency": "AED"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 172.7,
+                        "currency": "SAR"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 400,
+                        "currency": "ZAR"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 80,
+                        "currency": "BRL"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 20000,
+                        "currency": "CLP"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 100000,
+                        "currency": "COP"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 20000,
+                        "currency": "CRC"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 260000,
+                        "currency": "IDR"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 5500,
+                        "currency": "JPY"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 9000,
+                        "currency": "KZT"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 100,
+                        "currency": "MYR"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 800,
+                        "currency": "MXN"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 8000,
+                        "currency": "NGN"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 1850,
+                        "currency": "PKR"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 1000,
+                        "currency": "PHP"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 172.7,
+                        "currency": "QAR"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 71.88,
+                        "currency": "SGD"
+                     }
+                  ],
+                  "total_count": 23
+               }
+            },
+            "quantity": 1,
+            "created": "2019-04-24T12:45:21-07:00",
+            "starts": "2019-04-24T00:00:00-07:00",
+            "replaces": {
+               "object": "SubscriptionItem",
+               "id": "Item_Yz1kmpJVp2HyWdi1_1",
+               "vid": "122e717681f06a9cbd2a82741fbbb06af26a38b4"
+            }
+         }
+      ],
+      "total_count": 1
+   },
+   "billing_day": 24,
+   "minimum_commitment": 0,
+   "notify_on_transition": false,
+   "most_recent_billing": {
+      "object": "Transaction",
+      "id": "EROS00000144",
+      "vid": "9cf18ff0b6184090b2fe26f7d26171f4be796875",
+      "created": "2019-04-24T12:45:21-07:00",
+      "amount": 901,
+      "currency": "INR",
+      "account": {
+         "object": "Account",
+         "id": "Yz1kmpJVp2HyWdi1",
+         "vid": "cb1949fab8276f640d8b469c4fe23cefbff209a6",
+         "created": "2019-04-24T12:26:00-07:00",
+         "email_type": "html",
+         "name": "Uma Maxwell",
+         "payment_methods": {
+            "object": "List",
+            "data": [
+               {
+                  "object": "PaymentMethod",
+                  "id": "CC_Yz1kmpJVp2HyWdi1",
+                  "vid": "59f5813e3237f73e83c755a7e3746d7c52460332",
+                  "created": "2019-04-24T12:26:01-07:00",
+                  "type": "CreditCard",
+                  "credit_card": {
+                     "object": "CreditCard",
+                     "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+                     "account": "411390XXXXXX0007",
+                     "bin": "411390",
+                     "last_digits": "0007",
+                     "account_length": 16,
+                     "expiration_date": "202003",
+                     "last_au_request_date": null,
+                     "last_update_date": null
+                  },
+                  "account_holder": "Uma Maxwell",
+                  "billing_address": {
+                     "object": "Address",
+                     "vid": "e56216000d53a9294c3a57bbc9d68f9d01daffdf",
+                     "postal_code": "400072",
+                     "country": "IN"
+                  },
+                  "customer_description": "Credit Card",
+                  "primary": true,
+                  "active": true
+               }
+            ],
+            "total_count": 1
+         }
+      },
+      "source_payment_method": {
+         "object": "PaymentMethod",
+         "id": "CC_Yz1kmpJVp2HyWdi1",
+         "vid": "59f5813e3237f73e83c755a7e3746d7c52460332",
+         "created": "2019-04-24T12:26:01-07:00",
+         "type": "CreditCard",
+         "credit_card": {
+            "object": "CreditCard",
+            "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+            "account": "411390XXXXXX0007",
+            "bin": "411390",
+            "last_digits": "0007",
+            "account_length": 16,
+            "expiration_date": "202003",
+            "last_au_request_date": null,
+            "last_update_date": null
+         },
+         "account_holder": "Uma Maxwell",
+         "billing_address": {
+            "object": "Address",
+            "vid": "e56216000d53a9294c3a57bbc9d68f9d01daffdf",
+            "postal_code": "400072",
+            "country": "IN"
+         },
+         "customer_description": "Credit Card",
+         "primary": true,
+         "active": true
+      },
+      "status_log": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionStatus",
+               "status": "Authorized",
+               "created": "2019-04-24T12:45:22-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard",
+                  "auth_code": "T00"
+               },
+               "note": "T00 - NA"
+            },
+            {
+               "object": "TransactionStatus",
+               "status": "New",
+               "created": "2019-04-24T12:45:22-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard",
+                  "auth_code": "T00"
+               }
+            }
+         ],
+         "total_count": 2
+      },
+      "payment_processor": "Test",
+      "payment_processor_transaction_id": "EROS00000144",
+      "metadata": {
+         "vin:type": "modify",
+         "vin:RetryNumber": "0",
+         "vin:BillingCycle": "1"
+      },
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "Premium_Yearly",
+               "index_number": 1,
+               "item_type": "Purchase",
+               "name": "Premium_Yearly",
+               "quantity": 1,
+               "service_period_starts": "2019-04-24T00:00:00-07:00",
+               "service_period_ends": "2020-04-23T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Eros_Now_Premium_Yearly",
+               "index_number": 2,
+               "item_type": "Purchase",
+               "name": "Eros_Now_Premium_Yearly",
+               "subscription_item": {
+                  "object": "SubscriptionItem",
+                  "id": "Item_Jb02D3003pBI2bmt",
+                  "vid": "669296561914723bd8d3583caf359255f41dc0e5"
+               },
+               "price": 950,
+               "quantity": 1,
+               "service_period_starts": "2019-04-24T00:00:00-07:00",
+               "service_period_ends": "2020-04-23T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "subtotal": 950,
+               "total": 950
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Eros_Now_Plus_Monthly",
+               "index_number": 3,
+               "item_type": "TaxableCredit",
+               "name": "Credit for merchantProductId Eros_Now_Plus_Monthly",
+               "subscription_item": {
+                  "object": "SubscriptionItem",
+                  "id": "Item_Yz1kmpJVp2HyWdi1_1",
+                  "vid": "122e717681f06a9cbd2a82741fbbb06af26a38b4"
+               },
+               "price": -49,
+               "quantity": 1,
+               "service_period_starts": "2019-04-24T00:00:00-07:00",
+               "service_period_ends": "2019-05-23T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "related_transactions": [
+                  "EROS00000142"
+               ],
+               "subtotal": -49,
+               "total": -49
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Total Tax",
+               "index_number": 4,
+               "item_type": "Purchase",
+               "name": "Total Tax",
+               "price": 0,
+               "quantity": 1,
+               "tax_classification": "TaxExempt",
+               "tax_type": "Exclusive Sales",
+               "discount": 0,
+               "subtotal": 0,
+               "total": 0
+            }
+         ],
+         "total_count": 4
+      },
+      "billing_descriptor": "Eros_Now_Premium_Yearly",
+      "sales_tax_address": {
+         "object": "Address",
+         "vid": "30fda5a418adf2c5734305bf3beafe17ce5e8f2e",
+         "postal_code": "400072",
+         "country": "IN"
+      },
+      "subscription_sequence": 2,
+      "billing_plan_sequence": 1,
+      "billing_attempt": 0,
+      "subscription": {
+         "object": "Subscription",
+         "id": "Subscription_Yz1kmpJVp2HyWdi1",
+         "vid": "bb0ab21d5be51bcfb2e70740cfebc447d368d007"
+      },
+      "cvn_checked": false
+   },
+   "next_billing": {
+      "object": "Transaction",
+      "created": "2020-04-24T00:00:00-07:00",
+      "amount": 950,
+      "currency": "INR",
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "Eros_Now_Premium_Yearly",
+               "item_type": "Purchase",
+               "name": "Eros_Now_Premium_Yearly",
+               "price": 950,
+               "quantity": 1,
+               "tax_type": "Exclusive Sales",
+               "subtotal": 950,
+               "total": 950
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "balance": 0
+}
