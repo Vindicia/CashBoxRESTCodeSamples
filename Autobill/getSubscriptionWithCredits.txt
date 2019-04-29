@@ -2,7 +2,7 @@ SOAP call : Not Applicable
 
 REST Method:  GET
 
-Endpoint :  https://api.prodtest.vindicia.com/accounts/uWSCSmt2VdlQWsk8
+Endpoint :  https://api.prodtest.vindicia.com/subscriptions/W3U363Jvvr0nzR
 
 JSON Response:
 
