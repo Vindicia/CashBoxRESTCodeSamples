@@ -1,0 +1,87 @@
+SOAP call : Not Applicable 
+
+REST Method:  GET
+
+Endpoint :  https://api.prodtest.vindicia.com/accounts/uWSCSmt2VdlQWsk8
+
+JSON Response:
+
+{
+   "object": "Account",
+   "id": "uWSCSmt2VdlQWsk8",
+   "vid": "704032c39deaafbb34b2042edcf52ecf58097ac5",
+   "created": "2019-04-29T09:04:27-07:00",
+   "default_currency": "USD",
+   "email": "foo@foo.com",
+   "email_type": "html",
+   "language": "EN",
+   "name": "Harry Quigley",
+   "shipping_address": {
+      "object": "Address",
+      "vid": "0298c8ce4c954d77ea72da52cca90e64421a2d7f",
+      "name": "Harry Quigley",
+      "line1": "13975 Berry Lane",
+      "city": "Addison",
+      "district": "TX",
+      "postal_code": "75001",
+      "country": "US"
+   },
+   "payment_methods": {
+      "object": "List",
+      "data": [
+         {
+            "object": "PaymentMethod",
+            "id": "CC_uWSCSmt2VdlQWsk8",
+            "vid": "4f3ae94d82011a1b8472e5abca78f4338f7ba121",
+            "created": "2019-04-29T09:04:29-07:00",
+            "type": "CreditCard",
+            "credit_card": {
+               "object": "CreditCard",
+               "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+               "account": "411390XXXXXX0007",
+               "bin": "411390",
+               "last_digits": "0007",
+               "account_length": 16,
+               "expiration_date": "202003",
+               "last_au_request_date": null,
+               "last_update_date": null
+            },
+            "account_holder": "Harry Quigley",
+            "billing_address": {
+               "object": "Address",
+               "vid": "aa68fc4d51603377ee3d020ad539c038a79599ce",
+               "name": "Harry Quigley",
+               "line1": "13975 Berry Lane",
+               "city": "Addison",
+               "district": "TX",
+               "postal_code": "75001",
+               "country": "US"
+            },
+            "customer_description": "Credit Card",
+            "primary": true,
+            "active": true
+         }
+      ],
+      "total_count": 1
+   },
+   "credit": {
+      "object": "Credit",
+      "currency_amounts": {
+         "object": "List",
+         "data": [
+            {
+               "object": "CurrencyAmount",
+               "vid": "f230945a464b147e1d91ca66124feeb9c792eb90",
+               "currency": "USD",
+               "amount": 1,
+               "description": "Good will account credit",
+               "reason": "Customer had a bad experience",
+               "granted_by_cashbox": false,
+               "granted": "2019-04-29T09:13:58-07:00",
+               "source": "Account"
+            }
+         ],
+         "total_count": 1
+      }
+   }
+}

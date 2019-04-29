@@ -1,0 +1,286 @@
+SOAP call : Not Applicable 
+
+REST Method:  GET
+
+Endpoint :  https://api.prodtest.vindicia.com/accounts/uWSCSmt2VdlQWsk8
+
+JSON Response:
+
+{
+   "object": "Subscription",
+   "id": "W3U363Jvvr0nzR",
+   "vid": "b3ac3e80b0d72f7b477b4ae77d2b2b24c04e352c",
+   "created": "2019-04-15T06:55:15-07:00",
+   "account": {
+      "object": "Account",
+      "id": "b9yPdU06ttFIPJ",
+      "vid": "8eb5000a1e52af2f2832d073f276d705011fb650",
+      "created": "2019-04-15T06:55:14-07:00",
+      "default_currency": "INR",
+      "email": "foo@foo.com",
+      "email_type": "html",
+      "language": "EN",
+      "name": "George Church",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "e874ca7d76df8014983b65aea0423341614951da",
+         "name": "George Church",
+         "line1": "5/A Gulab Estate, Safed Pool, Sakinaka, T2 Link Road, Andheri Kurla Road",
+         "city": "Mumbai",
+         "district": "Maharashtra",
+         "postal_code": "400072",
+         "country": "IN"
+      },
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "bx0UA575MkyM7W",
+               "vid": "c54786c8dfbf2c78f92141dd15bde5173507d02e",
+               "created": "2019-04-15T06:55:14-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "469191fbf680b9e62758c7dff7780e747257e907",
+                  "account": "448598XXXXXX2217",
+                  "bin": "448598",
+                  "last_digits": "2217",
+                  "account_length": 16,
+                  "expiration_date": "202108",
+                  "last_au_request_date": null,
+                  "last_update_date": null
+               },
+               "account_holder": "George Church",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "1f9773ddce70835b1ae7a2135f48a1295c90a762",
+                  "name": "George Church",
+                  "line1": "5/A Gulab Estate, Safed Pool, Sakinaka, T2 Link Road, Andheri Kurla Road",
+                  "city": "Mumbai",
+                  "district": "Maharashtra",
+                  "postal_code": "400072",
+                  "country": "IN"
+               },
+               "customer_description": "Credit Card",
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      },
+      "metadata": {
+         "MIGRATED_INACTIVE": "TRUE"
+      }
+   },
+   "billing_plan": {
+      "object": "BillingPlan",
+      "id": "MONTHLY",
+      "vid": "dd8b2837339fa7f1e80a6ad237eb27491fbaa324",
+      "created": "2018-03-28T11:27:09-07:00",
+      "description": "Monthly Subscription",
+      "status": "Active",
+      "periods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "BillingPlanPeriod",
+               "type": "Month",
+               "quantity": 1,
+               "cycles": 0,
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "CAD"
+                     },
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "INR"
+                     },
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "GBP"
+                     },
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "USD"
+                     }
+                  ],
+                  "total_count": 4
+               },
+               "do_not_notify_first_bill": false
+            }
+         ],
+         "total_count": 1
+      },
+      "skip_initial_billing_notification": false,
+      "metadata": {
+         "export": "1",
+         "Export": "1"
+      },
+      "billing_descriptor": "Monthly Billing Plan",
+      "used_on_subscriptions": true
+   },
+   "payment_method": {
+      "object": "PaymentMethod",
+      "id": "bx0UA575MkyM7W",
+      "vid": "c54786c8dfbf2c78f92141dd15bde5173507d02e",
+      "created": "2019-04-15T06:55:14-07:00",
+      "type": "CreditCard",
+      "credit_card": {
+         "object": "CreditCard",
+         "vid": "469191fbf680b9e62758c7dff7780e747257e907",
+         "account": "448598XXXXXX2217",
+         "bin": "448598",
+         "last_digits": "2217",
+         "account_length": 16,
+         "expiration_date": "202108",
+         "last_au_request_date": null,
+         "last_update_date": null
+      },
+      "account_holder": "George Church",
+      "billing_address": {
+         "object": "Address",
+         "vid": "1f9773ddce70835b1ae7a2135f48a1295c90a762",
+         "name": "George Church",
+         "line1": "5/A Gulab Estate, Safed Pool, Sakinaka, T2 Link Road, Andheri Kurla Road",
+         "city": "Mumbai",
+         "district": "Maharashtra",
+         "postal_code": "400072",
+         "country": "IN"
+      },
+      "customer_description": "Credit Card",
+      "primary": true,
+      "active": true
+   },
+   "currency": "INR",
+   "status": "Active",
+   "billing_state": "Good Standing",
+   "starts": "2019-04-15T06:55:14-07:00",
+   "ends": "2019-05-22T00:00:00-07:00",
+   "entitled_through": "2019-05-22T00:00:00-07:00",
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "SubscriptionItem",
+            "id": "sub_8do3J03SQGPCoAFOOB_GIFT_PRODUCT",
+            "vid": "4a2d7a722f6ad5dd42d7c672ddef7f8fb0eb4cbd",
+            "index": 0,
+            "product": {
+               "object": "Product",
+               "id": "FOOB_GIFT_PRODUCT",
+               "vid": "5cf5821d7db45b412c283e758e12b224a61b6db8",
+               "created": "2019-04-01T09:05:32-07:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "FOOB_GIFT_PRODUCT"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "status": "Active",
+               "metadata": {
+                  "ProductCatalog": "NA"
+               },
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "Catalog",
+                        "description": "BBC BritBox"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "billing_descriptor": "FOOB_GIFT_PRODUCT",
+               "credit_granted": {
+                  "object": "Credit"
+               },
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 7.99,
+                        "currency": "USD"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 49,
+                        "currency": "INR"
+                     }
+                  ],
+                  "total_count": 2
+               }
+            },
+            "currency": "INR",
+            "quantity": 1,
+            "created": "2019-04-15T06:55:14-07:00",
+            "starts": "2019-04-15T00:00:00-07:00"
+         }
+      ],
+      "total_count": 1
+   },
+   "billing_day": 15,
+   "minimum_commitment": 0,
+   "notify_on_transition": false,
+   "next_billing": {
+      "object": "Transaction",
+      "created": "2019-05-15T00:00:00-07:00",
+      "amount": 49,
+      "currency": "INR",
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "FOOB_GIFT_PRODUCT",
+               "item_type": "Purchase",
+               "name": "FOOB_GIFT_PRODUCT",
+               "price": 49,
+               "quantity": 1,
+               "tax_type": "Exclusive Sales",
+               "subtotal": 49,
+               "total": 49
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "metadata": {
+      "Test": "Test"
+   },
+   "credit": {
+      "object": "Credit",
+      "currency_amounts": {
+         "object": "List",
+         "data": [
+            {
+               "object": "CurrencyAmount",
+               "vid": "aea5c961445e30c18e4af386bc3b6b6f7fd28311",
+               "currency": "INR",
+               "amount": 10,
+               "description": "Good will Subscription credit",
+               "reason": "Customer had a bad experience",
+               "granted_by_cashbox": false,
+               "granted": "2019-04-29T09:50:31-07:00",
+               "source": "Account"
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "balance": 0
+}
