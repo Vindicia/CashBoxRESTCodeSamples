@@ -1,0 +1,324 @@
+SOAP call : Refund.fetchByTransaction
+
+REST Method:  GET
+
+Endpoint :  https://api.prodtest.vindicia.com/transactions/LM00023410/refunds/
+
+JSON Response:
+
+{
+   "object": "List",
+   "data": [
+      {
+         "object": "Refund",
+         "id": "LM00023456",
+         "vid": "de1ffc7cabeb28bf6075b08ded45c5dad8016ecd",
+         "created": "2018-05-29T12:13:16-07:00",
+         "transaction": {
+            "object": "Transaction",
+            "id": "LM00023410",
+            "vid": "faf5d896593fa054256f70c8ed9ee8ed3cc7ff05",
+            "created": "2018-05-29T00:17:36-07:00",
+            "amount": 5.5,
+            "currency": "USD",
+            "account": {
+               "object": "Account",
+               "id": "LHM_201709211156060236-11",
+               "vid": "e7fc442cfbc43582e87bcc860fce3a6070ac8f12",
+               "created": "2017-09-21T09:56:08-07:00",
+               "email": "liam.varnish@gmail.com",
+               "email_type": "html",
+               "language": "EN",
+               "company": "DirecTV",
+               "name": "Liam Varnish",
+               "shipping_address": {
+                  "object": "Address",
+                  "vid": "824e12f2918892347b17f3c4e34bdff696859031",
+                  "name": "Liam Varnish",
+                  "line1": "1 Michigan Ave",
+                  "city": "Chicago",
+                  "district": "IL",
+                  "postal_code": "60010",
+                  "country": "US"
+               },
+               "payment_methods": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "PaymentMethod",
+                        "vid": "e3a6a5734c0ac3d3b4e82203c574ee90b72b57f9",
+                        "created": "2017-09-21T09:56:10-07:00",
+                        "type": "CreditCard",
+                        "credit_card": {
+                           "object": "CreditCard",
+                           "vid": "106aae469529eed558d29a5effadf2b4f87c85bc",
+                           "account": "400344XXXXXX1548",
+                           "bin": "400344",
+                           "last_digits": "1548",
+                           "account_length": 16,
+                           "expiration_date": "202012",
+                           "last_au_request_date": null,
+                           "last_update_date": null
+                        },
+                        "account_holder": "Liam Varnish",
+                        "billing_address": {
+                           "object": "Address",
+                           "vid": "bbd179d0b17821513fe7db464dcd745c5645108b",
+                           "name": "Liam Varnish",
+                           "line1": "1 Michigan Ave",
+                           "city": "Chicago",
+                           "district": "IL",
+                           "postal_code": "60010",
+                           "country": "US"
+                        },
+                        "primary": true,
+                        "active": true
+                     }
+                  ],
+                  "total_count": 1
+               }
+            },
+            "source_payment_method": {
+               "object": "PaymentMethod",
+               "vid": "e3a6a5734c0ac3d3b4e82203c574ee90b72b57f9",
+               "created": "2017-09-21T09:56:10-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "106aae469529eed558d29a5effadf2b4f87c85bc",
+                  "account": "400344XXXXXX1548",
+                  "bin": "400344",
+                  "last_digits": "1548",
+                  "account_length": 16,
+                  "expiration_date": "202012",
+                  "last_au_request_date": null,
+                  "last_update_date": null
+               },
+               "account_holder": "Liam Varnish",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "bbd179d0b17821513fe7db464dcd745c5645108b",
+                  "name": "Liam Varnish",
+                  "line1": "1 Michigan Ave",
+                  "city": "Chicago",
+                  "district": "IL",
+                  "postal_code": "60010",
+                  "country": "US"
+               },
+               "primary": true,
+               "active": true
+            },
+            "status_log": {
+               "object": "List",
+               "data": [
+                  {
+                     "object": "TransactionStatus",
+                     "status": "Refunded",
+                     "created": "2018-05-29T12:13:17-07:00",
+                     "payment_method_type": "CreditCard",
+                     "credit_card_status": {
+                        "object": "TransactionStatusCreditCard",
+                        "auth_code": "T00"
+                     }
+                  },
+                  {
+                     "object": "TransactionStatus",
+                     "status": "Captured",
+                     "created": "2018-05-29T00:43:17-07:00",
+                     "payment_method_type": "CreditCard",
+                     "credit_card_status": {
+                        "object": "TransactionStatusCreditCard",
+                        "auth_code": "T00"
+                     },
+                     "note": "T00"
+                  },
+                  {
+                     "object": "TransactionStatus",
+                     "status": "New",
+                     "created": "2018-05-29T00:17:38-07:00",
+                     "payment_method_type": "CreditCard",
+                     "credit_card_status": {
+                        "object": "TransactionStatusCreditCard",
+                        "auth_code": "T00"
+                     }
+                  }
+               ],
+               "total_count": 3
+            },
+            "payment_processor": "Test",
+            "payment_processor_transaction_id": "LM00023410",
+            "shipping_address": {
+               "object": "Address",
+               "vid": "824e12f2918892347b17f3c4e34bdff696859031",
+               "name": "Liam Varnish",
+               "line1": "1 Michigan Ave",
+               "city": "Chicago",
+               "district": "IL",
+               "postal_code": "60010",
+               "country": "US"
+            },
+            "metadata": {
+               "vin:RetryNumber": "0",
+               "vin:BillingCycle": "250"
+            },
+            "items": {
+               "object": "List",
+               "data": [
+                  {
+                     "object": "TransactionItem",
+                     "sku": "DAILY",
+                     "index_number": 1,
+                     "item_type": "Purchase",
+                     "name": "Daily Billing Plan",
+                     "quantity": 1,
+                     "service_period_starts": "2018-05-29T00:00:00-07:00",
+                     "service_period_ends": "2018-05-29T00:00:00-07:00",
+                     "tax_type": "Exclusive Sales",
+                     "total": 0
+                  },
+                  {
+                     "object": "TransactionItem",
+                     "sku": "DAY1",
+                     "index_number": 2,
+                     "item_type": "Purchase",
+                     "name": "Daily Product",
+                     "subscription_item": {
+                        "object": "SubscriptionItem",
+                        "id": "ABI_201709211156060236",
+                        "vid": "0a811f2b76937dc8e2ca7eb45c569470b73a33f1"
+                     },
+                     "price": 4.99,
+                     "quantity": 1,
+                     "service_period_starts": "2018-05-29T00:00:00-07:00",
+                     "service_period_ends": "2018-05-29T00:00:00-07:00",
+                     "tax_type": "Exclusive Sales",
+                     "tax": {
+                        "object": "List",
+                        "data": [
+                           {
+                              "object": "TaxItem",
+                              "jurisdiction": "CITY_14000",
+                              "name": "CHICAGO CITY SALES TAX",
+                              "amount": 0.06,
+                              "external_tax_name": "IL CITY TAX",
+                              "external_jurisdiction_name": "CHICAGO",
+                              "tax_rate": 0.0125
+                           },
+                           {
+                              "object": "TaxItem",
+                              "jurisdiction": "COUNTY_031",
+                              "name": "COOK COUNTY SALES TAX",
+                              "amount": 0.09,
+                              "external_tax_name": "IL COUNTY TAX",
+                              "external_jurisdiction_name": "COOK",
+                              "tax_rate": 0.0175
+                           },
+                           {
+                              "object": "TaxItem",
+                              "jurisdiction": "SPECIAL_AQOF",
+                              "name": "REGIONAL TRANSPORT. AUTHORITY (RTA) SPECIAL SALES TAX",
+                              "amount": 0.05,
+                              "external_tax_name": "IL SPECIAL TAX",
+                              "external_jurisdiction_name": "REGIONAL TRANSPORT. AUTHORITY (RTA)",
+                              "tax_rate": 0.01
+                           },
+                           {
+                              "object": "TaxItem",
+                              "jurisdiction": "STATE_17",
+                              "name": "ILLINOIS STATE SALES TAX",
+                              "amount": 0.31,
+                              "external_tax_name": "IL STATE TAX",
+                              "external_jurisdiction_name": "ILLINOIS",
+                              "tax_rate": 0.0625
+                           }
+                        ],
+                        "total_count": 4
+                     },
+                     "subtotal": 4.99,
+                     "total": 5.5
+                  },
+                  {
+                     "object": "TransactionItem",
+                     "sku": "Total Tax",
+                     "index_number": 3,
+                     "item_type": "Purchase",
+                     "name": "Total Tax",
+                     "price": 0,
+                     "quantity": 1,
+                     "tax_classification": "TaxExempt",
+                     "service_period_starts": "2018-05-29T00:00:00-07:00",
+                     "service_period_ends": "2018-05-29T00:00:00-07:00",
+                     "tax_type": "Exclusive Sales",
+                     "tax": {
+                        "object": "List",
+                        "data": [
+                           {
+                              "object": "TaxItem",
+                              "jurisdiction": "CITY_14000",
+                              "name": "CHICAGO CITY SALES TAX",
+                              "amount": 0.06
+                           },
+                           {
+                              "object": "TaxItem",
+                              "jurisdiction": "COUNTY_031",
+                              "name": "COOK COUNTY SALES TAX",
+                              "amount": 0.09
+                           },
+                           {
+                              "object": "TaxItem",
+                              "jurisdiction": "SPECIAL_AQOF",
+                              "name": "REGIONAL TRANSPORT. AUTHORITY (RTA) SPECIAL SALES TAX",
+                              "amount": 0.05
+                           },
+                           {
+                              "object": "TaxItem",
+                              "jurisdiction": "STATE_17",
+                              "name": "ILLINOIS STATE SALES TAX",
+                              "amount": 0.31
+                           }
+                        ],
+                        "total_count": 4
+                     },
+                     "discount": 0,
+                     "subtotal": 0,
+                     "total": 0.51
+                  }
+               ],
+               "total_count": 3
+            },
+            "billing_descriptor": "Daily Stream",
+            "sales_tax_address": {
+               "object": "Address",
+               "vid": "c39f22e72ba1a6c5f322d6e96a9f7205f0b7a6a9",
+               "name": "Liam Varnish",
+               "line1": "1 Michigan Ave",
+               "city": "CHICAGO",
+               "district": "IL",
+               "postal_code": "60010",
+               "country": "US"
+            },
+            "subscription_sequence": 251,
+            "billing_plan_sequence": 251,
+            "original_billing_date": "2018-05-29T00:00:00-07:00",
+            "billing_attempt": 0,
+            "subscription": {
+               "object": "Subscription",
+               "id": "AB_201709211156060236",
+               "vid": "50df716a19e6ff62724fb564ecdda76f5b6a5228"
+            },
+            "cvn_checked": false
+         },
+         "refund_distribution_strategy": "None",
+         "amount": 4.99,
+         "amount_includes_tax": false,
+         "currency": "USD",
+         "note": "goodwill",
+         "token_action": "None",
+         "status": "Complete"
+      }
+   ],
+   "total_count": 1,
+   "url": "/transactions/LM00023410/refunds/",
+   "next": "/transactions/LM00023410/refunds/?starting_after=LM00023456",
+   "previous": "/transactions/LM00023410/refunds/?ending_before=LM00023456"
+}
