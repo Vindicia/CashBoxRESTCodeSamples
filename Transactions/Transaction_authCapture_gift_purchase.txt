@@ -1,0 +1,279 @@
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/transactions
+
+JSON Request 
+
+{
+  "source_payment_method": {
+    "object": "PaymentMethod",
+    "vid": "f01911dd3cec27bc9c76f2824adb3e4db3036ed0"
+  },
+  "account": {
+    "email": "foo@foo.com",
+    "email_type": "html",
+    "language": "EN",
+    "shipping_address": {
+      "city": "Austin",
+      "name": "Rhonda Killarney",
+      "district": "TX",
+      "country": "US",
+      "object": "Address",
+      "line1": "12255 Devonshire Drive",
+      "postal_code": "78703"
+    },
+    "name": "Rhonda Killarney",
+    "object": "Account",
+    "id": "Account_LsFU1VUOori9",
+    "default_currency": "USD"
+  },
+  "to_be_captured": true,
+  "policy": {
+    "send_email_notification": 0,
+    "min_chargeback_probability": 99
+  },
+  "items": [
+    {
+      "sku": "ANNUAL_GIFT",
+      "price": "74.99",
+      "object": "TransactionItem",
+      "name": "Gift Subscription Purchase",
+      "quantity": 1
+    }
+  ],
+  "object": "Transaction",
+  "source_ip": "63.201.132.182",
+  "id": "GIFT00800848"
+}
+
+JSON Response:
+
+{
+   "object": "Transaction",
+   "id": "GIFT00800848",
+   "vid": "cf457187fdd4af5d5ef4bc70020a371e57241f26",
+   "created": "2019-04-30T14:31:34-07:00",
+   "amount": 81.18,
+   "currency": "USD",
+   "account": {
+      "object": "Account",
+      "id": "Account_LsFU1VUOori9",
+      "vid": "f67d989ad01adf389ed8068317dde56a6b9629aa",
+      "created": "2019-04-30T14:31:33-07:00",
+      "default_currency": "USD",
+      "email": "foo@foo.com",
+      "email_type": "html",
+      "language": "EN",
+      "name": "Rhonda Killarney",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "8ee17aefaf83ef6ae4bc4239e2f4b51dae23ffd3",
+         "name": "Rhonda Killarney",
+         "line1": "12255 Devonshire Drive",
+         "city": "Austin",
+         "district": "TX",
+         "postal_code": "78703",
+         "country": "US"
+      },
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "cc_6cfc34dc-db44",
+               "vid": "f01911dd3cec27bc9c76f2824adb3e4db3036ed0",
+               "created": "2019-04-30T14:31:12-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                  "account": "411111XXXXXX1111",
+                  "bin": "411111",
+                  "last_digits": "1111",
+                  "account_length": 16,
+                  "expiration_date": "202306",
+                  "last_au_request_date": null,
+                  "last_update_date": null
+               },
+               "account_holder": "John John ",
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "source_payment_method": {
+      "object": "PaymentMethod",
+      "id": "cc_6cfc34dc-db44",
+      "vid": "f01911dd3cec27bc9c76f2824adb3e4db3036ed0",
+      "created": "2019-04-30T14:31:12-07:00",
+      "type": "CreditCard",
+      "credit_card": {
+         "object": "CreditCard",
+         "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+         "account": "411111XXXXXX1111",
+         "bin": "411111",
+         "last_digits": "1111",
+         "account_length": 16,
+         "expiration_date": "202306",
+         "last_au_request_date": null,
+         "last_update_date": null
+      },
+      "account_holder": "John John ",
+      "primary": true,
+      "active": true
+   },
+   "status_log": {
+      "object": "List",
+      "data": [
+         {
+            "object": "TransactionStatus",
+            "status": "Authorized",
+            "created": "2019-04-30T14:31:35-07:00",
+            "payment_method_type": "CreditCard",
+            "credit_card_status": {
+               "object": "TransactionStatusCreditCard",
+               "auth_code": "T00"
+            },
+            "note": "T00 - NA"
+         },
+         {
+            "object": "TransactionStatus",
+            "status": "New",
+            "created": "2019-04-30T14:31:35-07:00",
+            "payment_method_type": "CreditCard",
+            "credit_card_status": {
+               "object": "TransactionStatusCreditCard",
+               "auth_code": "T00"
+            }
+         }
+      ],
+      "total_count": 2
+   },
+   "payment_processor": "Test",
+   "payment_processor_transaction_id": "GIFT00800848",
+   "shipping_address": {
+      "object": "Address",
+      "vid": "8ee17aefaf83ef6ae4bc4239e2f4b51dae23ffd3",
+      "name": "Rhonda Killarney",
+      "line1": "12255 Devonshire Drive",
+      "city": "Austin",
+      "district": "TX",
+      "postal_code": "78703",
+      "country": "US"
+   },
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "TransactionItem",
+            "sku": "ANNUAL_GIFT",
+            "index_number": 1,
+            "item_type": "Purchase",
+            "name": "Gift Subscription Purchase",
+            "price": 74.99,
+            "quantity": 1,
+            "tax_type": "Exclusive Sales",
+            "tax": {
+               "object": "List",
+               "data": [
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "CITY_05000",
+                     "name": "AUSTIN CITY SALES TAX",
+                     "amount": 0.75,
+                     "external_tax_name": "TX CITY TAX",
+                     "external_jurisdiction_name": "AUSTIN",
+                     "tax_rate": 0.01
+                  },
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "SPECIAL_6000814",
+                     "name": "AUSTIN MTA TRANSIT SPECIAL SALES TAX",
+                     "amount": 0.75,
+                     "external_tax_name": "TX SPECIAL TAX",
+                     "external_jurisdiction_name": "AUSTIN MTA TRANSIT",
+                     "tax_rate": 0.01
+                  },
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "STATE_48",
+                     "name": "TEXAS STATE SALES TAX",
+                     "amount": 4.69,
+                     "external_tax_name": "TX STATE TAX",
+                     "external_jurisdiction_name": "TEXAS",
+                     "tax_rate": 0.0625
+                  }
+               ],
+               "total_count": 3
+            },
+            "subtotal": 74.99,
+            "total": 81.18
+         },
+         {
+            "object": "TransactionItem",
+            "sku": "Total Tax",
+            "index_number": 2,
+            "item_type": "Purchase",
+            "name": "Total Tax",
+            "price": 0,
+            "quantity": 1,
+            "tax_classification": "TaxExempt",
+            "tax_type": "Exclusive Sales",
+            "tax": {
+               "object": "List",
+               "data": [
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "CITY_05000",
+                     "name": "AUSTIN CITY SALES TAX",
+                     "amount": 0.75
+                  },
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "SPECIAL_6000814",
+                     "name": "AUSTIN MTA TRANSIT SPECIAL SALES TAX",
+                     "amount": 0.75
+                  },
+                  {
+                     "object": "TaxItem",
+                     "jurisdiction": "STATE_48",
+                     "name": "TEXAS STATE SALES TAX",
+                     "amount": 4.69
+                  }
+               ],
+               "total_count": 3
+            },
+            "discount": 0,
+            "subtotal": 0,
+            "total": 6.19
+         }
+      ],
+      "total_count": 2
+   },
+   "source_ip": "63.201.132.182",
+   "sales_tax_address": {
+      "object": "Address",
+      "vid": "37092414851ff71db7aecc6017e67ff66eab413a",
+      "name": "Rhonda Killarney",
+      "line1": "12255 Devonshire Drive",
+      "city": "AUSTIN",
+      "district": "TX",
+      "postal_code": "78703",
+      "country": "US"
+   },
+   "score": -1,
+   "score_codes": {
+      "object": "List",
+      "data": [
+         {
+            "object": "ScoreCode",
+            "id": "-1",
+            "description": "<calculated>: (2019-04-30 21:31:34)"
+         }
+      ],
+      "total_count": 1
+   },
+   "cvn_checked": false
+}
