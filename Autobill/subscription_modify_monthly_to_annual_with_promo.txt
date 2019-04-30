@@ -1,0 +1,520 @@
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/subscriptions/Subscription_W7Tn5cGDDnColwaH?effective_date=today&bill_prorated_period=true
+
+JSON Request 
+
+{
+  "billing_plan": {
+    "object": "BillingPlan",
+    "id": "ANNUAL"
+  },
+  "object": "Subscription",
+  "id": "Subscription_W7Tn5cGDDnColwaH",
+  "items": [
+    {
+      "product": {
+        "object": "Product",
+        "id": "Generic_Annual"
+      },
+      "object": "SubscriptionItem",
+      "replaces": {
+        "product": {
+          "object": "Product",
+          "id": "Generic"
+        },
+        "object": "SubscriptionItem"
+      },
+      "id": "Item_31Z4xmRlUMxPy3Qv",
+      "campaign_code": "ANNUAL10"
+    }
+  ]
+}
+
+JSON Response:
+
+{
+   "object": "Subscription",
+   "id": "Subscription_W7Tn5cGDDnColwaH",
+   "vid": "f709ec73f079573f91a6c982ed922a74b85d9026",
+   "created": "2019-04-29T15:25:51-07:00",
+   "account": {
+      "object": "Account",
+      "id": "W7Tn5cGDDnColwaH",
+      "vid": "6add48e5d672632b6f9c54503c8e80d1d7d64ad0",
+      "created": "2019-04-29T15:25:51-07:00",
+      "default_currency": "USD",
+      "email": "foo@foo.com",
+      "email_type": "html",
+      "language": "EN",
+      "name": "Zoro Taylor",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "206b033f8777c731df6dca717fe68c73899780e8",
+         "name": "Zoro Taylor",
+         "line1": "17692 Westfield Drive",
+         "city": "Portland",
+         "district": "OR",
+         "postal_code": "97209",
+         "country": "US"
+      },
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "cc_7b0175f9-3aaa",
+               "vid": "f3c114d505c83d13958fc6df4369f07a4755b839",
+               "created": "2019-04-29T15:26:28-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                  "account": "411111XXXXXX1111",
+                  "bin": "411111",
+                  "last_digits": "1111",
+                  "account_length": 16,
+                  "expiration_date": "202201",
+                  "last_au_request_date": null,
+                  "last_update_date": null
+               },
+               "account_holder": "Zoro Taylor",
+               "primary": true,
+               "active": true
+            },
+            {
+               "object": "PaymentMethod",
+               "id": "CC_W7Tn5cGDDnColwaH",
+               "vid": "517e52534122b52b0ff84df96366bce5439895fd",
+               "created": "2019-04-29T15:25:52-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+                  "account": "411390XXXXXX0007",
+                  "bin": "411390",
+                  "last_digits": "0007",
+                  "account_length": 16,
+                  "expiration_date": "202003",
+                  "last_au_request_date": null,
+                  "last_update_date": null
+               },
+               "account_holder": "Zoro Taylor",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "4f18c29702463961b50d78a969fa945d70acdfca",
+                  "name": "Zoro Taylor",
+                  "line1": "17692 Westfield Drive",
+                  "city": "Portland",
+                  "district": "OR",
+                  "postal_code": "97209",
+                  "country": "US"
+               },
+               "customer_description": "Credit Card",
+               "primary": false,
+               "active": true
+            }
+         ],
+         "total_count": 2
+      }
+   },
+   "billing_plan": {
+      "object": "BillingPlan",
+      "id": "ANNUAL",
+      "vid": "928d4931da2c9c6ce00d3f2b490e85c2610397e6",
+      "created": "2018-09-24T12:01:32-07:00",
+      "description": "Annual Subscription",
+      "status": "Active",
+      "periods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "BillingPlanPeriod",
+               "type": "Year",
+               "quantity": 1,
+               "cycles": 0,
+               "do_not_notify_first_bill": false
+            }
+         ],
+         "total_count": 1
+      },
+      "skip_initial_billing_notification": false,
+      "billing_descriptor": "Annual Subscription",
+      "used_on_subscriptions": true
+   },
+   "payment_method": {
+      "object": "PaymentMethod",
+      "id": "cc_7b0175f9-3aaa",
+      "vid": "f3c114d505c83d13958fc6df4369f07a4755b839",
+      "created": "2019-04-29T15:26:28-07:00",
+      "type": "CreditCard",
+      "credit_card": {
+         "object": "CreditCard",
+         "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+         "account": "411111XXXXXX1111",
+         "bin": "411111",
+         "last_digits": "1111",
+         "account_length": 16,
+         "expiration_date": "202201",
+         "last_au_request_date": null,
+         "last_update_date": null
+      },
+      "account_holder": "Zoro Taylor",
+      "primary": true,
+      "active": true
+   },
+   "currency": "USD",
+   "description": "Subscription_W7Tn5cGDDnColwaH",
+   "status": "Active",
+   "billing_state": "Good Standing",
+   "starts": "2019-04-29T15:25:51-07:00",
+   "ends": "2020-05-07T00:00:00-07:00",
+   "entitled_through": "2020-05-07T00:00:00-07:00",
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "SubscriptionItem",
+            "id": "Item_LWGpRXfMd3DR5cbE",
+            "vid": "7c43d1a651c133b651eaff4e3ebd6be15948bf66",
+            "index": 0,
+            "product": {
+               "object": "Product",
+               "id": "Generic_Annual",
+               "vid": "fa13402ad24d97f9b6a2fb2851291a9064ae287c",
+               "created": "2019-04-30T08:26:43-07:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "Generic Brand"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "status": "Active",
+               "tax_classification": "Annual Subscription",
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "GOLD",
+                        "description": "GOLD PACKAGE"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "billing_descriptor": "Annual Subscription",
+               "credit_granted": {
+                  "object": "Credit"
+               },
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 74.99,
+                        "currency": "USD"
+                     }
+                  ],
+                  "total_count": 1
+               }
+            },
+            "quantity": 1,
+            "created": "2019-04-30T08:35:42-07:00",
+            "starts": "2019-04-30T00:00:00-07:00",
+            "replaces": {
+               "object": "SubscriptionItem",
+               "id": "Item_W7Tn5cGDDnColwaH_1",
+               "vid": "d8efc7d17649816adc2773de34f0e1dd920dd152"
+            }
+         }
+      ],
+      "total_count": 1
+   },
+   "billing_day": 30,
+   "minimum_commitment": 0,
+   "notify_on_transition": false,
+   "most_recent_billing": {
+      "object": "Transaction",
+      "id": "LM00045430",
+      "vid": "2eacdaad4dd86e94cdb6a62833080cbee8262349",
+      "created": "2019-04-30T08:39:35-07:00",
+      "amount": 60.73,
+      "currency": "USD",
+      "account": {
+         "object": "Account",
+         "id": "W7Tn5cGDDnColwaH",
+         "vid": "6add48e5d672632b6f9c54503c8e80d1d7d64ad0",
+         "created": "2019-04-29T15:25:51-07:00",
+         "default_currency": "USD",
+         "email": "foo@foo.com",
+         "email_type": "html",
+         "language": "EN",
+         "name": "Zoro Taylor",
+         "shipping_address": {
+            "object": "Address",
+            "vid": "206b033f8777c731df6dca717fe68c73899780e8",
+            "name": "Zoro Taylor",
+            "line1": "17692 Westfield Drive",
+            "city": "Portland",
+            "district": "OR",
+            "postal_code": "97209",
+            "country": "US"
+         },
+         "payment_methods": {
+            "object": "List",
+            "data": [
+               {
+                  "object": "PaymentMethod",
+                  "id": "cc_7b0175f9-3aaa",
+                  "vid": "f3c114d505c83d13958fc6df4369f07a4755b839",
+                  "created": "2019-04-29T15:26:28-07:00",
+                  "type": "CreditCard",
+                  "credit_card": {
+                     "object": "CreditCard",
+                     "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                     "account": "411111XXXXXX1111",
+                     "bin": "411111",
+                     "last_digits": "1111",
+                     "account_length": 16,
+                     "expiration_date": "202201",
+                     "last_au_request_date": null,
+                     "last_update_date": null
+                  },
+                  "account_holder": "Zoro Taylor",
+                  "primary": true,
+                  "active": true
+               },
+               {
+                  "object": "PaymentMethod",
+                  "id": "CC_W7Tn5cGDDnColwaH",
+                  "vid": "517e52534122b52b0ff84df96366bce5439895fd",
+                  "created": "2019-04-29T15:25:52-07:00",
+                  "type": "CreditCard",
+                  "credit_card": {
+                     "object": "CreditCard",
+                     "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+                     "account": "411390XXXXXX0007",
+                     "bin": "411390",
+                     "last_digits": "0007",
+                     "account_length": 16,
+                     "expiration_date": "202003",
+                     "last_au_request_date": null,
+                     "last_update_date": null
+                  },
+                  "account_holder": "Zoro Taylor",
+                  "billing_address": {
+                     "object": "Address",
+                     "vid": "4f18c29702463961b50d78a969fa945d70acdfca",
+                     "name": "Zoro Taylor",
+                     "line1": "17692 Westfield Drive",
+                     "city": "Portland",
+                     "district": "OR",
+                     "postal_code": "97209",
+                     "country": "US"
+                  },
+                  "customer_description": "Credit Card",
+                  "primary": false,
+                  "active": true
+               }
+            ],
+            "total_count": 2
+         }
+      },
+      "source_payment_method": {
+         "object": "PaymentMethod",
+         "id": "cc_7b0175f9-3aaa",
+         "vid": "f3c114d505c83d13958fc6df4369f07a4755b839",
+         "created": "2019-04-29T15:26:28-07:00",
+         "type": "CreditCard",
+         "credit_card": {
+            "object": "CreditCard",
+            "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+            "account": "411111XXXXXX1111",
+            "bin": "411111",
+            "last_digits": "1111",
+            "account_length": 16,
+            "expiration_date": "202201",
+            "last_au_request_date": null,
+            "last_update_date": null
+         },
+         "account_holder": "Zoro Taylor",
+         "primary": true,
+         "active": true
+      },
+      "status_log": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionStatus",
+               "status": "Authorized",
+               "created": "2019-04-30T08:39:37-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard",
+                  "auth_code": "T00"
+               },
+               "note": "T00 - NA"
+            },
+            {
+               "object": "TransactionStatus",
+               "status": "New",
+               "created": "2019-04-30T08:39:35-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard",
+                  "auth_code": "T00"
+               }
+            }
+         ],
+         "total_count": 2
+      },
+      "payment_processor": "Test",
+      "payment_processor_transaction_id": "LM00045430",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "206b033f8777c731df6dca717fe68c73899780e8",
+         "name": "Zoro Taylor",
+         "line1": "17692 Westfield Drive",
+         "city": "Portland",
+         "district": "OR",
+         "postal_code": "97209",
+         "country": "US"
+      },
+      "metadata": {
+         "vin:type": "modify",
+         "vin:RetryNumber": "0",
+         "vin:TaxError_1": "Item #0 Avalara TaxCode changed.  We sent (Annual Subscription) verbatim and Avalara changed it to (P0000000).\n\tsku (ANNUAL)",
+         "vin:BillingCycle": "1",
+         "vin:TaxError_2": "Item #1 Avalara TaxCode changed.  We sent (Annual Subscription) verbatim and Avalara changed it to (P0000000).\n\tsku (Generic_Annual)"
+      },
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "ANNUAL",
+               "index_number": 1,
+               "item_type": "Purchase",
+               "name": "Annual Subscription",
+               "quantity": 1,
+               "tax_classification": "Annual Subscription",
+               "service_period_starts": "2019-04-30T00:00:00-07:00",
+               "service_period_ends": "2020-04-29T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Generic_Annual",
+               "index_number": 2,
+               "item_type": "Purchase",
+               "name": "Generic Brand",
+               "subscription_item": {
+                  "object": "SubscriptionItem",
+                  "id": "Item_LWGpRXfMd3DR5cbE",
+                  "vid": "7c43d1a651c133b651eaff4e3ebd6be15948bf66"
+               },
+               "price": 74.99,
+               "quantity": 1,
+               "tax_classification": "Annual Subscription",
+               "campaign_id": "AIP_10",
+               "campaign_description": "10 Percent Discount for 1 Year",
+               "service_period_starts": "2019-04-30T00:00:00-07:00",
+               "service_period_ends": "2020-04-29T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "discount": -7.5,
+               "subtotal": 74.99,
+               "total": 67.49
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Generic",
+               "index_number": 4,
+               "item_type": "TaxableCredit",
+               "name": "Credit for merchantProductId Generic",
+               "subscription_item": {
+                  "object": "SubscriptionItem",
+                  "id": "Item_W7Tn5cGDDnColwaH_1",
+                  "vid": "d8efc7d17649816adc2773de34f0e1dd920dd152"
+               },
+               "price": -6.76,
+               "quantity": 1,
+               "tax_classification": "DV017194",
+               "service_period_starts": "2019-04-30T00:00:00-07:00",
+               "service_period_ends": "2019-05-28T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "related_transactions": [
+                  "LM00045339"
+               ],
+               "subtotal": -6.76,
+               "total": -6.76
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Total Tax",
+               "index_number": 5,
+               "item_type": "Purchase",
+               "name": "Total Tax",
+               "price": 0,
+               "quantity": 1,
+               "tax_classification": "TaxExempt",
+               "tax_type": "Exclusive Sales",
+               "discount": 0,
+               "subtotal": 0,
+               "total": 0
+            }
+         ],
+         "total_count": 4
+      },
+      "billing_descriptor": "Annual Subscription",
+      "sales_tax_address": {
+         "object": "Address",
+         "vid": "c62f8f7e116b71b52fb9108ded8a5097cc3a811d",
+         "name": "Zoro Taylor",
+         "line1": "17692 Westfield Drive",
+         "city": "PORTLAND",
+         "district": "OR",
+         "postal_code": "97209",
+         "country": "US"
+      },
+      "subscription_sequence": 2,
+      "billing_plan_sequence": 1,
+      "billing_attempt": 0,
+      "subscription": {
+         "object": "Subscription",
+         "id": "Subscription_W7Tn5cGDDnColwaH",
+         "vid": "f709ec73f079573f91a6c982ed922a74b85d9026"
+      },
+      "cvn_checked": false
+   },
+   "next_billing": {
+      "object": "Transaction",
+      "created": "2020-04-30T00:00:00-07:00",
+      "amount": 74.99,
+      "currency": "USD",
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "Generic_Annual",
+               "item_type": "Purchase",
+               "name": "Generic Brand",
+               "price": 74.99,
+               "quantity": 1,
+               "tax_classification": "Annual Subscription",
+               "tax_type": "Exclusive Sales",
+               "subtotal": 74.99,
+               "total": 74.99
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "balance": 0
+}
