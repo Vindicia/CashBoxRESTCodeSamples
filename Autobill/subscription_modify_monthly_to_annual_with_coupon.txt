@@ -1,0 +1,557 @@
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/subscriptions/Subscription_UvUwWu1ebqXc6YiU?effective_date=today&bill_prorated_period=true
+
+JSON Request 
+
+{
+  "billing_plan": {
+    "object": "BillingPlan",
+    "id": "ANNUAL"
+  },
+  "object": "Subscription",
+  "id": "Subscription_UvUwWu1ebqXc6YiU",
+  "items": [
+    {
+      "product": {
+        "object": "Product",
+        "id": "Generic_Annual"
+      },
+      "object": "SubscriptionItem",
+      "replaces": {
+        "product": {
+          "object": "Product",
+          "id": "Generic"
+        },
+        "object": "SubscriptionItem"
+      },
+      "id": "Item_2l9NRUXlxHJqhkmQ",
+      "campaign_code": "AIP10-TE8BFK3E8PGJRP4G"
+    }
+  ]
+}
+
+JSON Response:
+
+{
+   "object": "Subscription",
+   "id": "Subscription_UvUwWu1ebqXc6YiU",
+   "vid": "b67b72261eca9f043af5d390012444b9306a93cb",
+   "created": "2019-04-30T11:02:40-07:00",
+   "account": {
+      "object": "Account",
+      "id": "UvUwWu1ebqXc6YiU",
+      "vid": "4ece3b149d5284e98d5ac243ac7127743f0b5a9b",
+      "created": "2019-04-30T11:02:40-07:00",
+      "default_currency": "USD",
+      "email": "foo@foo.com",
+      "email_type": "html",
+      "language": "EN",
+      "name": "Edward Yesterday",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "9023c6ffbab932e40299080d17d5e25141511c80",
+         "name": "Edward Yesterday",
+         "line1": "14190 Kenwood Road",
+         "city": "New York",
+         "district": "NY",
+         "postal_code": "10278",
+         "country": "US"
+      },
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "CC_UvUwWu1ebqXc6YiU",
+               "vid": "1e0052aa1a38dc3a62032ce4afdd614ce42d7e9f",
+               "created": "2019-04-30T11:02:41-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+                  "account": "411390XXXXXX0007",
+                  "bin": "411390",
+                  "last_digits": "0007",
+                  "account_length": 16,
+                  "expiration_date": "202003",
+                  "last_au_request_date": null,
+                  "last_update_date": null
+               },
+               "account_holder": "Edward Yesterday",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "9e96038c87f7d62cf3acc815ce13864fe683fcc4",
+                  "name": "Edward Yesterday",
+                  "line1": "14190 Kenwood Road",
+                  "city": "New York",
+                  "district": "NY",
+                  "postal_code": "10278",
+                  "country": "US"
+               },
+               "customer_description": "Credit Card",
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "billing_plan": {
+      "object": "BillingPlan",
+      "id": "ANNUAL",
+      "vid": "928d4931da2c9c6ce00d3f2b490e85c2610397e6",
+      "created": "2018-09-24T12:01:32-07:00",
+      "description": "Annual Subscription",
+      "status": "Active",
+      "periods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "BillingPlanPeriod",
+               "type": "Year",
+               "quantity": 1,
+               "cycles": 0,
+               "do_not_notify_first_bill": false
+            }
+         ],
+         "total_count": 1
+      },
+      "skip_initial_billing_notification": false,
+      "billing_descriptor": "Annual Subscription",
+      "used_on_subscriptions": true
+   },
+   "payment_method": {
+      "object": "PaymentMethod",
+      "id": "CC_UvUwWu1ebqXc6YiU",
+      "vid": "1e0052aa1a38dc3a62032ce4afdd614ce42d7e9f",
+      "created": "2019-04-30T11:02:41-07:00",
+      "type": "CreditCard",
+      "credit_card": {
+         "object": "CreditCard",
+         "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+         "account": "411390XXXXXX0007",
+         "bin": "411390",
+         "last_digits": "0007",
+         "account_length": 16,
+         "expiration_date": "202003",
+         "last_au_request_date": null,
+         "last_update_date": null
+      },
+      "account_holder": "Edward Yesterday",
+      "billing_address": {
+         "object": "Address",
+         "vid": "9e96038c87f7d62cf3acc815ce13864fe683fcc4",
+         "name": "Edward Yesterday",
+         "line1": "14190 Kenwood Road",
+         "city": "New York",
+         "district": "NY",
+         "postal_code": "10278",
+         "country": "US"
+      },
+      "customer_description": "Credit Card",
+      "primary": true,
+      "active": true
+   },
+   "currency": "USD",
+   "description": "Subscription_UvUwWu1ebqXc6YiU",
+   "status": "Active",
+   "billing_state": "Good Standing",
+   "starts": "2019-04-30T11:02:40-07:00",
+   "ends": "2020-05-07T00:00:00-07:00",
+   "entitled_through": "2020-05-07T00:00:00-07:00",
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "SubscriptionItem",
+            "id": "Item_2l9NRUXlxHJqhkmQ",
+            "vid": "2803c3d1d9f70890f14d9ffc9aa11f7fb55f21f3",
+            "index": 0,
+            "product": {
+               "object": "Product",
+               "id": "Generic_Annual",
+               "vid": "fa13402ad24d97f9b6a2fb2851291a9064ae287c",
+               "created": "2019-04-30T08:26:43-07:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "Generic Brand"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "status": "Active",
+               "tax_classification": "Annual Subscription",
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "GOLD",
+                        "description": "GOLD PACKAGE"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "billing_descriptor": "Annual Subscription",
+               "credit_granted": {
+                  "object": "Credit"
+               },
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 74.99,
+                        "currency": "USD"
+                     }
+                  ],
+                  "total_count": 1
+               }
+            },
+            "quantity": 1,
+            "created": "2019-04-30T11:06:22-07:00",
+            "starts": "2019-04-30T00:00:00-07:00",
+            "replaces": {
+               "object": "SubscriptionItem",
+               "id": "Item_UvUwWu1ebqXc6YiU_1",
+               "vid": "d3d2d22c4a704c9826cee8aa786d1a88f06563f6"
+            }
+         }
+      ],
+      "total_count": 1
+   },
+   "billing_day": 30,
+   "minimum_commitment": 0,
+   "notify_on_transition": false,
+   "most_recent_billing": {
+      "object": "Transaction",
+      "id": "LM00045432",
+      "vid": "9c63a51dc5d5976e1cf30eab523195a8fc0947bb",
+      "created": "2019-04-30T11:06:23-07:00",
+      "amount": 66.49,
+      "currency": "USD",
+      "account": {
+         "object": "Account",
+         "id": "UvUwWu1ebqXc6YiU",
+         "vid": "4ece3b149d5284e98d5ac243ac7127743f0b5a9b",
+         "created": "2019-04-30T11:02:40-07:00",
+         "default_currency": "USD",
+         "email": "foo@foo.com",
+         "email_type": "html",
+         "language": "EN",
+         "name": "Edward Yesterday",
+         "shipping_address": {
+            "object": "Address",
+            "vid": "9023c6ffbab932e40299080d17d5e25141511c80",
+            "name": "Edward Yesterday",
+            "line1": "14190 Kenwood Road",
+            "city": "New York",
+            "district": "NY",
+            "postal_code": "10278",
+            "country": "US"
+         },
+         "payment_methods": {
+            "object": "List",
+            "data": [
+               {
+                  "object": "PaymentMethod",
+                  "id": "CC_UvUwWu1ebqXc6YiU",
+                  "vid": "1e0052aa1a38dc3a62032ce4afdd614ce42d7e9f",
+                  "created": "2019-04-30T11:02:41-07:00",
+                  "type": "CreditCard",
+                  "credit_card": {
+                     "object": "CreditCard",
+                     "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+                     "account": "411390XXXXXX0007",
+                     "bin": "411390",
+                     "last_digits": "0007",
+                     "account_length": 16,
+                     "expiration_date": "202003",
+                     "last_au_request_date": null,
+                     "last_update_date": null
+                  },
+                  "account_holder": "Edward Yesterday",
+                  "billing_address": {
+                     "object": "Address",
+                     "vid": "9e96038c87f7d62cf3acc815ce13864fe683fcc4",
+                     "name": "Edward Yesterday",
+                     "line1": "14190 Kenwood Road",
+                     "city": "New York",
+                     "district": "NY",
+                     "postal_code": "10278",
+                     "country": "US"
+                  },
+                  "customer_description": "Credit Card",
+                  "primary": true,
+                  "active": true
+               }
+            ],
+            "total_count": 1
+         }
+      },
+      "source_payment_method": {
+         "object": "PaymentMethod",
+         "id": "CC_UvUwWu1ebqXc6YiU",
+         "vid": "1e0052aa1a38dc3a62032ce4afdd614ce42d7e9f",
+         "created": "2019-04-30T11:02:41-07:00",
+         "type": "CreditCard",
+         "credit_card": {
+            "object": "CreditCard",
+            "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+            "account": "411390XXXXXX0007",
+            "bin": "411390",
+            "last_digits": "0007",
+            "account_length": 16,
+            "expiration_date": "202003",
+            "last_au_request_date": null,
+            "last_update_date": null
+         },
+         "account_holder": "Edward Yesterday",
+         "billing_address": {
+            "object": "Address",
+            "vid": "9e96038c87f7d62cf3acc815ce13864fe683fcc4",
+            "name": "Edward Yesterday",
+            "line1": "14190 Kenwood Road",
+            "city": "New York",
+            "district": "NY",
+            "postal_code": "10278",
+            "country": "US"
+         },
+         "customer_description": "Credit Card",
+         "primary": true,
+         "active": true
+      },
+      "status_log": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionStatus",
+               "status": "Authorized",
+               "created": "2019-04-30T11:06:24-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard",
+                  "auth_code": "T00"
+               },
+               "note": "T00 - NA"
+            },
+            {
+               "object": "TransactionStatus",
+               "status": "New",
+               "created": "2019-04-30T11:06:23-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard",
+                  "auth_code": "T00"
+               }
+            }
+         ],
+         "total_count": 2
+      },
+      "payment_processor": "Test",
+      "payment_processor_transaction_id": "LM00045432",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "9023c6ffbab932e40299080d17d5e25141511c80",
+         "name": "Edward Yesterday",
+         "line1": "14190 Kenwood Road",
+         "city": "New York",
+         "district": "NY",
+         "postal_code": "10278",
+         "country": "US"
+      },
+      "metadata": {
+         "vin:type": "modify",
+         "vin:RetryNumber": "0",
+         "vin:TaxError_1": "Item #0 Avalara TaxCode changed.  We sent (Annual Subscription) verbatim and Avalara changed it to (P0000000).\n\tsku (ANNUAL)",
+         "vin:BillingCycle": "1",
+         "vin:TaxError_2": "Item #1 Avalara TaxCode changed.  We sent (Annual Subscription) verbatim and Avalara changed it to (P0000000).\n\tsku (Generic_Annual)"
+      },
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "ANNUAL",
+               "index_number": 1,
+               "item_type": "Purchase",
+               "name": "Annual Subscription",
+               "quantity": 1,
+               "tax_classification": "Annual Subscription",
+               "service_period_starts": "2019-04-30T00:00:00-07:00",
+               "service_period_ends": "2020-04-29T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Generic_Annual",
+               "index_number": 2,
+               "item_type": "Purchase",
+               "name": "Generic Brand",
+               "subscription_item": {
+                  "object": "SubscriptionItem",
+                  "id": "Item_2l9NRUXlxHJqhkmQ",
+                  "vid": "2803c3d1d9f70890f14d9ffc9aa11f7fb55f21f3"
+               },
+               "price": 74.99,
+               "quantity": 1,
+               "tax_classification": "Annual Subscription",
+               "campaign_id": "AIP_Coupon_10",
+               "campaign_description": "10 Percent Discount for 1 Year",
+               "service_period_starts": "2019-04-30T00:00:00-07:00",
+               "service_period_ends": "2020-04-29T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "tax": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "CITY_51000",
+                        "name": "NEW YORK CITY CITY SALES TAX",
+                        "amount": 3.04,
+                        "external_tax_name": "NY CITY TAX",
+                        "external_jurisdiction_name": "NEW YORK CITY",
+                        "tax_rate": 0.045
+                     },
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "SPECIAL_359071",
+                        "name": "METROPOLITAN COMMUTER TRANSPORTATION DISTRICT SPECIAL SALES TAX",
+                        "amount": 0.25,
+                        "external_tax_name": "NY SPECIAL TAX",
+                        "external_jurisdiction_name": "METROPOLITAN COMMUTER TRANSPORTATION DISTRICT",
+                        "tax_rate": 0.00375
+                     },
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "STATE_36",
+                        "name": "NEW YORK STATE SALES TAX",
+                        "amount": 2.7,
+                        "external_tax_name": "NY STATE TAX",
+                        "external_jurisdiction_name": "NEW YORK",
+                        "tax_rate": 0.04
+                     }
+                  ],
+                  "total_count": 3
+               },
+               "discount": -7.5,
+               "subtotal": 74.99,
+               "total": 73.48
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Generic",
+               "index_number": 4,
+               "item_type": "TaxableCredit",
+               "name": "Credit for merchantProductId Generic",
+               "subscription_item": {
+                  "object": "SubscriptionItem",
+                  "id": "Item_UvUwWu1ebqXc6YiU_1",
+                  "vid": "d3d2d22c4a704c9826cee8aa786d1a88f06563f6"
+               },
+               "price": -6.99,
+               "quantity": 1,
+               "tax_classification": "DV017194",
+               "service_period_starts": "2019-04-30T00:00:00-07:00",
+               "service_period_ends": "2019-05-29T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "related_transactions": [
+                  "LM00045431"
+               ],
+               "subtotal": -6.99,
+               "total": -6.99
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Total Tax",
+               "index_number": 5,
+               "item_type": "Purchase",
+               "name": "Total Tax",
+               "price": 0,
+               "quantity": 1,
+               "tax_classification": "TaxExempt",
+               "tax_type": "Exclusive Sales",
+               "tax": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "CITY_51000",
+                        "name": "NEW YORK CITY CITY SALES TAX",
+                        "amount": 3.04
+                     },
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "SPECIAL_359071",
+                        "name": "METROPOLITAN COMMUTER TRANSPORTATION DISTRICT SPECIAL SALES TAX",
+                        "amount": 0.25
+                     },
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "STATE_36",
+                        "name": "NEW YORK STATE SALES TAX",
+                        "amount": 2.7
+                     }
+                  ],
+                  "total_count": 3
+               },
+               "discount": 0,
+               "subtotal": 0,
+               "total": 5.99
+            }
+         ],
+         "total_count": 4
+      },
+      "billing_descriptor": "Annual Subscription",
+      "sales_tax_address": {
+         "object": "Address",
+         "vid": "5e04a9d1c4b697927777f5984ce6448b0376d4ad",
+         "name": "Edward Yesterday",
+         "line1": "14190 Kenwood Road",
+         "city": "NEW YORK",
+         "district": "NY",
+         "postal_code": "10278",
+         "country": "US"
+      },
+      "subscription_sequence": 2,
+      "billing_plan_sequence": 1,
+      "billing_attempt": 0,
+      "subscription": {
+         "object": "Subscription",
+         "id": "Subscription_UvUwWu1ebqXc6YiU",
+         "vid": "b67b72261eca9f043af5d390012444b9306a93cb"
+      },
+      "cvn_checked": false
+   },
+   "next_billing": {
+      "object": "Transaction",
+      "created": "2020-04-30T00:00:00-07:00",
+      "amount": 74.99,
+      "currency": "USD",
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "Generic_Annual",
+               "item_type": "Purchase",
+               "name": "Generic Brand",
+               "price": 74.99,
+               "quantity": 1,
+               "tax_classification": "Annual Subscription",
+               "tax_type": "Exclusive Sales",
+               "subtotal": 74.99,
+               "total": 74.99
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "balance": 0
+}
