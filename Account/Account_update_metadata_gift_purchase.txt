@@ -1,0 +1,70 @@
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/accounts/Account_LsFU1VUOori9
+
+JSON Request 
+
+{
+  "id": "Account_LsFU1VUOori9",
+  "metadata": {
+    "coupon_code": "AIP10-YMHYVYR6RX9MR39B",
+    "transaction_id": "GIFT00800848",
+    "gift_recipient_email": "samwise@gangee.com"
+  }
+}
+
+JSON Response:
+
+{
+   "object": "Account",
+   "id": "Account_LsFU1VUOori9",
+   "vid": "f67d989ad01adf389ed8068317dde56a6b9629aa",
+   "created": "2019-04-30T14:31:33-07:00",
+   "default_currency": "USD",
+   "email": "foo@foo.com",
+   "email_type": "html",
+   "language": "EN",
+   "name": "Rhonda Killarney",
+   "shipping_address": {
+      "object": "Address",
+      "vid": "8ee17aefaf83ef6ae4bc4239e2f4b51dae23ffd3",
+      "name": "Rhonda Killarney",
+      "line1": "12255 Devonshire Drive",
+      "city": "Austin",
+      "district": "TX",
+      "postal_code": "78703",
+      "country": "US"
+   },
+   "payment_methods": {
+      "object": "List",
+      "data": [
+         {
+            "object": "PaymentMethod",
+            "id": "cc_6cfc34dc-db44",
+            "vid": "f01911dd3cec27bc9c76f2824adb3e4db3036ed0",
+            "created": "2019-04-30T14:31:12-07:00",
+            "type": "CreditCard",
+            "credit_card": {
+               "object": "CreditCard",
+               "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+               "account": "411111XXXXXX1111",
+               "bin": "411111",
+               "last_digits": "1111",
+               "account_length": 16,
+               "expiration_date": "202306",
+               "last_au_request_date": null,
+               "last_update_date": null
+            },
+            "account_holder": "John John ",
+            "primary": true,
+            "active": true
+         }
+      ],
+      "total_count": 1
+   },
+   "metadata": {
+      "transaction_id": "GIFT00800848",
+      "coupon_code": "AIP10-YMHYVYR6RX9MR39B",
+      "gift_recipient_email": "samwise@gangee.com"
+   }
+}
