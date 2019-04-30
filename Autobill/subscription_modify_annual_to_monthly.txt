@@ -1,0 +1,350 @@
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/subscriptions/Subscription_T46jVnDUFSPiNZrx?effective_date=nextBill
+
+JSON Request 
+
+{
+  "billing_plan": {
+    "object": "BillingPlan",
+    "id": "MONTHLY"
+  },
+  "object": "Subscription",
+  "id": "Subscription_T46jVnDUFSPiNZrx",
+  "items": [
+    {
+      "product": {
+        "object": "Product",
+        "id": "Generic"
+      },
+      "object": "SubscriptionItem",
+      "replaces": {
+        "product": {
+          "object": "Product",
+          "id": "Generic_Annual"
+        },
+        "object": "SubscriptionItem"
+      },
+      "id": "Item_qMm3neiQlWWbuR8A"
+    }
+  ]
+}
+
+JSON Response:
+
+{
+   "object": "Subscription",
+   "id": "Subscription_T46jVnDUFSPiNZrx",
+   "vid": "da7116872fac5a14d3f27608ed315c1fb8c49dc7",
+   "created": "2019-04-30T11:33:03-07:00",
+   "account": {
+      "object": "Account",
+      "id": "T46jVnDUFSPiNZrx",
+      "vid": "11f260d8c981cfeeb59948851c4b451caab579e1",
+      "created": "2019-04-30T11:33:02-07:00",
+      "default_currency": "USD",
+      "email": "foo@foo.com",
+      "email_type": "html",
+      "language": "EN",
+      "name": "Kirsten Longhorn",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "631e41b389295d07c8b124a02ab02f4dc2099601",
+         "name": "Kirsten Longhorn",
+         "line1": "1195 Lake Shore Drive",
+         "city": "Grayslake",
+         "district": "IL",
+         "postal_code": "60030",
+         "country": "US"
+      },
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "CC_T46jVnDUFSPiNZrx",
+               "vid": "4002d787c701ea175d4eb3e93a362ee5fcdf4b77",
+               "created": "2019-04-30T11:33:04-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+                  "account": "411390XXXXXX0007",
+                  "bin": "411390",
+                  "last_digits": "0007",
+                  "account_length": 16,
+                  "expiration_date": "202003",
+                  "last_au_request_date": null,
+                  "last_update_date": null
+               },
+               "account_holder": "Kirsten Longhorn",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "a0e767151a800791877ca17b463fc8536ac40798",
+                  "name": "Kirsten Longhorn",
+                  "line1": "1195 Lake Shore Drive",
+                  "city": "Grayslake",
+                  "district": "IL",
+                  "postal_code": "60030",
+                  "country": "US"
+               },
+               "customer_description": "Credit Card",
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "billing_plan": {
+      "object": "BillingPlan",
+      "id": "MONTHLY",
+      "vid": "dd8b2837339fa7f1e80a6ad237eb27491fbaa324",
+      "created": "2018-03-28T11:27:09-07:00",
+      "description": "Monthly Subscription",
+      "status": "Active",
+      "periods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "BillingPlanPeriod",
+               "type": "Month",
+               "quantity": 1,
+               "cycles": 0,
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "CAD"
+                     },
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "INR"
+                     },
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "GBP"
+                     },
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "USD"
+                     }
+                  ],
+                  "total_count": 4
+               },
+               "do_not_notify_first_bill": false
+            }
+         ],
+         "total_count": 1
+      },
+      "skip_initial_billing_notification": false,
+      "metadata": {
+         "export": "1",
+         "Export": "1"
+      },
+      "billing_descriptor": "Monthly Billing Plan",
+      "used_on_subscriptions": true
+   },
+   "payment_method": {
+      "object": "PaymentMethod",
+      "id": "CC_T46jVnDUFSPiNZrx",
+      "vid": "4002d787c701ea175d4eb3e93a362ee5fcdf4b77",
+      "created": "2019-04-30T11:33:04-07:00",
+      "type": "CreditCard",
+      "credit_card": {
+         "object": "CreditCard",
+         "vid": "25ae8bdc4b930e2ea7729194f6c646f6aa2c380f",
+         "account": "411390XXXXXX0007",
+         "bin": "411390",
+         "last_digits": "0007",
+         "account_length": 16,
+         "expiration_date": "202003",
+         "last_au_request_date": null,
+         "last_update_date": null
+      },
+      "account_holder": "Kirsten Longhorn",
+      "billing_address": {
+         "object": "Address",
+         "vid": "a0e767151a800791877ca17b463fc8536ac40798",
+         "name": "Kirsten Longhorn",
+         "line1": "1195 Lake Shore Drive",
+         "city": "Grayslake",
+         "district": "IL",
+         "postal_code": "60030",
+         "country": "US"
+      },
+      "customer_description": "Credit Card",
+      "primary": true,
+      "active": true
+   },
+   "currency": "USD",
+   "description": "Subscription_T46jVnDUFSPiNZrx",
+   "status": "Active",
+   "billing_state": "Good Standing",
+   "starts": "2019-04-30T11:33:03-07:00",
+   "ends": "2020-05-07T00:00:00-07:00",
+   "entitled_through": "2020-05-07T00:00:00-07:00",
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "SubscriptionItem",
+            "id": "Item_T46jVnDUFSPiNZrx_1",
+            "vid": "30f454c56fd9629891c6f4cb8030b413b40c955e",
+            "index": 0,
+            "product": {
+               "object": "Product",
+               "id": "Generic_Annual",
+               "vid": "fa13402ad24d97f9b6a2fb2851291a9064ae287c",
+               "created": "2019-04-30T08:26:43-07:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "Generic Brand"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "status": "Active",
+               "tax_classification": "Annual Subscription",
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "GOLD",
+                        "description": "GOLD PACKAGE"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "billing_descriptor": "Annual Subscription",
+               "credit_granted": {
+                  "object": "Credit"
+               },
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 74.99,
+                        "currency": "USD"
+                     }
+                  ],
+                  "total_count": 1
+               }
+            },
+            "quantity": 1,
+            "created": "2019-04-30T11:33:03-07:00",
+            "ends": "2020-04-30T00:00:00-07:00",
+            "starts": "2019-04-30T00:00:00-07:00",
+            "replaced_by": {
+               "object": "SubscriptionItem",
+               "id": "Item_qMm3neiQlWWbuR8A",
+               "vid": "28bf8637a621e9fb57e2bf609e759749ac840e3c"
+            }
+         },
+         {
+            "object": "SubscriptionItem",
+            "id": "Item_qMm3neiQlWWbuR8A",
+            "vid": "28bf8637a621e9fb57e2bf609e759749ac840e3c",
+            "index": 1,
+            "product": {
+               "object": "Product",
+               "id": "Generic",
+               "vid": "0cad5d09827d21c6466e9dd371248e960ac78a58",
+               "created": "2019-04-01T09:59:15-07:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "Generic Subscription"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "status": "Active",
+               "tax_classification": "DV017194",
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "GOLD",
+                        "description": "GOLD PACKAGE"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "billing_descriptor": "Generic",
+               "credit_granted": {
+                  "object": "Credit"
+               },
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 6.99,
+                        "currency": "USD"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 49,
+                        "currency": "INR"
+                     }
+                  ],
+                  "total_count": 2
+               }
+            },
+            "quantity": 1,
+            "created": "2019-04-30T11:37:32-07:00",
+            "starts": "2020-04-30T00:00:00-07:00",
+            "replaces": {
+               "object": "SubscriptionItem",
+               "id": "Item_T46jVnDUFSPiNZrx_1",
+               "vid": "30f454c56fd9629891c6f4cb8030b413b40c955e"
+            }
+         }
+      ],
+      "total_count": 2
+   },
+   "billing_day": 30,
+   "minimum_commitment": 0,
+   "notify_on_transition": false,
+   "next_billing": {
+      "object": "Transaction",
+      "created": "2020-04-30T00:00:00-07:00",
+      "amount": 6.99,
+      "currency": "USD",
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "Generic",
+               "item_type": "Purchase",
+               "name": "Generic Subscription",
+               "price": 6.99,
+               "quantity": 1,
+               "tax_classification": "DV017194",
+               "tax_type": "Exclusive Sales",
+               "subtotal": 6.99,
+               "total": 6.99
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "balance": 0
+}
