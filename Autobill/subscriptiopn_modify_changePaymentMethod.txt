@@ -305,7 +305,7 @@ JSON Response:
                "vid": "505142b5afba81123ed5fb7701bea61b4bcafbf8",
                "currency": "USD",
                "amount": 2,
-               "description": "Good will Subscription credit",
+               "description": "Subscription credit",
                "reason": "Customer had a bad experience",
                "granted_by_cashbox": false,
                "granted": "2019-04-29T12:07:37-07:00",
