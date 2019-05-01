@@ -1,0 +1,438 @@
+REST Method:  GET
+
+Endpoint :  https://api.prodtest.vindicia.com/subscriptions?dryrun=0
+
+JSON Request 
+
+{
+  "billing_plan": {
+    "id": "ANNUAL"
+  },
+  "account": {
+    "email_type": "html",
+    "language": "EN",
+    "id": "Account_GJgSbMcNWGy2fAaO",
+    "shipping_address": {
+      "city": "Dallas",
+      "name": "James Deano",
+      "district": "TX",
+      "country": "US",
+      "line1": "2551 Main Street",
+      "postal_code": "75243"
+    },
+    "default_currency": "USD",
+    "email": "foo@foo.com",
+    "name": "James Deano"
+  },
+  "description": "Subs_GJgSbMcNWGy2fAaO",
+  "policy": {
+    "ignore_avs_policy": 1,
+    "validate_for_future_payment": 0,
+    "ignore_cvn_policy": 1,
+    "immediate_auth_failure_policy": "doNotSaveAutoBill",
+    "min_chargeback_probability": 99
+  },
+  "currency": "USD",
+  "payment_method": {
+    "vid": "44655ca5ce14d1b42d5a8379af53b246a1c9b3b3"
+  },
+  "items": [
+    {
+      "product": {
+        "id": "Generic_Annual"
+      },
+      "id": "Item_GJgSbMcNWGy2fAaO_1",
+      "campaign_code": "GIFTYEAR-G5GMSVKVDTUM46UV"
+    }
+  ],
+  "object": "Subscription",
+  "id": "Subscription_GJgSbMcNWGy2fAaO",
+  "minimum_commitment": 0
+}
+
+JSON Response:
+
+{
+   "object": "Subscription",
+   "id": "Subscription_GJgSbMcNWGy2fAaO",
+   "vid": "d9d711a16ded9198c39d94ced65841d333728de8",
+   "created": "2019-05-01T11:16:42-07:00",
+   "account": {
+      "object": "Account",
+      "id": "Account_GJgSbMcNWGy2fAaO",
+      "vid": "34cf1eb50d79953b38d191764aefad09c3c5e89a",
+      "created": "2019-05-01T11:16:42-07:00",
+      "default_currency": "USD",
+      "email": "foo@foo.com",
+      "email_type": "html",
+      "language": "EN",
+      "name": "James Deano",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "ee107a67645dd0f3be92cce17c34f7567dc5a25d",
+         "name": "James Deano",
+         "line1": "2551 Main Street",
+         "city": "Dallas",
+         "district": "TX",
+         "postal_code": "75243",
+         "country": "US"
+      },
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "cc_e68e6ec4-be01",
+               "vid": "44655ca5ce14d1b42d5a8379af53b246a1c9b3b3",
+               "created": "2019-05-01T11:14:48-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                  "account": "411111XXXXXX1111",
+                  "bin": "411111",
+                  "last_digits": "1111",
+                  "account_length": 16,
+                  "expiration_date": "202105",
+                  "last_au_request_date": null,
+                  "last_update_date": null
+               },
+               "account_holder": "James Deano",
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "billing_plan": {
+      "object": "BillingPlan",
+      "id": "ANNUAL",
+      "vid": "928d4931da2c9c6ce00d3f2b490e85c2610397e6",
+      "created": "2018-09-24T12:01:32-07:00",
+      "description": "Annual Subscription",
+      "status": "Active",
+      "periods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "BillingPlanPeriod",
+               "type": "Year",
+               "quantity": 1,
+               "cycles": 0,
+               "do_not_notify_first_bill": false
+            }
+         ],
+         "total_count": 1
+      },
+      "skip_initial_billing_notification": false,
+      "billing_descriptor": "Annual Subscription",
+      "used_on_subscriptions": true
+   },
+   "payment_method": {
+      "object": "PaymentMethod",
+      "id": "cc_e68e6ec4-be01",
+      "vid": "44655ca5ce14d1b42d5a8379af53b246a1c9b3b3",
+      "created": "2019-05-01T11:14:48-07:00",
+      "type": "CreditCard",
+      "credit_card": {
+         "object": "CreditCard",
+         "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+         "account": "411111XXXXXX1111",
+         "bin": "411111",
+         "last_digits": "1111",
+         "account_length": 16,
+         "expiration_date": "202105",
+         "last_au_request_date": null,
+         "last_update_date": null
+      },
+      "account_holder": "James Deano",
+      "primary": true,
+      "active": true
+   },
+   "currency": "USD",
+   "description": "Subs_GJgSbMcNWGy2fAaO",
+   "status": "Active",
+   "billing_state": "Good Standing",
+   "starts": "2019-05-01T11:16:42-07:00",
+   "ends": "2020-05-08T00:00:00-07:00",
+   "entitled_through": "2020-05-08T00:00:00-07:00",
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "SubscriptionItem",
+            "id": "Item_GJgSbMcNWGy2fAaO_1",
+            "vid": "af144aa04e315a85097c97878bb9cce5be2052d0",
+            "index": 0,
+            "product": {
+               "object": "Product",
+               "id": "Generic_Annual",
+               "vid": "fa13402ad24d97f9b6a2fb2851291a9064ae287c",
+               "created": "2019-04-30T08:26:43-07:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "Generic Brand"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "status": "Active",
+               "tax_classification": "DV017194",
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "GOLD",
+                        "description": "GOLD PACKAGE"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "billing_descriptor": "Annual Subscription",
+               "credit_granted": {
+                  "object": "Credit"
+               },
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 74.99,
+                        "currency": "USD"
+                     }
+                  ],
+                  "total_count": 1
+               }
+            },
+            "quantity": 1,
+            "created": "2019-05-01T11:16:42-07:00",
+            "starts": "2019-05-01T00:00:00-07:00",
+            "campaign_id": "ANNUAL_GIFT_COUPON"
+         }
+      ],
+      "total_count": 1
+   },
+   "billing_day": 1,
+   "minimum_commitment": 0,
+   "notify_on_transition": false,
+   "most_recent_billing": {
+      "object": "Transaction",
+      "id": "LM00045685",
+      "vid": "ab3238a1139536932b868ed5bdb9755b9103f9c3",
+      "created": "2019-05-01T11:16:42-07:00",
+      "amount": 0,
+      "currency": "USD",
+      "account": {
+         "object": "Account",
+         "id": "Account_GJgSbMcNWGy2fAaO",
+         "vid": "34cf1eb50d79953b38d191764aefad09c3c5e89a",
+         "created": "2019-05-01T11:16:42-07:00",
+         "default_currency": "USD",
+         "email": "foo@foo.com",
+         "email_type": "html",
+         "language": "EN",
+         "name": "James Deano",
+         "shipping_address": {
+            "object": "Address",
+            "vid": "ee107a67645dd0f3be92cce17c34f7567dc5a25d",
+            "name": "James Deano",
+            "line1": "2551 Main Street",
+            "city": "Dallas",
+            "district": "TX",
+            "postal_code": "75243",
+            "country": "US"
+         },
+         "payment_methods": {
+            "object": "List",
+            "data": [
+               {
+                  "object": "PaymentMethod",
+                  "id": "cc_e68e6ec4-be01",
+                  "vid": "44655ca5ce14d1b42d5a8379af53b246a1c9b3b3",
+                  "created": "2019-05-01T11:14:48-07:00",
+                  "type": "CreditCard",
+                  "credit_card": {
+                     "object": "CreditCard",
+                     "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                     "account": "411111XXXXXX1111",
+                     "bin": "411111",
+                     "last_digits": "1111",
+                     "account_length": 16,
+                     "expiration_date": "202105",
+                     "last_au_request_date": null,
+                     "last_update_date": null
+                  },
+                  "account_holder": "James Deano",
+                  "primary": true,
+                  "active": true
+               }
+            ],
+            "total_count": 1
+         }
+      },
+      "source_payment_method": {
+         "object": "PaymentMethod",
+         "id": "cc_e68e6ec4-be01",
+         "vid": "44655ca5ce14d1b42d5a8379af53b246a1c9b3b3",
+         "created": "2019-05-01T11:14:48-07:00",
+         "type": "CreditCard",
+         "credit_card": {
+            "object": "CreditCard",
+            "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+            "account": "411111XXXXXX1111",
+            "bin": "411111",
+            "last_digits": "1111",
+            "account_length": 16,
+            "expiration_date": "202105",
+            "last_au_request_date": null,
+            "last_update_date": null
+         },
+         "account_holder": "James Deano",
+         "primary": true,
+         "active": true
+      },
+      "status_log": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionStatus",
+               "status": "Authorized",
+               "created": "2019-05-01T11:16:43-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard",
+                  "auth_code": "VIN_900"
+               },
+               "note": "VIN_900 - N/A"
+            },
+            {
+               "object": "TransactionStatus",
+               "status": "New",
+               "created": "2019-05-01T11:16:42-07:00",
+               "payment_method_type": "CreditCard",
+               "credit_card_status": {
+                  "object": "TransactionStatusCreditCard",
+                  "auth_code": "VIN_900"
+               }
+            }
+         ],
+         "total_count": 2
+      },
+      "payment_processor": "Vindicia",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "ee107a67645dd0f3be92cce17c34f7567dc5a25d",
+         "name": "James Deano",
+         "line1": "2551 Main Street",
+         "city": "Dallas",
+         "district": "TX",
+         "postal_code": "75243",
+         "country": "US"
+      },
+      "metadata": {
+         "vin:payment_processor": "Vindicia"
+      },
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "ANNUAL",
+               "index_number": 1,
+               "item_type": "Purchase",
+               "name": "Annual Subscription",
+               "quantity": 1,
+               "tax_classification": "DV017194",
+               "service_period_starts": "2019-05-01T00:00:00-07:00",
+               "service_period_ends": "2020-04-30T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Generic_Annual",
+               "index_number": 2,
+               "item_type": "Purchase",
+               "name": "Generic Brand",
+               "price": 74.99,
+               "quantity": 1,
+               "tax_classification": "DV017194",
+               "service_period_starts": "2019-05-01T00:00:00-07:00",
+               "service_period_ends": "2020-04-30T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "discount": -74.99,
+               "subtotal": 74.99,
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Total Tax",
+               "index_number": 4,
+               "item_type": "Purchase",
+               "name": "Total Tax",
+               "price": 0,
+               "quantity": 1,
+               "tax_classification": "TaxExempt",
+               "service_period_starts": "2019-05-01T00:00:00-07:00",
+               "service_period_ends": "2020-04-30T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "discount": 0,
+               "subtotal": 0,
+               "total": 0
+            }
+         ],
+         "total_count": 3
+      },
+      "billing_descriptor": "Annual Subscription",
+      "sales_tax_address": {
+         "object": "Address",
+         "vid": "1a9ea4b022901ac6fc14fe3f3ffca488f8d0e8ee",
+         "name": "James Deano",
+         "line1": "2551 Main Street",
+         "city": "DALLAS",
+         "district": "TX",
+         "postal_code": "75243",
+         "country": "US"
+      },
+      "subscription_sequence": 1,
+      "billing_plan_sequence": 1,
+      "original_billing_date": "2019-05-01T00:00:00-07:00",
+      "subscription": {
+         "object": "Subscription",
+         "id": "Subscription_GJgSbMcNWGy2fAaO",
+         "vid": "d9d711a16ded9198c39d94ced65841d333728de8"
+      },
+      "cvn_checked": false
+   },
+   "next_billing": {
+      "object": "Transaction",
+      "created": "2020-05-01T00:00:00-07:00",
+      "amount": 74.99,
+      "currency": "USD",
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "Generic_Annual",
+               "item_type": "Purchase",
+               "name": "Generic Brand",
+               "price": 74.99,
+               "quantity": 1,
+               "tax_classification": "DV017194",
+               "tax_type": "Exclusive Sales",
+               "subtotal": 74.99,
+               "total": 74.99
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "balance": 0
+}
