@@ -1,0 +1,210 @@
+REST Method:  POST
+
+Endpoint :  https://api.prodtest.vindicia.com/transactions
+
+JSON Request 
+
+{
+  "source_payment_method": {
+    "object": "PaymentMethod",
+    "id": "cc_54042c86-0ad0"
+  },
+  "account": {
+    "object": "Account",
+    "id": "Account_q9VpsLoG0bpO"
+  },
+  "to_be_captured": true,
+  "policy": {
+    "send_email_notification": 0,
+    "min_chargeback_probability": 99
+  },
+  "items": [
+    {
+      "sku": "ANNUAL_GIFT",
+      "name": "Gift Subscription Purchase",
+      "price": "74.99",
+      "object": "TransactionItem",
+      "tax_classification": "DV017194",
+      "quantity": 1
+    }
+  ],
+  "object": "Transaction",
+  "source_ip": "63.201.132.182",
+  "id": "GIFT22256255"
+}
+
+JSON Response:
+
+{
+   "object": "Transaction",
+   "id": "GIFT22256255",
+   "vid": "f8961bd68c2a755b8c878e40db0a4f07ee1b22af",
+   "created": "2019-05-01T07:38:29-07:00",
+   "amount": 74.99,
+   "currency": "USD",
+   "account": {
+      "object": "Account",
+      "id": "Account_q9VpsLoG0bpO",
+      "vid": "9fdaf5c0690dbc16b20f743214df0b66c850f5e0",
+      "created": "2019-05-01T06:52:03-07:00",
+      "default_currency": "USD",
+      "email": "foo@foo.com",
+      "email_type": "html",
+      "language": "EN",
+      "name": "Patty Jenkins",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "2c35b92ff6cc454f38e798b8c3b7578def054202",
+         "name": "Patty Jenkins",
+         "line1": "22864 Cherry Hills",
+         "city": "Berkeley",
+         "district": "CA",
+         "postal_code": "94704",
+         "country": "US"
+      },
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "cc_54042c86-0ad0",
+               "vid": "0777210400a06771100c4307aca63125a219e945",
+               "created": "2019-05-01T06:50:56-07:00",
+               "type": "CreditCard",
+               "credit_card": {
+                  "object": "CreditCard",
+                  "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+                  "account": "411111XXXXXX1111",
+                  "bin": "411111",
+                  "last_digits": "1111",
+                  "account_length": 16,
+                  "expiration_date": "202201",
+                  "last_au_request_date": null,
+                  "last_update_date": null
+               },
+               "account_holder": "John John ",
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "source_payment_method": {
+      "object": "PaymentMethod",
+      "id": "cc_54042c86-0ad0",
+      "vid": "0777210400a06771100c4307aca63125a219e945",
+      "created": "2019-05-01T06:50:56-07:00",
+      "type": "CreditCard",
+      "credit_card": {
+         "object": "CreditCard",
+         "vid": "dc9b99622d3b58288bfbb24e5addd95f70c0aaa8",
+         "account": "411111XXXXXX1111",
+         "bin": "411111",
+         "last_digits": "1111",
+         "account_length": 16,
+         "expiration_date": "202201",
+         "last_au_request_date": null,
+         "last_update_date": null
+      },
+      "account_holder": "John John ",
+      "primary": true,
+      "active": true
+   },
+   "status_log": {
+      "object": "List",
+      "data": [
+         {
+            "object": "TransactionStatus",
+            "status": "Authorized",
+            "created": "2019-05-01T07:38:30-07:00",
+            "payment_method_type": "CreditCard",
+            "credit_card_status": {
+               "object": "TransactionStatusCreditCard",
+               "auth_code": "T00"
+            },
+            "note": "T00 - NA"
+         },
+         {
+            "object": "TransactionStatus",
+            "status": "New",
+            "created": "2019-05-01T07:38:29-07:00",
+            "payment_method_type": "CreditCard",
+            "credit_card_status": {
+               "object": "TransactionStatusCreditCard",
+               "auth_code": "T00"
+            }
+         }
+      ],
+      "total_count": 2
+   },
+   "payment_processor": "Test",
+   "payment_processor_transaction_id": "GIFT22256255",
+   "shipping_address": {
+      "object": "Address",
+      "vid": "2c35b92ff6cc454f38e798b8c3b7578def054202",
+      "name": "Patty Jenkins",
+      "line1": "22864 Cherry Hills",
+      "city": "Berkeley",
+      "district": "CA",
+      "postal_code": "94704",
+      "country": "US"
+   },
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "TransactionItem",
+            "sku": "ANNUAL_GIFT",
+            "index_number": 1,
+            "item_type": "Purchase",
+            "name": "Gift Subscription Purchase",
+            "price": 74.99,
+            "quantity": 1,
+            "tax_classification": "DV017194",
+            "tax_type": "Exclusive Sales",
+            "subtotal": 74.99,
+            "total": 74.99
+         },
+         {
+            "object": "TransactionItem",
+            "sku": "Total Tax",
+            "index_number": 2,
+            "item_type": "Purchase",
+            "name": "Total Tax",
+            "price": 0,
+            "quantity": 1,
+            "tax_classification": "TaxExempt",
+            "tax_type": "Exclusive Sales",
+            "discount": 0,
+            "subtotal": 0,
+            "total": 0
+         }
+      ],
+      "total_count": 2
+   },
+   "source_ip": "63.201.132.182",
+   "sales_tax_address": {
+      "object": "Address",
+      "vid": "6729508e44dd884f4250d11da4445288acb641c0",
+      "name": "Patty Jenkins",
+      "line1": "22864 Cherry Hills",
+      "city": "BERKELEY",
+      "district": "CA",
+      "postal_code": "94704",
+      "country": "US"
+   },
+   "score": -1,
+   "score_codes": {
+      "object": "List",
+      "data": [
+         {
+            "object": "ScoreCode",
+            "id": "-1",
+            "description": "<calculated>: (2019-05-01 14:38:29)"
+         }
+      ],
+      "total_count": 1
+   },
+   "cvn_checked": false
+}
