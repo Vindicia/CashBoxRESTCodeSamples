@@ -1,4 +1,3 @@
-SOAP call : Autobill.update	
 
 REST Method:  POST	
 
