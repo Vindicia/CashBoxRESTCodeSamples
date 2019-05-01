@@ -3,7 +3,7 @@ SOAP call : Autobill.update
 REST Method:  POST
 
 
-Endpoint:https://api.prodtest.vindicia.com/subscriptions?dry_run=0
+Endpoint:https://api.prodtest.vindicia.com/subscriptions?dryrun=0
 
 Get the "vid" of payment method from PMT response and use it as payment method to create a AB.
 
