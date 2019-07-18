@@ -194,7 +194,7 @@ amount = 2001 # Brain Tree - Soft Failure
 
 jsonObj = {
 
-    "id": "Subscription_" + guid,
+    "id": subscription_id,
     
     "account": {
        "id": account_id,
