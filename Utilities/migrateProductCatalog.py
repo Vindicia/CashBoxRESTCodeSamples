@@ -668,8 +668,8 @@ def scan_for_tokens(source, sourceURL):
 #############################################################################################################
 
 # Set the source and destination credentials 
-sourceLogin = "silverhammer_soap_soap:s2g20eWya8qc6i36GSf3WjK9oZCTYUoL"
-destinationLogin = "pcmig_soap:BJD0SyPq16CQ8w3bj7ufpp96RGGbjt3N"
+sourceLogin = "<source environment credentials>"
+destinationLogin = "<destination environment credentials>"
 
 # Encode with base64 for REST 
 source = base64.b64encode(b'' + sourceLogin)
