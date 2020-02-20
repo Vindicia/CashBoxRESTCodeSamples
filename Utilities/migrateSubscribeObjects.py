@@ -1,9 +1,10 @@
 #############################################################################################################
-##  VINDICIA SUBSCRIBE PRODUCT CATALOG MIGRATION UTILITY                                                   ##
+##  VINDICIA SUBSCRIBE OBJECT MIGRATION UTILITY                                                            ##
 ##   AUTHOR: Liam Maxwell                                                                                  ##
 ##     DATE: 02/12/2020                                                                                    ##
 ##  VERSION: 1.0                                                                                           ##
-##  PURPOSE: To migrate Season Sets, Rate Plans, Billing Plans, Products and Canpaigns from a source       ##
+##  PURPOSE: To migrate Subscribe objects from one environment to another.  Currently used for Product     ##
+##  Catalog Migration move Season Sets, Rate Plans, Billing Plans, Products and Canpaigns from a source    ##
 ##  to a destination.  Only tokens are not supported and have to be created manually first.                ##
 ##                                                                                                         ##
 ##  Utility settings are located at the bottom of this program                                             ##
@@ -147,7 +148,7 @@ def migrate_objects(objType, source, destination, sourceURL, destinationURL):
             while objectCounter <= totalNumberOfObjectsFetched:
                 objectId = event['data'][x]['id']
 
-                # Need to manage Campaigns differently because statis is "state"
+                # Need to manage Campaigns differently because status is "state"
                 # Need to manage Rate Plans and Season Sets differently because there is not a status 
                 if objType == "campaigns": 
                     objectStatus = event['data'][x]['state']
@@ -298,8 +299,8 @@ def scan_for_tokens(source, sourceURL):
 #############################################################################################################
 
 # Set the source and destination credentials 
-sourceLogin = "silverhammer_soap_soap:s2g20eWya8qc6i36GSf3WjK9oZCTYUoL"
-destinationLogin = "pcmig2_soap:E598PfyMnw26Rx09MBCYv7mtagzfsIZR"
+sourceLogin = "<username>:<password>"
+destinationLogin = "<username>:<password>"
 
 # Encode with base64 for REST 
 source = base64.b64encode(b'' + sourceLogin)
