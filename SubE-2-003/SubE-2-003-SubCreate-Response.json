@@ -1,0 +1,488 @@
+{
+   "object": "Subscription",
+   "id": "Subscription_1582577664",
+   "vid": "fba769aa19760dca71cbc5a0bbc8949af77709af",
+   "created": "2020-02-24T12:54:23-08:00",
+   "account": {
+      "object": "Account",
+      "id": "Account_1582577664",
+      "vid": "61b38569966b1e730446ae6a9bd00e5f21c2d5e6",
+      "created": "2020-02-24T12:54:23-08:00",
+      "default_currency": "USD",
+      "email": "lmaxwell@vindicia.com",
+      "email_type": "html",
+      "language": "EN",
+      "name": "Eloise Kuhic",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "f1eb75c82ef828fbd06d6ec34512d0d37954f72f",
+         "line1": "18649 High Street",
+         "city": "Pleasant Prairie",
+         "district": "WI",
+         "postal_code": "53158",
+         "country": "US"
+      },
+      "payment_methods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "PaymentMethod",
+               "id": "PP_1582577664",
+               "vid": "38ff0947223e9f4c31bbeb839a57b90c73053d3e",
+               "created": "2020-02-24T12:54:24-08:00",
+               "type": "PayPal",
+               "paypal": {
+                  "object": "PayPal",
+                  "paypal_email": null,
+                  "payer_id": null,
+                  "return_url": "http://www.google.com",
+                  "cancel_url": "http://www.google.com",
+                  "request_reference_id": true,
+                  "reference_id": null
+               },
+               "account_holder": "John Doe",
+               "billing_address": {
+                  "object": "Address",
+                  "vid": "29991aef5556b8f7761c68986e25b2768f676f7f",
+                  "postal_code": "53158",
+                  "country": "US"
+               },
+               "primary": true,
+               "active": true
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "billing_plan": {
+      "object": "BillingPlan",
+      "id": "MONTHLY",
+      "vid": "05094f9975a41183cd3686e10c5d7c052d12e08d",
+      "created": "2019-05-22T07:44:35-07:00",
+      "description": "Monthly Subscription",
+      "status": "Active",
+      "periods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "BillingPlanPeriod",
+               "type": "Month",
+               "quantity": 1,
+               "cycles": 0,
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "CAD"
+                     },
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "INR"
+                     },
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "MXN"
+                     },
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "USD"
+                     },
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "EUR"
+                     }
+                  ],
+                  "total_count": 5
+               },
+               "do_not_notify_first_bill": true
+            }
+         ],
+         "total_count": 1
+      },
+      "skip_initial_billing_notification": true,
+      "used_on_subscriptions": true
+   },
+   "payment_method": {
+      "object": "PaymentMethod",
+      "id": "PP_1582577664",
+      "vid": "38ff0947223e9f4c31bbeb839a57b90c73053d3e",
+      "created": "2020-02-24T12:54:24-08:00",
+      "type": "PayPal",
+      "paypal": {
+         "object": "PayPal",
+         "paypal_email": null,
+         "payer_id": null,
+         "return_url": "http://www.google.com",
+         "cancel_url": "http://www.google.com",
+         "request_reference_id": true,
+         "reference_id": null
+      },
+      "account_holder": "John Doe",
+      "billing_address": {
+         "object": "Address",
+         "vid": "29991aef5556b8f7761c68986e25b2768f676f7f",
+         "postal_code": "53158",
+         "country": "US"
+      },
+      "primary": true,
+      "active": true
+   },
+   "currency": "USD",
+   "description": "Subscription_1582577664",
+   "status": "Pending Activation",
+   "billing_state": "Pending Acceptance",
+   "starts": "2020-02-24T12:54:23-08:00",
+   "ends": "2020-03-31T00:00:00-07:00",
+   "entitled_through": "2020-03-31T00:00:00-07:00",
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "SubscriptionItem",
+            "id": "Item_1582577664",
+            "vid": "403624f8de4a8b39e3b6b8415d895f55c8a40163",
+            "index": 0,
+            "product": {
+               "object": "Product",
+               "id": "BOOTCAMP",
+               "vid": "95f8bc8504c8b1a0258c38974671bb8c48190c98",
+               "created": "2019-11-14T13:30:13-08:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "Bootcamp Subscription"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "status": "Active",
+               "tax_classification": "DV017194",
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "basic",
+                        "description": "basic"
+                     },
+                     {
+                        "object": "Entitlement",
+                        "id": "premium",
+                        "description": "premium"
+                     },
+                     {
+                        "object": "Entitlement",
+                        "id": "bootcamp"
+                     }
+                  ],
+                  "total_count": 3
+               },
+               "billing_descriptor": "BOOTCAMP",
+               "credit_granted": {
+                  "object": "Credit"
+               },
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 9.99,
+                        "currency": "USD"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 50,
+                        "currency": "INR"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 10.99,
+                        "currency": "CAD"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 8.99,
+                        "currency": "EUR"
+                     },
+                     {
+                        "object": "ProductPrice",
+                        "amount": 200,
+                        "currency": "MXN"
+                     }
+                  ],
+                  "total_count": 5
+               }
+            },
+            "quantity": 1,
+            "created": "2020-02-24T12:54:23-08:00",
+            "starts": "2020-02-24T00:00:00-08:00"
+         }
+      ],
+      "total_count": 1
+   },
+   "billing_day": 24,
+   "minimum_commitment": 0,
+   "notify_on_transition": false,
+   "most_recent_billing": {
+      "object": "Transaction",
+      "id": "SH00007997",
+      "vid": "8996a09d80be03c9823d15aebc1ad631c3cfd72f",
+      "created": "2020-02-24T12:54:23-08:00",
+      "amount": 10.54,
+      "currency": "USD",
+      "account": {
+         "object": "Account",
+         "id": "Account_1582577664",
+         "vid": "61b38569966b1e730446ae6a9bd00e5f21c2d5e6",
+         "created": "2020-02-24T12:54:23-08:00",
+         "default_currency": "USD",
+         "email": "lmaxwell@vindicia.com",
+         "email_type": "html",
+         "language": "EN",
+         "name": "Eloise Kuhic",
+         "shipping_address": {
+            "object": "Address",
+            "vid": "f1eb75c82ef828fbd06d6ec34512d0d37954f72f",
+            "line1": "18649 High Street",
+            "city": "Pleasant Prairie",
+            "district": "WI",
+            "postal_code": "53158",
+            "country": "US"
+         },
+         "payment_methods": {
+            "object": "List",
+            "data": [
+               {
+                  "object": "PaymentMethod",
+                  "id": "PP_1582577664",
+                  "vid": "38ff0947223e9f4c31bbeb839a57b90c73053d3e",
+                  "created": "2020-02-24T12:54:24-08:00",
+                  "type": "PayPal",
+                  "paypal": {
+                     "object": "PayPal",
+                     "paypal_email": null,
+                     "payer_id": null,
+                     "return_url": "http://www.google.com",
+                     "cancel_url": "http://www.google.com",
+                     "request_reference_id": true,
+                     "reference_id": null
+                  },
+                  "account_holder": "John Doe",
+                  "billing_address": {
+                     "object": "Address",
+                     "vid": "29991aef5556b8f7761c68986e25b2768f676f7f",
+                     "postal_code": "53158",
+                     "country": "US"
+                  },
+                  "primary": true,
+                  "active": true
+               }
+            ],
+            "total_count": 1
+         }
+      },
+      "source_payment_method": {
+         "object": "PaymentMethod",
+         "id": "PP_1582577664",
+         "vid": "38ff0947223e9f4c31bbeb839a57b90c73053d3e",
+         "created": "2020-02-24T12:54:24-08:00",
+         "type": "PayPal",
+         "paypal": {
+            "object": "PayPal",
+            "paypal_email": null,
+            "payer_id": null,
+            "return_url": "http://www.google.com",
+            "cancel_url": "http://www.google.com",
+            "request_reference_id": true,
+            "reference_id": null
+         },
+         "account_holder": "John Doe",
+         "billing_address": {
+            "object": "Address",
+            "vid": "29991aef5556b8f7761c68986e25b2768f676f7f",
+            "postal_code": "53158",
+            "country": "US"
+         },
+         "primary": true,
+         "active": true
+      },
+      "status_log": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionStatus",
+               "status": "AuthorizationPending",
+               "created": "2020-02-24T12:54:29-08:00",
+               "payment_method_type": "PayPal",
+               "paypal_status": {
+                  "object": "TransactionStatusPayPal",
+                  "token": "EC-2RN72384DR576582L",
+                  "auth_code": "000",
+                  "redirect_url": "https://www.sandbox.paypal.com/webscr?cmd=_express-checkout&useraction=commit&token=EC-2RN72384DR576582L"
+               },
+               "note": "000 - NA"
+            },
+            {
+               "object": "TransactionStatus",
+               "status": "New",
+               "created": "2020-02-24T12:54:23-08:00",
+               "payment_method_type": "PayPal",
+               "paypal_status": {
+                  "object": "TransactionStatusPayPal",
+                  "token": "EC-2RN72384DR576582L",
+                  "auth_code": "000",
+                  "redirect_url": "https://www.sandbox.paypal.com/webscr?cmd=_express-checkout&useraction=commit&token=EC-2RN72384DR576582L"
+               }
+            }
+         ],
+         "total_count": 2
+      },
+      "payment_processor": "PayPal",
+      "payment_processor_transaction_id": "SH00007997",
+      "shipping_address": {
+         "object": "Address",
+         "vid": "f1eb75c82ef828fbd06d6ec34512d0d37954f72f",
+         "line1": "18649 High Street",
+         "city": "Pleasant Prairie",
+         "district": "WI",
+         "postal_code": "53158",
+         "country": "US"
+      },
+      "metadata": {
+         "vin:BillingPlanUnit": "month",
+         "vin:BillingPlanLength": "1",
+         "vin:ignoreAvsPolicy": "1",
+         "vin:RetryNumber": "0",
+         "vin:recurring": "1",
+         "vin:ignoreCvnPolicy": "1",
+         "vin:BillingCycle": "0",
+         "vin:FutureAmount": "9.99"
+      },
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "MONTHLY",
+               "index_number": 1,
+               "item_type": "Purchase",
+               "name": "Monthly Subscription",
+               "quantity": 1,
+               "tax_classification": "DV017194",
+               "service_period_starts": "2020-02-24T00:00:00-08:00",
+               "service_period_ends": "2020-03-23T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "BOOTCAMP",
+               "index_number": 2,
+               "item_type": "Purchase",
+               "name": "Bootcamp Subscription",
+               "subscription_item": {
+                  "object": "SubscriptionItem",
+                  "id": "Item_1582577664",
+                  "vid": "403624f8de4a8b39e3b6b8415d895f55c8a40163"
+               },
+               "price": 9.99,
+               "quantity": 1,
+               "tax_classification": "DV017194",
+               "service_period_starts": "2020-02-24T00:00:00-08:00",
+               "service_period_ends": "2020-03-23T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "tax": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "COUNTY_059",
+                        "name": "KENOSHA COUNTY SALES TAX",
+                        "amount": 0.05,
+                        "external_tax_name": "WI COUNTY TAX",
+                        "external_jurisdiction_name": "KENOSHA",
+                        "tax_rate": 0.005
+                     },
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "STATE_55",
+                        "name": "WISCONSIN STATE SALES TAX",
+                        "amount": 0.5,
+                        "external_tax_name": "WI STATE TAX",
+                        "external_jurisdiction_name": "WISCONSIN",
+                        "tax_rate": 0.05
+                     }
+                  ],
+                  "total_count": 2
+               },
+               "subtotal": 9.99,
+               "total": 10.54
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Total Tax",
+               "index_number": 3,
+               "item_type": "Purchase",
+               "name": "Total Tax",
+               "price": 0,
+               "quantity": 1,
+               "tax_classification": "TaxExempt",
+               "service_period_starts": "2020-02-24T00:00:00-08:00",
+               "service_period_ends": "2020-03-23T00:00:00-07:00",
+               "tax_type": "Exclusive Sales",
+               "tax": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "COUNTY_059",
+                        "name": "KENOSHA COUNTY SALES TAX",
+                        "amount": 0.05
+                     },
+                     {
+                        "object": "TaxItem",
+                        "jurisdiction": "STATE_55",
+                        "name": "WISCONSIN STATE SALES TAX",
+                        "amount": 0.5
+                     }
+                  ],
+                  "total_count": 2
+               },
+               "discount": 0,
+               "subtotal": 0,
+               "total": 0.55
+            }
+         ],
+         "total_count": 3
+      },
+      "billing_descriptor": "BOOTCAMP",
+      "sales_tax_address": {
+         "object": "Address",
+         "vid": "12ab83f631530c6b46eb1c0305ed97dee8695560",
+         "line1": "18649 High Street",
+         "city": "PLEASANT PRAIRIE",
+         "district": "WI",
+         "postal_code": "53158",
+         "country": "US"
+      },
+      "subscription_sequence": 1,
+      "billing_plan_sequence": 1,
+      "original_billing_date": "2020-02-24T00:00:00-08:00",
+      "billing_attempt": 0,
+      "subscription": {
+         "object": "Subscription",
+         "id": "Subscription_1582577664",
+         "vid": "fba769aa19760dca71cbc5a0bbc8949af77709af"
+      }
+   },
+   "balance": 0
+}

@@ -1,0 +1,56 @@
+{
+  "billing_plan": {
+    "id": "MONTHLY"
+  },
+  "account": {
+    "email_type": "html",
+    "language": "EN",
+    "id": "Account_1582580229",
+    "shipping_address": {
+      "city": "Pleasant Prairie",
+      "district": "WI",
+      "country": "US",
+      "line1": "18649 High Street",
+      "postal_code": "53158"
+    },
+    "default_currency": "USD",
+    "email": "test@dummy.org",
+    "name": "Juliana Stroman"
+  },
+  "description": "Subscription_1582580229",
+  "policy": {
+    "ignore_avs_policy": 1,
+    "validate_for_future_payment": 0,
+    "ignore_cvn_policy": 1,
+    "immediate_auth_failure_policy": "doNotSaveAutoBill",
+    "min_chargeback_probability": 100
+  },
+  "currency": "USD",
+  "payment_method": {
+    "id": "PP_1582580229",
+    "type": "PayPal",
+    "paypal": {
+      "paypal_email": "sb-kme5j611874@personal.example.com",
+      "return_url": "http://merchant.success.paypal.com",
+      "cancel_url": "http://merchant.error.paypal.com",
+      "request_reference_id": true
+   },
+   "billing_address": {
+      "object": "Address",
+      "postal_code": "53158",
+      "country": "US"
+   },
+   "account_holder": "John Doe"
+  },
+  "items": [
+    {
+      "product": {
+        "id": "BOOTCAMP"
+      },
+      "id": "Item_1582580229",
+      "campaign_code": ""
+    }
+  ],
+  "id": "Subscription_1582580229",
+  "minimum_commitment": 0
+}

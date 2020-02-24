@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "536ff300-0f41-414c-a348-8ffebbda8462",
+		"name": "SubE-2-003",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Subscription PayPal",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"billing_plan\": {\n    \"id\": \"MONTHLY\"\n  },\n  \"account\": {\n    \"email_type\": \"html\",\n    \"language\": \"EN\",\n    \"id\": \"Account_{{$timestamp}}\",\n    \"shipping_address\": {\n      \"city\": \"Pleasant Prairie\",\n      \"district\": \"WI\",\n      \"country\": \"US\",\n      \"line1\": \"18649 High Street\",\n      \"postal_code\": \"53158\"\n    },\n    \"default_currency\": \"USD\",\n    \"email\": \"{{email}}\",\n    \"name\": \"{{$randomFirstName}} {{$randomLastName}}\"\n  },\n  \"description\": \"Subscription_{{$timestamp}}\",\n  \"policy\": {\n    \"ignore_avs_policy\": 1,\n    \"validate_for_future_payment\": 0,\n    \"ignore_cvn_policy\": 1,\n    \"immediate_auth_failure_policy\": \"doNotSaveAutoBill\",\n    \"min_chargeback_probability\": 100\n  },\n  \"currency\": \"USD\",\n  \"payment_method\": {\n    \"id\": \"PP_{{$timestamp}}\",\n    \"type\": \"PayPal\",\n    \"paypal\": {\n      \"paypal_email\": \"sb-kme5j611874@personal.example.com\",\n      \"return_url\": \"http://merchant.success.paypal.com\",\n      \"cancel_url\": \"http://merchant.error.paypal.com\",\n      \"request_reference_id\": true\n   },\n   \"billing_address\": {\n      \"object\": \"Address\",\n      \"postal_code\": \"53158\",\n      \"country\": \"US\"\n   },\n   \"account_holder\": \"John Doe\"\n  },\n  \"items\": [\n    {\n      \"product\": {\n        \"id\": \"BOOTCAMP\"\n      },\n      \"id\": \"Item_{{$timestamp}}\",\n      \"campaign_code\": \"\"\n    }\n  ],\n  \"id\": \"Subscription_{{$timestamp}}\",\n  \"minimum_commitment\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.prodtest.vindicia.com/subscriptions?dryrun=0",
+					"protocol": "https",
+					"host": [
+						"api",
+						"prodtest",
+						"vindicia",
+						"com"
+					],
+					"path": [
+						"subscriptions"
+					],
+					"query": [
+						{
+							"key": "dryrun",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Capture PayPal Transaction",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.prodtest.vindicia.com/transactions/SH00007997/actions/finish",
+					"protocol": "https",
+					"host": [
+						"api",
+						"prodtest",
+						"vindicia",
+						"com"
+					],
+					"path": [
+						"transactions",
+						"SH00007997",
+						"actions",
+						"finish"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
