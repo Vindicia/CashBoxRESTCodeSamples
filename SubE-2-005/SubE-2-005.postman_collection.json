@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "93ca3d78-5a9f-4314-95da-e67a11a60a72",
+		"name": "SubE-2-005",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create VIP Subscription without Payment Method (SubE-2-005)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"billing_plan\": {\r\n    \"id\": \"ANNUAL\"\r\n  },\r\n  \"account\": {\r\n    \"id\": \"Account_{{$timestamp}}\",\r\n    \"default_currency\": \"USD\"\r\n  },\r\n  \"description\": \"VIP Subscription\",\r\n  \"policy\": {\r\n    \"ignore_avs_policy\": 1,\r\n    \"validate_for_future_payment\": 0,\r\n    \"ignore_cvn_policy\": 1,\r\n    \"immediate_auth_failure_policy\": \"doNotSaveAutoBill\",\r\n    \"min_chargeback_probability\": 100\r\n  },\r\n  \"currency\": \"USD\",\r\n  \"items\": [\r\n    {\r\n      \"product\": {\r\n        \"id\": \"VIP\"\r\n      },\r\n      \"id\": \"Item_{{$timestamp}}\"\r\n    }\r\n  ],\r\n  \"id\": \"Subscription_{{$timestamp}}\",\r\n  \"minimum_commitment\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.prodtest.vindicia.com/subscriptions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"prodtest",
+						"vindicia",
+						"com"
+					],
+					"path": [
+						"subscriptions"
+					]
+				},
+				"description": "As long as the initial transaction is an amount of zero - then you can create a subscription without providing a payment method. \nIn this example, I am overriding the amount of the product to a zero amount."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

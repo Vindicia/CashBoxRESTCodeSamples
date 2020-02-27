@@ -1,0 +1,257 @@
+{
+   "object": "Subscription",
+   "id": "Subscription_1582839611",
+   "vid": "a496f74350cd3b959db7187a96b8c1f334cc7c2f",
+   "created": "2020-02-27T13:40:11-08:00",
+   "account": {
+      "object": "Account",
+      "id": "Account_1582839611",
+      "vid": "59dabc326252d5b4c84cded774d6df2eee278f85",
+      "created": "2020-02-27T13:40:10-08:00",
+      "default_currency": "USD",
+      "email_type": "html"
+   },
+   "billing_plan": {
+      "object": "BillingPlan",
+      "id": "ANNUAL",
+      "vid": "66ae486ebbcac23061cde13de799291eac3eb338",
+      "created": "2019-06-03T15:55:36-07:00",
+      "description": "Annual Subscription",
+      "status": "Active",
+      "periods": {
+         "object": "List",
+         "data": [
+            {
+               "object": "BillingPlanPeriod",
+               "type": "Year",
+               "quantity": 1,
+               "cycles": 0,
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "INR"
+                     },
+                     {
+                        "object": "BillingPlanPrice",
+                        "amount": 0,
+                        "currency": "USD"
+                     }
+                  ],
+                  "total_count": 2
+               },
+               "do_not_notify_first_bill": false
+            }
+         ],
+         "total_count": 1
+      },
+      "skip_initial_billing_notification": false,
+      "billing_descriptor": "Annual Subscription",
+      "used_on_subscriptions": true
+   },
+   "currency": "USD",
+   "description": "VIP Subscription",
+   "status": "Active",
+   "billing_state": "Free Period",
+   "starts": "2020-02-27T13:40:11-08:00",
+   "ends": "2021-03-06T00:00:00-08:00",
+   "entitled_through": "2021-03-06T00:00:00-08:00",
+   "items": {
+      "object": "List",
+      "data": [
+         {
+            "object": "SubscriptionItem",
+            "id": "Item_1582839611",
+            "vid": "6e955a9151e28375b364d299032c8378ab27c732",
+            "index": 0,
+            "product": {
+               "object": "Product",
+               "id": "VIP",
+               "vid": "175f41f8ad8f24a41f42d08d0348d17c48217c22",
+               "created": "2020-02-27T13:37:50-08:00",
+               "descriptions": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductDescription",
+                        "language": "EN",
+                        "description": "VIP Subscription"
+                     }
+                  ],
+                  "total_count": 1
+               },
+               "status": "Active",
+               "entitlements": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "Entitlement",
+                        "id": "basic",
+                        "description": "basic"
+                     },
+                     {
+                        "object": "Entitlement",
+                        "id": "premium",
+                        "description": "premium"
+                     },
+                     {
+                        "object": "Entitlement",
+                        "id": "vip",
+                        "description": "vip"
+                     }
+                  ],
+                  "total_count": 3
+               },
+               "billing_descriptor": "VIP Subscription",
+               "credit_granted": {
+                  "object": "Credit"
+               },
+               "prices": {
+                  "object": "List",
+                  "data": [
+                     {
+                        "object": "ProductPrice",
+                        "amount": 0,
+                        "currency": "USD"
+                     }
+                  ],
+                  "total_count": 1
+               }
+            },
+            "quantity": 1,
+            "created": "2020-02-27T13:40:11-08:00",
+            "starts": "2020-02-27T00:00:00-08:00"
+         }
+      ],
+      "total_count": 1
+   },
+   "billing_day": 27,
+   "minimum_commitment": 0,
+   "notify_on_transition": false,
+   "most_recent_billing": {
+      "object": "Transaction",
+      "id": "SH00008222",
+      "vid": "db476d68bdf0e746ca5d9e558bd26d45ca9969bc",
+      "created": "2020-02-27T13:40:11-08:00",
+      "amount": 0,
+      "currency": "USD",
+      "account": {
+         "object": "Account",
+         "id": "Account_1582839611",
+         "vid": "59dabc326252d5b4c84cded774d6df2eee278f85",
+         "created": "2020-02-27T13:40:10-08:00",
+         "default_currency": "USD",
+         "email_type": "html"
+      },
+      "status_log": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionStatus",
+               "status": "Captured",
+               "created": "2020-02-27T13:40:12-08:00",
+               "payment_method_type": null,
+               "note": "VIN_900 - N/A"
+            },
+            {
+               "object": "TransactionStatus",
+               "status": "New",
+               "created": "2020-02-27T13:40:11-08:00",
+               "payment_method_type": null
+            }
+         ],
+         "total_count": 2
+      },
+      "metadata": {
+         "vin:BillingPlanUnit": "year",
+         "vin:payment_processor": "Vindicia",
+         "vin:TaxError_1": "Can't compute sales tax due to lack of shipping and billing addresses",
+         "vin:BillingPlanLength": "1",
+         "vin:FutureAmount": "0"
+      },
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "ANNUAL",
+               "index_number": 1,
+               "item_type": "Purchase",
+               "name": "Annual Subscription",
+               "quantity": 1,
+               "service_period_starts": "2020-02-27T00:00:00-08:00",
+               "service_period_ends": "2021-02-26T00:00:00-08:00",
+               "tax_type": "Exclusive Sales",
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "VIP",
+               "index_number": 2,
+               "item_type": "Purchase",
+               "name": "VIP Subscription",
+               "subscription_item": {
+                  "object": "SubscriptionItem",
+                  "id": "Item_1582839611",
+                  "vid": "6e955a9151e28375b364d299032c8378ab27c732"
+               },
+               "quantity": 1,
+               "service_period_starts": "2020-02-27T00:00:00-08:00",
+               "service_period_ends": "2021-02-26T00:00:00-08:00",
+               "tax_type": "Exclusive Sales",
+               "total": 0
+            },
+            {
+               "object": "TransactionItem",
+               "sku": "Total Tax",
+               "index_number": 3,
+               "item_type": "Purchase",
+               "name": "Total Tax",
+               "price": 0,
+               "quantity": 1,
+               "tax_classification": "TaxExempt",
+               "service_period_starts": "2020-02-27T00:00:00-08:00",
+               "service_period_ends": "2021-02-26T00:00:00-08:00",
+               "tax_type": "Exclusive Sales",
+               "discount": 0,
+               "subtotal": 0,
+               "total": 0
+            }
+         ],
+         "total_count": 3
+      },
+      "billing_descriptor": "VIP Subscription",
+      "subscription_sequence": 1,
+      "billing_plan_sequence": 1,
+      "original_billing_date": "2020-02-27T00:00:00-08:00",
+      "subscription": {
+         "object": "Subscription",
+         "id": "Subscription_1582839611",
+         "vid": "a496f74350cd3b959db7187a96b8c1f334cc7c2f"
+      }
+   },
+   "next_billing": {
+      "object": "Transaction",
+      "created": "2021-02-27T00:00:00-08:00",
+      "amount": 0,
+      "currency": "USD",
+      "items": {
+         "object": "List",
+         "data": [
+            {
+               "object": "TransactionItem",
+               "sku": "VIP",
+               "item_type": "Purchase",
+               "name": "VIP Subscription",
+               "quantity": 1,
+               "tax_type": "Exclusive Sales",
+               "total": 0
+            }
+         ],
+         "total_count": 1
+      }
+   },
+   "balance": 0
+}

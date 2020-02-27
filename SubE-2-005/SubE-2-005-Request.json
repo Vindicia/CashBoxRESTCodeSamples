@@ -1,0 +1,28 @@
+{
+  "billing_plan": {
+    "id": "ANNUAL"
+  },
+  "account": {
+    "id": "Account_1582839611",
+    "default_currency": "USD"
+  },
+  "description": "VIP Subscription",
+  "policy": {
+    "ignore_avs_policy": 1,
+    "validate_for_future_payment": 0,
+    "ignore_cvn_policy": 1,
+    "immediate_auth_failure_policy": "doNotSaveAutoBill",
+    "min_chargeback_probability": 100
+  },
+  "currency": "USD",
+  "items": [
+    {
+      "product": {
+        "id": "VIP"
+      },
+      "id": "Item_1582839611"
+    }
+  ],
+  "id": "Subscription_1582839611",
+  "minimum_commitment": 0
+}
