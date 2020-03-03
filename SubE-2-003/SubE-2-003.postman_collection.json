@@ -73,7 +73,7 @@
 			"response": []
 		},
 		{
-			"name": "Capture PayPal Transaction",
+			"name": "Finish PayPal Subscription",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -102,7 +102,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://api.prodtest.vindicia.com/transactions/SH00007997/actions/finish",
+					"raw": "https://api.prodtest.vindicia.com/subscriptions/SH00008436/actions/finish",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -111,8 +111,8 @@
 						"com"
 					],
 					"path": [
-						"transactions",
-						"SH00007997",
+						"subscriptions",
+						"SH00008436",
 						"actions",
 						"finish"
 					]
