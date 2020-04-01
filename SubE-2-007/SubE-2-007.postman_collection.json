@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "ec8f0af0-6d65-491c-a813-04f88402d47f",
+		"name": "SubE-2-007",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Product Single Use",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.prodtest.vindicia.com/products/CubsOpeningDay",
+					"protocol": "https",
+					"host": [
+						"api",
+						"prodtest",
+						"vindicia",
+						"com"
+					],
+					"path": [
+						"products",
+						"CubsOpeningDay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase Single Use Product",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"object\": \"Transaction\",\n  \"id\": \"DGD{{$timestamp}}\",\n  \"account\": {\n\t   \"id\": \"Account_{{$timestamp}}\",\n\t   \"default_currency\": \"USD\",\n\t   \"email_type\": \"html\",\n\t   \"email\": \"{{email}}\",\n\t   \"notify_before_billing\": true,\n\t   \"name\": \"{{$randomFirstName}} {{$randomLastName}}\",\n\t   \"shipping_address\": {\n\t      \"object\": \"Address\",\n\t      \"line1\": \"123 Anywhere St.\",\n\t      \"city\": \"Kenosha\",\n\t      \"district\": \"WI\",\n\t      \"postal_code\": \"53158\",\n\t      \"country\": \"US\"\n\t   },\n\t   \"payment_methods\": {\n\t      \"object\": \"List\",\n\t      \"data\": [\n\t         {\n\t            \"id\": \"CC_{{$timestamp}}\",\n\t            \"type\": \"CreditCard\",\n\t            \"credit_card\": {\n\t               \"cvn\": \"123\",\n\t               \"account\": \"4111111111111111\",\n\t               \"expiration_date\": \"202302\"\n\t            },\n\t            \"billing_address\": {\n\t    \t\t\t\"line1\": \"123 Anywhere St.\",\n\t    \t\t\t \"city\": \"Kenosha\",\n\t    \t\t\t \"district\": \"WI\",\n\t\t\t\t\t \"postal_code\": \"53158\",\n\t\t\t\t     \"country\": \"US\"\n\t            }\n\t         }\n\t      ]\n\t   }\n\t},\n  \"source_payment_method\": {\n    \"id\": \"CC_{{$timestamp}}\"\n  },\n  \"shipping_address\": {\n    \"object\": \"Address\",\n    \"name\": \"c/o Charlie Brown\",\n\t\"line1\": \"123 Anywhere St.\",\n\t\"city\": \"Kenosha\",\n\t\"district\": \"WI\",\n\t\"postal_code\": \"53158\",\n\t\"country\": \"US\"\n  },\n  \"items\": [\n    {\n      \"object\": \"TransactionItem\",\n      \"sku\": \"DigitalDownload\",\n      \"name\": \"Digital Document Lifetime Access\",\n      \"price\": 5.99,\n      \"quantity\": 1,\n      \"tax_classification\" : \"DV017194\"\n    }\n  ],\n  \"source_ip\": \"63.201.132.182\",\n  \"policy\": {\n    \"min_chargeback_probability\": 99,\n    \"send_email_notification\": 0\n  },\n  \"to_be_captured\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.prodtest.vindicia.com/transactions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"prodtest",
+						"vindicia",
+						"com"
+					],
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Grant Single Use Entitlements",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"object\": \"Entitlement\",\n   \"id\": \"DigitalDownload\",\n   \"description\": \"DigitalDownload\",\n   \"account\": {\n      \"object\": \"Account\",\n      \"id\": \"Account_1585774763\"\n   },\n   \"starts\": \"2020-04-01T10:00:00-07:00\",\n   \"ends\": \"2040-04-01T10:00:00-07:00\",\n   \"active\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.prodtest.vindicia.com/accounts/Account_1585774763/entitlements",
+					"protocol": "https",
+					"host": [
+						"api",
+						"prodtest",
+						"vindicia",
+						"com"
+					],
+					"path": [
+						"accounts",
+						"Account_1585774763",
+						"entitlements"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
