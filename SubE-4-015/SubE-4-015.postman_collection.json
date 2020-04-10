@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "3e238301-0d42-404a-b70b-517fb5c8e644",
+		"name": "SubE-4-015",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Existing Account",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.prodtest.vindicia.com/accounts?email=SubE-4-015@vindicia.com",
+					"protocol": "https",
+					"host": [
+						"api",
+						"prodtest",
+						"vindicia",
+						"com"
+					],
+					"path": [
+						"accounts"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "SubE-4-015@vindicia.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product Single Use",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.prodtest.vindicia.com/products/MovieRental",
+					"protocol": "https",
+					"host": [
+						"api",
+						"prodtest",
+						"vindicia",
+						"com"
+					],
+					"path": [
+						"products",
+						"MovieRental"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase Single Use Product",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"object\": \"Transaction\",\n  \"id\": \"SUP{{$timestamp}}\",\n  \"account\": {\n\t   \"id\": \"Account_1586548586\"\n\t},\n  \"source_payment_method\": {\n    \"id\": \"CC_1586548586\"\n  },\n  \"shipping_address\": {\n\t\"postal_code\": \"53158\",\n\t\"country\": \"US\"\n  },\n  \"currency\": \"USD\",\n  \"items\": [\n    {\n      \"object\": \"TransactionItem\",\n      \"sku\": \"MovieRental\",\n      \"name\": \"Finding Dory\",\n      \"price\": 6.99,\n      \"quantity\": 1,\n      \"tax_classification\" : \"DV017194\"\n    }\n  ],\n  \"source_ip\": \"63.201.132.182\",\n  \"policy\": {\n    \"min_chargeback_probability\": 99,\n    \"send_email_notification\": 0\n  },\n  \"to_be_captured\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.prodtest.vindicia.com/transactions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"prodtest",
+						"vindicia",
+						"com"
+					],
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Grant Single Use Entitlements",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"object\": \"Entitlement\",\n   \"id\": \"FindingDory\",\n   \"description\": \"Finding Dory - Movie Rental\",\n   \"account\": {\n      \"id\": \"Account_1586548586\"\n   },\n   \"starts\": \"2020-04-10T10:00:00-07:00\",\n   \"ends\": \"2040-04-15T10:00:00-07:00\",\n   \"active\": false \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.prodtest.vindicia.com/accounts/Account_1586548586/entitlements",
+					"protocol": "https",
+					"host": [
+						"api",
+						"prodtest",
+						"vindicia",
+						"com"
+					],
+					"path": [
+						"accounts",
+						"Account_1586548586",
+						"entitlements"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
