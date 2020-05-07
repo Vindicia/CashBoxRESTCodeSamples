@@ -43,7 +43,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"billing_plan\": {\n    \"id\": \"MONTHLY\"\n  },\n  \"account\": {\n    \"email_type\": \"html\",\n    \"language\": \"EN\",\n    \"id\": \"Account_{{$timestamp}}\",\n    \"shipping_address\": {\n      \"city\": \"Pleasant Prairie\",\n      \"district\": \"WI\",\n      \"country\": \"US\",\n      \"line1\": \"18649 High Street\",\n      \"postal_code\": \"53158\"\n    },\n    \"default_currency\": \"USD\",\n    \"email\": \"{{email}}\",\n    \"name\": \"{{$randomFirstName}} {{$randomLastName}}\"\n  },\n  \"description\": \"Subscription_{{$timestamp}}\",\n  \"policy\": {\n    \"ignore_avs_policy\": 1,\n    \"validate_for_future_payment\": 0,\n    \"ignore_cvn_policy\": 1,\n    \"immediate_auth_failure_policy\": \"doNotSaveAutoBill\",\n    \"min_chargeback_probability\": 100\n  },\n  \"currency\": \"USD\",\n  \"payment_method\": {\n    \"id\": \"PP_{{$timestamp}}\",\n    \"type\": \"PayPal\",\n    \"paypal\": {\n      \"paypal_email\": \"sb-kme5j611874@personal.example.com\",\n      \"return_url\": \"http://merchant.success.paypal.com\",\n      \"cancel_url\": \"http://merchant.error.paypal.com\",\n      \"request_reference_id\": true\n   },\n   \"billing_address\": {\n      \"object\": \"Address\",\n      \"postal_code\": \"53158\",\n      \"country\": \"US\"\n   },\n   \"account_holder\": \"John Doe\"\n  },\n  \"items\": [\n    {\n      \"product\": {\n        \"id\": \"BOOTCAMP\"\n      },\n      \"id\": \"Item_{{$timestamp}}\",\n      \"campaign_code\": \"\"\n    }\n  ],\n  \"id\": \"Subscription_{{$timestamp}}\",\n  \"minimum_commitment\": 0\n}",
+					"raw": "{\n  \"billing_plan\": {\n    \"id\": \"MONTHLY-TEST\"\n  },\n  \"account\": {\n    \"email_type\": \"html\",\n    \"language\": \"EN\",\n    \"id\": \"Account_{{$timestamp}}\",\n    \"shipping_address\": {\n      \"city\": \"Pleasant Prairie\",\n      \"district\": \"WI\",\n      \"country\": \"US\",\n      \"line1\": \"18649 High Street\",\n      \"postal_code\": \"53158\"\n    },\n    \"default_currency\": \"USD\",\n    \"email\": \"{{myemail}}\",\n    \"name\": \"{{$randomFirstName}} {{$randomLastName}}\"\n  },\n  \"description\": \"Subscription_{{$timestamp}}\",\n  \"policy\": {\n    \"ignore_avs_policy\": 1,\n    \"validate_for_future_payment\": 0,\n    \"ignore_cvn_policy\": 1,\n    \"immediate_auth_failure_policy\": \"doNotSaveAutoBill\",\n    \"min_chargeback_probability\": 100\n  },\n  \"currency\": \"USD\",\n  \"payment_method\": {\n    \"id\": \"PP_{{$timestamp}}\",\n    \"type\": \"PayPal\",\n    \"paypal\": {\n      \"return_url\": \"http://merchant.success.paypal.com\",\n      \"cancel_url\": \"http://merchant.error.paypal.com\",\n      \"request_reference_id\": true\n   },\n   \"billing_address\": {\n      \"object\": \"Address\",\n      \"postal_code\": \"53158\",\n      \"country\": \"US\"\n   },\n   \"account_holder\": \"John Doe\"\n  },\n  \"items\": [\n    {\n      \"product\": {\n        \"id\": \"BOOTCAMP\"\n      },\n      \"id\": \"Item_{{$timestamp}}\",\n      \"campaign_code\": \"\"\n    }\n  ],\n  \"id\": \"Subscription_{{$timestamp}}\",\n  \"minimum_commitment\": 0\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -102,7 +102,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://api.prodtest.vindicia.com/subscriptions/SH00008436/actions/finish",
+					"raw": "https://api.prodtest.vindicia.com/subscriptions/SH00008449/actions/finish",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -112,7 +112,7 @@
 					],
 					"path": [
 						"subscriptions",
-						"SH00008436",
+						"SH00008449",
 						"actions",
 						"finish"
 					]

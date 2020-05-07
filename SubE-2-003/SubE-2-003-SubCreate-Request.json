@@ -30,7 +30,6 @@
     "id": "PP_1582580229",
     "type": "PayPal",
     "paypal": {
-      "paypal_email": "sb-kme5j611874@personal.example.com",
       "return_url": "http://merchant.success.paypal.com",
       "cancel_url": "http://merchant.error.paypal.com",
       "request_reference_id": true
